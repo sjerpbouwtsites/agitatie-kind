@@ -26,24 +26,24 @@ function agitatie_stijl_en_script() {
 add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
 
 $kind_config = array(
-    'support'                      => array(
-        'custom-logo'              => array(
-           'height'                => 169,
-           'width'                 => 400,
-           'flex-width'            => true,
-        ),
-    ),
-    'archief'                      => array(
-        'faq'                      => array(
-            'geen_afb'             => true,
-            'geen_datum'           => true,
-            'exc_lim'              => 300
-        ),
-        'post'                     => array(
-            'taxonomieen'          => true
-        )
-    ),
-    'content_width'                => 760
+    // 'support'                      => array(
+    //     'custom-logo'              => array(
+    //        'height'                => 169,
+    //        'width'                 => 400,
+    //        'flex-width'            => true,
+    //     ),
+    // ),
+    // 'archief'                      => array(
+    //     'faq'                      => array(
+    //         'geen_afb'             => true,
+    //         'geen_datum'           => true,
+    //         'exc_lim'              => 300
+    //     ),
+    //     'post'                     => array(
+    //         'taxonomieen'          => true
+    //     )
+    // ),
+    // 'content_width'                => 760
 
 );
 $kind_menus = array(
@@ -63,17 +63,19 @@ $kind_thumbs = array(
 
 function registreer_posttypes() {
 
-    $faq = new Posttype_voorb('faq', 'faqs');
-    $faq->pas_args_aan(array(
-        'menu_icon'           => 'dashicons-editor-quote',
-    ));
-    $faq->registreer();
+    // ter voorbeeld
 
-    $download = new Posttype_voorb('download', 'downloads');
-    $download->pas_args_aan(array(
-        'menu_icon'             => 'dashicons-download'
-    ));
-    $download->registreer();
+    // $faq = new Posttype_voorb('faq', 'faqs');
+    // $faq->pas_args_aan(array(
+    //     'menu_icon'           => 'dashicons-editor-quote',
+    // ));
+    // $faq->registreer();
+
+    // $download = new Posttype_voorb('download', 'downloads');
+    // $download->pas_args_aan(array(
+    //     'menu_icon'             => 'dashicons-download'
+    // ));
+    // $download->registreer();
 
 }
 
