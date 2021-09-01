@@ -17,7 +17,7 @@ var locs = {
 //create possible options for plugins per environment
 //to include plugin in gulp, create at least key with empty obj (after install..)
 var	pluginsConfig = {
-	//sourcemaps: {},
+	sourcemaps: {},
 	sass: {
 		dev: {
 			outputStyle: 'expanded',
@@ -110,10 +110,10 @@ gulp.task('init', ['watch-sass', 'watch-js']);
 
 gulp.task('sass', function () {
   return gulp.src(locs.sass.src)
-  	//.pipe(plugins.sourcemaps.init())
+  	.pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(pluginsOpts.sass).on('error', plugins.sass.logError))
     .pipe(plugins.autoprefixer(pluginsOpts.autoprefixer))
-    //.pipe(plugins.sourcemaps.write('./maps'))
+    .pipe(plugins.sourcemaps.write('./maps'))
     .pipe(gulp.dest(locs.sass.dist));
 });
 
