@@ -1,0 +1,88 @@
+ .voorpagina {
+
+
+
+ 	&.marginveld.veel {
+ 		margin-top: 0;
+ 		margin-bottom: 0;
+ 		padding-top: 100px;
+ 		padding-bottom: 100px;
+ 	}
+
+	h1, h2 {
+		margin-top: 0;
+	}
+	& ~ #stek-voet {
+		margin-top: 0;
+	}
+ 	background-image: url('https://vloerwerk.org/wp-content/uploads/2018/03/solidariteitsnetwerk-vloerwerk-actie.jpg');
+	background-size: 100%;
+	background-position: left top;
+
+	.verpakking-klein {
+		padding: 50px;
+		background-color: rgba(255, 255, 255, 0.85);
+		& ~ .verpakking-klein {
+			padding-top: 0;
+		}
+		position: relative;
+		left: calc(-50% + 760px);
+	}
+	@media (max-width: 1200px) {
+		&.marginveld.veel {
+			padding: 0;
+		}
+
+		.verpakking-klein {
+			width: 100%;
+			left: auto;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+	@media (max-width: 600px) {
+		.verpakking-klein {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.art-lijst {
+		margin-bottom: -15px;
+		margin-left: -7.5px;
+		margin-right: -7.5px;
+		.art-c {
+			flex-basis: calc(33% - 15px);
+			margin-bottom: 15px;
+			margin-right: 7.5px;
+			margin-left: 7.5px;
+			flex-grow: 1;
+			min-width: 180px;
+			@media (max-width: 900px) {
+				margin-bottom: 2em;
+				header {
+					margin-bottom: .5em;
+					line-height: 1;
+				}
+				h3 {
+					display: inline-block;
+				}
+				time {
+					&::before {
+						content: " - ";
+					}
+				}
+			}
+			@media (max-width: 400px) {
+				-webkit-flex: 1 1 auto;
+			}
+			img {
+				height: 110px;
+			}
+		}
+	}
+
+	.knoppendoos {
+		padding: 20px 20px 10px 20px;
+		background-color: $hoofdkleur;
+	}
+
+}

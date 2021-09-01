@@ -1,0 +1,35 @@
+//child
+/*!
+ Theme Name:   Agitatie child
+ Theme URI:    http://sjerpbouwtsites.nl
+ Description:  Het kind thema waarin aanpassingen voor specifiek deze site zijn gedaan.
+ Author:       Sjerp van Wouden
+ Author URI:   http://sjerpbouwtsites.nl
+ Template:     agitatie
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  agitatie
+*/
+
+@import '../../agitatie/scss/inst/kleur/basiswaarden';
+@import '../../agitatie/scss/inst/tekst/basiswaarden';
+@import '../../agitatie/scss/inst/kleur/initialisatie';
+@import '../../agitatie/scss/inst/tekst/initialisatie';
+@import '../../agitatie/scss/inst/kleur/zet-klassen';
+
+@import '../sass-variabelen/variabelen-kleur';
+@import '../sass-variabelen/variabelen-tekst';
+
+@import 'mixins';
+@import 'footer';
+@import 'generiek-teksten';
+@import 'generiek';
+@import 'header';
+@import 'single';
+@import 'voorpagina';
+@import 'tax-blok';
+@import 'paginering';
+@import 'knop';
+@import 'singular';

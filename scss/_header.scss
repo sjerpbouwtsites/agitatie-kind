@@ -1,0 +1,11 @@
+//child
+
+.stek-kop-links {
+	.custom-logo-link {
+		width: 160px;
+		@media (max-width: 400px) {
+			width: 120px;
+			margin-left: -5px;
+		}
+	}
+}

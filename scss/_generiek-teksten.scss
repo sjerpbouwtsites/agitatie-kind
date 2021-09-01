@@ -1,0 +1,17 @@
+/* body {
+	font-family: $broodletter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $kopletter;
+} */
+
+.bericht-tekst {
+	font-size: 1.4em;
+	p, span {
+		line-height:1.55;
+		@media(max-width: 600px){
+			line-height:1.45;
+		}
+	}
+}

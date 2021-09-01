@@ -1,0 +1,64 @@
+//child
+
+
+.art-meta {
+	padding: 20px;
+	background-color: #EDEDED;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	@media (max-width: 440px) {
+		display: block;
+
+	}
+	time, .sharedaddy {
+
+	}
+	time {
+		color: $zwart;
+		//flex-basis: 110px;
+		margin-right: 20px;
+	}
+	div.sharedaddy {
+		h3.sd-title {
+			display: none;
+		}
+	}
+
+	.sd-content ul {
+		display: flex;
+		//width: 112px;
+		flex-wrap: wrap;
+		margin-bottom: -10px !important;
+		@media (max-width: 440px) {
+			margin-top: 10px !important;
+		}
+		li {
+			margin-bottom: 10px !important;
+			opacity: 0.8;
+			&:hover {
+				opacity:1;
+			}
+		}
+
+	}
+
+	.sd-social-icon .sd-content ul li a.sd-button.share-more {
+		padding: 4px 8px 5px 5px;
+		position: relative;
+		top: 0;
+		margin-left: 4px;
+		opacity: 0.8;
+		border-radius: 0;
+		border: 0;
+		&:hover {
+			opacity:1;
+			background-color: #f1f1f1;
+		}
+
+		&::before {
+			position: relative;
+			top: 3px;
+		}
+	}
+}
