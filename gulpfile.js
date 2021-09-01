@@ -11,17 +11,13 @@ var locs = {
 	sass: {
 		src: './scss/**/*.scss',
 		dist: './'
-	},
-	imgs: {
-		src: './img/src/**/*',
-		dist: './img'
 	}
 };
 
 //create possible options for plugins per environment
 //to include plugin in gulp, create at least key with empty obj (after install..)
 var	pluginsConfig = {
-	sourcemaps: {},
+	//sourcemaps: {},
 	sass: {
 		dev: {
 			outputStyle: 'expanded',
@@ -46,7 +42,6 @@ var	pluginsConfig = {
 	plumber: {},
 	uglify: {},
 	concat: {},
-	imagemin: {},
 	autoprefixer: {
 		dev: {
 			browsers: ['last 2 versions']
@@ -115,10 +110,10 @@ gulp.task('init', ['watch-sass', 'watch-js']);
 
 gulp.task('sass', function () {
   return gulp.src(locs.sass.src)
-  	.pipe(plugins.sourcemaps.init())
+  	//.pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(pluginsOpts.sass).on('error', plugins.sass.logError))
     .pipe(plugins.autoprefixer(pluginsOpts.autoprefixer))
-    .pipe(plugins.sourcemaps.write('./maps'))
+    //.pipe(plugins.sourcemaps.write('./maps'))
     .pipe(gulp.dest(locs.sass.dist));
 });
 
@@ -157,15 +152,4 @@ gulp.task('concat-js', function() {
 
 
 ///////// END JS /////////////
-///////// - - - - - //////////
-///////// MINIFY IMGS /////////////
-
-gulp.task('minify-images', function(){
-    gulp.src(locs.imgs.src)
-        .pipe(plugins.imagemin(pluginsOpts.imagemin))
-        .pipe(gulp.dest(locs.imgs.dist));
-});
-
-
-///////// END MINIFY IMGS /////////////
 ///////// - - - - - //////////
