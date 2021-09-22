@@ -33,16 +33,16 @@ $kind_config = array(
     //        'flex-width'            => true,
     //     ),
     // ),
-    // 'archief'                      => array(
-    //     'faq'                      => array(
-    //         'geen_afb'             => true,
-    //         'geen_datum'           => true,
-    //         'exc_lim'              => 300
-    //     ),
-    //     'post'                     => array(
-    //         'taxonomieen'          => true
-    //     )
-    // ),
+    'archief'                      => array(
+        'faq'                      => array(
+            'geen_afb'             => true,
+            'geen_datum'           => true,
+            'exc_lim'              => 300
+        ),
+        // 'post'                     => array(
+        //     'taxonomieen'          => true
+        // )
+    ),
     // 'content_width'                => 760
 
 );
@@ -65,11 +65,16 @@ function registreer_posttypes() {
 
     // ter voorbeeld
 
-    // $faq = new Posttype_voorb('faq', 'faqs');
-    // $faq->pas_args_aan(array(
-    //     'menu_icon'           => 'dashicons-editor-quote',
-    // ));
-    // $faq->registreer();
+    $faq = new Posttype_voorb('faq', 'faqs');
+    $faq->pas_args_aan(array(
+        'menu_icon'           => 'dashicons-editor-quote',
+        'supports' =>
+            array(
+                'title',
+                'editor'
+            ),        
+    ));
+    $faq->registreer();
 
     // $download = new Posttype_voorb('download', 'downloads');
     // $download->pas_args_aan(array(
