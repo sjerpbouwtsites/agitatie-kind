@@ -103,6 +103,7 @@ gulp.task('default', function(){
 });
 
 gulp.task('init', ['watch-sass', 'watch-js']);
+gulp.task('productie', ['sass', 'concat-js']);
 
 ////////// END TRIGGERS /////////
 ///////// - - - - - //////////
