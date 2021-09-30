@@ -10,6 +10,199 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  agitatie
-*/.tekst-wit{color:#fff}.tekst-wittig{color:#f5f5f5}.tekst-lichtgrijs{color:#CAC8C8}.tekst-grijs{color:#666}.tekst-donkergrijs{color:#211f1f}.tekst-zwart{color:#252525}.tekst-hoofdkleur{color:#C82449}.tekst-zijkleur{color:#F9E6B1}.tekst-accentkleur{color:#B5DEE8}.tekst-hoofdkleur-donker{color:#b22041}.tekst-zijkleur-donker{color:#f7de99}.tekst-accentkleur-donker{color:#a2d5e2}.achtergrond-wit{background-color:#fff}.achtergrond-wittig{background-color:#f5f5f5}.achtergrond-lichtgrijs{background-color:#CAC8C8}.achtergrond-grijs{background-color:#666}.achtergrond-donkergrijs{background-color:#211f1f}.achtergrond-zwart{background-color:#252525}.achtergrond-hoofdkleur{background-color:#C82449}.achtergrond-zijkleur{background-color:#F9E6B1}.achtergrond-accentkleur{background-color:#B5DEE8}.achtergrond-hoofdkleur-donker{background-color:#b22041}.achtergrond-zijkleur-donker{background-color:#f7de99}.achtergrond-accentkleur-donker{background-color:#a2d5e2}
+*/
+.tekst-wit {
+  color: #fff; }
 
-/*# sourceMappingURL=maps/style.css.map */
+.tekst-wittig {
+  color: #f5f5f5; }
+
+.tekst-lichtgrijs {
+  color: #CAC8C8; }
+
+.tekst-grijs {
+  color: #666; }
+
+.tekst-donkergrijs {
+  color: #211f1f; }
+
+.tekst-zwart {
+  color: #252525; }
+
+.tekst-hoofdkleur {
+  color: #0099dc; }
+
+.tekst-zijkleur {
+  color: #62a316; }
+
+.tekst-accentkleur {
+  color: #B5DEE8; }
+
+.tekst-hoofdkleur-donker {
+  color: #0087c3; }
+
+.tekst-zijkleur-donker {
+  color: #548d13; }
+
+.tekst-accentkleur-donker {
+  color: #a2d5e2; }
+
+.achtergrond-wit {
+  background-color: #fff; }
+
+.achtergrond-wittig {
+  background-color: #f5f5f5; }
+
+.achtergrond-lichtgrijs {
+  background-color: #CAC8C8; }
+
+.achtergrond-grijs {
+  background-color: #666; }
+
+.achtergrond-donkergrijs {
+  background-color: #211f1f; }
+
+.achtergrond-zwart {
+  background-color: #252525; }
+
+.achtergrond-hoofdkleur {
+  background-color: #0099dc; }
+
+.achtergrond-zijkleur {
+  background-color: #62a316; }
+
+.achtergrond-accentkleur {
+  background-color: #B5DEE8; }
+
+.achtergrond-hoofdkleur-donker {
+  background-color: #0087c3; }
+
+.achtergrond-zijkleur-donker {
+  background-color: #548d13; }
+
+.achtergrond-accentkleur-donker {
+  background-color: #a2d5e2; }
+
+.tekst-wit {
+  color: #fff; }
+
+.tekst-wittig {
+  color: #f5f5f5; }
+
+.tekst-lichtgrijs {
+  color: #CAC8C8; }
+
+.tekst-grijs {
+  color: #666; }
+
+.tekst-donkergrijs {
+  color: #211f1f; }
+
+.tekst-zwart {
+  color: #252525; }
+
+.tekst-hoofdkleur {
+  color: #0099dc; }
+
+.tekst-zijkleur {
+  color: #62a316; }
+
+.tekst-accentkleur {
+  color: #B5DEE8; }
+
+.tekst-hoofdkleur-donker {
+  color: #0087c3; }
+
+.tekst-zijkleur-donker {
+  color: #548d13; }
+
+.tekst-accentkleur-donker {
+  color: #a2d5e2; }
+
+.achtergrond-wit {
+  background-color: #fff; }
+
+.achtergrond-wittig {
+  background-color: #f5f5f5; }
+
+.achtergrond-lichtgrijs {
+  background-color: #CAC8C8; }
+
+.achtergrond-grijs {
+  background-color: #666; }
+
+.achtergrond-donkergrijs {
+  background-color: #211f1f; }
+
+.achtergrond-zwart {
+  background-color: #252525; }
+
+.achtergrond-hoofdkleur {
+  background-color: #0099dc; }
+
+.achtergrond-zijkleur {
+  background-color: #62a316; }
+
+.achtergrond-accentkleur {
+  background-color: #B5DEE8; }
+
+.achtergrond-hoofdkleur-donker {
+  background-color: #0087c3; }
+
+.achtergrond-zijkleur-donker {
+  background-color: #548d13; }
+
+.achtergrond-accentkleur-donker {
+  background-color: #a2d5e2; }
+
+/*voorbeeld in code bovenstaande mixin
+
+div::after {
+    @include pseudo;
+    top: -1em; left: -1em;
+    width: 1em; height: 1em;
+}
+*/
+/* voorbeeld in code bovenstaande mixin
+
+div {
+    @include responsive-ratio(16,9);
+}
+
+*/
+/*voorbeeld van gebruik:
+
+input,
+textarea {
+    @include input-placeholder {
+        color: $grey;
+    }
+}
+*/
+/*voorbeeld in gebruik:
+
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+
+*/
+/*gebruik
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+*/
+/*gebruik:
+.button {
+  @include border-radius(5px);
+}
+
+
+*/
