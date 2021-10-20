@@ -254,3 +254,8 @@ pre {
 @media screen and (max-width: 600px) {
   .stek-kop-links .radical-riders-title {
     font-size: 1.5rem; } }
+
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before,
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after,
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
+  background-color: #181818; }
