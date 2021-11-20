@@ -30,22 +30,22 @@
   color: #252525; }
 
 .tekst-hoofdkleur {
-  color: #3baf99; }
+  color: #CB4131; }
 
 .tekst-zijkleur {
-  color: #266f6b; }
+  color: #2a2322; }
 
 .tekst-accentkleur {
-  color: #B5DEE8; }
+  color: #d4e97e; }
 
 .tekst-hoofdkleur-donker {
-  color: #359c88; }
+  color: #b63a2c; }
 
 .tekst-zijkleur-donker {
-  color: #1f5c59; }
+  color: #1c1717; }
 
 .tekst-accentkleur-donker {
-  color: #a2d5e2; }
+  color: #cde568; }
 
 .achtergrond-wit {
   background-color: #fff; }
@@ -66,22 +66,22 @@
   background-color: #252525; }
 
 .achtergrond-hoofdkleur {
-  background-color: #3baf99; }
+  background-color: #CB4131; }
 
 .achtergrond-zijkleur {
-  background-color: #266f6b; }
+  background-color: #2a2322; }
 
 .achtergrond-accentkleur {
-  background-color: #B5DEE8; }
+  background-color: #d4e97e; }
 
 .achtergrond-hoofdkleur-donker {
-  background-color: #359c88; }
+  background-color: #b63a2c; }
 
 .achtergrond-zijkleur-donker {
-  background-color: #1f5c59; }
+  background-color: #1c1717; }
 
 .achtergrond-accentkleur-donker {
-  background-color: #a2d5e2; }
+  background-color: #cde568; }
 
 .tekst-wit {
   color: #fff; }
@@ -102,22 +102,22 @@
   color: #252525; }
 
 .tekst-hoofdkleur {
-  color: #3baf99; }
+  color: #CB4131; }
 
 .tekst-zijkleur {
-  color: #266f6b; }
+  color: #2a2322; }
 
 .tekst-accentkleur {
-  color: #B5DEE8; }
+  color: #d4e97e; }
 
 .tekst-hoofdkleur-donker {
-  color: #359c88; }
+  color: #b63a2c; }
 
 .tekst-zijkleur-donker {
-  color: #1f5c59; }
+  color: #1c1717; }
 
 .tekst-accentkleur-donker {
-  color: #a2d5e2; }
+  color: #cde568; }
 
 .achtergrond-wit {
   background-color: #fff; }
@@ -138,22 +138,22 @@
   background-color: #252525; }
 
 .achtergrond-hoofdkleur {
-  background-color: #3baf99; }
+  background-color: #CB4131; }
 
 .achtergrond-zijkleur {
-  background-color: #266f6b; }
+  background-color: #2a2322; }
 
 .achtergrond-accentkleur {
-  background-color: #B5DEE8; }
+  background-color: #d4e97e; }
 
 .achtergrond-hoofdkleur-donker {
-  background-color: #359c88; }
+  background-color: #b63a2c; }
 
 .achtergrond-zijkleur-donker {
-  background-color: #1f5c59; }
+  background-color: #1c1717; }
 
 .achtergrond-accentkleur-donker {
-  background-color: #a2d5e2; }
+  background-color: #cde568; }
 
 /*voorbeeld in code bovenstaande mixin
 
@@ -206,3 +206,83 @@ a {
 
 
 */
+body {
+  background-color: #fffaf9; }
+
+#stek-voet {
+  background-color: #2a2322;
+  font-family: "Noto Sans", serif; }
+
+#stek-voet section {
+  border-left-color: #CB4131; }
+
+#stek-voet a.heading-logo--footer {
+  font-size: 3em;
+  font-weight: bold; }
+
+#stek-voet,
+#stek-voet section a,
+#stek-voet a.heading-logo--footer {
+  color: #CB4131; }
+
+#stek-voet a:hover {
+  text-decoration: underline; }
+
+a.heading-logo {
+  font-size: 2rem;
+  line-height: 70px;
+  color: #f5f5f5;
+  font-weight: 900;
+  font-family: "Noto Sans", sans-serif; }
+
+@media (max-width: 1024px) {
+  .prio-menu-container {
+    display: none !important; } }
+
+#stek-kop {
+  background-color: #CB4131;
+  box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
+  font-family: "Noto Sans", serif; }
+
+.sub-menu .menu-item a {
+  background-color: #252525; }
+
+.openklap-menu-container {
+  background-color: #b63a2c; }
+
+.prio-menu-container .menu-item a {
+  color: #f5f5f5; }
+
+.prio-menu-container .menu-item:hover > a {
+  background-color: rgba(255, 255, 255, 0.1); }
+  .prio-menu-container .menu-item:hover > a:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.prio-menu-container .menu-item-has-children:hover .sub-menu a {
+  background-color: #CB4131; }
+  .prio-menu-container .menu-item-has-children:hover .sub-menu a:hover {
+    text-decoration: underline; }
+
+.kopmenu-mobiel {
+  color: #f5f5f5;
+  position: relative; }
+  .kopmenu-mobiel:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+    .kopmenu-mobiel:hover::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #404040; }
+
+.mobiele-menu-schakel-open .kopmenu-mobiel:hover::before {
+  display: none; }
+
+.vp-menu.achtergrond-zijkleur {
+  position: relative; }
+
+.knop {
+  font-family: "Noto Sans", serif; }

@@ -1,1 +1,116 @@
 //child
+
+a.heading-logo {
+  font-size: 2rem;
+  line-height: 70px; 
+  color: $wittig;
+  font-weight: 900;
+  font-family: $kopletter;
+}
+
+@media (max-width: 1024px) {
+  .prio-menu-container {
+    display: none !important;
+  }
+}
+
+#stek-kop {
+  background-color: $hoofdkleur;
+  box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, .1);
+  font-family: $kleine_letter;
+}
+
+.sub-menu {
+	//box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, .1);
+}
+
+.sub-menu .menu-item a {
+	background-color: $zwart;
+}
+
+// OPENKLAPMENU
+
+.openklap-menu-container {
+	background-color: $hoofdkleur_donker;
+}
+
+.openklap-menu-container a {
+	//color: $wittig;
+}
+/// PRIO MENU 
+
+.prio-menu a {
+
+}
+
+.prio-menu .sub-menu .menu-item a {
+//	background-color: transparent; 
+}	
+
+	.prio-menu-container {
+    .menu-item a{
+      color: $wittig;
+    }
+		.menu-item:hover {
+			& > a {
+				background-color: rgba(255, 255, 255, 0.1);
+				// color: white;
+        
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }        
+			}
+		}
+    
+		.menu-item-has-children:hover {
+      .sub-menu {
+        a {
+          background-color: $hoofdkleur;
+          &:hover {
+            text-decoration: underline;
+          }
+				}
+				
+			}
+			.sub-menu .menu-item > a:hover {
+				// background-color: $hoofdkleur;
+				// color: white;				
+			}			
+		}
+	}
+
+/// MENU KNOP AAN/UIT
+
+.kopmenu-mobiel {
+   color: $wittig;
+   position: relative;
+	&:hover {
+		 background-color: rgba(255, 255, 255, 0.1);
+     &::before {
+      content: '';
+      display: block;
+      width: 5px;  
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #404040;
+	}}
+}
+.mobiele-menu-schakel-open .kopmenu-mobiel:hover::before {
+  display: none;
+}
+.mobiele-menu-schakel-open .kopmenu-mobiel {
+//	color: white;
+	
+}
+
+// MENU IN FOOTER
+
+footer .menu {
+	a:hover {
+//		color: $hoofdkleur;
+	}
+}
+
+

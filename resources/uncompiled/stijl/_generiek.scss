@@ -1,2 +1,27 @@
+body {
+  background-color: #fffaf9
+}
 
+#stek-voet {
+  background-color: $zijkleur;
+  font-family: $kleine_letter
+}
 
+#stek-voet section {
+  border-left-color: $hoofdkleur;
+}
+
+#stek-voet a.heading-logo--footer {
+  font-size: 3em;
+  font-weight: bold;
+}
+#stek-voet,
+#stek-voet section a, 
+#stek-voet a.heading-logo--footer {
+  color: $hoofdkleur;
+}
+#stek-voet a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
