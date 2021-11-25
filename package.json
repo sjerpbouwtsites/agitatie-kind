@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "watch" : "npm run rollup",
+    "watch": "npm run rollup",
     "rollup": "rollup --config resources/rollup-kind.config.js -w",
     "rollup-productie": "rollup --config resources/rollup-kind.config.js",
     "alles-productie": "cd ../; cd hoofdthema; npm run rollup-productie; cd ../; cd kindthema; npm run rollup-productie",
