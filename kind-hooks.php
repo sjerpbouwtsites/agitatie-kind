@@ -94,11 +94,25 @@ add_action('after_setup_theme', 'ag_no_date_stories_single');
 
 function ag_zoek_en_menu_footer()
 {
+    $menu_locations = get_nav_menu_locations();
+
+    if (array_key_exists('footer-taal', $menu_locations)) {
+        echo "<section  class='footer-section'>";
+        echo "<h3>" . taal\streng('Schakel van taal') . "</h3>";
+        $a = array(
+            'theme_location'             => 'footer-taal',
+            'menu_class'                => 'footer-taal',
+            'container_class'            => 'footer-taal-container',
+        );
+        wp_nav_menu($a);
+        echo "</section>";
+    }
+
+
     echo "<section  class='footer-section'>
     <h3>" . taal\streng('Zoeken') . "</h3>";
     get_search_form();
 
-    $menu_locations = get_nav_menu_locations();
 
     if (array_key_exists('footer-menu', $menu_locations)) {
 
