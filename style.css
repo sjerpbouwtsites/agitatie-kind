@@ -304,14 +304,47 @@ body {
 .uitgelichte-afbeelding-buiten.hero h1 {
   background: linear-gradient(5deg, #1a0f0a 0%, #21130d 45%, #1e110b 50%, black 100%); }
 
-.uitgelichte-afb-knop {
-  background-color: transparent;
-  background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
-  padding: 20px;
-  border-right: 1px solid #9d913d44;
-  border-bottom: 1px solid #9d913d40;
-  border-top: 1px solid #9d913d25;
-  border-left: 1px solid #9d913d20; }
+@media (max-width: 600px) {
+  .uitgelichte-afbeelding-buiten.hero {
+    padding-top: 0; }
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    left: 0;
+    transform: unset;
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    transform: initial;
+    margin-top: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen h1 {
+    background: linear-gradient(5deg, #79706ccc 0%, #21130dcc 45%, #1e110bcc 50%, #000000cc 100%);
+    display: block;
+    max-width: 80%;
+    align-self: center; }
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+    position: absolute;
+    bottom: calc(0% + 20px);
+    top: initial;
+    margin-top: 0;
+    left: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-50%, 0%);
+    width: 80%; }
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop {
+      padding: 0.3em 0.6em !important;
+      display: flex;
+      align-items: center; }
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop span {
+      line-height: .8em !important;
+      display: inline-block;
+      max-width: calc(100% - 30px); }
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop i {
+      display: inline-block; } }
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
@@ -320,12 +353,15 @@ a.achtergrond-hoofdkleur {
 .knop.in-kleur {
   background-color: transparent;
   background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
-  padding: 20px;
+  padding: .75em .33;
   border-right: 1px solid #9d913d44;
   border-bottom: 1px solid #9d913d40;
   border-top: 1px solid #9d913d25;
   border-left: 1px solid #9d913d20;
   background-color: #eae9e4; }
+  @media (max-width: 600px) {
+    .knop.in-kleur {
+      padding: .5em .25; } }
 
 #stek-kop .stek-kop-links {
   flex-basis: initial; }
@@ -336,6 +372,14 @@ a.achtergrond-hoofdkleur {
   color: #f5f5f5;
   font-weight: 900;
   font-family: "Noto Sans", sans-serif; }
+  @media (max-width: 768px) {
+    .custom-logo.geen-logo {
+      font-size: 1.2rem;
+      overflow: hidden;
+      max-height: 70px; } }
+  @media (max-width: 360px) {
+    .custom-logo.geen-logo {
+      font-size: 1rem; } }
 
 @media (max-width: 1024px) {
   .prio-menu-container {
@@ -402,21 +446,27 @@ a.achtergrond-hoofdkleur {
 #tax-blok {
   background-color: transparent;
   background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
-  padding: 20px;
+  padding: .75em .33;
   border-right: 1px solid #9d913d44;
   border-bottom: 1px solid #9d913d40;
   border-top: 1px solid #9d913d25;
   border-left: 1px solid #9d913d20; }
+  @media (max-width: 600px) {
+    #tax-blok {
+      padding: .5em .25; } }
 
 .agenda-lijst__wrapper {
   background-color: transparent;
   background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
-  padding: 20px;
+  padding: .75em .33;
   border-right: 1px solid #9d913d44;
   border-bottom: 1px solid #9d913d40;
   border-top: 1px solid #9d913d25;
   border-left: 1px solid #9d913d20;
   overflow-x: hidden; }
+  @media (max-width: 600px) {
+    .agenda-lijst__wrapper {
+      padding: .5em .25; } }
 
 .agenda-lijst__link {
   position: relative;
@@ -476,6 +526,27 @@ time.agenda-lijst__tijd span {
     color: #252525;
     line-height: 1.1;
     margin-top: .025em; }
+
+@media (max-width: 800px) and (min-width: 380px) {
+  .agenda-lijst__rechts--pagina {
+    display: block; } }
+
+@media (max-width: 520px) and (min-width: 380px) {
+  .agenda-lijst__rechts--pagina {
+    display: none; }
+  .agenda-lijst__links--pagina {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wraP: wrap;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .agenda-lijst__titel--pagina,
+  .agenda-lijst__tijd--pagina,
+  .agenda-lijst__taxonomie--pagina {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-basis: 33%; } }
 
 .knop {
   font-family: "Noto Sans", serif; }

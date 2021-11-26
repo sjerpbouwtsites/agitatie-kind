@@ -43,9 +43,63 @@ body {
 .uitgelichte-afbeelding-buiten.hero h1 {
   @include bruinzwarte-gradient();
 }
+@media (max-width: 600px) {
+
+  .uitgelichte-afbeelding-buiten.hero {
+    padding-top: 0;
+  }
+
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    
+    left: 0;
+    transform: unset;
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    transform: initial;
+    margin-top: 0;
+    top: 0;
+    position: absolute;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen h1 {
+    background: linear-gradient(5deg, #79706ccc 0%, #21130dcc 45%, #1e110bcc 50%, #000000cc 100%);
+    display: block;
+    max-width: 80%;
+    align-self: center;
+  }
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+    position: absolute;
+    bottom: calc(0% + 20px);
+    top: initial;
+    margin-top: 0;
+    left: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-50%, 0%);
+    width: 80%;
+    .knop {
+      padding: 0.3em 0.6em !important;
+      display: flex;
+  align-items: center;      
+    }
+    span {
+      line-height: .8em !important;
+      display: inline-block;
+      max-width: calc(100% - 30px);
+    }
+    i {
+      display: inline-block;
+    }
+  }
+
+}
 
 .uitgelichte-afb-knop{
-  @include geel-blok();  
+  //@include geel-blok();  
 }
 
 .achtergrond-hoofdkleur, 

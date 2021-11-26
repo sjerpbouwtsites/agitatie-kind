@@ -8,12 +8,14 @@
 @mixin geel-blok(){
   background-color: transparent;
   background: linear-gradient(185deg, #9d913d11 0%, lighten(#9d913d11, 2%) 45%, lighten(#9d913d11, 1%) 50%, darken(#9d913d11, 10%) 100%);
-  padding: 20px;
+  padding: .75em .33;
   border-right: 1px solid #9d913d44;
   border-bottom: 1px solid #9d913d40;
   border-top: 1px solid #9d913d25;
   border-left: 1px solid #9d913d20;
-
+  @media (max-width: 600px) {
+    padding: .5em .25;
+  }
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){

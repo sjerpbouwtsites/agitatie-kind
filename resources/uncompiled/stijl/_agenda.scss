@@ -85,3 +85,34 @@ time.agenda-lijst__tijd {
     margin-top: .025em;    
   }
 }
+
+@media (max-width: 800px) and (min-width: 380px){
+  
+  .agenda-lijst__rechts--pagina {
+    display: block;
+  }
+}
+
+@media (max-width: 520px) and (min-width: 380px) {
+  
+  .agenda-lijst__rechts--pagina {
+    display: none;
+  }
+  .agenda-lijst__links--pagina {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wraP: wrap;
+    justify-content: space-between;
+    align-items: flex-start;    
+}  
+.agenda-lijst__titel--pagina, 
+.agenda-lijst__tijd--pagina, 
+.agenda-lijst__taxonomie--pagina {
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-basis: 33%;
+}
+}
+
+
