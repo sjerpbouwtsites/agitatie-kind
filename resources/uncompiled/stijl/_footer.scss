@@ -22,3 +22,19 @@
 #stek-voet .textwidget ul {
   padding-left: 1em;
 }
+
+.footer-menu {
+  columns: 2;
+}
+
+.footer-section .search-form {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.footer-section .search-form .search-submit {
+    margin-left: 10px;
+    padding-top: calc(.3em - 0px);
+    padding-bottom: calc(.3em - 0px);
+}
