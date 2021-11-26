@@ -51,6 +51,7 @@ $kind_config = array(
 $kind_menus = array(
     //'voorpagina'
     'footer-menu' => esc_html__('footer-menu', 'agitatie'),
+    'footer-taal' => esc_html__('footer-taal', 'agitatie'),
 );
 
 
