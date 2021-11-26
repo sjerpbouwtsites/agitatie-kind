@@ -11,149 +11,197 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  agitatie
 */
-.tekst-wit {
+.tekst-wit,
+a.tekst-wit {
   color: #fff; }
 
-.tekst-wittig {
+.tekst-wittig,
+a.tekst-wittig {
   color: #f5f5f5; }
 
-.tekst-lichtgrijs {
+.tekst-lichtgrijs,
+a.tekst-lichtgrijs {
   color: #CAC8C8; }
 
-.tekst-grijs {
+.tekst-grijs,
+a.tekst-grijs {
   color: #666; }
 
-.tekst-donkergrijs {
+.tekst-donkergrijs,
+a.tekst-donkergrijs {
   color: #211f1f; }
 
-.tekst-zwart {
+.tekst-zwart, time.agenda-lijst__tijd,
+a.tekst-zwart {
   color: #252525; }
 
-.tekst-hoofdkleur {
-  color: #CB4131; }
+.tekst-hoofdkleur,
+a.tekst-hoofdkleur {
+  color: #1a0f0a; }
 
-.tekst-zijkleur {
-  color: #2a2322; }
+.tekst-zijkleur,
+a.tekst-zijkleur {
+  color: #797660; }
 
-.tekst-accentkleur {
-  color: #d4e97e; }
+.tekst-accentkleur,
+a.tekst-accentkleur {
+  color: #9d913d; }
 
-.tekst-hoofdkleur-donker {
-  color: #b63a2c; }
+.tekst-hoofdkleur-donker,
+a.tekst-hoofdkleur-donker {
+  color: #080403; }
 
-.tekst-zijkleur-donker {
-  color: #1c1717; }
+.tekst-zijkleur-donker,
+a.tekst-zijkleur-donker {
+  color: #6b6855; }
 
-.tekst-accentkleur-donker {
-  color: #cde568; }
+.tekst-accentkleur-donker,
+a.tekst-accentkleur-donker {
+  color: #8b8036; }
 
-.achtergrond-wit {
+.achtergrond-wit,
+a.achtergrond-wit {
   background-color: #fff; }
 
-.achtergrond-wittig {
+.achtergrond-wittig,
+a.achtergrond-wittig {
   background-color: #f5f5f5; }
 
-.achtergrond-lichtgrijs {
+.achtergrond-lichtgrijs,
+a.achtergrond-lichtgrijs {
   background-color: #CAC8C8; }
 
-.achtergrond-grijs {
+.achtergrond-grijs,
+a.achtergrond-grijs {
   background-color: #666; }
 
-.achtergrond-donkergrijs {
+.achtergrond-donkergrijs,
+a.achtergrond-donkergrijs {
   background-color: #211f1f; }
 
-.achtergrond-zwart {
+.achtergrond-zwart,
+a.achtergrond-zwart {
   background-color: #252525; }
 
-.achtergrond-hoofdkleur {
-  background-color: #CB4131; }
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
+  background-color: #1a0f0a; }
 
-.achtergrond-zijkleur {
-  background-color: #2a2322; }
+.achtergrond-zijkleur,
+a.achtergrond-zijkleur {
+  background-color: #797660; }
 
-.achtergrond-accentkleur {
-  background-color: #d4e97e; }
+.achtergrond-accentkleur,
+a.achtergrond-accentkleur {
+  background-color: #9d913d; }
 
-.achtergrond-hoofdkleur-donker {
-  background-color: #b63a2c; }
+.achtergrond-hoofdkleur-donker,
+a.achtergrond-hoofdkleur-donker {
+  background-color: #080403; }
 
-.achtergrond-zijkleur-donker {
-  background-color: #1c1717; }
+.achtergrond-zijkleur-donker,
+a.achtergrond-zijkleur-donker {
+  background-color: #6b6855; }
 
-.achtergrond-accentkleur-donker {
-  background-color: #cde568; }
+.achtergrond-accentkleur-donker,
+a.achtergrond-accentkleur-donker {
+  background-color: #8b8036; }
 
-.tekst-wit {
+.tekst-wit,
+a.tekst-wit {
   color: #fff; }
 
-.tekst-wittig {
+.tekst-wittig,
+a.tekst-wittig {
   color: #f5f5f5; }
 
-.tekst-lichtgrijs {
+.tekst-lichtgrijs,
+a.tekst-lichtgrijs {
   color: #CAC8C8; }
 
-.tekst-grijs {
+.tekst-grijs,
+a.tekst-grijs {
   color: #666; }
 
-.tekst-donkergrijs {
+.tekst-donkergrijs,
+a.tekst-donkergrijs {
   color: #211f1f; }
 
-.tekst-zwart {
+.tekst-zwart, time.agenda-lijst__tijd,
+a.tekst-zwart {
   color: #252525; }
 
-.tekst-hoofdkleur {
-  color: #CB4131; }
+.tekst-hoofdkleur,
+a.tekst-hoofdkleur {
+  color: #1a0f0a; }
 
-.tekst-zijkleur {
-  color: #2a2322; }
+.tekst-zijkleur,
+a.tekst-zijkleur {
+  color: #797660; }
 
-.tekst-accentkleur {
-  color: #d4e97e; }
+.tekst-accentkleur,
+a.tekst-accentkleur {
+  color: #9d913d; }
 
-.tekst-hoofdkleur-donker {
-  color: #b63a2c; }
+.tekst-hoofdkleur-donker,
+a.tekst-hoofdkleur-donker {
+  color: #080403; }
 
-.tekst-zijkleur-donker {
-  color: #1c1717; }
+.tekst-zijkleur-donker,
+a.tekst-zijkleur-donker {
+  color: #6b6855; }
 
-.tekst-accentkleur-donker {
-  color: #cde568; }
+.tekst-accentkleur-donker,
+a.tekst-accentkleur-donker {
+  color: #8b8036; }
 
-.achtergrond-wit {
+.achtergrond-wit,
+a.achtergrond-wit {
   background-color: #fff; }
 
-.achtergrond-wittig {
+.achtergrond-wittig,
+a.achtergrond-wittig {
   background-color: #f5f5f5; }
 
-.achtergrond-lichtgrijs {
+.achtergrond-lichtgrijs,
+a.achtergrond-lichtgrijs {
   background-color: #CAC8C8; }
 
-.achtergrond-grijs {
+.achtergrond-grijs,
+a.achtergrond-grijs {
   background-color: #666; }
 
-.achtergrond-donkergrijs {
+.achtergrond-donkergrijs,
+a.achtergrond-donkergrijs {
   background-color: #211f1f; }
 
-.achtergrond-zwart {
+.achtergrond-zwart,
+a.achtergrond-zwart {
   background-color: #252525; }
 
-.achtergrond-hoofdkleur {
-  background-color: #CB4131; }
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
+  background-color: #1a0f0a; }
 
-.achtergrond-zijkleur {
-  background-color: #2a2322; }
+.achtergrond-zijkleur,
+a.achtergrond-zijkleur {
+  background-color: #797660; }
 
-.achtergrond-accentkleur {
-  background-color: #d4e97e; }
+.achtergrond-accentkleur,
+a.achtergrond-accentkleur {
+  background-color: #9d913d; }
 
-.achtergrond-hoofdkleur-donker {
-  background-color: #b63a2c; }
+.achtergrond-hoofdkleur-donker,
+a.achtergrond-hoofdkleur-donker {
+  background-color: #080403; }
 
-.achtergrond-zijkleur-donker {
-  background-color: #1c1717; }
+.achtergrond-zijkleur-donker,
+a.achtergrond-zijkleur-donker {
+  background-color: #6b6855; }
 
-.achtergrond-accentkleur-donker {
-  background-color: #cde568; }
+.achtergrond-accentkleur-donker,
+a.achtergrond-accentkleur-donker {
+  background-color: #8b8036; }
 
 /*voorbeeld in code bovenstaande mixin
 
@@ -206,15 +254,31 @@ a {
 
 
 */
+#stek-voet.stek-voet {
+  background-color: #c5c4b9; }
+
+.stek-voet .colofon a {
+  color: #E32222; }
+
+.achtergrond-hoofdkleur .tekst-wittig {
+  color: #eae9e4; }
+
+.bericht-tekst > h2 {
+  line-height: 1.15; }
+
+.bericht-tekst > h3,
+.bericht-tekst > h4 {
+  line-height: 1.05; }
+
 body {
   background-color: #fffaf9; }
 
 #stek-voet {
-  background-color: #2a2322;
+  background-color: #797660;
   font-family: "Noto Sans", serif; }
 
 #stek-voet section {
-  border-left-color: #CB4131; }
+  border-left-color: #1a0f0a; }
 
 #stek-voet a.heading-logo--footer {
   font-size: 3em;
@@ -223,12 +287,50 @@ body {
 #stek-voet,
 #stek-voet section a,
 #stek-voet a.heading-logo--footer {
-  color: #CB4131; }
+  color: #1a0f0a; }
 
 #stek-voet a:hover {
   text-decoration: underline; }
 
-a.heading-logo {
+.heading-logo, h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -.04em; }
+  .heading-logo .slagzin, h1 .slagzin, h2 .slagzin, h3 .slagzin, h4 .slagzin, h5 .slagzin, h6 .slagzin {
+    letter-spacing: initial; }
+
+.bericht .verpakking h1, .bericht .verpakking h2, .bericht .verpakking h3, .bericht .verpakking h4, .bericht .verpakking h5, .bericht .verpakking h6 {
+  font-family: "Noto Serif", serif;
+  letter-spacing: initial; }
+
+.uitgelichte-afbeelding-buiten.hero h1 {
+  background: linear-gradient(5deg, #1a0f0a 0%, #21130d 45%, #1e110b 50%, black 100%); }
+
+.uitgelichte-afb-knop {
+  background-color: transparent;
+  background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
+  padding: 20px;
+  border-right: 1px solid #9d913d44;
+  border-bottom: 1px solid #9d913d40;
+  border-top: 1px solid #9d913d25;
+  border-left: 1px solid #9d913d20; }
+
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
+  background: linear-gradient(5deg, #1a0f0a 0%, #21130d 45%, #1e110b 50%, black 100%); }
+
+.knop.in-kleur {
+  background-color: transparent;
+  background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
+  padding: 20px;
+  border-right: 1px solid #9d913d44;
+  border-bottom: 1px solid #9d913d40;
+  border-top: 1px solid #9d913d25;
+  border-left: 1px solid #9d913d20;
+  background-color: #eae9e4; }
+
+#stek-kop .stek-kop-links {
+  flex-basis: initial; }
+
+.custom-logo.geen-logo {
   font-size: 2rem;
   line-height: 70px;
   color: #f5f5f5;
@@ -240,18 +342,31 @@ a.heading-logo {
     display: none !important; } }
 
 #stek-kop {
-  background-color: #CB4131;
-  box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
+  background-color: transparent;
+  background: linear-gradient(5deg, #1a0f0a 0%, #21130d 45%, #1e110b 50%, black 100%);
   font-family: "Noto Sans", serif; }
 
 .sub-menu .menu-item a {
   background-color: #252525; }
 
 .openklap-menu-container {
-  background-color: #b63a2c; }
+  background-color: #080403; }
+
+.openklap-menu-container a {
+  font-family: "Noto Serif", serif; }
 
 .prio-menu-container .menu-item a {
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  position: relative; }
+  .prio-menu-container .menu-item a:hover::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #404040; }
 
 .prio-menu-container .menu-item:hover > a {
   background-color: rgba(255, 255, 255, 0.1); }
@@ -259,7 +374,7 @@ a.heading-logo {
     background-color: rgba(255, 255, 255, 0.1); }
 
 .prio-menu-container .menu-item-has-children:hover .sub-menu a {
-  background-color: #CB4131; }
+  background-color: #1a0f0a; }
   .prio-menu-container .menu-item-has-children:hover .sub-menu a:hover {
     text-decoration: underline; }
 
@@ -283,6 +398,84 @@ a.heading-logo {
 
 .vp-menu.achtergrond-zijkleur {
   position: relative; }
+
+#tax-blok {
+  background-color: transparent;
+  background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
+  padding: 20px;
+  border-right: 1px solid #9d913d44;
+  border-bottom: 1px solid #9d913d40;
+  border-top: 1px solid #9d913d25;
+  border-left: 1px solid #9d913d20; }
+
+.agenda-lijst__wrapper {
+  background-color: transparent;
+  background: linear-gradient(185deg, #9d913d11 0%, rgba(164, 152, 64, 0.0666667) 45%, rgba(161, 148, 62, 0.0666667) 50%, rgba(120, 111, 47, 0.0666667) 100%);
+  padding: 20px;
+  border-right: 1px solid #9d913d44;
+  border-bottom: 1px solid #9d913d40;
+  border-top: 1px solid #9d913d25;
+  border-left: 1px solid #9d913d20;
+  overflow-x: hidden; }
+
+.agenda-lijst__link {
+  position: relative;
+  background-color: transparent; }
+  .agenda-lijst__link::before {
+    display: block;
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    background-color: transparent;
+    background: linear-gradient(88deg, #1a0f0a 0%, #1a0f0acc 48%, #643a26bb 50%, #ad6443aa 52%, transparent 100%);
+    transform: translate(-15px);
+    transition: ease-in-out 0.2s;
+    opacity: 0.25; }
+  .agenda-lijst__link:hover {
+    background-color: transparent; }
+    .agenda-lijst__link:hover::before {
+      transform: translate(0px);
+      transition: 0.1s ease-in-out 0.2s;
+      opacity: 0.5; }
+  .agenda-lijst__link::after {
+    display: block;
+    content: '';
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - 5px);
+    right: calc(100% + 20px);
+    background-color: transparent;
+    background: linear-gradient(2deg, #1a0f0a 0%, #1a0f0acc 48%, #643a26bb 50%, #ad6443aa 52%, transparent 100%);
+    transform: translate(0, 0);
+    transition: 0.05s ease-in-out 0.25s;
+    opacity: 0.25; }
+  .agenda-lijst__link:hover::after {
+    transform: translate(100%, 0);
+    transition: 0.12s ease-in-out 0.24s;
+    opacity: 0.5; }
+
+time.agenda-lijst__tijd span {
+  line-height: 1; }
+
+.agenda-lijst__links > * ~ * {
+  margin-top: .33rem; }
+
+.agenda-lijst__links .agenda-lijst__taxonomie {
+  opacity: .8;
+  font-size: .75em;
+  text-transform: uppercase; }
+
+.agenda-lijst__rechts--pagina {
+  width: auto;
+  flex-basis: 100%; }
+  .agenda-lijst__rechts--pagina span {
+    color: #252525;
+    line-height: 1.1;
+    margin-top: .025em; }
 
 .knop {
   font-family: "Noto Sans", serif; }

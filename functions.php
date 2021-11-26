@@ -27,6 +27,7 @@ function agitatie_stijl_en_script()
 add_action('wp_enqueue_scripts', 'agitatie_stijl_en_script');
 
 $kind_config = array(
+    'agenda'                        => true,
     'support'                      => array(
         'custom-logo'              => array(
             'height'                => 169,
@@ -47,6 +48,7 @@ $kind_config = array(
     // 'content_width'                => 760
 
 );
+$_GLOBALS['kind_config'] = $kind_config;
 $kind_menus = array(
     //'voorpagina'
 );

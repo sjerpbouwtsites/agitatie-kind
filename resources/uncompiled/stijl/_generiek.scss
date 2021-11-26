@@ -39,3 +39,21 @@ body {
     letter-spacing: initial;
   }
 }
+
+.uitgelichte-afbeelding-buiten.hero h1 {
+  @include bruinzwarte-gradient();
+}
+
+.uitgelichte-afb-knop{
+  @include geel-blok();  
+}
+
+.achtergrond-hoofdkleur, 
+a.achtergrond-hoofdkleur {
+  @include bruinzwarte-gradient();
+}
+
+.knop.in-kleur {
+  @include geel-blok();
+  background-color: $zijkleur_extreem_licht;
+}

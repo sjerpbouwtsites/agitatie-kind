@@ -1,1 +1,12 @@
-   
+.achtergrond-hoofdkleur .tekst-wittig {
+  color: $zijkleur_extreem_licht;
+}
+
+.bericht-tekst > h2 {
+  line-height: 1.15;
+}
+
+.bericht-tekst > h3,
+.bericht-tekst > h4  {
+  line-height: 1.05;
+}

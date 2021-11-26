@@ -1,0 +1,87 @@
+
+.agenda-lijst__wrapper {
+  @include geel-blok();
+  overflow-x: hidden;
+}
+
+.agenda-lijst__link {
+  position: relative;
+  
+  &::before {
+    display: block;
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    background-color: transparent;
+    background: linear-gradient(88deg, #1a0f0a 0%, #1a0f0acc 48%, #643a26bb 50%, #ad6443aa 52%, transparent 100%);
+    transform: translate(-15px);
+    transition: ease-in-out 0.2s;
+    opacity: 0.25;
+  }
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+    &::before {
+      transform: translate(0px);
+      transition: 0.1s ease-in-out 0.2s;
+      opacity: 0.5;
+    }
+  }
+  &::after {
+    display: block;
+    content: '';
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - 5px);
+    right: calc(100% + 20px);
+    background-color: transparent;
+    background: linear-gradient(2deg, #1a0f0a 0%, #1a0f0acc 48%, #643a26bb 50%, #ad6443aa 52%, transparent 100%);
+    transform: translate(0,0);
+    transition: 0.05s ease-in-out 0.25s;
+    opacity: 0.25;
+  }
+  &:hover {
+    &::after {
+      transform: translate(100%,0);
+      transition: 0.12s ease-in-out 0.24s;
+      opacity: 0.5;
+    }
+  }  
+}
+
+
+// AGENDA 
+
+
+time.agenda-lijst__tijd {
+  @extend .tekst-zwart;
+  span {
+    line-height: 1;
+  }
+}
+
+.agenda-lijst__links {
+  & > * ~ * {
+    margin-top: .33rem;
+  }
+}
+
+.agenda-lijst__links .agenda-lijst__taxonomie {
+  opacity: .8;
+  font-size: .75em;
+  text-transform: uppercase;
+}
+
+.agenda-lijst__rechts--pagina {
+  width: auto;
+  flex-basis: 100%;
+  span {
+    color: $zwart;
+    line-height: 1.1;
+    margin-top: .025em;    
+  }
+}

@@ -1,10 +1,14 @@
 
 
+
+
 //hier overschrijven
-$hoofdkleur: 		#CB4131;
-$zijkleur:    hsl(8, 11%, 15%);
-$accentkleur: #d4e97e;
+ $hoofdkleur: #1a0f0a;
+ $zijkleur: #797660;
+ //$zijkleur:    #ecd839;
+ $accentkleur: 	#9d913d;
  
+ $zijkleur_extreem_licht: lighten($zijkleur, 48%);
 
 
  

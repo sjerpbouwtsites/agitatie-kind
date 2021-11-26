@@ -1,6 +1,11 @@
 //child
 
-a.heading-logo {
+#stek-kop .stek-kop-links {
+  flex-basis: initial;
+}
+
+
+.custom-logo.geen-logo {
   font-size: 2rem;
   line-height: 70px; 
   color: $wittig;
@@ -15,8 +20,8 @@ a.heading-logo {
 }
 
 #stek-kop {
-  background-color: $hoofdkleur;
-  box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, .1);
+  background-color: transparent;
+  @include bruinzwarte-gradient();
   font-family: $kleine_letter;
 }
 
@@ -51,6 +56,18 @@ a.heading-logo {
 	.prio-menu-container {
     .menu-item a{
       color: $wittig;
+      position: relative;
+      &:hover {
+        &::before {
+         content: '';
+         display: block;
+         width: 5px;  
+         height: 100%;
+         position: absolute;
+         left: 0;
+         top: 0;
+         background-color: #404040;
+     }}      
     }
 		.menu-item:hover {
 			& > a {
