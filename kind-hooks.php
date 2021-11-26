@@ -96,8 +96,9 @@ function ag_zoek_en_menu_footer()
 {
     $menu_locations = get_nav_menu_locations();
 
+    echo "<section  class='footer-section'>";
+
     if (array_key_exists('footer-taal', $menu_locations)) {
-        echo "<section  class='footer-section'>";
         echo "<h3>" . taal\streng('Schakel van taal') . "</h3>";
         $a = array(
             'theme_location'             => 'footer-taal',
@@ -105,14 +106,16 @@ function ag_zoek_en_menu_footer()
             'container_class'            => 'footer-taal-container',
         );
         wp_nav_menu($a);
-        echo "</section>";
     }
 
-
-    echo "<section  class='footer-section'>
-    <h3>" . taal\streng('Zoeken') . "</h3>";
+    echo "    <h3>" . taal\streng('Zoeken') . "</h3>";
     get_search_form();
 
+
+    echo "</section>";
+
+
+    echo "<section  class='footer-section'>";
 
     if (array_key_exists('footer-menu', $menu_locations)) {
 
