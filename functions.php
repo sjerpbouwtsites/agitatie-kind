@@ -37,7 +37,7 @@ $kind_config = array(
     // ),
     'archief'                      => array(
         'story'                      => array(
-            'geen_afb'             => true,
+            // 'geen_afb'             => true,
             'geen_datum'           => true,
             'exc_lim'              => 300
         )
