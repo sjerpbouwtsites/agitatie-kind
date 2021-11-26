@@ -15,7 +15,9 @@ function ag_vp_print_nieuws_hook()
 
     if (count($rider_stories->posts) > 0) :
         echo "<section class='vp-nieuws verpakking verpakking-klein'>
-		<h2>Rider stories</h2><div class='art-lijst'>";
+		<h2>Rider stories</h2>
+        
+        <div class='art-lijst'>";
 
         foreach ($rider_stories->posts as $story) :
             if (!isset($a)) {

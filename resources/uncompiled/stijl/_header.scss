@@ -5,7 +5,7 @@
 }
 #stek-kop .stek-kop-links {
     flex-basis: 300px;
-    max-width: calc(100% - 80px)
+    max-width: calc(100% - 160px)
 }
 .stek-kop-links .radical-riders-title {
     font-size: 2.5rem; 
@@ -24,3 +24,10 @@
         font-size: 1.5rem;
     }
 }
+
+.multi-lang-vlaggen .lang-item a {
+    background-color: #252525
+}
+.multi-lang-vlaggen .lang-item a:hover {
+    background-color: #353535;
+  }
