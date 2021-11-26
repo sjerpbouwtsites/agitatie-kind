@@ -20,9 +20,9 @@ include_once KIND_DIR . '/overschrijvingen.php';
 
 function agitatie_stijl_en_script()
 {
-    wp_enqueue_style('agitatie-stijl', THEME_URI.'/style.css', array(), null);
+    wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
     wp_enqueue_style('kind-stijl', get_stylesheet_uri(), array('agitatie-stijl'), null);
-    wp_enqueue_script('kind-script', KIND_URI.'/js/kind.js', array(), null, true);
+    wp_enqueue_script('kind-script', KIND_URI . '/js/kind.js', array(), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'agitatie_stijl_en_script');
@@ -35,13 +35,13 @@ $kind_config = array(
     //        'flex-width'            => true,
     //     ),
     // ),
-     'archief'                      => array(
-    'story'                      => array(
-        'geen_afb'             => true,
-        'geen_datum'           => true,
-        'exc_lim'              => 300
-    )
-     ),
+    'archief'                      => array(
+        'story'                      => array(
+            'geen_afb'             => true,
+            'geen_datum'           => true,
+            'exc_lim'              => 300
+        )
+    ),
     'post'                     => array(
         'taxonomieen'          => false
     )
@@ -50,16 +50,17 @@ $kind_config = array(
 );
 $kind_menus = array(
     //'voorpagina'
+    'footer-menu' => esc_html__('footer-menu', 'agitatie'),
 );
 
+
 $kind_thumbs = array(
-/*	'voorpagina' => array(
+    /*	'voorpagina' => array(
         'naam'             => 'voorpagina',
         'breedte'          => 2000,
         'hoogte'           => 1000,
         'crop'             => true,
-    )*/
-);
+    )*/);
 
 
 

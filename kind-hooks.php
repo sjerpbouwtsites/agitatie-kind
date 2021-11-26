@@ -91,3 +91,13 @@ function ag_no_date_stories_single()
 }
 
 add_action('after_setup_theme', 'ag_no_date_stories_single');
+
+function ag_zoek_en_menu_footer()
+{
+    echo "<section  class='footer-section'>
+    <h3>" . taal\streng('Zoeken') . "</h3>";
+    get_search_form();
+    echo "</section>";
+}
+
+add_action('ag_footer_voor_velden_action', 'ag_zoek_en_menu_footer', 30);
