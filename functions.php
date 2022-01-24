@@ -41,6 +41,13 @@ $kind_config = array(
             'geen_datum'           => true,
             'exc_lim'              => 300
         ),
+        'medestrijder' => array(
+            'geen_datum'            => true,
+            'exc_lim'               => 800,
+            'class'                 => 'vertikaal-op-archief art-c',
+            'geen_meer_tekst'       => true,
+
+        )
         // 'post'                     => array(
         //     'taxonomieen'          => true
         // )
@@ -68,16 +75,29 @@ function registreer_posttypes()
 
     // ter voorbeeld
 
-    $faq = new Posttype_voorb('faq', 'faqs');
-    $faq->pas_args_aan(array(
-        'menu_icon'           => 'dashicons-editor-quote',
+    // $faq = new Posttype_voorb('faq', 'faqs');
+    // $faq->pas_args_aan(array(
+    //     'menu_icon'           => 'dashicons-editor-quote',
+    //     'supports' =>
+    //     array(
+    //         'title',
+    //         'editor'
+    //     ),
+    // ));
+    // $faq->registreer();
+
+    $oproepers = new Posttype_voorb('medestrijder', 'medestrijders');
+    $oproepers->pas_args_aan(array(
+        'menu_icon'           => 'dashicons-megaphone',
         'supports' =>
         array(
             'title',
-            'editor'
+            'editor',
+            'thumbnail',
+            'page-attributes'
         ),
     ));
-    $faq->registreer();
+    $oproepers->registreer();
 
     // $download = new Posttype_voorb('download', 'downloads');
     // $download->pas_args_aan(array(
@@ -86,3 +106,94 @@ function registreer_posttypes()
     // $download->registreer();
 
 }
+
+if (function_exists('acf_add_local_field_group')) :
+
+    acf_add_local_field_group(array(
+        'key' => 'group_61ee203517c59',
+        'title' => 'medestrijders',
+        'fields' => array(
+            array(
+                'key' => 'field_61ee204967d03',
+                'label' => 'medestrijders achtergrond',
+                'name' => 'medestrijders_achtergrond',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+                'preview_size' => 'bovenaan_art',
+                'library' => 'all',
+                'min_width' => 2000,
+                'min_height' => 700,
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_61ee22806b2fe',
+                'label' => 'medestrijders titel',
+                'name' => 'medestrijders_titel',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_61ee21be65e42',
+                'label' => 'medestrijders begeleidend',
+                'name' => 'medestrijders_begeleidend',
+                'type' => 'wysiwyg',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ));
+
+endif;
