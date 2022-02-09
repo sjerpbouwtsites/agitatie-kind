@@ -2,12 +2,13 @@
 
 global $wp_query;
 
-define('KIND_DIR',get_stylesheet_directory());
-define('KIND_URI',get_stylesheet_directory_uri());
+define('KIND_DIR', get_stylesheet_directory());
+define('KIND_URI', get_stylesheet_directory_uri());
 
 //deze klassen extenden die van de parent theme. Moet dus later geladen worden. functions.php wordt geladen in 'setup theme' dus daar wachten we op.
-function kinder_klassen(){
-	include_once KIND_DIR . '/kind-klassen.php';
+function kinder_klassen()
+{
+    include_once KIND_DIR . '/kind-klassen.php';
 }
 
 add_action('after_setup_theme', 'kinder_klassen');
@@ -16,13 +17,14 @@ include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 
 
-function agitatie_stijl_en_script() {
-    wp_enqueue_style( 'agitatie-stijl', THEME_URI.'/style.css', array(), null );
-    wp_enqueue_style( 'kind-stijl', get_stylesheet_uri(), array('agitatie-stijl'), null );
+function agitatie_stijl_en_script()
+{
+    wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
+    wp_enqueue_style('kind-stijl', get_stylesheet_uri(), array('agitatie-stijl'), null);
     // wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
 }
 
-add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
+add_action('wp_enqueue_scripts', 'agitatie_stijl_en_script');
 
 $kind_config = array(
     // 'support'                      => array(
@@ -42,25 +44,26 @@ $kind_config = array(
         //     'taxonomieen'          => true
         // )
     ),
+    'agenda' => true,
     // 'content_width'                => 760
 
 );
 $kind_menus = array(
-	//'voorpagina'
+    //'voorpagina'
 );
 
 $kind_thumbs = array(
-/*	'voorpagina' => array(
+    /*	'voorpagina' => array(
         'naam'             => 'voorpagina',
         'breedte'          => 2000,
         'hoogte'           => 1000,
         'crop'             => true,
-    )*/
-);
+    )*/);
 
 
 
-function registreer_posttypes() {
+function registreer_posttypes()
+{
 
     // ter voorbeeld
 
@@ -68,10 +71,10 @@ function registreer_posttypes() {
     $faq->pas_args_aan(array(
         'menu_icon'           => 'dashicons-editor-quote',
         'supports' =>
-            array(
-                'title',
-                'editor'
-            ),        
+        array(
+            'title',
+            'editor'
+        ),
     ));
     $faq->registreer();
 
@@ -82,4 +85,3 @@ function registreer_posttypes() {
     // $download->registreer();
 
 }
-
