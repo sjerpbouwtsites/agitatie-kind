@@ -14,7 +14,7 @@ function ag_vp_print_nieuws_hook()
     ));
 
     if (count($rider_stories->posts) > 0) :
-        echo "<section class='vp-nieuws verpakking verpakking-klein'>
+        echo "<section class='vp-stories verpakking verpakking-klein'>
 		<h2>Rider stories</h2>
         
         <div class='art-lijst'>";
@@ -56,6 +56,8 @@ function ag_vp_print_nieuws_hook()
                     'class'         => 'in-lijst',
                     'htype'            => 3,
                     'geen_tekst'    => true,
+                    'geen_datum' => false,
+                    'datum' => true,
                     'geen_afb'        => false
                 ), $vp_post);
             } else {
