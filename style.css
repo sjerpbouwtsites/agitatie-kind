@@ -358,6 +358,9 @@ pre {
         flex-basis: calc(16.6% - 30px);
         min-width: 180px; } }
 
+.voorpagina .art-lijst .art-c img {
+  height: auto; }
+
 .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before,
 .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after,
 .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
