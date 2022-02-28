@@ -42,6 +42,7 @@ $kind_config = array(
             'exc_lim'              => 300
         )
     ),
+    'agenda' => true,
     'post'                     => array(
         'taxonomieen'          => false
     )
