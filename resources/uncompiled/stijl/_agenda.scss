@@ -1,0 +1,14 @@
+.agenda-address__regel {
+  color: #d0d0d0;
+}
+
+// overschrijving van klungelige css uit ouder
+#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(33, 33, 33, 0.1);
+}
+#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
