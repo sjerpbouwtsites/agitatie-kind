@@ -82,6 +82,15 @@ function registreer_posttypes()
 
     // $download = new Posttype_voorb('download', 'downloads');
     // $download->pas_args_aan(array(
+    //     'menu_icon'           => 'dashicons-download',
+    //     'description'         => "<div class='bericht-tekst'>
+    //         <p>Download posters, flyers, etc!</p>
+    //     </div>"
+    // ));
+    // $download->registreer();
+
+    // $download = new Posttype_voorb('download', 'downloads');
+    // $download->pas_args_aan(array(
     //     'menu_icon'             => 'dashicons-download'
     // ));
     // $download->registreer();
