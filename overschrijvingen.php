@@ -59,7 +59,9 @@ function ag_archief_content_ctrl()
 }
 
 function maak_tweede_kolom_archief($categorie_voor_zijbalk)
+
 {
+  //  var_dump($categorie_voor_zijbalk);
   echo "<div class='vol-scherm-veld__tweede'>";
   global $post;
 
@@ -113,20 +115,31 @@ function maak_tweede_kolom_archief($categorie_voor_zijbalk)
   // endif;
 
   wp_reset_query();
-  $query = new WP_Query([
 
+  //var_dump($categorie_voor_zijbalk);
+  $story_query = new WP_Query([
     'numberposts'      => -1,
     'orderby'          => 'date',
     'order'            => 'DESC',
-    'meta_key'         => 'categorie',
-    'meta_value'       => $categorie_voor_zijbalk->ID,
     'post_type'        => array('story'),
   ]);
-  if (count($query->posts) > 0) :
+
+  // TODO SLECHTE PERFORMANCE
+  $story_query_filtered = [];
+  foreach ($story_query->posts as $q) {
+    $c = get_field('categorie', $q->ID);
+    if (empty($c) || !$c) continue;
+    if ($c->name === $categorie_voor_zijbalk->name) {
+      $story_query_filtered[] = $q;
+    }
+  }
+
+
+  if (count($story_query_filtered) > 0) :
     echo "<section class='vol-scherm-veld__tweede-sectie'>";
     echo "<h2>$categorie_voor_zijbalk->name rider " . agitatie\taal\streng('stories') . "</h2>";
     $download_counter = 0;
-    foreach ($query->posts as $post) :
+    foreach ($story_query_filtered as $post) :
       if ($download_counter >= 6) continue;
       //maakt post type objs aan en print @ controllers
 
@@ -145,7 +158,7 @@ function maak_tweede_kolom_archief($categorie_voor_zijbalk)
 
       $download_counter++;
     endforeach;
-    if (count($query->posts) > 6) {
+    if (count($story_query_filtered) > 6) {
       echo "<footer class='archief-zijveld-footer'>";
       $terug = new Ag_knop(array(
         'class'   => 'in-wit ikoon-links',
