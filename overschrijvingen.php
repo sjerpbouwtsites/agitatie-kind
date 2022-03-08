@@ -106,7 +106,7 @@ function tweede_kolom_sectie($sectie_post_type, $sectie_post_type_meervoud, $cat
 
     $counter = 0;
     foreach ($query_filtered as $post) :
-      if ($counter >= 6) continue;
+      if ($counter >= 4) continue;
       //maakt post type objs aan en print @ controllers
 
       $basis_array = array(
@@ -124,7 +124,7 @@ function tweede_kolom_sectie($sectie_post_type, $sectie_post_type_meervoud, $cat
 
       $counter++;
     endforeach;
-    if (count($query_filtered) > 3) {
+    if (count($query_filtered) > 4) {
       echo "<footer class='archief-zijveld-footer'>";
       $terug = new Ag_knop(array(
         'class'   => 'in-wit ikoon-links',
