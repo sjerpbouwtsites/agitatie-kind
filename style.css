@@ -420,7 +420,7 @@ pre {
     min-width: 190px; }
   .archief-zijveld-footer {
     margin-left: 20px;
-    margin-right: 20px; } }
+    margin-top: 20px; } }
 
 @media (min-width: 1024px) and (max-width: 1399px) {
   .vol-scherm-veld {
