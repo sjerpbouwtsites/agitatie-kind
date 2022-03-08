@@ -40,9 +40,14 @@ $kind_config = array(
             // 'geen_afb'             => true,
             'geen_datum'           => true,
             'exc_lim'              => 300
+        ),
+        'download'                 => array(
+            'geen_datum'           => true,
+            'exc_lim'              => 300
         )
     ),
     'agenda' => true,
+    'downloads' => true,
     'post'                     => array(
         'taxonomieen'          => false
     )
@@ -79,19 +84,4 @@ function registreer_posttypes()
         </div>"
     ));
     $story->registreer();
-
-    // $download = new Posttype_voorb('download', 'downloads');
-    // $download->pas_args_aan(array(
-    //     'menu_icon'           => 'dashicons-download',
-    //     'description'         => "<div class='bericht-tekst'>
-    //         <p>Download posters, flyers, etc!</p>
-    //     </div>"
-    // ));
-    // $download->registreer();
-
-    // $download = new Posttype_voorb('download', 'downloads');
-    // $download->pas_args_aan(array(
-    //     'menu_icon'             => 'dashicons-download'
-    // ));
-    // $download->registreer();
 }

@@ -40,7 +40,10 @@ function ag_archief_content_ctrl()
   echo "<div class='vol-scherm-veld__voorste'>";
 
   if (have_posts()) :
-    echo "<h2>" . agitatie\taal\streng('berichten') . "</h2>";
+
+    if ($post->post_type === 'post') {
+      echo "<h2>" . agitatie\taal\streng('berichten') . "</h2>";
+    }
     while (have_posts()) : the_post();
       //maakt post type objs aan en print @ controllers
       ag_archief_generiek_loop($post);
@@ -61,86 +64,49 @@ function ag_archief_content_ctrl()
 function maak_tweede_kolom_archief($categorie_voor_zijbalk)
 
 {
-  //  var_dump($categorie_voor_zijbalk);
+
   echo "<div class='vol-scherm-veld__tweede'>";
-  global $post;
 
-  // wp_reset_query();
-  // $query = new WP_Query([
+  tweede_kolom_sectie('story', 'stories', $categorie_voor_zijbalk);
+  tweede_kolom_sectie('download', 'downloads', $categorie_voor_zijbalk);
 
-  //   'numberposts'      => -1,
-  //   'orderby'          => 'date',
-  //   'order'            => 'DESC',
-  //   // 'meta_key'         => 'categorie',
-  //   // 'meta_value'       => $categorie_voor_zijbalk,
-  //   'post_type'        => array('download'),
-  // ]);
-  // if (count($query->posts) > 0) :
-  //   echo "<section class='vol-scherm-veld__tweede-sectie'>";
-  //   echo "<h2>" . agitatie\taal\streng('downloads') . "</h2>";
-  //   $download_counter = 0;
-  //   foreach ($query->posts as $post) :
-  //     if ($download_counter >= 3) continue;
-  //     //maakt post type objs aan en print @ controllers
+  echo "</div>";
+}
 
-  //     $basis_array = array(
-  //       'exc_lim'     => 230,
-  //       'class'      => 'in-lijst in-lijst-in-zijkant',
-  //       'taxonomieen'   => false,
-  //       'datum' => false
-  //     );
-
-  //     $m_art = new Ag_article_c($basis_array, $post);
-
-  //     if (isset($m_art)) {
-  //       $m_art->print();
-  //     }
-
-  //     $download_counter++;
-  //   endforeach;
-  //   if (count($query->posts) > 3) {
-  //     echo "<footer class='archief-zijveld-footer'>";
-  //     $terug = new Ag_knop(array(
-  //       'class'   => 'in-wit ikoon-links',
-  //       'link'     => get_post_type_archive_link('download'),
-  //       'tekst'    => 'Alle ' . agitatie\taal\streng('downloads'),
-  //       'ikoon'    => 'arrow-left-thick'
-  //     ));
-
-  //     $terug->print();
-
-  //     echo "<footer>";
-  //   }
-  //   echo "</section>";
-  // endif;
-
+function tweede_kolom_sectie($sectie_post_type, $sectie_post_type_meervoud, $categorie_voor_zijbalk)
+{
   wp_reset_query();
 
-  //var_dump($categorie_voor_zijbalk);
-  $story_query = new WP_Query([
+  $query = new WP_Query([
     'numberposts'      => -1,
     'orderby'          => 'date',
     'order'            => 'DESC',
-    'post_type'        => array('story'),
+    'post_type'        => array($sectie_post_type),
   ]);
 
   // TODO SLECHTE PERFORMANCE
-  $story_query_filtered = [];
-  foreach ($story_query->posts as $q) {
+  $query_filtered = [];
+  foreach ($query->posts as $q) {
     $c = get_field('categorie', $q->ID);
     if (empty($c) || !$c) continue;
     if ($c->name === $categorie_voor_zijbalk->name) {
-      $story_query_filtered[] = $q;
+      $query_filtered[] = $q;
     }
   }
 
 
-  if (count($story_query_filtered) > 0) :
-    echo "<section class='vol-scherm-veld__tweede-sectie'>";
-    echo "<h2>$categorie_voor_zijbalk->name rider " . agitatie\taal\streng('stories') . "</h2>";
-    $download_counter = 0;
-    foreach ($story_query_filtered as $post) :
-      if ($download_counter >= 6) continue;
+  if (count($query_filtered) > 0) :
+    echo "<section class='vol-scherm-veld__tweede-sectie vol-scherm-veld__tweede-sectie--" . $sectie_post_type . "'>";
+
+    if ($sectie_post_type === 'story') {
+      echo "<h2>$categorie_voor_zijbalk->name rider " . agitatie\taal\streng($sectie_post_type_meervoud) . "</h2>";
+    } else {
+      echo "<h2>" . agitatie\taal\streng($sectie_post_type_meervoud) . "</h2>";
+    }
+
+    $counter = 0;
+    foreach ($query_filtered as $post) :
+      if ($counter >= 6) continue;
       //maakt post type objs aan en print @ controllers
 
       $basis_array = array(
@@ -156,14 +122,14 @@ function maak_tweede_kolom_archief($categorie_voor_zijbalk)
         $m_art->print();
       }
 
-      $download_counter++;
+      $counter++;
     endforeach;
-    if (count($story_query_filtered) > 6) {
+    if (count($query_filtered) > 6) {
       echo "<footer class='archief-zijveld-footer'>";
       $terug = new Ag_knop(array(
         'class'   => 'in-wit ikoon-links',
-        'link'     => get_post_type_archive_link('story'),
-        'tekst'    => 'Alle ' . agitatie\taal\streng('stories'),
+        'link'     => get_post_type_archive_link($sectie_post_type),
+        'tekst'    => \agitatie\taal\streng('Alle') . ' ' . agitatie\taal\streng($sectie_post_type_meervoud),
         'ikoon'    => 'arrow-left-thick'
       ));
 
@@ -173,6 +139,4 @@ function maak_tweede_kolom_archief($categorie_voor_zijbalk)
     }
     echo "</section>";
   endif;
-
-  echo "</div>";
 }
