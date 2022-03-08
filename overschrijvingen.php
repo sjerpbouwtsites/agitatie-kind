@@ -124,12 +124,12 @@ function tweede_kolom_sectie($sectie_post_type, $sectie_post_type_meervoud, $cat
 
       $counter++;
     endforeach;
-    if (count($query_filtered) > 6) {
+    if (count($query_filtered) > 3) {
       echo "<footer class='archief-zijveld-footer'>";
       $terug = new Ag_knop(array(
         'class'   => 'in-wit ikoon-links',
         'link'     => get_post_type_archive_link($sectie_post_type),
-        'tekst'    => \agitatie\taal\streng('Alle') . ' ' . agitatie\taal\streng($sectie_post_type_meervoud),
+        'tekst'    => \agitatie\taal\streng('alle') . ' ' . agitatie\taal\streng($sectie_post_type_meervoud),
         'ikoon'    => 'arrow-left-thick'
       ));
 
