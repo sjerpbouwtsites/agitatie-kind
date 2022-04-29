@@ -1,7 +1,13 @@
 //child
 
 #stek-kop {
-    background-color: $basis_zwart;
+    background-color: #ececec;
+    a {
+        color: #C82449;
+    }
+    .stek-kop-rechts {
+        display: none !important;
+    }
 }
 #stek-kop .stek-kop-links {
     flex-basis: 300px;
@@ -26,8 +32,8 @@
 }
 
 .multi-lang-vlaggen .lang-item a {
-    background-color: #252525
+ //   background-color: #252525
 }
 .multi-lang-vlaggen .lang-item a:hover {
-    background-color: #353535;
+ //   background-color: #353535;
   }

@@ -36,18 +36,18 @@ $kind_config = array(
     //     ),
     // ),
     'archief'                      => array(
-        'story'                      => array(
-            // 'geen_afb'             => true,
-            'geen_datum'           => true,
-            'exc_lim'              => 300
-        ),
-        'download'                 => array(
-            'geen_datum'           => true,
-            'exc_lim'              => 300
-        )
+        // 'story'                      => array(
+        //     // 'geen_afb'             => true,
+        //     'geen_datum'           => true,
+        //     'exc_lim'              => 300
+        // ),
+        // 'download'                 => array(
+        //     'geen_datum'           => true,
+        //     'exc_lim'              => 300
+        // )
     ),
-    'agenda' => true,
-    'downloads' => true,
+    // 'agenda' => true,
+    // 'downloads' => true,
     'post'                     => array(
         'taxonomieen'          => false
     )
@@ -76,12 +76,12 @@ function registreer_posttypes()
 
     // ter voorbeeld
 
-    $story = new Posttype_voorb('story', 'stories');
-    $story->pas_args_aan(array(
-        'menu_icon'           => 'dashicons-editor-quote',
-        'description'         => "<div class='bericht-tekst'>
-            <p>These are the stories of some of our riders.</p>
-        </div>"
-    ));
-    $story->registreer();
+    // $story = new Posttype_voorb('story', 'stories');
+    // $story->pas_args_aan(array(
+    //     'menu_icon'           => 'dashicons-editor-quote',
+    //     'description'         => "<div class='bericht-tekst'>
+    //         <p>These are the stories of some of our riders.</p>
+    //     </div>"
+    // ));
+    // $story->registreer();
 }

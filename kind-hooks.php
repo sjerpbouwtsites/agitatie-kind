@@ -77,11 +77,11 @@ function ag_vp_print_nieuws_hook()
 
 function ag_kop_links()
 {
-    echo "<div class='stek-kop-links'><a href='" . taal\home_url() . "' class='radical-riders-title '>Radical Riders</a></div><!--koplinks-->";
+    echo "<div class='stek-kop-links'><a href='" . taal\home_url() . "' class='radical-riders-title'>Horeca United</a></div><!--koplinks-->";
 }
 function ag_logo_in_footer_hook()
 {
-    echo "<a href='" . taal\home_url() . "' class='radical-riders-title radical-riders-title--footer'>Radical Riders</a>";
+    echo "<a href='" . taal\home_url() . "' class='radical-riders-title radical-riders-title--footer'>Horeca United</a>";
 }
 
 function ag_no_date_stories_single()
@@ -96,6 +96,8 @@ add_action('after_setup_theme', 'ag_no_date_stories_single');
 
 function ag_zoek_en_menu_footer()
 {
+
+    return;
     $menu_locations = get_nav_menu_locations();
 
     echo "<section  class='footer-section'>";

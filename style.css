@@ -11,10 +11,6 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  agitatie
 */
-@font-face {
-  font-family: "Nobel";
-  src: url("lettertype/nobel.ttf") format("ttf"); }
-
 .tekst-wit,
 a.tekst-wit {
   color: #fff; }
@@ -41,11 +37,11 @@ a.tekst-zwart {
 
 .tekst-hoofdkleur,
 a.tekst-hoofdkleur {
-  color: #af1616; }
+  color: #C82449; }
 
 .tekst-zijkleur,
 a.tekst-zijkleur {
-  color: #62a316; }
+  color: #F9E6B1; }
 
 .tekst-accentkleur,
 a.tekst-accentkleur {
@@ -53,11 +49,11 @@ a.tekst-accentkleur {
 
 .tekst-hoofdkleur-donker,
 a.tekst-hoofdkleur-donker {
-  color: #981313; }
+  color: #b22041; }
 
 .tekst-zijkleur-donker,
 a.tekst-zijkleur-donker {
-  color: #548d13; }
+  color: #f7de99; }
 
 .tekst-accentkleur-donker,
 a.tekst-accentkleur-donker {
@@ -89,11 +85,11 @@ a.achtergrond-zwart {
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
-  background-color: #af1616; }
+  background-color: #C82449; }
 
 .achtergrond-zijkleur,
 a.achtergrond-zijkleur {
-  background-color: #62a316; }
+  background-color: #F9E6B1; }
 
 .achtergrond-accentkleur,
 a.achtergrond-accentkleur {
@@ -101,11 +97,11 @@ a.achtergrond-accentkleur {
 
 .achtergrond-hoofdkleur-donker,
 a.achtergrond-hoofdkleur-donker {
-  background-color: #981313; }
+  background-color: #b22041; }
 
 .achtergrond-zijkleur-donker,
 a.achtergrond-zijkleur-donker {
-  background-color: #548d13; }
+  background-color: #f7de99; }
 
 .achtergrond-accentkleur-donker,
 a.achtergrond-accentkleur-donker {
@@ -137,11 +133,11 @@ a.tekst-zwart {
 
 .tekst-hoofdkleur,
 a.tekst-hoofdkleur {
-  color: #af1616; }
+  color: #C82449; }
 
 .tekst-zijkleur,
 a.tekst-zijkleur {
-  color: #62a316; }
+  color: #F9E6B1; }
 
 .tekst-accentkleur,
 a.tekst-accentkleur {
@@ -149,11 +145,11 @@ a.tekst-accentkleur {
 
 .tekst-hoofdkleur-donker,
 a.tekst-hoofdkleur-donker {
-  color: #981313; }
+  color: #b22041; }
 
 .tekst-zijkleur-donker,
 a.tekst-zijkleur-donker {
-  color: #548d13; }
+  color: #f7de99; }
 
 .tekst-accentkleur-donker,
 a.tekst-accentkleur-donker {
@@ -185,11 +181,11 @@ a.achtergrond-zwart {
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
-  background-color: #af1616; }
+  background-color: #C82449; }
 
 .achtergrond-zijkleur,
 a.achtergrond-zijkleur {
-  background-color: #62a316; }
+  background-color: #F9E6B1; }
 
 .achtergrond-accentkleur,
 a.achtergrond-accentkleur {
@@ -197,11 +193,11 @@ a.achtergrond-accentkleur {
 
 .achtergrond-hoofdkleur-donker,
 a.achtergrond-hoofdkleur-donker {
-  background-color: #981313; }
+  background-color: #b22041; }
 
 .achtergrond-zijkleur-donker,
 a.achtergrond-zijkleur-donker {
-  background-color: #548d13; }
+  background-color: #f7de99; }
 
 .achtergrond-accentkleur-donker,
 a.achtergrond-accentkleur-donker {
@@ -259,10 +255,9 @@ a {
 
 */
 #stek-voet {
-  background-color: #121212; }
-
-#stek-voet section {
-  border-color: #211f1f; }
+  color: #f5f5f5; }
+  #stek-voet a {
+    color: #f5f5f5; }
 
 .radical-riders-title--footer {
   font-size: 4rem;
@@ -288,16 +283,6 @@ a {
   padding-top: calc(.3em - 0px);
   padding-bottom: calc(.3em - 0px); }
 
-.tekst-zwart, a.tekst-zwart {
-  color: #f5f5f5; }
-
-body {
-  background-color: #181818;
-  color: #f5f5f5; }
-
-pre {
-  color: black; }
-
 .wpcf7-textarea {
   height: 150px; }
 
@@ -314,7 +299,11 @@ pre {
   margin-top: .25em; }
 
 #stek-kop {
-  background-color: #252525; }
+  background-color: #ececec; }
+  #stek-kop a {
+    color: #C82449; }
+  #stek-kop .stek-kop-rechts {
+    display: none !important; }
 
 #stek-kop .stek-kop-links {
   flex-basis: 300px;
@@ -334,11 +323,8 @@ pre {
   .stek-kop-links .radical-riders-title {
     font-size: 1.5rem; } }
 
-.multi-lang-vlaggen .lang-item a {
-  background-color: #252525; }
-
-.multi-lang-vlaggen .lang-item a:hover {
-  background-color: #353535; }
+.vp-nieuws {
+  display: none; }
 
 @media (min-width: 1200px) {
   .home .site-main {
@@ -353,6 +339,7 @@ pre {
     .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein > h2 {
       margin-top: 0; }
     .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws {
+      display: none;
       width: 100%; }
       .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws .art-lijst .art-c {
         flex-basis: calc(16.6% - 30px);
@@ -360,11 +347,6 @@ pre {
 
 .voorpagina .art-lijst .art-c img {
   height: auto; }
-
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before,
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after,
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
-  background-color: #181818; }
 
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {
@@ -400,7 +382,6 @@ pre {
     margin-left: 40px;
     flex-basis: calc(33.33% - 40px); }
   .vol-scherm-veld__tweede-sectie {
-    background-color: #ffffff1c;
     position: relative; }
     .vol-scherm-veld__tweede-sectie::before {
       position: absolute;
@@ -408,14 +389,10 @@ pre {
       top: -20px;
       display: block;
       content: "";
-      background-color: #ffffff1c;
       height: 20px;
       width: 100%; }
   .vol-scherm-veld__tweede-sectie.vol-scherm-veld__tweede-sectie--download {
-    margin-top: 50px;
-    background-color: #76433b1c; }
-    .vol-scherm-veld__tweede-sectie.vol-scherm-veld__tweede-sectie--download::before {
-      background-color: #76433b1c; }
+    margin-top: 50px; }
   .vol-scherm-veld__tweede-sectie .art-c {
     min-width: 190px; }
   .archief-zijveld-footer {
@@ -434,13 +411,9 @@ pre {
   .vol-scherm-veld .art-c {
     min-width: 190px; } }
 
-.agenda-address__regel {
-  color: #d0d0d0; }
-
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
   margin-top: 0.5em;
-  padding-top: 0.5em;
-  border-top: 1px solid rgba(33, 33, 33, 0.1); }
+  padding-top: 0.5em; }
 
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget {
   margin-bottom: 0.5em;

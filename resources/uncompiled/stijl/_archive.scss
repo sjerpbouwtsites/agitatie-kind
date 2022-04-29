@@ -37,7 +37,7 @@
     flex-basis: calc(33.33% - 40px);
   }
   .vol-scherm-veld__tweede-sectie {
-    background-color: #ffffff1c;
+   // background-color: #ffffff1c;
     position: relative;
     &::before {
       position: absolute;
@@ -45,7 +45,7 @@
       top: -20px;
       display: block;
       content: "";
-      background-color: #ffffff1c;
+ //     background-color: #ffffff1c;
       height: 20px;
       width: 100%;
     }
@@ -53,9 +53,9 @@
 
   .vol-scherm-veld__tweede-sectie.vol-scherm-veld__tweede-sectie--download {
     margin-top: 50px;
-    background-color: #76433b1c;
+//    background-color: #76433b1c;
     &::before {
-      background-color: #76433b1c;
+//      background-color: #76433b1c;
     }
   }
 
