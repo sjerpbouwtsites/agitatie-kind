@@ -2,36 +2,9 @@
 
 // voorpagina blokken naast elkaar zetten.
 
-@media (min-width: 1200px) {
-  .home {
-    .site-main {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .uitgelichte-afbeelding-buiten {
-      width: 100%;
-      flex-shrink: 0;
-    }
 
-    // inleiding en rider stories
-    .uitgelichte-afbeelding-buiten ~ .verpakking-klein {
-      width: 50%;
-      margin: initial;
-      & > h2 {
-        margin-top: 0;
-      }
-      // nieuwsoverzicht
-      &.vp-nieuws {
-        width: 100%;
-        .art-lijst .art-c {
-          flex-basis: calc(16.6% - 30px);
-          min-width: 180px;
-        }
-      }
-    }
-  }
-}
 
 .voorpagina .art-lijst .art-c img {
   height: auto;
 }
+ 

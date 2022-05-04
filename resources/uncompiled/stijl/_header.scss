@@ -1,7 +1,17 @@
 //child
 
+.horeca-united-title  {
+    font-family: $basis_kopletter;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.stek-kop-rechts {
+    display: none !important;
+}
+
 #stek-kop {
-    background-color: $basis_zwart;
+    //background-color: $basis_zwart;
 }
 #stek-kop .stek-kop-links {
     flex-basis: 300px;
@@ -26,8 +36,8 @@
 }
 
 .multi-lang-vlaggen .lang-item a {
-    background-color: #252525
+    background: none;
 }
 .multi-lang-vlaggen .lang-item a:hover {
-    background-color: #353535;
+    background: none;
   }
