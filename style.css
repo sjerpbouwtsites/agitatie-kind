@@ -11,10 +11,6 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  agitatie
 */
-@font-face {
-  font-family: "Nobel";
-  src: url("lettertype/nobel.ttf") format("ttf"); }
-
 .tekst-wit,
 a.tekst-wit {
   color: #fff; }
@@ -41,11 +37,11 @@ a.tekst-zwart {
 
 .tekst-hoofdkleur,
 a.tekst-hoofdkleur {
-  color: #af1616; }
+  color: #16a368; }
 
 .tekst-zijkleur,
 a.tekst-zijkleur {
-  color: #62a316; }
+  color: #5f16a3; }
 
 .tekst-accentkleur,
 a.tekst-accentkleur {
@@ -53,11 +49,11 @@ a.tekst-accentkleur {
 
 .tekst-hoofdkleur-donker,
 a.tekst-hoofdkleur-donker {
-  color: #981313; }
+  color: #138d5a; }
 
 .tekst-zijkleur-donker,
 a.tekst-zijkleur-donker {
-  color: #548d13; }
+  color: #52138d; }
 
 .tekst-accentkleur-donker,
 a.tekst-accentkleur-donker {
@@ -89,11 +85,11 @@ a.achtergrond-zwart {
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
-  background-color: #af1616; }
+  background-color: #16a368; }
 
 .achtergrond-zijkleur,
 a.achtergrond-zijkleur {
-  background-color: #62a316; }
+  background-color: #5f16a3; }
 
 .achtergrond-accentkleur,
 a.achtergrond-accentkleur {
@@ -101,11 +97,11 @@ a.achtergrond-accentkleur {
 
 .achtergrond-hoofdkleur-donker,
 a.achtergrond-hoofdkleur-donker {
-  background-color: #981313; }
+  background-color: #138d5a; }
 
 .achtergrond-zijkleur-donker,
 a.achtergrond-zijkleur-donker {
-  background-color: #548d13; }
+  background-color: #52138d; }
 
 .achtergrond-accentkleur-donker,
 a.achtergrond-accentkleur-donker {
@@ -137,11 +133,11 @@ a.tekst-zwart {
 
 .tekst-hoofdkleur,
 a.tekst-hoofdkleur {
-  color: #af1616; }
+  color: #16a368; }
 
 .tekst-zijkleur,
 a.tekst-zijkleur {
-  color: #62a316; }
+  color: #5f16a3; }
 
 .tekst-accentkleur,
 a.tekst-accentkleur {
@@ -149,11 +145,11 @@ a.tekst-accentkleur {
 
 .tekst-hoofdkleur-donker,
 a.tekst-hoofdkleur-donker {
-  color: #981313; }
+  color: #138d5a; }
 
 .tekst-zijkleur-donker,
 a.tekst-zijkleur-donker {
-  color: #548d13; }
+  color: #52138d; }
 
 .tekst-accentkleur-donker,
 a.tekst-accentkleur-donker {
@@ -185,11 +181,11 @@ a.achtergrond-zwart {
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
-  background-color: #af1616; }
+  background-color: #16a368; }
 
 .achtergrond-zijkleur,
 a.achtergrond-zijkleur {
-  background-color: #62a316; }
+  background-color: #5f16a3; }
 
 .achtergrond-accentkleur,
 a.achtergrond-accentkleur {
@@ -197,11 +193,11 @@ a.achtergrond-accentkleur {
 
 .achtergrond-hoofdkleur-donker,
 a.achtergrond-hoofdkleur-donker {
-  background-color: #981313; }
+  background-color: #138d5a; }
 
 .achtergrond-zijkleur-donker,
 a.achtergrond-zijkleur-donker {
-  background-color: #548d13; }
+  background-color: #52138d; }
 
 .achtergrond-accentkleur-donker,
 a.achtergrond-accentkleur-donker {
@@ -258,15 +254,10 @@ a {
 
 
 */
-#stek-voet {
-  background-color: #121212; }
-
-#stek-voet section {
-  border-color: #211f1f; }
-
-.radical-riders-title--footer {
+.horeca-united-title.horeca-united-title--footer {
   font-size: 4rem;
-  line-height: 1; }
+  line-height: 1;
+  color: #f5f5f5; }
 
 #stek-voet .verpakking.widgets section {
   align-self: flex-start; }
@@ -288,13 +279,6 @@ a {
   padding-top: calc(.3em - 0px);
   padding-bottom: calc(.3em - 0px); }
 
-.tekst-zwart, a.tekst-zwart {
-  color: #f5f5f5; }
-
-body {
-  background-color: #181818;
-  color: #f5f5f5; }
-
 pre {
   color: black; }
 
@@ -313,8 +297,13 @@ pre {
 .sticky-widget .custom-html-widget .knop + .knop {
   margin-top: .25em; }
 
-#stek-kop {
-  background-color: #252525; }
+.horeca-united-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 900; }
+
+.stek-kop-rechts {
+  display: none !important; }
 
 #stek-kop .stek-kop-links {
   flex-basis: 300px;
@@ -335,36 +324,13 @@ pre {
     font-size: 1.5rem; } }
 
 .multi-lang-vlaggen .lang-item a {
-  background-color: #252525; }
+  background: none; }
 
 .multi-lang-vlaggen .lang-item a:hover {
-  background-color: #353535; }
-
-@media (min-width: 1200px) {
-  .home .site-main {
-    display: flex;
-    flex-wrap: wrap; }
-  .home .uitgelichte-afbeelding-buiten {
-    width: 100%;
-    flex-shrink: 0; }
-  .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein {
-    width: 50%;
-    margin: initial; }
-    .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein > h2 {
-      margin-top: 0; }
-    .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws {
-      width: 100%; }
-      .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws .art-lijst .art-c {
-        flex-basis: calc(16.6% - 30px);
-        min-width: 180px; } }
+  background: none; }
 
 .voorpagina .art-lijst .art-c img {
   height: auto; }
-
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before,
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after,
-.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
-  background-color: #181818; }
 
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {
@@ -433,18 +399,6 @@ pre {
     margin-left: 15px; }
   .vol-scherm-veld .art-c {
     min-width: 190px; } }
-
-.agenda-address__regel {
-  color: #d0d0d0; }
-
-#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
-  margin-top: 0.5em;
-  padding-top: 0.5em;
-  border-top: 1px solid rgba(33, 33, 33, 0.1); }
-
-#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget {
-  margin-bottom: 0.5em;
-  padding-bottom: 0.5em; }
 
 .archive.category .tax {
   display: none; }
