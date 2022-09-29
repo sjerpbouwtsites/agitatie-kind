@@ -2,6 +2,7 @@
 
 use agitatie\taal as taal;
 
+
 function ag_vp_print_nieuws_hook()
 {
     $rider_stories = new WP_Query(array(

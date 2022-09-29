@@ -18,6 +18,7 @@ include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 
 
+
 function agitatie_stijl_en_script()
 {
     wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
