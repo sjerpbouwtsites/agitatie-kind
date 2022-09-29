@@ -23,7 +23,7 @@ if (localStorage.getItem('cancellation-seen') !== 'true') {
         font-family: sans-serif;
       }
   .cancel-button {
-    margin-top: 20px;
+    margin-top: 20px; 
   background-color: #ccc;
   }
   </style>
@@ -31,8 +31,8 @@ if (localStorage.getItem('cancellation-seen') !== 'true') {
       <p>De Radical Riders zijn in het proces van ontbinden.<br>The Radical Riders are in the process of dissolving.</p>
       <p>We zijn niet langer beschikbaar voor solidaritet e.d.<br>
       We are no longer available for solidarity</p>
-      <p>Onze vrienden van de <a href='https://www.ridersunion.nl/'>FNV</a> zijn ook riders aan het organiseren.<br>
-      Our friends from the <a href='https://www.ridersunion.nl/ '>FNV</a> are also organising riders.</p>
+      <p>Onze vrienden van de <a href='mailto:martine.heijthuiyzen@fnv.nl'>FNV</a> zijn ook riders aan het organiseren.<br>
+      Our friends from the <a href='mailto:martine.heijthuiyzen@fnv.nl'>FNV</a> are also organising riders.</p>
       <p>Meer info volgt. More info will follow. <br> Radical Riders.
       <button class='cancel-button' id='close-cancel-notification'>Sluiten en niet meer tonen / close and don't show anymore</button>
   
