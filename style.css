@@ -10,6 +10,420 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  agitatie
-*/.tekst-wit{color:#fff}.tekst-wittig{color:#f5f5f5}.tekst-lichtgrijs{color:#CAC8C8}.tekst-grijs{color:#666}.tekst-donkergrijs{color:#211f1f}.tekst-zwart{color:#252525}.tekst-hoofdkleur{color:#C82449}.tekst-zijkleur{color:#F9E6B1}.tekst-accentkleur{color:#B5DEE8}.tekst-hoofdkleur-donker{color:#b22041}.tekst-zijkleur-donker{color:#f7de99}.tekst-accentkleur-donker{color:#a2d5e2}.achtergrond-wit{background-color:#fff}.achtergrond-wittig{background-color:#f5f5f5}.achtergrond-lichtgrijs{background-color:#CAC8C8}.achtergrond-grijs{background-color:#666}.achtergrond-donkergrijs{background-color:#211f1f}.achtergrond-zwart{background-color:#252525}.achtergrond-hoofdkleur{background-color:#C82449}.achtergrond-zijkleur{background-color:#F9E6B1}.achtergrond-accentkleur{background-color:#B5DEE8}.achtergrond-hoofdkleur-donker{background-color:#b22041}.achtergrond-zijkleur-donker{background-color:#f7de99}.achtergrond-accentkleur-donker{background-color:#a2d5e2}
+*/
+.tekst-wit,
+a.tekst-wit {
+  color: #fff; }
 
-/*# sourceMappingURL=maps/style.css.map */
+.tekst-wittig,
+a.tekst-wittig {
+  color: #f5f5f5; }
+
+.tekst-lichtgrijs,
+a.tekst-lichtgrijs {
+  color: #CAC8C8; }
+
+.tekst-grijs,
+a.tekst-grijs {
+  color: #666; }
+
+.tekst-donkergrijs,
+a.tekst-donkergrijs {
+  color: #211f1f; }
+
+.tekst-zwart,
+a.tekst-zwart {
+  color: #252525; }
+
+.tekst-hoofdkleur,
+a.tekst-hoofdkleur {
+  color: #C82449; }
+
+.tekst-zijkleur,
+a.tekst-zijkleur {
+  color: #F9E6B1; }
+
+.tekst-accentkleur,
+a.tekst-accentkleur {
+  color: #B5DEE8; }
+
+.tekst-hoofdkleur-donker,
+a.tekst-hoofdkleur-donker {
+  color: #b22041; }
+
+.tekst-zijkleur-donker,
+a.tekst-zijkleur-donker {
+  color: #f7de99; }
+
+.tekst-accentkleur-donker,
+a.tekst-accentkleur-donker {
+  color: #a2d5e2; }
+
+.achtergrond-wit,
+a.achtergrond-wit {
+  background-color: #fff; }
+
+.achtergrond-wittig,
+a.achtergrond-wittig {
+  background-color: #f5f5f5; }
+
+.achtergrond-lichtgrijs,
+a.achtergrond-lichtgrijs {
+  background-color: #CAC8C8; }
+
+.achtergrond-grijs,
+a.achtergrond-grijs {
+  background-color: #666; }
+
+.achtergrond-donkergrijs,
+a.achtergrond-donkergrijs {
+  background-color: #211f1f; }
+
+.achtergrond-zwart,
+a.achtergrond-zwart {
+  background-color: #252525; }
+
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
+  background-color: #C82449; }
+
+.achtergrond-zijkleur,
+a.achtergrond-zijkleur {
+  background-color: #F9E6B1; }
+
+.achtergrond-accentkleur,
+a.achtergrond-accentkleur {
+  background-color: #B5DEE8; }
+
+.achtergrond-hoofdkleur-donker,
+a.achtergrond-hoofdkleur-donker {
+  background-color: #b22041; }
+
+.achtergrond-zijkleur-donker,
+a.achtergrond-zijkleur-donker {
+  background-color: #f7de99; }
+
+.achtergrond-accentkleur-donker,
+a.achtergrond-accentkleur-donker {
+  background-color: #a2d5e2; }
+
+.tekst-wit,
+a.tekst-wit {
+  color: #fff; }
+
+.tekst-wittig,
+a.tekst-wittig {
+  color: #f5f5f5; }
+
+.tekst-lichtgrijs,
+a.tekst-lichtgrijs {
+  color: #CAC8C8; }
+
+.tekst-grijs,
+a.tekst-grijs {
+  color: #666; }
+
+.tekst-donkergrijs,
+a.tekst-donkergrijs {
+  color: #211f1f; }
+
+.tekst-zwart,
+a.tekst-zwart {
+  color: #252525; }
+
+.tekst-hoofdkleur,
+a.tekst-hoofdkleur {
+  color: #C82449; }
+
+.tekst-zijkleur,
+a.tekst-zijkleur {
+  color: #F9E6B1; }
+
+.tekst-accentkleur,
+a.tekst-accentkleur {
+  color: #B5DEE8; }
+
+.tekst-hoofdkleur-donker,
+a.tekst-hoofdkleur-donker {
+  color: #b22041; }
+
+.tekst-zijkleur-donker,
+a.tekst-zijkleur-donker {
+  color: #f7de99; }
+
+.tekst-accentkleur-donker,
+a.tekst-accentkleur-donker {
+  color: #a2d5e2; }
+
+.achtergrond-wit,
+a.achtergrond-wit {
+  background-color: #fff; }
+
+.achtergrond-wittig,
+a.achtergrond-wittig {
+  background-color: #f5f5f5; }
+
+.achtergrond-lichtgrijs,
+a.achtergrond-lichtgrijs {
+  background-color: #CAC8C8; }
+
+.achtergrond-grijs,
+a.achtergrond-grijs {
+  background-color: #666; }
+
+.achtergrond-donkergrijs,
+a.achtergrond-donkergrijs {
+  background-color: #211f1f; }
+
+.achtergrond-zwart,
+a.achtergrond-zwart {
+  background-color: #252525; }
+
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
+  background-color: #C82449; }
+
+.achtergrond-zijkleur,
+a.achtergrond-zijkleur {
+  background-color: #F9E6B1; }
+
+.achtergrond-accentkleur,
+a.achtergrond-accentkleur {
+  background-color: #B5DEE8; }
+
+.achtergrond-hoofdkleur-donker,
+a.achtergrond-hoofdkleur-donker {
+  background-color: #b22041; }
+
+.achtergrond-zijkleur-donker,
+a.achtergrond-zijkleur-donker {
+  background-color: #f7de99; }
+
+.achtergrond-accentkleur-donker,
+a.achtergrond-accentkleur-donker {
+  background-color: #a2d5e2; }
+
+/*voorbeeld in code bovenstaande mixin
+
+div::after {
+    @include pseudo;
+    top: -1em; left: -1em;
+    width: 1em; height: 1em;
+}
+*/
+/* voorbeeld in code bovenstaande mixin
+
+div {
+    @include responsive-ratio(16,9);
+}
+
+*/
+/*voorbeeld van gebruik:
+
+input,
+textarea {
+    @include input-placeholder {
+        color: $grey;
+    }
+}
+*/
+/*voorbeeld in gebruik:
+
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+
+*/
+/*gebruik
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+*/
+/*gebruik:
+.button {
+  @include border-radius(5px);
+}
+
+
+*/
+#stek-voet {
+  color: #f5f5f5; }
+  #stek-voet a {
+    color: #f5f5f5; }
+
+.radical-riders-title--footer {
+  font-size: 4rem;
+  line-height: 1; }
+
+#stek-voet .verpakking.widgets section {
+  align-self: flex-start; }
+
+#stek-voet .textwidget ol,
+#stek-voet .textwidget ul {
+  padding-left: 1em; }
+
+.footer-menu {
+  columns: 2; }
+
+.footer-section .search-form {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 0; }
+
+.footer-section .search-form .search-submit {
+  margin-left: 10px;
+  padding-top: calc(.3em - 0px);
+  padding-bottom: calc(.3em - 0px); }
+
+.wpcf7-textarea {
+  height: 150px; }
+
+.sticky-widget.widget_nav_menu li + li {
+  margin-top: .25em; }
+
+.sticky-widget.widget_nav_menu a {
+  line-height: .5em; }
+
+.sticky-widget.widget_nav_menu .menu-item:not(.current-menu-item) a {
+  color: #f5f5f5; }
+
+.sticky-widget .custom-html-widget .knop + .knop {
+  margin-top: .25em; }
+
+#stek-kop {
+  background-color: #ececec; }
+  #stek-kop a {
+    color: #C82449; }
+  #stek-kop .stek-kop-rechts {
+    display: none !important; }
+
+#stek-kop .stek-kop-links {
+  flex-basis: 300px;
+  max-width: calc(100% - 160px); }
+
+.stek-kop-links .radical-riders-title {
+  font-size: 2.5rem; }
+
+@media screen and (max-width: 600px) {
+  #mobiele-menu-schakel {
+    font-size: 0.01px;
+    padding-right: 15px; }
+  #mobiele-menu-schakel i {
+    font-size: 1.2rem; } }
+
+@media screen and (max-width: 600px) {
+  .stek-kop-links .radical-riders-title {
+    font-size: 1.5rem; } }
+
+.vp-nieuws {
+  display: none; }
+
+@media (min-width: 1200px) {
+  .home .site-main {
+    display: flex;
+    flex-wrap: wrap; }
+  .home .uitgelichte-afbeelding-buiten {
+    width: 100%;
+    flex-shrink: 0; }
+  .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein {
+    width: 50%;
+    margin: initial; }
+    .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein > h2 {
+      margin-top: 0; }
+    .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws {
+      display: none;
+      width: 100%; }
+      .home .uitgelichte-afbeelding-buiten ~ .verpakking-klein.vp-nieuws .art-lijst .art-c {
+        flex-basis: calc(16.6% - 30px);
+        min-width: 180px; } }
+
+.voorpagina .art-lijst .art-c img {
+  height: auto; }
+
+.vol-scherm-veld__voorste,
+.vol-scherm-veld__tweede-sectie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+
+.vol-scherm-veld h2 {
+  width: 100%;
+  text-transform: capitalize;
+  margin-left: 15px;
+  margin-right: 15px; }
+
+@media (min-width: 1024px) {
+  .vol-scherm-veld h2 {
+    margin-top: 0; }
+  .vol-scherm-veld.art-lijst + footer {
+    text-align: left;
+    margin-top: 40px; } }
+
+@media (min-width: 1400px) {
+  .art-lijst.vol-scherm-veld {
+    margin-left: calc(-50vw + 50% + 15px);
+    margin-right: calc(-50vw - 50% - 15px);
+    width: calc(100vw - 30px);
+    margin-top: 100px; }
+  .vol-scherm-veld__voorste {
+    flex-basis: calc(66.66%);
+    justify-content: left;
+    align-items: start;
+    align-content: flex-start; }
+  .vol-scherm-veld__tweede {
+    margin-left: 40px;
+    flex-basis: calc(33.33% - 40px); }
+  .vol-scherm-veld__tweede-sectie {
+    position: relative; }
+    .vol-scherm-veld__tweede-sectie::before {
+      position: absolute;
+      left: 0;
+      top: -20px;
+      display: block;
+      content: "";
+      height: 20px;
+      width: 100%; }
+  .vol-scherm-veld__tweede-sectie.vol-scherm-veld__tweede-sectie--download {
+    margin-top: 50px; }
+  .vol-scherm-veld__tweede-sectie .art-c {
+    min-width: 190px; }
+  .archief-zijveld-footer {
+    margin-left: 20px;
+    margin-bottom: 20px; } }
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .vol-scherm-veld {
+    margin-top: 60px; }
+  .vol-scherm-veld__voorste {
+    flex-basis: calc(50% - 15px);
+    margin-right: 15px; }
+  .vol-scherm-veld__tweede {
+    flex-basis: calc(50% - 15px);
+    margin-left: 15px; }
+  .vol-scherm-veld .art-c {
+    min-width: 190px; } }
+
+#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
+  margin-top: 0.5em;
+  padding-top: 0.5em; }
+
+#stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em; }
+
+.archive.category .tax {
+  display: none; }
+
+.vol-scherm-veld__tweede-sectie--download {
+  margin-top: 30px; }
+
+.vol-scherm-veld__tweede-sectie--download .post-datum {
+  display: none; }

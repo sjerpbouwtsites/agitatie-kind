@@ -1,3 +1,4 @@
 node_modules/
 .htaccess
 nginx.conf
+style.css

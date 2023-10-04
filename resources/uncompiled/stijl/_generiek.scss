@@ -1,0 +1,28 @@
+body {
+    // background-color: darken($zwart, 5%);
+    // color: $wittig;
+}
+
+pre {
+    //color: black;
+}
+
+.wpcf7-textarea {
+    height: 150px;
+} 
+
+.sticky-widget.widget_nav_menu li + li {
+    margin-top: .25em;
+}
+
+.sticky-widget.widget_nav_menu a {
+    line-height: .5em;
+}
+
+.sticky-widget.widget_nav_menu .menu-item:not(.current-menu-item) a 
+ {
+     color: $wittig;
+}
+.sticky-widget .custom-html-widget .knop + .knop {
+    margin-top: .25em;
+}

@@ -1,0 +1,39 @@
+//child
+
+#stek-kop {
+    background-color: #ececec;
+    a {
+        color: #C82449;
+    }
+    .stek-kop-rechts {
+        display: none !important;
+    }
+}
+#stek-kop .stek-kop-links {
+    flex-basis: 300px;
+    max-width: calc(100% - 160px)
+}
+.stek-kop-links .radical-riders-title {
+    font-size: 2.5rem; 
+}
+@media screen and (max-width: 600px) {
+    #mobiele-menu-schakel {
+        font-size: 0.01px;
+        padding-right:15px;
+    }
+    #mobiele-menu-schakel i {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .stek-kop-links .radical-riders-title  {
+        font-size: 1.5rem;
+    }
+}
+
+.multi-lang-vlaggen .lang-item a {
+ //   background-color: #252525
+}
+.multi-lang-vlaggen .lang-item a:hover {
+ //   background-color: #353535;
+  }
