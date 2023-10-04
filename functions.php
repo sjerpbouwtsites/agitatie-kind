@@ -21,6 +21,7 @@ function agitatie_stijl_en_script()
 {
     wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
     wp_enqueue_style('kind-stijl', get_stylesheet_uri(), array('agitatie-stijl'), null);
+    wp_enqueue_style( 'kind-nood-stijl', KIND_URI.'/nood-style.css', null, null ); // ivm gulp niet iwllen installeren
     wp_enqueue_script('kind-script', KIND_URI . '/js/kind.js', array(), null, true);
 }
 
