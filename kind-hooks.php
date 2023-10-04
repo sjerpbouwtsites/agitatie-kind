@@ -47,3 +47,17 @@ function ag_vp_print_nieuws_hook()
 		//$afm = ag_agenda_filter_ctrl();
 
 	}
+
+add_filter( 'the_content', 'voeg_auteur_toe_aan_content_op_single', 1 );
+
+function voeg_auteur_toe_aan_content_op_single( $content ) {
+
+	global $post;
+
+    if ( is_singular() && in_the_loop(  ) && !is_front_page() && $post->post_type === 'post'  ) {
+		$a = get_the_author();
+        return "<span class='auteur'>Door $a</span>" . $content;
+    }
+
+    return $content;
+}

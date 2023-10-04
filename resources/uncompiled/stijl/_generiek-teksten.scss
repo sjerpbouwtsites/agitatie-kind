@@ -1,3 +1,28 @@
   .tekst-zwart,a.tekst-zwart {
      // color: $wittig;
   }
+.art-c .art-rechts p {
+   font-size: .75em;
+   font-family: Merriweather Sans;
+   opacity: .75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: Merriweather Sans, sans-serif;
+}
+
+p {
+   font-weight: 400;
+}
+
+.auteur {
+   color: $grijs;
+   font-style: italic;
+   display: block;
+   margin-bottom: .5em;
+}

@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "^9.0.0",
     "rollup-plugin-scss": "^2.6.1"
-  },
-  "dependencies": {}
+  }
 }

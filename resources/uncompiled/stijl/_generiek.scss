@@ -26,3 +26,31 @@ pre {
 .sticky-widget .custom-html-widget .knop + .knop {
     margin-top: .25em;
 }
+@media screen and (max-width: 600px) {
+    .uitgelichte-afbeelding-buiten.hero {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -250%);
+        width: 80%;
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+        position: absolute;
+        bottom: 0;
+        top: 10px;
+        font-size: .5em;
+        left: 50%;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(-50%, calc(100% + 1em));
+        width: 80%;
+    }
+}

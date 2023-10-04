@@ -1,25 +1,29 @@
 const path = require('path');
 const fs = require('fs');
-import scss from 'rollup-plugin-scss';
+const scss = require("rollup-plugin-scss");
 
 const uncompiled = path.resolve(`${__dirname}/uncompiled`);
 const build = path.resolve(`${__dirname}/build`);
 const thema = path.resolve(`${__dirname}/../`);
 
-export default {
+module.exports = {
   input: `${uncompiled}/js/index.js`,
   output: {
     file: `${build}/js/kind-bundel.js`,
-    format: 'es'
+    format: "es",
   },
-  plugins: [ 
+  plugins: [
     scss({
-      watch: [`${uncompiled}/stijl/`, `${uncompiled}/stijl/**/*`, `${uncompiled}/stijl/style.scss`],
+      watch: [
+        `${uncompiled}/stijl/`,
+        `${uncompiled}/stijl/**/*`,
+        `${uncompiled}/stijl/style.scss`,
+      ],
       output: function (styles, styleNodes) {
-        fs.writeFileSync('style.css', styles)
+        fs.writeFileSync("style.css", styles);
       },
       sourceMaps: true,
-      outFile: '../style.css'
-    }) // will output compiled styles to output.css
-  ]  
+      outFile: "../style.css",
+    }), // will output compiled styles to output.css
+  ],
 };

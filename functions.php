@@ -47,7 +47,7 @@ $kind_config = array(
         // )
     ),
     // 'agenda' => true,
-    // 'downloads' => true,
+    'downloads' => true,
     'post'                     => array(
         'taxonomieen'          => false
     )

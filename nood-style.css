@@ -1,15 +1,6 @@
-.voorpagina .art-lijst .art-c img {
-    height: 160px;
-}
+
 .uitgelichte-afbeelding-buiten.hero {
     height: calc(100vh - 70px);
     margin-bottom: 3em;
 }
 
-#primary.voorpagina .vp-menu {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    padding-left: calc(50% - 350px);
-    padding-right: calc(50% - 350px);
-}
