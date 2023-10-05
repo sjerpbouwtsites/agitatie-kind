@@ -292,6 +292,9 @@ a {
   font-family: Merriweather Sans;
   opacity: .75; }
 
+h1 {
+  line-height: 0.9; }
+
 h1,
 h2,
 h3,
