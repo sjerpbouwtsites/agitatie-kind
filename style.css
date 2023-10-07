@@ -336,7 +336,7 @@ p {
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     top: 100%;
     left: 50%;
-    transform: translate(-50%, -250%);
+    transform: translate(-50%, -300%);
     width: 80%;
     opacity: 0.8; } }
 
@@ -347,7 +347,6 @@ p {
     top: 10px;
     font-size: .5em;
     left: 50%;
-    -webkit-transform: translate(0, -50%);
     transform: translate(-50%, calc(100% + 1em));
     width: 80%; } }
 
