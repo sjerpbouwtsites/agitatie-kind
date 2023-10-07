@@ -338,7 +338,7 @@ p {
     left: 50%;
     transform: translate(-50%, -300%);
     width: 80%;
-    opacity: 0.8; } }
+    opacity: 1; } }
 
 @media screen and (max-width: 600px) {
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
