@@ -7,6 +7,23 @@ pre {
     //color: black;
 }
 
+.zichtbaar-op-focus {
+    position: absolute;
+    left: -50vw;
+    top:-50vh;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+}
+.zichtbaar-op-focus:focus {
+    position: static;
+    left: auto;
+    top:auto;
+    height: initial;
+    width: initial;
+    opacity: 1;
+}
+
 .wpcf7-textarea {
     height: 150px;
 } 

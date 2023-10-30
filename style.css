@@ -313,6 +313,22 @@ p {
   display: block;
   margin-bottom: .5em; }
 
+.zichtbaar-op-focus {
+  position: absolute;
+  left: -50vw;
+  top: -50vh;
+  height: 1px;
+  width: 1px;
+  opacity: 0; }
+
+.zichtbaar-op-focus:focus {
+  position: static;
+  left: auto;
+  top: auto;
+  height: initial;
+  width: initial;
+  opacity: 1; }
+
 .wpcf7-textarea {
   height: 150px; }
 
@@ -349,6 +365,9 @@ p {
     left: 50%;
     transform: translate(-50%, calc(100% + 1em));
     width: 80%; } }
+
+.mobiele-menu-schakel-open .kopmenu-mobiel {
+  z-index: 1002; }
 
 #stek-kop {
   background-color: #ececec; }
