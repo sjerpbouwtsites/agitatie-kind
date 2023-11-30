@@ -19,6 +19,69 @@ do_action('ag_archief_intro_action');
 global $post;
 global $kind_config;
 
+
+class OyveyTeam extends Ag_article_c
+{
+    public function __construct($config, $post)
+    {
+        parent::__construct($config);
+        $this->art = $post;
+    }
+
+    public function maak_artikel($maak_html = false)
+    {
+        if (!$this->gecontroleerd) {
+            $this->controleer();
+        }
+
+        if ($maak_html) {
+            ob_start();
+        }
+
+        $link_target = $this->target_blank ? "_blank" : "_self";
+        $download_attr = $this->download_link ? "download" : "";
+
+        ?>
+
+		<article id='<?= $this->art->post_name ?>' class="flex art-c <?= $this->class ?> <?= $this->extra_class() ?>" <?= $this->data_src ?>>
+
+			<?php if (!$this->geen_afb) : ?>
+				<div class='art-links'>
+					<a href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
+						<?php $this->print_afb(); ?>
+					</a>
+				</div>
+			<?php endif; ?>
+
+			<div class='art-rechts'>
+				<a class='tekst-zwart' href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
+					<header>
+						<h<?= $this->htype ?> class='tekst-hoofdkleur'>
+							<?= $this->art->post_title ?>
+						</h<?= $this->htype ?>>
+						<?php $this->datum();
+        $this->taxonomieen(); ?>
+					</header>
+					<?php
+
+                    if (!$this->geen_tekst) :
+                        echo $this->maak_tekst();
+                    endif;  ?>
+				</a>
+			</div>
+            <div class='oyvey-team hidden verstopt'>
+                <?=$this->art->post_content?>
+            </div>
+
+		</article>
+<?php
+
+        if ($maak_html) {
+            $this->html = ob_get_clean();
+        }
+    }
+}
+
 $extra_class = '';
 
 if (
@@ -43,7 +106,6 @@ if (have_posts()) : while (have_posts()) : the_post();
     $basis_array = array(
         'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
         'class'			=> 'in-lijst',
-        'geen_datum'    => true,
         'taxonomieen' 	=> true
     );
 
