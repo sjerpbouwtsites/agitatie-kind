@@ -85,7 +85,7 @@ add_action('after_setup_theme', 'ag_config_agenda');
 
 function create_oyvey_team()
 {
-    $team = new Posttype_voorb('team');
+    $team = new Posttype_voorb('team', 'teams');
 
     $team->pas_args_aan(array(
         'exclude_from_search' => true,
