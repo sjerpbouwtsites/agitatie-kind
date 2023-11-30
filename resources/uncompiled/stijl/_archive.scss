@@ -87,4 +87,13 @@
 
 .oyvey-team.art-c.in-lijst {
   flex-basis: calc(50% - 30px);
+  position: relative;
+  padding-bottom: 100%;
+  .wp-post-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
