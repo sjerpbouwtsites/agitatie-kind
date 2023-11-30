@@ -551,8 +551,13 @@ p {
     left: 2em;
     font-size: 1.25em; }
     .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
-      color: white;
-      font-weight: 800; }
+      color: white; }
+  .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst {
+    padding: 2em; }
+    .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst *:first-child {
+      margin-top: 0; }
+    .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst *:last-child {
+      margin-bottom: 0; }
 
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
   margin-top: 0.5em;
