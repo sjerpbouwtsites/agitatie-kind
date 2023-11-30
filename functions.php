@@ -93,8 +93,8 @@ function create_oyvey_team()
         'show_in_nav_menus'	=> false,
         'show_in_menu'		=> false,
         'add_to_menu'		=> false,
-        'public'			=> false,
-        'rewrite' 			=> false,
+        'public'			=> true,
+        'rewrite' 			=> true,
         'has_archive' 		=> true,
         'supports' =>
             array(
