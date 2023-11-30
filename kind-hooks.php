@@ -17,10 +17,10 @@ function voeg_auteur_toe_aan_content_op_single($content)
 
 if (!function_exists('ag_archief_content_hook')) : function ag_archief_content_hook()
 {
-    global $wp_query;
-    echo "<pre>";
-    var_dump($wp_query);
-    echo "</pre>";
+    // global $wp_query;
+    // echo "<pre>";
+    // var_dump($wp_query);
+    // echo "</pre>";
 
     ag_archief_content_ctrl();
     ag_archief_sub_tax_ctrl();
