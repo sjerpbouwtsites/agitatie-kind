@@ -104,7 +104,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     //ag_archief_generiek_loop($post);
 
     $basis_array = array(
-        'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
+        'exc_lim' 		=> 150,
         'class'			=> 'in-lijst',
         'taxonomieen' 	=> true
     );
