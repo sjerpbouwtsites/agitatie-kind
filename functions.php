@@ -89,10 +89,10 @@ function create_oyvey_team()
 
     $team->pas_args_aan(array(
         'exclude_from_search' => true,
-        'publicly_queryable' => false,
-        'show_in_nav_menus'	=> false,
-        'show_in_menu'		=> false,
-        'add_to_menu'		=> false,
+        'publicly_queryable' => true,
+        'show_in_nav_menus'	=> true,
+        'show_in_menu'		=> true,
+        'add_to_menu'		=> true,
         'public'			=> true,
         'rewrite' 			=> true,
         'has_archive' 		=> true,
