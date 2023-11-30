@@ -32,7 +32,7 @@ while (have_posts()) : the_post();
             echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum">';
             var_dump($afbeelding);
             echo "<div class='art-links'>
-        <img src='' alt='' width='' height='' />
+        <img src='".$afbeelding['sizes']['medium']."' alt='".$afbeelding['alt']."' width='300' height='200' />
         </div>";
 
             echo "<div class='art-rechts'>
