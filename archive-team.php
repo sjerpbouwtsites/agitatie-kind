@@ -46,14 +46,14 @@ class OyveyTeam extends Ag_article_c
 
 			<?php if (!$this->geen_afb) : ?>
 				<div class='art-links'>
-					<a href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
+					
 						<?php $this->print_afb(); ?>
-					</a>
+					
 				</div>
 			<?php endif; ?>
 
 			<div class='art-rechts'>
-				<a class='tekst-zwart' href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
+				
 					<header>
 						<h<?= $this->htype ?> class='tekst-hoofdkleur'>
 							<?= $this->art->post_title ?>
@@ -66,10 +66,10 @@ class OyveyTeam extends Ag_article_c
                     if (!$this->geen_tekst) :
                         echo $this->maak_tekst();
                     endif;  ?>
-				</a>
+				
 			</div>
-            <div class='oyvey-team hidden verstopt'>
-                <?=$this->art->post_content?>
+            <div class='oyvey-team-volle-tekst'>
+                <?php wpautop($this->art->post_content); ?>
             </div>
 
 		</article>
