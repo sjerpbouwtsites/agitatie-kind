@@ -10,8 +10,6 @@ echo "<article class='bericht'>";
 
 ag_uitgelichte_afbeelding_ctrl();
 
-echo "HALLO DIT IS PAGE WITH CARDS";
-
 while (have_posts()) : the_post();
     echo "<div class='verpakking verpakking-klein marginveld titel-over-afbeelding-indien-aanwezig'>";
 
@@ -21,6 +19,35 @@ while (have_posts()) : the_post();
 
     echo "<div class='bericht-tekst'>";
     the_content();
+
+    if(have_rows('kaart')):
+        echo '<div class="art-lijst">';
+        while(have_rows('kaart')) : the_row();
+
+            $titel = get_sub_field('titel');
+            $tekst = get_sub_field('tekst');
+            $afbeelding = get_sub_field('afbeelding');
+            $slug = sanitize_title($titel);
+
+            echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum">';
+            var_dump($afbeelding);
+            echo "<div class='art-links'>
+        <img src='' alt='' width='' height='' />
+        </div>";
+
+            echo "<div class='art-rechts'>
+                <header>
+                    <h3 class='tekst-hoofdkleur'>$title</h3>
+                </header>
+                <p class='tekst-zwart'>
+                    $tekst
+                </p>
+            </div>";
+
+        endwhile;
+        echo "</div";
+    endif;
+
     echo "</div>";
 
     echo "</div>";
