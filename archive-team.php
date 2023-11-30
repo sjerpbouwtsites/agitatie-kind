@@ -105,6 +105,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     $basis_array = array(
         'exc_lim' 		=> 150,
         'class'			=> 'in-lijst',
+        'geen_datum'    => true,
         'taxonomieen' 	=> true
     );
 
