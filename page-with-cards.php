@@ -43,7 +43,7 @@ while (have_posts()) : the_post();
                     $tekst
                 </p>
             </div>";
-
+            echo "</article>";
         endwhile;
         echo "</div";
     endif;
