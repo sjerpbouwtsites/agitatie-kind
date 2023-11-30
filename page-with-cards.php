@@ -37,7 +37,7 @@ while (have_posts()) : the_post();
 
             echo "<div class='art-rechts'>
                 <header>
-                    <h3 class='tekst-hoofdkleur'>$title</h3>
+                    <h3 class='tekst-hoofdkleur'>$titel</h3>
                 </header>
                 <p class='tekst-zwart'>
                     $tekst
