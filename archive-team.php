@@ -69,7 +69,7 @@ class OyveyTeam extends Ag_article_c
 				
 			</div>
             <div class='oyvey-team-volle-tekst'>
-                <?php wpautop($this->art->post_content); ?>
+                <?php echo wpautop($this->art->post_content); ?>
             </div>
 
 		</article>

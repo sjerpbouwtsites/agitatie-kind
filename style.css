@@ -540,10 +540,19 @@ p {
     padding-bottom: 100%; }
   .oyvey-team.art-c.in-lijst .wp-post-image {
     position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    font-size: 1.25em;
+    height: 100%; }
+  .oyvey-team.art-c.in-lijst .art-rechts {
+    position: absolute;
     top: 2em;
     left: 2em;
-    margin-top: 0;
     font-size: 1.25em; }
+    .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
+      color: white;
+      font-weight: 800; }
 
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
   margin-top: 0.5em;
