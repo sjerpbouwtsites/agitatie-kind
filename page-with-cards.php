@@ -30,7 +30,7 @@ while (have_posts()) : the_post();
             $slug = sanitize_title($titel);
 
             echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum">';
-            var_dump($afbeelding);
+
             echo "<div class='art-links'>
         <img src='".$afbeelding['sizes']['medium']."' alt='".$afbeelding['alt']."' width='300' height='200' />
         </div>";
