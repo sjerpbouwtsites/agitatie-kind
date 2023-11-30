@@ -532,6 +532,9 @@ p {
   .vol-scherm-veld .art-c {
     min-width: 190px; } }
 
+.oyvey-team.art-c.in-lijst {
+  flex-basis: calc(50% - 30px); }
+
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
   margin-top: 0.5em;
   padding-top: 0.5em; }
