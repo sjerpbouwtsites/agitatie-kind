@@ -21,7 +21,7 @@ function agitatie_stijl_en_script()
 {
     wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
     wp_enqueue_style('kind-stijl', get_stylesheet_uri(), array('agitatie-stijl'), null);
-    wp_enqueue_style( 'kind-nood-stijl', KIND_URI.'/nood-style.css', null, null ); // ivm gulp niet iwllen installeren
+    wp_enqueue_style('kind-nood-stijl', KIND_URI.'/nood-style.css', null, null); // ivm gulp niet iwllen installeren
     // wp_enqueue_script('kind-script', KIND_URI . '/resources/build/js/kind-bundel.js', array(), null, true);
 }
 
@@ -60,29 +60,54 @@ $kind_menus = array(
     'footer-taal' => esc_html__('footer-taal', 'agitatie'),
 );
 if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
-	{
+{
+    $kind_config = $GLOBALS['kind_config'];
 
-		$kind_config = $GLOBALS['kind_config'];
+    if (empty($kind_config) || (array_key_exists('agenda', $kind_config) && $kind_config['agenda'])) :
 
-		if (empty($kind_config) || (array_key_exists('agenda', $kind_config) && $kind_config['agenda'])) :
+        $agenda = new Posttype_voorb('agenda', 'agenda');
+        $agenda->pas_args_aan(array(
+            'has_archive' => true,
+            'public' => true,
+            'show_in_nav_menus' => true,
+            'menu_icon' => 'dashicons-calendar-alt',
+        ));
+        $agenda->registreer();
 
-			$agenda = new Posttype_voorb('agenda', 'agenda');
-			$agenda->pas_args_aan(array(
-				'has_archive' => true,
-				'public' => true,
-				'show_in_nav_menus' => true,
-				'menu_icon' => 'dashicons-calendar-alt',
-			));
-			$agenda->registreer();
+        $agenda->maak_taxonomie('plek', 'plekken');
+        $agenda->maak_taxonomie('type', 'types');
 
-			$agenda->maak_taxonomie('plek', 'plekken');
-			$agenda->maak_taxonomie('type', 'types');
-
-		endif;
-	}
+    endif;
+}
 endif;
 
 add_action('after_setup_theme', 'ag_config_agenda');
+
+function create_oyvey_team()
+{
+    $team = new Posttype_voorb('team');
+
+    $team->pas_args_aan(array(
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'show_in_nav_menus'	=> true,
+        'show_in_menu'		=> true,
+        'add_to_menu'		=> true,
+        'public'			=> true,
+        'has_archive' 		=> false,
+        'supports' =>
+            array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+            ),
+    ));
+
+    $team->registreer();
+}
+
+add_action('after_setup_theme', 'create_oyvey_team');
 
 $kind_thumbs = array(
     /*	'voorpagina' => array(
@@ -96,7 +121,6 @@ $kind_thumbs = array(
 
 function registreer_posttypes()
 {
-
     // ter voorbeeld
 
     // $story = new Posttype_voorb('story', 'stories');
