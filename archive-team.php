@@ -17,14 +17,13 @@ do_action('ag_archief_intro_action');
 
 //do_action('ag_archief_content_action');
 global $post;
-global $kind_config;
 
 
 class OyveyTeam extends Ag_article_c
 {
     public function __construct($config, $post)
     {
-        parent::__construct($config);
+        parent::__construct($config, $post);
         $this->art = $post;
     }
 
