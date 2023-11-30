@@ -534,8 +534,10 @@ p {
 
 .oyvey-team.art-c.in-lijst {
   flex-basis: calc(50% - 30px);
-  position: relative;
-  padding-bottom: calc(50% - 30px); }
+  position: relative; }
+  .oyvey-team.art-c.in-lijst .art-links {
+    position: relative;
+    padding-bottom: 100%; }
   .oyvey-team.art-c.in-lijst .wp-post-image {
     position: absolute;
     top: 0;
