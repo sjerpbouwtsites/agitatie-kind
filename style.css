@@ -621,7 +621,8 @@ p {
   right: -100%;
   width: auto;
   height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  object-fit: cover; }
 
 .hex .hex-title,
 .hex p {
