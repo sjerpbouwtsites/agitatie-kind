@@ -82,12 +82,6 @@ function oyvey_vp_agenda()
         'omgeving' => 'pagina'
     ));
 
-
-    echo "<pre>";
-    var_dump($agenda);
-    echo "</pre>";
-
-
     if (count($agenda->agendastukken) > 0) :
 
         echo "<section class='verpakking verpakking-klein marginveld'>";
