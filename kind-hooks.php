@@ -46,11 +46,20 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
         $hexagon_list = array_map(function ($vp_post) {
             $thumbnail_id = get_post_thumbnail_id($vp_post->ID);
             $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+
+            $text = get_the_excerpt();
+            $matches= preg_match(
+                "/^.{0,250}\s/gm",
+                $text
+            );
+            if (count($matches)) {
+                $text = $matches[0];
+            }
             return array(
                 'url' => $vp_post->guid,
                 'title' => $vp_post->post_title,
                 'img_html' => get_the_post_thumbnail($vp_post),
-                'text' => get_the_excerpt($vp_post)
+                'text' => $text
             );
         }, $vp_posts->posts);
 
