@@ -14,3 +14,49 @@ function copyCloseMenuForAccessibility(){
 }
 
 window.addEventListener('load', copyCloseMenuForAccessibility);
+
+function setHexagonsOnHero(){
+
+if (!document.body.classList.contains('home')) return
+
+const hexagonsOuter = document.createElement('div');
+hexagonsOuter.className = 'hexagons-outer';
+hexagonsOuter.innerHTML = `
+
+  <div class="hexagon-container">
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+    <div class="hexagon-single"></div>
+  </div>
+  `;
+
+    document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter);
+
+}
+
+window.addEventListener('load', setHexagonsOnHero);
