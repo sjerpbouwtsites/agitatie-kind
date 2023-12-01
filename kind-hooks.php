@@ -30,19 +30,18 @@ endif;
 if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
 {
     $vp_posts = new WP_Query(array(
-        'posts_per_page' => 18
+        'posts_per_page' => 6
     ));
 
     if (count($vp_posts->posts)) :
+
+        echo "<section class='verpakking marginveld'>";
 
         $footerknop = new Ag_knop(array(
             'link' 		=> get_post_type_archive_link('post'),
             'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
             'class'		=> 'in-wit'
         ));
-
-
-
 
         echo  "<div class='art-lijst'>";
 
