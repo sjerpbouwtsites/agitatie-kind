@@ -85,6 +85,7 @@ function oyvey_vp_agenda()
     $types_verz = [];
 
     foreach ($agenda as $a) {
+        echo $a->ID;
         $types_hier = wp_get_post_terms($a->ID, 'type');
         foreach($types_hier as $t) {
             $types_verz[] = $t;
