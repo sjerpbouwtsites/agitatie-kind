@@ -96,7 +96,7 @@ function oyvey_vp_agenda()
         }
     }
 
-    echo "<section class='verpakking marginveld'>";
+    echo "<section class='verpakking marginveld oyvey-agenda-voorpagina'>";
 
     echo "<h2>" . ucfirst(\agitatie\taal\streng('Onze events')) . "</h2>";
 
