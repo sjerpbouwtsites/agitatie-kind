@@ -43,7 +43,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
 
         echo "<pre>";
-        var_dump($post);
+        var_dump($vp_posts[0]);
         echo "</pre>";
         $hexagon_list = array_map(function ($vp_post) {
             $text = strlen($vp_post->post_excerpt) > 0 ? $vp_post->post_excerpt : $vp_post->post_content;
