@@ -48,15 +48,12 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 
             $text = get_the_excerpt();
-            $matches= preg_match(
-                "/^.{0,120}\s/",
-                $text
-            );
-            if (is_array($matches)) {
-                $text = $matches[0];
-            } else {
-                $text = 'fail';
-            }
+            $text = substr($text, 0, strpos($text, ' '));
+            // if (is_array($matches)) {
+            //     $text = $matches[0];
+            // } else {
+            //     $text = 'fail';
+            // }
             return array(
                 'url' => $vp_post->guid,
                 'title' => $vp_post->post_title,
@@ -66,12 +63,12 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
         }, $vp_posts->posts);
 
 
-    echo "<section class='vp-nieuws verpakking'>
+        echo "<section class='vp-nieuws verpakking'>
 		<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
-    create_hexagon_grid($hexagon_list);
-    //					<div class='art-lijst'>";
+        create_hexagon_grid($hexagon_list);
+        //					<div class='art-lijst'>";
 
-    // foreach ($vp_posts->posts as $vp_post) :
+        // foreach ($vp_posts->posts as $vp_post) :
         //     if (!isset($a)) {
         //         $a = new Ag_article_c(array(
         //             'class' 		=> 'in-lijst',
@@ -84,14 +81,14 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
         //     $a->gecontroleerd = false;
 
         //     $a->print();
-    // endforeach;
+        // endforeach;
 
-    //echo "</div>"; //art lijst
-    echo "<footer>";
-    $footerknop->print();
-    echo "</footer>";
+        //echo "</div>"; //art lijst
+        echo "<footer>";
+        $footerknop->print();
+        echo "</footer>";
 
-    echo "</section>";
+        echo "</section>";
 
     endif;
 }
