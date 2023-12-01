@@ -82,12 +82,9 @@ function oyvey_vp_agenda()
         'omgeving' => 'pagina'
     ));
 
-
-
     $types_verz = [];
 
-    foreach ($agenda as $a) {
-        echo $a->ID;
+    foreach ($agenda->agendastukken as $a) {
         $types_hier = wp_get_post_terms($a->ID, 'type');
         foreach($types_hier as $t) {
             $types_verz[] = $t;
@@ -95,8 +92,7 @@ function oyvey_vp_agenda()
     }
 
     echo "<section class='verpakking'>";
-    var_dump($agenda);
-    var_dump($types_verz);
+
     $types_set = array_unique($types_verz);
 
     var_dump($types_set);
