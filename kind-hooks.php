@@ -35,7 +35,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
     if (count($vp_posts->posts)) :
 
-        echo "<section class='verpakking marginveld'>";
+        echo "<section class='verpakking marginveld vp-nieuws'>";
 
         $footerknop = new Ag_knop(array(
             'link' 		=> get_post_type_archive_link('post'),
@@ -71,7 +71,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 }
 endif;
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 20);
+add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 30);
 
 function oyvey_vp_agenda()
 {
