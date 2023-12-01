@@ -662,6 +662,34 @@ p {
   transform: translateY(0%) translatez(-1px); }
 
 /*** SPACING AND SIZING *****************************************************************/
+@media (min-width: 1500px) {
+  /* <- 2-3  hexagons per row */
+  .hex {
+    width: 32.666%;
+    /* = (100-2) / 3 */
+    padding-bottom: 37.720%;
+    /* =  width / sin(60) */ }
+  .hex:nth-child(8n+1),
+  .hex:nth-child(8n+2) {
+    transform: translateX(50%) rotate(-60deg) skewY(30deg); }
+  .hex:nth-child(8n+3),
+  .hex:nth-child(8n+4),
+  .hex:nth-child(8n+5) {
+    margin-top: -8.564%;
+    margin-bottom: -8.564%; }
+  .hex:nth-child(8n+2),
+  .hex:nth-child(8n+4) {
+    margin-right: 1%;
+    margin-left: 1%; }
+  .hex:nth-child(8n+1) {
+    margin-left: 0.5%; }
+  .hex:nth-child(8n+3),
+  .hex:nth-child(8n+6) {
+    clear: left; }
+  .hex:nth-child(8n+7),
+  .hex:nth-child(8n+8) {
+    clear: left; } }
+
 @media (min-width: 1201px) {
   /* <- 2-3  hexagons per row */
   .hex {
