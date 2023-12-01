@@ -615,7 +615,7 @@ p {
   position: relative;
   background-color: #FFF;
   opacity: 0;
-  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+  transition: opacity 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
 
 .hexagons-single.visible {
   opacity: 1; }

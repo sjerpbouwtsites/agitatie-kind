@@ -36,7 +36,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter)
 
-  for (let i = hexagonCount; i >= 0; i-=1){
+  for (let i = hexagonCount; i >= 1; i-=1){
     setTimeout(()=>{
         document.getElementById(`hexagons-single-${i+1}`).classList.add('visible');
     }, 50 + (i * 8))
