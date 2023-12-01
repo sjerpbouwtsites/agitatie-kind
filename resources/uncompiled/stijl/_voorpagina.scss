@@ -2,6 +2,11 @@
 
 // voorpagina blokken naast elkaar zetten.
 
+.uitgelichte-afbeelding-buiten.hero {
+  height: calc(100vh - 70px);
+  margin-bottom: 3em;
+}
+
 .voorpagina .site-main {
   display: flex;
   flex-wrap: wrap;
