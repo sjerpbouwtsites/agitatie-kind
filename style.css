@@ -594,9 +594,9 @@ p {
   /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
   position: absolute;
-  right: 20%;
-  top: 20%;
-  max-width: 45%; }
+  right: 5%;
+  top: 15%;
+  max-width: 35%; }
 
 .hexagons-container {
   font-size: 0;
