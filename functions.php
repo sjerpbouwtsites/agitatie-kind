@@ -85,7 +85,8 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
                     'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
                 ),
                 'public' 	=> true,
-                'rewrite'	=> array('slug'=>'agenda-type')
+                'rewrite'	=> array('slug'=>'agenda-type'),
+                'show_in_menu'=> true
 
             )
         );
