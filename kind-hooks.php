@@ -82,6 +82,7 @@ function oyvey_vp_agenda()
         'omgeving' => 'pagina'
     ));
 
+
     echo "<pre>";
     var_dump($agenda);
     echo "</pre>";
