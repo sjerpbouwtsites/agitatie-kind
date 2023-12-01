@@ -42,6 +42,11 @@
     left: -4px;
     transform: scale(0.9);
     mix-blend-mode: exclusion;
+    opacity: 0;
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  .hexagons-inner.visible {
+    opacity: 1;
   }
 
   .hexagons-container::before {

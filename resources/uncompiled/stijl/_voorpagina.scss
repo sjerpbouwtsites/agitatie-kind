@@ -6,6 +6,9 @@
   height: calc(100vh - 70px);
   margin-bottom: 3em;
 }
+.uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+  z-index: 2;
+}
 
 .voorpagina .site-main {
   display: flex;

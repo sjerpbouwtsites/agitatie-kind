@@ -394,6 +394,9 @@ p {
   height: calc(100vh - 70px);
   margin-bottom: 3em; }
 
+.uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+  z-index: 2; }
+
 .voorpagina .site-main {
   display: flex;
   flex-wrap: wrap; }
@@ -625,7 +628,12 @@ p {
   top: -4.1px;
   left: -4px;
   transform: scale(0.9);
-  mix-blend-mode: exclusion; }
+  mix-blend-mode: exclusion;
+  opacity: 0;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+
+.hexagons-inner.visible {
+  opacity: 1; }
 
 .hexagons-container::before {
   content: "";
