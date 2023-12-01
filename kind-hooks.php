@@ -50,9 +50,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             $text = get_the_excerpt();
             $matches= preg_match(
                 "/^.{0,250}\s/",
-                $text,
-                null,
-                'gm'
+                $text
             );
             if (isArray($matches) && count($matches)) {
                 $text = $matches[0];
