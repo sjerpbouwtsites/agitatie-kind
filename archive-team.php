@@ -15,6 +15,8 @@ do_action('ag_archief_titel_action');
 
 do_action('ag_archief_intro_action');
 
+echo "<div class='bericht-tekst'>".wpautop(get_field('teams-pagina-tekst-boven', 'option'))."</div>";
+
 //do_action('ag_archief_content_action');
 global $post;
 
