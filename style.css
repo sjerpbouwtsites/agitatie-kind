@@ -613,7 +613,12 @@ p {
   background: #2e6160;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: relative;
-  background-color: #FFF; }
+  background-color: #FFF;
+  opacity: 0;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+
+.hexagons-single.visible {
+  opacity: 1; }
 
 .hexagons-inner {
   width: var(--s);
@@ -628,12 +633,7 @@ p {
   top: -4.1px;
   left: -4px;
   transform: scale(0.9);
-  mix-blend-mode: exclusion;
-  opacity: 0;
-  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
-
-.hexagons-inner.visible {
-  opacity: 1; }
+  mix-blend-mode: exclusion; }
 
 .hexagons-container::before {
   content: "";

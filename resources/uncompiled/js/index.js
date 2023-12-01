@@ -28,8 +28,8 @@ let singleHTML = '';
 let hexagonCount = screen.availWidth > 1500 ? 36 : screen.availWidth > 1200 ? 27 : screen.availWidth > 768 ? 16 : screen.availWidth > 460 ? 10 : 6
 
 for (let i = 0; i < hexagonCount; i+=1){
-singleHTML +=`<div class="hexagons-single">
-<div id='hexagons-inner-${i+1}' class='hexagons-inner'></div>
+singleHTML +=`<div id='hexagons-single-${i+1}' class="hexagons-single">
+<div  class='hexagons-inner'></div>
 </div>`
 }
 hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
@@ -38,7 +38,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
 
   for (let i = 1; i <= hexagonCount; i+=1){
     setTimeout(()=>{
-        document.getElementById(`hexagons-inner-${i+1}`).classList.add('visible');
+        document.getElementById(`hexagons-single-${i+1}`).classList.add('visible');
     }, 50 + (i * 8))
   }
 
