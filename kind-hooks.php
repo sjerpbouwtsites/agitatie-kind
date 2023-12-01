@@ -82,24 +82,27 @@ function oyvey_vp_agenda()
         'omgeving' => 'pagina'
     ));
 
-    $types_verz = [];
+    $types_id_verz = [];
+    $types = [];
 
     foreach ($agenda->agendastukken as $a) {
         $types_hier = wp_get_post_terms($a->ID, 'type');
         foreach($types_hier as $t) {
-            $types_verz[] = $t->term_taxonomy_id;
+            $types_id_verz[] = $t->term_taxonomy_id;
+            $types[$t->term_taxonomy_id] = $t;
         }
     }
 
     echo "<section class='verpakking'>";
 
-    $types_set = array_unique($types_verz);
-    foreach ($types_set as $type) {
+    $types_set = array_unique($types_id_verz);
+    foreach ($types_set as $type_id) {
+        $type = $types[$type_id];
         $a = new Ag_article_c(array(
             'class' 		=> 'in-lijst',
             'htype'			=> 3,
             'is_categorie'	=> true,
-        ), $vp_post);
+        ), $type);
         $a->print();
     }
 
