@@ -613,7 +613,7 @@ p {
   background: #2e6160;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: relative;
-  background-color: #FFF;
+  background-color: #2e6160;
   opacity: 0;
   transition: opacity 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
 
@@ -627,7 +627,7 @@ p {
   display: inline-block;
   font-size: initial;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background: white;
+  background: #2e6160;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: absolute;
   top: -4.1px;
