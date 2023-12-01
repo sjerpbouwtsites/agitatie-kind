@@ -54,7 +54,7 @@ function addClassesToHexagon(hexagonCount){
     if (hexagonCount > 1){
         const newcount = hexagonCount -1;
         setTimeout(()=>{
-            hexagonCount(newcount)
+            addClassesToHexagon(newcount)
         }, 12)
     }
 
