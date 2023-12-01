@@ -37,12 +37,21 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter)
 
   for (let i = hexagonCount; i > 1; i-=1){
+    const sel = `hexagons-single-${i+1}`;
+    let el;
+    try {
+        el = document.getElementById(sel)
+    } catch (error) {
+        console.log(sel);
+        console.log(error);
+        continue;
+    }
     setTimeout(()=>{
-        document.getElementById(`hexagons-single-${i+1}`).classList.add('visible');
-    }, 50 + (i * 12))
+        el.classList.add('visible');
+    }, 250 + (i * 12))
     setTimeout(()=>{
-        document.getElementById(`hexagons-single-${i+1}`).classList.add('rotated');
-    }, 250 + (i * 12))    
+        el.classList.add('rotated');
+    }, 450 + (i * 12))    
   }
 
 }
