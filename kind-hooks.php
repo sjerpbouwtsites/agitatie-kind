@@ -90,9 +90,14 @@ function oyvey_vp_agenda()
             $types_verz[] = $t;
         }
     }
+
+    echo "<section class='verpakking'>";
+
+    var_dump($types_verz);
     $types_set = array_unique($types_verz);
 
     var_dump($types_set);
+    echo "</section>";
 
     // if (count($agenda->agendastukken) > 0) :
 
