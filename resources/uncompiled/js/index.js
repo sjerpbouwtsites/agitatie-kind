@@ -11,7 +11,7 @@ function copyCloseMenuForAccessibility(){
     const lijstEl = document.createElement('li');
     lijstEl.id = 'sluit-openklap-li';
     lijstEl.appendChild(nieuweKnop);
-    document.getElementById('menu-openklapmenu').appendChild(lijstEl)
+    document.getElementById('menu-openklap').appendChild(lijstEl)
     
 }
 
