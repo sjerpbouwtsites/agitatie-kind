@@ -37,6 +37,8 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
         echo "<section class='verpakking marginveld vp-nieuws'>";
 
+        echo "<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+
         $footerknop = new Ag_knop(array(
             'link' 		=> get_post_type_archive_link('post'),
             'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
