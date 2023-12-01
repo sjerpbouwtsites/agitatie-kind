@@ -50,7 +50,7 @@
     margin: 0 auto;
   }
   
-  .hex h1,
+  .hex .hex-title,
   .hex p {
     margin: 0;
     width: 102%;
@@ -62,7 +62,7 @@
     transition: transform .2s ease-out, opacity .3s ease-out;
   }
   
-  .hex h1 {
+  .hex .hex-title {
     bottom: 50%;
     padding-top: 50%;
     font-size: 1.5em;
@@ -70,7 +70,7 @@
     transform: translateY(-100%) translatez(-1px);
   }
   
-  .hex h1:after {
+  .hex .hex-title:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -89,7 +89,7 @@
   
   /*** HOVER EFFECT  **********************************************************************/
   
-  .hexIn:hover h1, .hexIn:focus h1, .hexIn:hover p, .hexIn:focus p {
+  .hexIn:hover .hex-title, .hexIn:focus .hex-title, .hexIn:hover p, .hexIn:focus p {
     transform: translateY(0%) translatez(-1px);
   }
   
