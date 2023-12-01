@@ -86,8 +86,9 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
                 ),
                 'public' 	=> true,
                 'rewrite'	=> array('slug'=>'agenda-type'),
-                'show_in_menu'=> true
-
+                'show_ui'   => true,
+                'show_in_menu'=> true,
+                'show_in_nav_menus'=> true,
             )
         );
         //$agenda->maak_taxonomie('type', 'types');

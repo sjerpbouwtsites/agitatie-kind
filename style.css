@@ -553,6 +553,7 @@ p {
     .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
       color: white; }
   .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst {
+    background-color: #f2f2f2;
     padding: 2em; }
     .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst *:first-child {
       margin-top: 0; }
