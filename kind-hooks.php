@@ -77,6 +77,8 @@ function oyvey_vp_agenda()
 {
     //$afm = ag_agenda_filter_ctrl();
 
+    echo "jal";
+
     $agenda = new Ag_agenda(array(
         'aantal' => 10,
         'omgeving' => 'pagina'
