@@ -94,6 +94,14 @@ function oyvey_vp_agenda()
     echo "<section class='verpakking'>";
 
     $types_set = array_unique($types_verz);
+    foreach ($types_set as $type) {
+        $a = new Ag_article_c(array(
+            'class' 		=> 'in-lijst',
+            'htype'			=> 3,
+            'is_categorie'	=> true,
+        ), $vp_post);
+        $a->print();
+    }
 
     var_dump($types_set);
     echo "</section>";
