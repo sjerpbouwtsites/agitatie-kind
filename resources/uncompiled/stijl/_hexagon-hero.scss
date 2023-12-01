@@ -8,6 +8,12 @@
     top: 15%;
     max-width: 35%;
   }
+  @media (max-width: 1500px){
+    .hexagons-outer {
+      right: 20px;
+      top: 50px;
+    }    
+  }
   
   .hexagons-container {
     font-size: 0; /*disable white space between inline block element */
