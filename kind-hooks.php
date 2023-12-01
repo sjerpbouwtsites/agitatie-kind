@@ -86,6 +86,9 @@ function oyvey_vp_agenda()
 
     foreach ($agenda->agendastukken as $a) {
         $types_hier = wp_get_post_terms($a->ID, 'type');
+        echo "<pre>";
+        var_dump($types_hier);
+        echo "</pre>";
         foreach($types_hier as $t) {
             $types_verz[] = $t;
         }
@@ -115,7 +118,7 @@ add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
 
 // function vervang_singular_na_artikel(){
 // 	remove_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 20);
-// 	add_action('ag_singular_na_artikel', 'ag_vp_print_nieuws_hook' );
+// 	add_action('ag_singular_sna_artikel', 'ag_vp_print_nieuws_hook' );
 // }
 
 // add_action('after_setup_theme', 'vervang_singular_na_artikel');
