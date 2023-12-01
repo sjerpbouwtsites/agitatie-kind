@@ -95,9 +95,7 @@ function oyvey_vp_agenda()
 
     echo "<section class='verpakking marginveld'>";
 
-    echo "<section class='vp-nieuws verpakking'>
-	<h2>" . ucfirst(\agitatie\taal\streng('Onze events')) . "</h2>
-		<div class='art-lijst'>";
+    echo "<h2>" . ucfirst(\agitatie\taal\streng('Onze events')) . "</h2>";
 
     echo "<div class='art-lijst'>";
 
