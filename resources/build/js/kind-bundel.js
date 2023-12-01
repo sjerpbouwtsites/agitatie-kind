@@ -21,41 +21,14 @@ if (!document.body.classList.contains('home')) return
 
 const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
-hexagonsOuter.innerHTML = `
-
-  <div class="hexagons-container">
-    <div class="hexagons-single">
-        <div class='hexagons-inner'></div>
-    </div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
-  </div>
-  `;
+let singleHTML = '';
+for (let i = 0; i < 30; i+=1){
+singleHTML +=`<div class="hexagons-single">
+<div class='hexagons-inner'></div>
+</div>`;
+}
+hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
+  
 
     document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter);
 
