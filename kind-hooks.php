@@ -52,7 +52,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
                 "/^.{0,250}\s/",
                 $text
             );
-            if (isArray($matches) && count($matches)) {
+            if (is_array($matches)) {
                 $text = $matches[0];
             }
             return array(
