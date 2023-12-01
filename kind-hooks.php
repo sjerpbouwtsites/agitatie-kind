@@ -73,7 +73,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 }
 endif;
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 30);
+//add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 30);
 
 function oyvey_vp_agenda()
 {
