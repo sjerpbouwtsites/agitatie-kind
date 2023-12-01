@@ -23,7 +23,7 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 36 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : bodyWidth > 460 ? 10 : 6;
+let hexagonCount = bodyWidth > 1500 ? 36 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10;
 
 for (let i = 0; i < hexagonCount; i+=1){
 singleHTML +=`<div id='hexagons-single-${i+1}' class="hexagons-single">
