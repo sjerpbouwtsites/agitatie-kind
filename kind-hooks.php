@@ -30,7 +30,7 @@ endif;
 if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
 {
     $vp_posts = new WP_Query(array(
-        'posts_per_page' => 50
+        'posts_per_page' => 6
     ));
 
     if (count($vp_posts->posts)) :
@@ -77,12 +77,15 @@ function oyvey_vp_agenda()
 {
     //$afm = ag_agenda_filter_ctrl();
 
-    echo "jal";
-
     $agenda = new Ag_agenda(array(
         'aantal' => 10,
         'omgeving' => 'pagina'
     ));
+
+    echo "<pre>";
+    var_dump($agenda);
+    echo "</pre>";
+
 
     if (count($agenda->agendastukken) > 0) :
 
