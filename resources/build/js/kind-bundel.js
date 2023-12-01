@@ -1,6 +1,3 @@
-console.log('hallo dit is het kind');   
-
-
 function copyCloseMenuForAccessibility(){
     
     
@@ -16,4 +13,4 @@ function copyCloseMenuForAccessibility(){
     
 }
 
-copyCloseMenuForAccessibility();
+window.addEventListener('load', copyCloseMenuForAccessibility);
