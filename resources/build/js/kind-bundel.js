@@ -24,34 +24,36 @@ hexagonsOuter.className = 'hexagons-outer';
 hexagonsOuter.innerHTML = `
 
   <div class="hexagons-container">
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
-    <div class="hexagons-single"></div>
+    <div class="hexagons-single">
+        <div class='hexagons-inner'></div>
+    </div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
+    <div class="hexagons-single"><div class='hexagons-inner'></div></div>
   </div>
   `;
 
