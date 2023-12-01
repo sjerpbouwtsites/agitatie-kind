@@ -30,7 +30,7 @@ endif;
 if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
 {
     $vp_posts = new WP_Query(array(
-        'posts_per_page' => 5
+        'posts_per_page' => 50
     ));
 
     if (count($vp_posts->posts)) :
