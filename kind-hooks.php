@@ -41,44 +41,32 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             'class'		=> 'in-wit'
         ));
 
-        $hexagon_list = array_map(function ($vp_post) {
-            $text = $vp_post->post_excerpt;
-            $text = substr(substr($text, 0, 135), 0, strrpos($text, ' ')+1);
-            return array(
-                'url' => $vp_post->guid,
-                'title' => $vp_post->post_title,
-                'img_html' => get_the_post_thumbnail($vp_post, 'medium'),
-                'text' => $text
-            );
-        }, $vp_posts->posts);
 
 
-        echo "<section class='vp-nieuws verpakking'>
-		<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
-        create_hexagon_grid($hexagon_list);
-        //					<div class='art-lijst'>";
 
-        // foreach ($vp_posts->posts as $vp_post) :
-        //     if (!isset($a)) {
-        //         $a = new Ag_article_c(array(
-        //             'class' 		=> 'in-lijst',
-        //             'htype'			=> 3,
-        //             'geen_afb'		=> false
-        //         ), $vp_post);
-        //     } else {
-        //         $a->art = $vp_post;
-        //     }
-        //     $a->gecontroleerd = false;
+        echo  "<div class='art-lijst'>";
 
-        //     $a->print();
-        // endforeach;
+        foreach ($vp_posts->posts as $vp_post) :
+            if (!isset($a)) {
+                $a = new Ag_article_c(array(
+                    'class' 		=> 'in-lijst',
+                    'htype'			=> 3,
+                    'geen_afb'		=> false
+                ), $vp_post);
+            } else {
+                $a->art = $vp_post;
+            }
+            $a->gecontroleerd = false;
 
-        //echo "</div>"; //art lijst
-        echo "<footer>";
-        $footerknop->print();
-        echo "</footer>";
+            $a->print();
+        endforeach;
 
-        echo "</section>";
+    echo "</div>"; //art lijst
+    echo "<footer>";
+    $footerknop->print();
+    echo "</footer>";
+
+    echo "</section>";
 
     endif;
 }
