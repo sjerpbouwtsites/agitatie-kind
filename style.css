@@ -665,7 +665,7 @@ p {
 @media (min-width: 1500px) {
   /* <- 2-3  hexagons per row */ }
 
-@media (min-width: 1201px) and (max-width: 1500px) {
+@media (min-width: 1201px) {
   /* <- 2-3  hexagons per row */
   .hex {
     width: 32.666%;
