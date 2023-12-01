@@ -581,7 +581,7 @@ p {
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
-  padding: 0.866% 0;
+  padding: 0.866% -60;
   font-family: 'Raleway', sans-serif;
   font-size: 15px; }
 
@@ -693,7 +693,7 @@ p {
   .hex:nth-child(8n+7) {
     margin-top: -96.1%; }
   .hex:nth-child(8n+8) {
-    margin-top: -46.1%; } }
+    margin-top: -37.5%; } }
 
 @media (min-width: 1201px) and (max-width: 1500px) {
   /* <- 2-3  hexagons per row */
