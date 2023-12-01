@@ -70,6 +70,16 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
             'has_archive' => true,
             'public' => true,
             'show_in_nav_menus' => true,
+            'publicly_queryable' => true,
+            'show_in_nav_menus'	=> true,
+            'show_in_menu'		=> true,
+            'add_to_menu'		=> true,
+            'menu_position'		=> 10,
+            'show_ui' 			=> true,
+            'rewrite' 			=> true,
+            'capability_type' 	=> 'post',
+            'hierarchical' 		=> false,
+            'public'			=> true,
             'menu_icon' => 'dashicons-calendar-alt',
         ));
         $agenda->registreer();
