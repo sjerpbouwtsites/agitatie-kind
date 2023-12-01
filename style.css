@@ -614,7 +614,8 @@ p {
 @media (max-width: 900px) {
   .hexagons-outer {
     transform: scale(0.7);
-    max-width: 55%; } }
+    max-width: 55%;
+    right: -30px; } }
 
 .hexagons-container {
   font-size: 0;
