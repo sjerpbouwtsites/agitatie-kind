@@ -86,11 +86,8 @@ function oyvey_vp_agenda()
 
     foreach ($agenda->agendastukken as $a) {
         $types_hier = wp_get_post_terms($a->ID, 'type');
-        echo "<pre>";
-        var_dump($types_hier);
-        echo "</pre>";
         foreach($types_hier as $t) {
-            $types_verz[] = $t;
+            $types_verz[] = $t->term_taxonomy_id;
         }
     }
 
