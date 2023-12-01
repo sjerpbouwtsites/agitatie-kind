@@ -41,31 +41,47 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             'class'		=> 'in-wit'
         ));
 
+
+
+        $hexagon_list = array_map(function ($vp_post) {
+            $thumbnail_id = get_post_thumbnail_id($vp_post->ID);
+            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+            return array(
+                'url' => $vp_post->guid,
+                'title' => $vp_post->post_title,
+                'alt'    => $alt,
+                'img_src' => get_the_post_thumbnail($vp_post),
+                'text' => get_the_excerpt($vp_post)
+            );
+        }, $vp_posts->posts);
+
+
         echo "<section class='vp-nieuws verpakking'>
-				<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>
-					<div class='art-lijst'>";
+		<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+        create_hexagon_grid($hexagon_list);
+        //					<div class='art-lijst'>";
 
-        foreach ($vp_posts->posts as $vp_post) :
-            if (!isset($a)) {
-                $a = new Ag_article_c(array(
-                    'class' 		=> 'in-lijst',
-                    'htype'			=> 3,
-                    'geen_afb'		=> false
-                ), $vp_post);
-            } else {
-                $a->art = $vp_post;
-            }
-            $a->gecontroleerd = false;
+        // foreach ($vp_posts->posts as $vp_post) :
+        //     if (!isset($a)) {
+        //         $a = new Ag_article_c(array(
+        //             'class' 		=> 'in-lijst',
+        //             'htype'			=> 3,
+        //             'geen_afb'		=> false
+        //         ), $vp_post);
+        //     } else {
+        //         $a->art = $vp_post;
+        //     }
+        //     $a->gecontroleerd = false;
 
-            $a->print();
-        endforeach;
+        //     $a->print();
+        // endforeach;
 
-    echo "</div>"; //art lijst
-    echo "<footer>";
-    $footerknop->print();
-    echo "</footer>";
+        //echo "</div>"; //art lijst
+        echo "<footer>";
+        $footerknop->print();
+        echo "</footer>";
 
-    echo "</section>";
+        echo "</section>";
 
     endif;
 }

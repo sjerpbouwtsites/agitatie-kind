@@ -149,3 +149,23 @@ function registreer_posttypes()
     // ));
     // $story->registreer();
 }
+
+function create_hexagon_grid($hexagon_list)
+{
+    echo '<ul id="hexGrid">';
+    foreach($hexagon_list as $item) {
+        $url = $item['url'];
+        $title = $item['title'];
+        $img_src = $item['img_src'];
+        $text = $item['text'];
+        echo "<li class='hex'>
+	  <a class='hexIn' href='$url'>
+		<img src='$img_src' alt='' />
+		<h3>$title</h3>
+		<p>$text</p>
+	  </a>
+	</li>";
+    }
+
+    echo "</ul>";
+}
