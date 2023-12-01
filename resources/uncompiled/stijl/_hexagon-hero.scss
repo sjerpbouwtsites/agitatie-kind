@@ -19,8 +19,16 @@
     .hexagons-outer {
       right: 20px;
       top: 50px;
-      transform:scale(0.7);
+      transform:scale(0.8);
     }    
+  }
+
+  @media (max-width: 900px){
+    .hexagons-outer {
+      right: -60px;
+      transform:scale(0.7);
+      width: 55%;
+    }
   }
 
   .hexagons-container {
