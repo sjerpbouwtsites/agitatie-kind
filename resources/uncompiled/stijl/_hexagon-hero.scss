@@ -10,11 +10,20 @@
   }
   @media (max-width: 1500px){
     .hexagons-outer {
+      --s: 90px;  /* size  */
       right: 20px;
       top: 50px;
     }    
   }
   
+  @media (max-width: 1200px){
+    .hexagons-outer {
+      --s: 70px;  /* size  */
+      right: 20px;
+      top: 50px;
+    }    
+  }
+
   .hexagons-container {
     font-size: 0; /*disable white space between inline block element */
     mix-blend-mode: lighten;
