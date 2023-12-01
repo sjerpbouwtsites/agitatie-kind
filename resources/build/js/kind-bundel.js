@@ -22,7 +22,10 @@ if (!document.body.classList.contains('home')) return
 const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
-for (let i = 0; i < 30; i+=1){
+
+let hexagonCount = screen.availWidth > 1500 ? 45 : screen.availWidth > 1200 ? 35 : screen.availWidth > 768 ? 20 : screen.availWidth > 460 ? 15 : 9;
+
+for (let i = 0; i < hexagonCount; i+=1){
 singleHTML +=`<div class="hexagons-single">
 <div class='hexagons-inner'></div>
 </div>`;
