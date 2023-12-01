@@ -105,7 +105,7 @@ function oyvey_vp_agenda()
     $types_set = array_unique($types_id_verz);
     foreach ($types_set as $type_id) {
         $type = $types[$type_id];
-        $type->name = $type->name . "<br><small class='text-zwart'>" .$type_counts[$type_id]." ".\agitatie\taal\streng('gepland')."</small>";
+        $type->name = $type->name . "<br><small class='tekst-zwart'>" .$type_counts[$type_id]." ".\agitatie\taal\streng('gepland')."</small>";
         $a = new Ag_article_c(array(
             'class' 		=> 'in-lijst',
             'htype'			=> 3,
