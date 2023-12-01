@@ -41,21 +41,9 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             'class'		=> 'in-wit'
         ));
 
-
-        echo "<pre>";
-        var_dump($vp_posts->posts[0]);
-        echo "</pre>";
         $hexagon_list = array_map(function ($vp_post) {
-            $text = strlen($vp_post->post_excerpt) > 0 ? $vp_post->post_excerpt : $vp_post->post_content;
-            // if (strlen($text) < 2) {
-            //     $text = $vp_post->post_content;
-            // }
+            $text = $vp_post->post_excerpt === '' ? $vp_post->post_excerpt : strlen($vp_post->post_content, 0, 150);
             $text = substr(substr($text, 0, 135), 0, strrpos($text, ' ')+1);
-            // if (is_array($matches)) {
-            //     $text = $matches[0];
-            // } else {
-            //     $text = 'fail';
-            // }
             return array(
                 'url' => $vp_post->guid,
                 'title' => $vp_post->post_title,
