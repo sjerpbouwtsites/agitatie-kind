@@ -603,6 +603,12 @@ p {
     right: 20px;
     top: 50px; } }
 
+@media (max-width: 1200px) {
+  .hexagons-outer {
+    right: 20px;
+    top: 50px;
+    transform: scale(0.7); } }
+
 .hexagons-container {
   font-size: 0;
   /*disable white space between inline block element */
