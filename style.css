@@ -593,7 +593,8 @@ p {
 
 .hexagons-container {
   font-size: 0;
-  /*disable white space between inline block element */ }
+  /*disable white space between inline block element */
+  mix-blend-mode: lighten; }
 
 .hexagons-single {
   width: var(--s);
@@ -602,9 +603,10 @@ p {
   display: inline-block;
   font-size: initial;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background: red;
+  background: #2e6160;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
-  position: relative; }
+  position: relative;
+  background-color: #FFF; }
 
 .hexagons-inner {
   width: var(--s);
@@ -613,12 +615,13 @@ p {
   display: inline-block;
   font-size: initial;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background: yellow;
+  background: white;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: scale(0.9); }
+  top: -4.1px;
+  left: -4px;
+  transform: scale(0.9);
+  mix-blend-mode: exclusion; }
 
 .hexagons-single:nth-child(odd) {
   background: green; }

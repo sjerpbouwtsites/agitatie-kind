@@ -7,33 +7,37 @@
   
   .hexagons-container {
     font-size: 0; /*disable white space between inline block element */
+    mix-blend-mode: lighten;
   }
   
   .hexagons-single {
     width: var(--s);
     margin: var(--m);
-    height: calc(var(--s)*1.1547); 
+    height: calc(var(--s)*1.1547);
     display: inline-block;
-    font-size:initial;
+    font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background: red;
-    margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+    background: rgb(46, 97, 96);
+    margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: relative;
+    // mix-blend-mode: lichten;
+    background-color: #FFF;
   }
 
   .hexagons-inner {
     width: var(--s);
     margin: var(--m);
-    height: calc(var(--s)*1.1547); 
+    height: calc(var(--s)*1.1547);
     display: inline-block;
-    font-size:initial;
+    font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background: yellow;
-    margin-bottom: calc(var(--m) - var(--s)*0.2885);     
+    background: rgb(255, 255, 255);
+    margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -4.1px;
+    left: -4px;
     transform: scale(0.9);
+    mix-blend-mode: exclusion;
   }
 
   .hexagons-single:nth-child(odd) {
