@@ -94,6 +94,7 @@ function oyvey_vp_agenda()
     }
 
     echo "<section class='verpakking'>";
+    echo "<div class='art-lijst'>";
 
     $types_set = array_unique($types_id_verz);
     foreach ($types_set as $type_id) {
@@ -106,7 +107,7 @@ function oyvey_vp_agenda()
         $a->print();
     }
 
-    var_dump($types_set);
+    echo "</div>";
     echo "</section>";
 
     // if (count($agenda->agendastukken) > 0) :
