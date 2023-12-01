@@ -160,8 +160,8 @@ function create_hexagon_grid($hexagon_list)
         $text = $item['text'];
         echo "<li class='hex'>
 	  <a class='hexIn' href='$url'>
+      <h3>$title</h3>
         $img_html
-		<h3>$title</h3>
 		<p>$text</p>
 	  </a>
 	</li>";
