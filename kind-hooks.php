@@ -49,8 +49,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             return array(
                 'url' => $vp_post->guid,
                 'title' => $vp_post->post_title,
-                'alt'    => $alt,
-                'img_src' => get_the_post_thumbnail($vp_post),
+                'img_html' => get_the_post_thumbnail($vp_post),
                 'text' => get_the_excerpt($vp_post)
             );
         }, $vp_posts->posts);

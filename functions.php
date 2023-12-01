@@ -156,11 +156,11 @@ function create_hexagon_grid($hexagon_list)
     foreach($hexagon_list as $item) {
         $url = $item['url'];
         $title = $item['title'];
-        $img_src = $item['img_src'];
+        $img_html = $item['img_html'];
         $text = $item['text'];
         echo "<li class='hex'>
 	  <a class='hexIn' href='$url'>
-		<img src='$img_src' alt='' />
+        $img_html
 		<h3>$title</h3>
 		<p>$text</p>
 	  </a>
