@@ -90,7 +90,7 @@ function oyvey_vp_agenda()
             $types_verz[] = $t;
         }
     }
-    $types_set = (new \Ds\Set($types_verz)).toArray();
+    $types_set = array_unique($types_verz);
 
     var_dump($types_set);
 
