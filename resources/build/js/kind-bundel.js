@@ -53,7 +53,7 @@ function addClassesToHexagon(hexagonCount){
         const newcount = hexagonCount -1;
         setTimeout(()=>{
             addClassesToHexagon(newcount);
-        }, 12);
+        }, 4);
     }
 
 }
