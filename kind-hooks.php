@@ -93,7 +93,12 @@ function oyvey_vp_agenda()
         }
     }
 
-    echo "<section class='verpakking'>";
+    echo "<section class='verpakking marginveld'>";
+
+    echo "<section class='vp-nieuws verpakking'>
+	<h2>" . ucfirst(\agitatie\taal\streng('Onze events')) . "</h2>
+		<div class='art-lijst'>";
+
     echo "<div class='art-lijst'>";
 
     $types_set = array_unique($types_id_verz);
@@ -107,7 +112,18 @@ function oyvey_vp_agenda()
         $a->print();
     }
 
+
     echo "</div>";
+
+    $footerknop = new Ag_knop(array(
+        'link' 		=> get_post_type_archive_link('post'),
+        'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
+        'class'		=> 'in-wit'
+    ));
+    echo "<footer>";
+    $footerknop->print();
+    echo "</footer>";
+
     echo "</section>";
 
     // if (count($agenda->agendastukken) > 0) :
