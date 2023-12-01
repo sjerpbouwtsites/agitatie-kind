@@ -26,11 +26,15 @@
     position: relative;
     // mix-blend-mode: lichten;
     opacity: 0;
-    transition: opacity .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: opacity, filter .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    filter: hue-rotate(90deg);
   }
 
   .hexagons-single.visible {
     opacity: 1;
+  }
+  .hexagons-single.rotated {
+    filter: hue-rotate(360deg);
   }
   .hexagons-inner {
     width: var(--s);
