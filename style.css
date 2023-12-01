@@ -623,6 +623,9 @@ p {
 .hexagons-single.rotated {
   filter: hue-rotate(1080deg); }
 
+.hexagons-single:hover {
+  filter: hue-rotate(1240deg); }
+
 .hexagons-inner {
   width: var(--s);
   margin: var(--m);
