@@ -114,8 +114,8 @@ function oyvey_vp_agenda()
     echo "</div>";
 
     $footerknop = new Ag_knop(array(
-        'link' 		=> get_post_type_archive_link('post'),
-        'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
+        'link' 		=> get_post_type_archive_link('agenda'),
+        'tekst' 	=> ucfirst(\agitatie\taal\streng('Bekijk de volledige agenda')),
         'class'		=> 'in-wit'
     ));
     echo "<footer>";
