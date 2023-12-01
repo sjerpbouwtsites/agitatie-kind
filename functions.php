@@ -70,22 +70,26 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
             'has_archive' => true,
             'public' => true,
             'show_in_nav_menus' => true,
-            'publicly_queryable' => true,
-            'show_in_nav_menus'	=> true,
-            'show_in_menu'		=> true,
-            'add_to_menu'		=> true,
-            'menu_position'		=> 10,
-            'show_ui' 			=> true,
-            'rewrite' 			=> true,
-            'capability_type' 	=> 'post',
-            'hierarchical' 		=> false,
-            'public'			=> true,
+
             'menu_icon' => 'dashicons-calendar-alt',
         ));
         $agenda->registreer();
 
         $agenda->maak_taxonomie('plek', 'plekken');
-        $agenda->maak_taxonomie('type', 'types');
+        register_taxonomy(
+            'type',
+            'types',
+            array(
+                'labels' => array(
+                    'name' => _x($tax_meervoud, 'taxonomy general name'),
+                    'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
+                ),
+                'public' 	=> true,
+                'rewrite'	=> array('slug'=>'agenda-type')
+
+            )
+        );
+        //$agenda->maak_taxonomie('type', 'types');
 
     endif;
 }
