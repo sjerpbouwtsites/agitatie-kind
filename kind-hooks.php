@@ -84,11 +84,14 @@ function oyvey_vp_agenda()
 
     $types_id_verz = [];
     $types = [];
+    $type_counts = [];
 
     foreach ($agenda->agendastukken as $a) {
         $types_hier = wp_get_post_terms($a->ID, 'type');
         foreach($types_hier as $t) {
             $types_id_verz[] = $t->term_taxonomy_id;
+            $cur_count = $type_counts[$t->term_taxonomy_id] || 0;
+            $type_counts[$t->term_taxonomy_id] = $cur_count + 1;
             $types[$t->term_taxonomy_id] = $t;
         }
     }
@@ -102,6 +105,7 @@ function oyvey_vp_agenda()
     $types_set = array_unique($types_id_verz);
     foreach ($types_set as $type_id) {
         $type = $types[$type_id];
+        $type->name = $type->name . " " .$type_counts[$type_id].ucfirst(\agitatie\taal\streng('events'));
         $a = new Ag_article_c(array(
             'class' 		=> 'in-lijst',
             'htype'			=> 3,
