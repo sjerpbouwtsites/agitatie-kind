@@ -78,21 +78,33 @@ function oyvey_vp_agenda()
     //$afm = ag_agenda_filter_ctrl();
 
     $agenda = new Ag_agenda(array(
-        'aantal' => 10,
+        'aantal' => 100,
         'omgeving' => 'pagina'
     ));
 
-    if (count($agenda->agendastukken) > 0) :
+    $types_verz = [];
 
-        echo "<section class='verpakking verpakking-klein marginveld'>";
-        echo "<div class='agenda'>
-			<h2>Agenda</h2>";
+    foreach ($agenda as $a) {
+        $types_hier = wp_get_post_terms($a->ID, 'type');
+        foreach($types_hier as $t) {
+            $types_verz[] = $t;
+        }
+    }
+    $types_set = (new \Ds\Set($types_verz)).toArray();
 
-        $agenda->print();
-        echo "</div>";
-        echo "</section>";
+    var_dump($types_set);
 
-    endif; // als agendastukken
+    // if (count($agenda->agendastukken) > 0) :
+
+    //     echo "<section class='verpakking verpakking-klein marginveld'>";
+    //     echo "<div class='agenda'>
+    // 		<h2>Agenda</h2>";
+
+    //     $agenda->print();
+    //     echo "</div>";
+    //     echo "</section>";
+
+    // endif; // als agendastukken
 }
 
 add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
