@@ -589,7 +589,10 @@ p {
   /* size  */
   --m: 4px;
   /* margin */
-  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px); }
+  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 .hexagons-container {
   font-size: 0;
@@ -622,9 +625,6 @@ p {
   left: -4px;
   transform: scale(0.9);
   mix-blend-mode: exclusion; }
-
-.hexagons-single:nth-child(odd) {
-  background: green; }
 
 .hexagons-container::before {
   content: "";
