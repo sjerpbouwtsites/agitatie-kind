@@ -21,11 +21,10 @@
     display: inline-block;
     font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background: rgb(46, 97, 96);
+    background: rgb(168, 191, 191);
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: relative;
     // mix-blend-mode: lichten;
-    background-color: rgb(46, 97, 96);
     opacity: 0;
     transition: opacity .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
@@ -40,7 +39,7 @@
     display: inline-block;
     font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background: rgb(46, 97, 96);
+    background: rgb(168, 191, 191);
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: absolute;
     top: -4.1px;
