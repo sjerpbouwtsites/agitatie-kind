@@ -48,7 +48,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
             $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 
             $text = get_the_excerpt();
-            $text = substr(substr($text, 0, 120), 0, strrpos($text, ' '));
+            $text = substr(substr($text, 0, 135), 0, strrpos($text, ' ')+1);
             // if (is_array($matches)) {
             //     $text = $matches[0];
             // } else {
