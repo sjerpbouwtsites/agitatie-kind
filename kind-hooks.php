@@ -42,7 +42,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
         ));
 
         $hexagon_list = array_map(function ($vp_post) {
-            $text = $vp_post->post_excerpt === '' ? $vp_post->post_excerpt : substr($vp_post->post_content, 0, 150);
+            $text = $vp_post->post_excerpt;
             $text = substr(substr($text, 0, 135), 0, strrpos($text, ' ')+1);
             return array(
                 'url' => $vp_post->guid,
