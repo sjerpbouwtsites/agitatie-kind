@@ -82,6 +82,8 @@ function oyvey_vp_agenda()
         'omgeving' => 'pagina'
     ));
 
+
+
     $types_verz = [];
 
     foreach ($agenda as $a) {
@@ -93,7 +95,7 @@ function oyvey_vp_agenda()
     }
 
     echo "<section class='verpakking'>";
-
+    var_dump($agenda);
     var_dump($types_verz);
     $types_set = array_unique($types_verz);
 
