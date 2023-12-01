@@ -690,7 +690,7 @@ p {
   .hex:nth-child(8n+8) {
     clear: left; } }
 
-@media (min-width: 1201px) {
+@media (min-width: 1201px) and (max-width: 1500px) {
   /* <- 2-3  hexagons per row */
   .hex {
     width: 32.666%;
