@@ -48,12 +48,12 @@ x28 29  x30 31  32
 const hideIndexAboveWidth1200 = `
 x1  x2  x3  4  
     x5  6   7   
-x8  9   10  11  
+x8  9   10  x11  
     12  x13 14  
-15  x16 17  18  
+15  x16 x17 x18  
     19  20  x21 
 22  23  x24 25  
-    26  27  28  
+    26  x27 28  
 29  30  x31 x32 
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
 
