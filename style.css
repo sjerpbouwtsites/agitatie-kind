@@ -371,6 +371,10 @@ p {
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
 
+@media screen and (max-width: 600px) {
+  .kopmenu-mobiel {
+    line-height: 40px; } }
+
 #stek-kop {
   background-color: #ececec; }
 
