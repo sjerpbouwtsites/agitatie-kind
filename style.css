@@ -516,7 +516,7 @@ p {
   .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     left: 30%; } }
 
-@media screen and (max-width) {
+@media screen and (max-width: 460px) {
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     top: 0;
     transform: initial;

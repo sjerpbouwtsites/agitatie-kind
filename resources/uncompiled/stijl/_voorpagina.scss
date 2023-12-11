@@ -157,7 +157,7 @@ position: relative;
   }
 }
 
-@media screen and (max-width){
+@media screen and (max-width: 460px){
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     top: 0;
     transform: initial;
