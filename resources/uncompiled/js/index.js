@@ -55,7 +55,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
 
   setTimeout(()=>{
       const configToUse = bodyWidth > 1500 ? hideIndexAtWidth1500 : []
-      console.log(configToUse)
+     
     addClassesToHexagon(hexagonCount, configToUse)
   }, 10)
 
@@ -63,8 +63,11 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
 
 function addClassesToHexagon(hexagonCount, config){
     
-    if (!config.includes(hexagonCount)) {
-        const thisEl = document.getElementById(`hexagons-single-${hexagonCount}`);
+    const noHexagons = document.querySelectorAll('.hexagons-single').length;
+    const thisIndex = (noHexagons - hexagonCount) + 1;
+    console.log(thisIndex)
+    if (!config.includes(thisIndex)) {
+        const thisEl = document.getElementById(`hexagons-single-${thisIndex}`);
         thisEl.classList.add('visible');
         
         setTimeout(()=>{
@@ -82,5 +85,5 @@ function addClassesToHexagon(hexagonCount, config){
 
 }
 
-console.log('sexHexagonsOnHero uitgecommentarieerd index.js agitatie-kind uncompiled js')
+
 window.addEventListener('load', setHexagonsOnHero)
