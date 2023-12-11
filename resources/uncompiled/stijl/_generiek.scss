@@ -72,3 +72,8 @@ pre {
         justify-content: flex-start;
     }
 }
+@media screen and (max-width: 460px){
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+        justify-content: center;
+    }
+}
