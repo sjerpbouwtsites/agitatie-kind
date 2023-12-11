@@ -483,8 +483,8 @@ p {
     content: '';
     display: block;
     height: 100%;
-    width: 70vw;
-    background: linear-gradient(280deg, rgba(69, 145, 140, 0) 0, rgba(69, 145, 140, 0.3) 9%, rgba(69, 145, 140, 0.2) 42%, white 100%);
+    width: 100%;
+    background: linear-gradient(280deg, rgba(69, 145, 140, 0.8) 0, rgba(69, 145, 140, 0.3) 9%, rgba(69, 145, 140, 0.2) 42%, rgba(147, 214, 209, 0.46) 100%);
     position: absolute;
     z-index: 1;
     top: 0;
