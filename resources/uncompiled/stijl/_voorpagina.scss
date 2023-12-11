@@ -156,3 +156,16 @@ position: relative;
     left: 30%;
   }
 }
+
+@media screen and (max-width){
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    top: 0;
+    transform: initial;
+    left: 0;
+    width: 100%;
+    h1 {
+      font-size: 1.75em;
+      background-color: lighten($achtergrondkleur, 20%);
+    }
+  }
+}

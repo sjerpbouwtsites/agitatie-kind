@@ -516,6 +516,16 @@ p {
   .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     left: 30%; } }
 
+@media screen and (max-width) {
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    top: 0;
+    transform: initial;
+    left: 0;
+    width: 100%; }
+    .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen h1 {
+      font-size: 1.75em;
+      background-color: white; } }
+
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {
   display: flex;
