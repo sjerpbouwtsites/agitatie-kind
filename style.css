@@ -399,7 +399,7 @@ p {
 .uitgelichte-afbeelding-buiten.hero {
   height: calc(100vh - 70px);
   margin-bottom: 3em; }
-  @media screen and (max-width) {
+  @media screen and (max-width: 600px) {
     .uitgelichte-afbeelding-buiten.hero {
       height: calc(100vh - 40px); } }
 
