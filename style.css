@@ -401,6 +401,10 @@ p {
   .stek-kop-links .radical-riders-title {
     font-size: 1.5rem; } }
 
+#stek-kop .custom-logo-link img {
+  width: auto;
+  height: 60px; }
+
 .uitgelichte-afbeelding-buiten.hero {
   height: calc(100vh - 70px);
   margin-bottom: 3em; }
