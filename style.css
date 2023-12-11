@@ -681,6 +681,9 @@ p {
 .hexagons-single.white-background {
   background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png"); }
 
+.white-background .hexagons-inner {
+  background-color: transparent; }
+
 .hexagons-single.visible {
   opacity: 0.5; }
 
@@ -694,7 +697,7 @@ p {
   display: inline-block;
   font-size: initial;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background: white;
+  background: #61b393;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: absolute;
   top: -4.1px;
