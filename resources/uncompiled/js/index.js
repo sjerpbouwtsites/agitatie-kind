@@ -29,17 +29,18 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 37 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
+let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
 
 const hideIndexAtWidth1500 = `
-5	x4	3	2	1
-	9	8	7	6
-x14	13	x12	11	10
-	18	x17	16	15
-23	x22	21	20	19
-	27	26	x25	24
-x33 32	x31	29	28
-    37	36	35	34	
+x1  x2  x3  x4  5
+    x6  7   8   9
+x10 11  x12 13  14
+    15  x16 17  18
+19  x20 21  22  23
+    24  25  x26 27
+x28 29  x30 31  32
+    33  34  x35 36
+37  38  x39 x40 x41
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
 
 
