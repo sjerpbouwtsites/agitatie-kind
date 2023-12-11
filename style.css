@@ -676,7 +676,7 @@ p {
   position: relative;
   opacity: 0;
   transition: opacity 1.52s cubic-bezier(0.6, -0.28, 0.735, 0.045), filter 2.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  filter: hue-rotate(90deg); }
+  filter: hue-rotate(90deg) saturate(70%); }
 
 .hexagons-single.white-background {
   background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png"); }
@@ -685,10 +685,7 @@ p {
   opacity: 0.5; }
 
 .hexagons-single.rotated {
-  filter: hue-rotate(1080deg); }
-
-.hexagons-single:hover {
-  filter: hue-rotate(1240deg); }
+  filter: hue-rotate(1080deg) saturate(25%); }
 
 .hexagons-inner {
   width: var(--s);
