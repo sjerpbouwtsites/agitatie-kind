@@ -38,12 +38,11 @@ x14	13	x12	11	10
 	27	26	x25	24
 x33 32	x31	29	28
     37	36	35	34	
-`.match(/(x\d+)/g).map(a=>Number(a.replace('x','')) -1);
+`.match(/(x\d+)/g).map(a=>Number(a.replace('x','')));
 
 
 for (let i = 0; i < hexagonCount; i+=1){
-   const toonStaatClass = hideIndexAtWidth1500.includes(i) ? 'verstopt': 'getoond';
-singleHTML +=`<div id='hexagons-single-${i+1}' class="hexagons-single ${toonStaatClass}">
+singleHTML +=`<div id='hexagons-single-${i+1}' data-index='${i}'class="hexagons-single">
 <div  class='hexagons-inner'></div>
 </div>`;
 }
@@ -52,19 +51,23 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter);
 
   setTimeout(()=>{
-    addClassesToHexagon(hexagonCount);
+    addClassesToHexagon(hexagonCount, {hideIndexAtWidth1500});
   }, 10);
 
 }
 
-function addClassesToHexagon(hexagonCount){
-    const thisEl = document.getElementById(`hexagons-single-${hexagonCount}`);
+function addClassesToHexagon(hexagonCount, configs){
+    const {hideIndexAtWidth1500} = configs;
     
+    if (!hideIndexAtWidth1500.includes(hexagonCount)) {
+        const thisEl = document.getElementById(`hexagons-single-${hexagonCount}`);
         thisEl.classList.add('visible');
-    
-    setTimeout(()=>{
-        thisEl.classList.add('rotated');
-    }, 250);    
+        
+        setTimeout(()=>{
+            thisEl.classList.add('rotated');
+        }, 250);    
+    }
+
 
     if (hexagonCount > 1){
         const newcount = hexagonCount -1;
