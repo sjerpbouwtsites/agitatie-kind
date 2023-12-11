@@ -74,14 +74,15 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 endif;
 
 
-function ag_vp_print_joods_genoeg_afb()
+function ag_vp_print_joods_genoeg_afb_in_post_content()
 {
-    echo "<figure class='joods-genoeg-afbeelding-buiten'>
+    global $post;
+    $post->post_content .= "<figure class='joods-genoeg-afbeelding-buiten'>
         <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='' height='' alt='Je bent Joods genoeg grafiek'>
     </figure>";
 }
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_joods_genoeg_afb', 01);
+add_action('voorpagina_voor_tekst_action', 'ag_vp_print_joods_genoeg_afb_in_post_content', 01);
 
 function oyvey_vp_agenda()
 {
