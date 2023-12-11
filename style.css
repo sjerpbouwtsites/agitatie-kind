@@ -502,8 +502,10 @@ p {
     top: 0;
     right: 50px;
     background-repeat: no-repeat; }
-  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
-    z-index: 3; } }
+  .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    z-index: 3; }
+  .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    left: 30%; } }
 
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {

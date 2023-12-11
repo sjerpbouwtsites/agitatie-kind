@@ -152,7 +152,10 @@ position: relative;
     right: 50px;
     background-repeat: no-repeat;
   }
-  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+  .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     z-index: 3;
+  }
+  .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    left: 30%;
   }
 }
