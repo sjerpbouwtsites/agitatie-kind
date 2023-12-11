@@ -643,8 +643,7 @@ p {
 
 @media (max-width: 1500px) {
   .hexagons-outer {
-    max-width: 630px;
-    transform: rotate(17deg) translateY(-110px); } }
+    max-width: 630px; } }
 
 @media (max-width: 1200px) {
   .hexagons-outer {

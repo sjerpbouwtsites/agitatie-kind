@@ -56,6 +56,19 @@ x8  9   10  x11
 33  x34 x35 x36
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')));
 
+const hideIndexAboveWidth900 = `
+x1  x2  x3    
+    x4  5      
+x6  7   8    
+    9  x10   
+11  x12 x13   
+    14  15   
+16  17  x18   
+    19  x20   
+21  22  x23  
+24  x25 x26 
+`.match(/(x\d+)/g).map(a=>Number(a.replace('x','')));
+
 
 for (let i = 0; i < hexagonCount; i+=1){
 singleHTML +=`<div id='hexagons-single-${i+1}' data-index='${i}'class="hexagons-single">
@@ -67,7 +80,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter);
 
   setTimeout(()=>{
-      const configToUse = bodyWidth > 1500 ? hideIndexAboveWidth1500 : bodyWidth > 1200 ? hideIndexAboveWidth1200 : [];
+      const configToUse = bodyWidth > 1500 ? hideIndexAboveWidth1500 : bodyWidth > 1200 ? hideIndexAboveWidth1200 : bodyWidth > 1200 ? hideIndexAboveWidth900 : [];
      
     addClassesToHexagon(hexagonCount, configToUse);
   }, 10);
