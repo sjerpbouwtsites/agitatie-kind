@@ -415,48 +415,6 @@ p {
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
   z-index: 2; }
 
-.voorpagina .site-main {
-  display: flex;
-  flex-wrap: wrap; }
-
-.voorpagina h2 {
-  font-size: 2.5rem; }
-
-.voorpagina .site-main .uitgelichte-afbeelding-buiten {
-  width: 100%;
-  margin-bottom: 0; }
-
-.voorpagina .site-main .uitgelichte-afbeelding-buiten + .tekstveld,
-.voorpagina .site-main .vp-menu {
-  width: 50%; }
-
-.voorpagina .site-main .uitgelichte-afbeelding-buiten + .tekstveld {
-  padding: 4em; }
-
-.voorpagina .site-main .uitgelichte-afbeelding-buiten + .tekstveld h2 {
-  margin-top: 0;
-  margin-bottom: 2em; }
-
-#primary.voorpagina .vp-menu {
-  margin-left: 0;
-  margin-right: 0;
-  width: 50%;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 4.66em;
-  margin-top: 0;
-  padding-bottom: 4.66em;
-  margin-bottom: 0; }
-
-#primary.voorpagina .vp-menu .knoppendoos {
-  margin-top: 3em; }
-
-#primary.voorpagina .vp-menu .knoppendoos .knop.in-kleur {
-  color: #252525;
-  font-size: 1.25em;
-  margin-bottom: .5em;
-  margin-right: .5em; }
-
 .voorpagina .art-lijst .art-c img {
   height: 160px; }
 
