@@ -48,7 +48,7 @@ x28 29  x30 31  32
 const hideIndexAboveWidth1200 = `
 x1  x2  x3  4  
     x5  6   7   
-x8  9  x10  11  
+x8  9   10  11  
     12  x13 14  
 15  x16 17  18  
     19  20  x21 
