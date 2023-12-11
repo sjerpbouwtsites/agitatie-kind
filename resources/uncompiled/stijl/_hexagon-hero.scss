@@ -24,8 +24,10 @@
 
   @media (max-width: 900px){
     .hexagons-outer {
-      transform:scale(0.7) rotate(8deg) translateY(-40px);
-      max-width: 55%;
+      transform:scale(0.7) rotate(3deg) translateY(-40px);
+      max-width: 450px;
+      bottom: -100px;
+      right: -40px;      
     }
   }
 
