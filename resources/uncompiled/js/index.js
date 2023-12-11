@@ -65,4 +65,4 @@ function addClassesToHexagon(hexagonCount){
 }
 
 console.log('sexHexagonsOnHero uitgecommentarieerd index.js agitatie-kind uncompiled js')
-//window.addEventListener('load', setHexagonsOnHero)
+window.addEventListener('load', setHexagonsOnHero)

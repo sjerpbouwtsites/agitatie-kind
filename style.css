@@ -504,19 +504,6 @@ p {
   right: 0; }
 
 @media (min-width: 1200px) {
-  .voorpagina .uitgelichte-afbeelding-buiten.hero::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 70vw;
-    background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagonenveld-9-desktop-2.png");
-    background-size: 60%;
-    background-position: center right;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 50px;
-    background-repeat: no-repeat; }
   .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     z-index: 3; }
   .voorpagina .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
