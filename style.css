@@ -496,11 +496,11 @@ p {
     width: 70vw;
     background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagonenveld-9-desktop-2.png");
     background-size: 60%;
-    background-position: bottom right;
+    background-position: center right;
     position: absolute;
     z-index: 2;
     top: 0;
-    right: 50%;
+    right: 50px;
     background-repeat: no-repeat; }
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     z-index: 3; } }
