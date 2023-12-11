@@ -445,6 +445,9 @@ p {
 .h3-als-lijst-opmaken {
   margin-bottom: 0; }
 
+.h3-als-lijst-opmaken + p {
+  margin-top: 0; }
+
 @media (max-width: 600px) {
   .voorpagina .site-main .uitgelichte-afbeelding-buiten + .tekstveld,
   .voorpagina .site-main .vp-menu {
