@@ -110,13 +110,23 @@ position: relative;
 .home #main .uitgelichte-afbeelding-buiten + div + .tekstveld {
   position: relative;
 }
-.joods-genoeg-afbeelding-buiten {
+.element-naast-tekst {
   margin: 0;
   position: absolute;
-  top: calc(100vh + 40px);
-  left: 50px;
   width: calc(((100vw - 685px)/2) - 120px);
-  mix-blend-mode: darken;
+  mix-blend-mode: darken;  
+}
+.element-naast-tekst-links{
+  left: 50px;
+}
+.element-naast-tekst-links{
+  right: 50px;
+}
+.joods-genoeg-afbeelding-buiten {
+  top: calc(100vh + 40px);
+}
+.oy-vey-logo-in-tekst {
+  top: calc(100vh + 240px);
 }
 
 @media (max-width: 600px) {

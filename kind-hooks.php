@@ -77,9 +77,15 @@ endif;
 function ag_vp_print_joods_genoeg_afb_in_post_content()
 {
     global $post;
-    $post->post_content .= "<figure class='joods-genoeg-afbeelding-buiten'>
-        <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='' height='' alt='Je bent Joods genoeg grafiek'>
-    </figure>";
+    $post->post_content .= "
+    <figure class='element-naast-tekst element-naast-tekst-links joods-genoeg-afbeelding-buiten'>
+        <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='1080' height='1080' alt='Je bent Joods genoeg grafiek'>
+    </figure>
+    <figure class='element-naast-tekst element-naast-tekst-rechts oy-vey-logo-in-tekst'>
+        <img src='".site_url('wp-content/uploads/2023/12/New-Oy-Vey-Logo1.svg')."' alt='Wapen van joodse culturele verenging Oy Vey' width='300' height='300' />
+    </figure>
+    
+    ";
 }
 
 add_action('voorpagina_voor_tekst_action', 'ag_vp_print_joods_genoeg_afb_in_post_content', 01);
