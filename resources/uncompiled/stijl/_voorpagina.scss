@@ -103,7 +103,15 @@ position: relative;
 .h3-als-lijst-opmaken + p {
   margin-top: 0;
 }
-
+.voorpagina #main .uitgelichte-afbeelding-buiten + div + .tekstveld {
+  position: relative;
+}
+.joods-genoeg-afbeelding-buiten {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
 
 @media (max-width: 600px) {
 
