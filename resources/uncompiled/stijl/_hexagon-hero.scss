@@ -46,8 +46,8 @@
     // clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     // background: rgb(168, 191, 191);
     background-image: url('http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon-rood.png');
-    background-size: 100%;
-    background-position: cover;
+    background-size: cover;
+    background-position: center center;
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: relative;
     // mix-blend-mode: lichten;
