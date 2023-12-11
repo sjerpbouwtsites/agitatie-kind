@@ -5,6 +5,9 @@
 .uitgelichte-afbeelding-buiten.hero {
   height: calc(100vh - 70px);
   margin-bottom: 3em;
+  @media screen and (max-width){
+    height: calc(100vh - 40px);
+  }
 }
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
   z-index: 2;
