@@ -63,7 +63,10 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
 {
     $kind_config = $GLOBALS['kind_config'];
 
-    if (empty($kind_config) || (array_key_exists('agenda', $kind_config) && $kind_config['agenda'])) :
+    if (!empty($kind_config) || (array_key_exists('agenda', $kind_config) && $kind_config['agenda'])) :
+
+        // echo "a";
+        // die();
 
         $agenda = new Posttype_voorb('agenda', 'agenda');
         $agenda->pas_args_aan(array(
@@ -73,25 +76,47 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
 
             'menu_icon' => 'dashicons-calendar-alt',
         ));
+
         $agenda->registreer();
 
-        $agenda->maak_taxonomie('plek', 'plekken');
+        $tax_meervoud = 'plekken';
+        $tax_enkelvoud = 'plek';
+        $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
         register_taxonomy(
-            'type',
-            'types',
+            $tax_enkelvoud,
+            'agenda',
             array(
                 'labels' => array(
                     'name' => _x($tax_meervoud, 'taxonomy general name'),
                     'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
                 ),
                 'public' 	=> true,
-                'rewrite'	=> array('slug'=>'agenda-type'),
+                // 'rewrite'	=> array('slug'=>'agenda-plek'),
                 'show_ui'   => true,
                 'show_in_menu'=> true,
                 'show_in_nav_menus'=> true,
             )
         );
-        //$agenda->maak_taxonomie('type', 'types');
+        $tax_meervoud = 'types';
+        $tax_enkelvoud = 'type';
+        $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
+        register_taxonomy(
+            $tax_enkelvoud,
+            'agenda',
+            array(
+                'labels' => array(
+                    'name' => _x($tax_meervoud, 'taxonomy general name'),
+                    'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
+                ),
+                'public' 	=> true,
+                // 'rewrite'	=> array('slug'=>'agenda-type'),
+                'show_ui'   => true,
+                'show_in_menu'=> true,
+                'show_in_nav_menus'=> true,
+            )
+        );
+
+
 
     endif;
 }
