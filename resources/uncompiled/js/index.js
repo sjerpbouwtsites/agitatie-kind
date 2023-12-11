@@ -31,6 +31,8 @@ let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
 let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
 
+
+
 const hideIndexAtWidth1500 = `
 x1  x2  x3  x4  5
     x6  7   8   9
@@ -65,7 +67,7 @@ function addClassesToHexagon(hexagonCount, config){
     
     const noHexagons = document.querySelectorAll('.hexagons-single').length;
     const thisIndex = (noHexagons - hexagonCount) + 1;
-    console.log(thisIndex)
+  
     if (!config.includes(thisIndex)) {
         const thisEl = document.getElementById(`hexagons-single-${thisIndex}`);
         thisEl.classList.add('visible');

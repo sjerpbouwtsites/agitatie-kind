@@ -630,7 +630,7 @@ p {
 
 .hexagons-outer {
   display: flex;
-  --s: 100px;
+  --s: 120px;
   /* size  */
   --m: 4px;
   /* margin */
@@ -638,7 +638,8 @@ p {
   position: absolute;
   right: 50px;
   top: -50px;
-  max-width: 550px; }
+  max-width: 700px;
+  transform: rotate(17deg) translateY(-40px); }
 
 @media (max-width: 1500px) {
   .hexagons-outer {
