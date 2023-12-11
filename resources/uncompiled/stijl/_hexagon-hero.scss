@@ -45,7 +45,7 @@
     font-size: initial;
     // clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     // background: rgb(168, 191, 191);
-    background-image: url('http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png');
+    background-image: url('http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon-rood.png');
     background-size: 100%;
     background-position: cover;
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
@@ -71,8 +71,8 @@
     height: calc(var(--s)*1.1547);
     display: inline-block;
     font-size: initial;
-    // clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    // background: rgb(255, 255, 255);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background: rgb(255, 255, 255);
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
     position: absolute;
     top: -4.1px;
