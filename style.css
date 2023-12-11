@@ -524,7 +524,7 @@ p {
     width: 100%; }
     .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen h1 {
       font-size: 1.75em;
-      background-color: white; } }
+      background-color: rgba(247, 247, 247, 0.7); } }
 
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {
