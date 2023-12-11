@@ -98,6 +98,9 @@ function addClassesToHexagon(hexagonCount, config){
         
         setTimeout(()=>{
             thisEl.classList.add('rotated');
+            setTimeout(()=>{
+                thisEl.classList.add('white-background');
+            }, 2500);
         }, 250);    
     }
 
