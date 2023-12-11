@@ -82,7 +82,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter)
 
   setTimeout(()=>{
-      const configToUse = bodyWidth > 1500 ? hideIndexAboveWidth1500 : bodyWidth > 1200 ? hideIndexAboveWidth1200 : bodyWidth > 1200 ? hideIndexAboveWidth900 : []
+      const configToUse = bodyWidth > 1500 ? hideIndexAboveWidth1500 : bodyWidth > 1200 ? hideIndexAboveWidth1200 : bodyWidth > 900 ? hideIndexAboveWidth900 : []
      
     addClassesToHexagon(hexagonCount, configToUse)
   }, 10)
