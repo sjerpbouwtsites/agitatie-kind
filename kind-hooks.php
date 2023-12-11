@@ -76,7 +76,9 @@ endif;
 
 function ag_vp_print_joods_genoeg_afb()
 {
-    echo "hallo";
+    echo "<figure class='joods-genoeg-afbeelding-buiten'>
+        <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='' height='' alt='Je bent Joods genoeg grafiek'>
+    </figure>";
 }
 
 add_action('voorpagina_na_tekst_action', 'ag_vp_print_joods_genoeg_afb', 01);
