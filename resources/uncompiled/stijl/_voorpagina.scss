@@ -118,7 +118,7 @@ position: relative;
 }
 
 @media (min-width: 1200px){
-  .voorpagina .uitgelichte-afbeelding-buiten.hero::after {
+  .voorpagina .uitgelichte-afbeelding-buiten.hero::before {
     content: '';
     display: block;
     height: 100%;
@@ -130,13 +130,29 @@ position: relative;
       rgba(69,145,140,0.2) 42%, 
       rgba(255,255,255,1) 100%
     ); 
-    background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagonenveld-desktop.png");
-    background-size: 84%;
-    background-position: bottom right;
+    
     position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
+    
+  }  
+  .voorpagina .uitgelichte-afbeelding-buiten.hero::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 70vw;
+    
+    background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagonenveld-9-desktop.png");
+    background-size: 84%;
+    background-position: bottom right;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
     background-repeat: no-repeat;
+  }
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    z-index: 3;
   }
 }
