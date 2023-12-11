@@ -682,7 +682,7 @@ p {
   background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png"); }
 
 .hexagons-single.visible {
-  opacity: 1; }
+  opacity: 0.5; }
 
 .hexagons-single.rotated {
   filter: hue-rotate(1080deg); }

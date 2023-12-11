@@ -60,7 +60,7 @@
   }
 
   .hexagons-single.visible {
-    opacity: 1;
+    opacity: 0.5;
   }
   .hexagons-single.rotated {
     filter: hue-rotate(1080deg);
