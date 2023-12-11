@@ -122,9 +122,21 @@ position: relative;
     content: '';
     display: block;
     height: 100%;
-    width: 50vw;
-    background-image: url("./wp-content/themes/agitatie-kind/img/ontwerp qauasi a la origineel  desktop oyvey hexagonen.png");
-    background-size: cover;
-    background-position: center right;
+    width: 70vw;
+    background: linear-gradient(
+      90deg, 
+      rgba(69,145,140,0) 0,
+      rgba(69,145,140,0.3) 9%, 
+      rgba(69,145,140,0.2) 42%, 
+      rgba(255,255,255,1) 100%
+    ); 
+    background-image: url("http://localhost/oyvey/wp-content/themes/agitatie-kind/img/ontwerp qauasi a la origineel desktop oyvey hexagonen.png");
+    background-size: 84%;
+    background-position: bottom right;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
   }
 }
