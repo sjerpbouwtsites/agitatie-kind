@@ -29,11 +29,11 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
+let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 32 : bodyWidth > 768 ? 16 : 10
 
 
 
-const hideIndexAtWidth1500 = `
+const hideIndexAboveWidth1500 = `
 x1  x2  x3  x4  5
     x6  7   8   9
 x10 11  x12 13  14
@@ -43,6 +43,18 @@ x10 11  x12 13  14
 x28 29  x30 31  32
     33  34  35  36
 37  38  x39 x40 x41
+`.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
+
+const hideIndexAboveWidth1200 = `
+x1  x2  x3  4  
+    x5  6   7   
+x8  9  x10  11  
+    12  x13 14  
+15  x16 17  18  
+    19  20  x21 
+x22 23  x24 25  
+    26  27  28  
+29  30  x31 x32 
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
 
 
@@ -56,7 +68,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter)
 
   setTimeout(()=>{
-      const configToUse = bodyWidth > 1500 ? hideIndexAtWidth1500 : []
+      const configToUse = bodyWidth > 1500 ? hideIndexAboveWidth1500 : bodyWidth > 1200 ? hideIndexAboveWidth1200 : []
      
     addClassesToHexagon(hexagonCount, configToUse)
   }, 10)

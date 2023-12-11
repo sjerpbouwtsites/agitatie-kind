@@ -645,7 +645,7 @@ p {
   .hexagons-outer {
     right: 20px;
     top: 50px;
-    max-width: 50%; } }
+    max-width: 630px; } }
 
 @media (max-width: 1200px) {
   .hexagons-outer {
