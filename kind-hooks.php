@@ -79,7 +79,7 @@ function ag_vp_print_joods_genoeg_afb()
     echo "hallo";
 }
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_joods_genoeg_afb', 30);
+add_action('voorpagina_na_tekst_action', 'ag_vp_print_joods_genoeg_afb', 01);
 
 function oyvey_vp_agenda()
 {
