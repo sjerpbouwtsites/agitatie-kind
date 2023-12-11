@@ -422,7 +422,7 @@ p {
   position: relative;
   padding-bottom: 4em;
   padding-top: 4em;
-  margin-top: 0;
+  margin-top: 4em;
   margin-bottom: 0; }
   .vp-nieuws h2 {
     margin-bottom: 1.5em;
@@ -443,7 +443,8 @@ p {
   left: 0; }
 
 .h3-als-lijst-opmaken {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 2.5em; }
 
 .h3-als-lijst-opmaken + p {
   margin-top: 0; }
