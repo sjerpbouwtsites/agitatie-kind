@@ -40,7 +40,7 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
 
   setTimeout(()=>{
     addClassesToHexagon(hexagonCount);
-  }, 100);
+  }, 10);
 
 }
 
