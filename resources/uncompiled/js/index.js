@@ -68,7 +68,7 @@ const hideIndexAboveWidth900 = `
 16  17   18   
     19   20   
 21  22   23  
-24  25   26 
+24  25   x26 
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
 
 
