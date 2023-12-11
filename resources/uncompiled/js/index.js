@@ -29,10 +29,23 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 36 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
+let hexagonCount = bodyWidth > 1500 ? 37 : bodyWidth > 1200 ? 21 : bodyWidth > 768 ? 16 : 10
+
+const hideIndexAtWidth1500 = `
+5	x4	3	2	1
+	9	8	7	6
+x14	13	x12	11	10
+	18	x17	16	15
+23	x22	21	20	19
+	27	26	x25	24
+x33 32	x31	29	28
+    37	36	35	34	
+`.match(/(x\d+)/g).map(a=>Number(a.replace('x','')) -1)
+
 
 for (let i = 0; i < hexagonCount; i+=1){
-singleHTML +=`<div id='hexagons-single-${i+1}' class="hexagons-single">
+   const toonStaatClass = hideIndexAtWidth1500.includes(i) ? 'verstopt': 'getoond';
+singleHTML +=`<div id='hexagons-single-${i+1}' class="hexagons-single ${toonStaatClass}">
 <div  class='hexagons-inner'></div>
 </div>`
 }
