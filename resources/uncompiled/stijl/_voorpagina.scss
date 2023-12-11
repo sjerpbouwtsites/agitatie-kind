@@ -116,3 +116,15 @@ position: relative;
 
 }
 }
+
+@media (min-width: 1200px){
+  .voorpagina .uitgelichte-afbeelding-buiten.hero::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 50vw;
+    background-image: url("./wp-content/themes/agitatie-kind/img/ontwerp qauasi a la origineel  desktop oyvey hexagonen.png");
+    background-size: cover;
+    background-position: center right;
+  }
+}
