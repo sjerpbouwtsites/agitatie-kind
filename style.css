@@ -524,7 +524,8 @@ p {
     width: 100%; }
     .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen h1 {
       font-size: 1.75em;
-      background-color: rgba(46, 97, 96, 0.7); } }
+      background-color: rgba(46, 97, 96, 0.7);
+      padding: 1.33em 1em; } }
 
 .vol-scherm-veld__voorste,
 .vol-scherm-veld__tweede-sectie {
