@@ -370,7 +370,8 @@ p {
 
 @media screen and (max-width: 460px) {
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
-    justify-content: center; } }
+    justify-content: center;
+    top: 60vh; } }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
