@@ -27,7 +27,7 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 36 : bodyWidth > 900 ? 36 : 10;
+let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 36 : bodyWidth > 900 ? 36 : bodyWidth > 600 ? 9 : 0;
 
 
 
