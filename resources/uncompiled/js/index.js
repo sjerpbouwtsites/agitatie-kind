@@ -52,16 +52,17 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter)
 
+  const configToUse = bodyWidth > 1500 ? hideIndexAtWidth1500 : []
   setTimeout(()=>{
-    addClassesToHexagon(hexagonCount, {hideIndexAtWidth1500})
+    addClassesToHexagon(hexagonCount, configToUse)
   }, 10)
 
 }
 
-function addClassesToHexagon(hexagonCount, configs){
-    const {hideIndexAtWidth1500} = configs;
+function addClassesToHexagon(hexagonCount, config){
     
-    if (!hideIndexAtWidth1500.includes(hexagonCount)) {
+    
+    if (!config.includes(hexagonCount)) {
         const thisEl = document.getElementById(`hexagons-single-${hexagonCount}`);
         thisEl.classList.add('visible');
         
