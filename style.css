@@ -675,7 +675,7 @@ p {
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
   position: relative;
   opacity: 0;
-  transition: opacity 1.52s cubic-bezier(0.6, -0.28, 0.735, 0.045), filter 2.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: opacity 1.52s cubic-bezier(0.6, -0.28, 0.735, 0.045), filter 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   filter: hue-rotate(90deg) saturate(70%); }
 
 .hexagons-single.white-background {
@@ -688,7 +688,7 @@ p {
   opacity: 0.4; }
 
 .hexagons-single.rotated {
-  filter: hue-rotate(1080deg) saturate(25%); }
+  filter: hue-rotate(2160deg) saturate(25%); }
 
 .hexagons-inner {
   width: var(--s);
