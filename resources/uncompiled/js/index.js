@@ -29,7 +29,7 @@ const hexagonsOuter = document.createElement('div');
 hexagonsOuter.className = 'hexagons-outer';
 let singleHTML = '';
 const bodyWidth = document.body.offsetWidth;
-let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 32 : bodyWidth > 768 ? 16 : 10
+let hexagonCount = bodyWidth > 1500 ? 41 : bodyWidth > 1200 ? 36 : bodyWidth > 768 ? 16 : 10
 
 
 
@@ -54,7 +54,8 @@ x8  9   10  x11
     19  20  x21 
 22  23  x24 25  
     26  x27 28  
-29  30  x31 x32 
+29  30  x31 32 
+33  x34 x35 x36
 `.match(/(x\d+)/g).map(a=>Number(a.replace('x','')))
 
 
