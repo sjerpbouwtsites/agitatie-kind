@@ -685,7 +685,7 @@ p {
   background-color: transparent; }
 
 .hexagons-single.visible {
-  opacity: 0.5; }
+  opacity: 0.4; }
 
 .hexagons-single.rotated {
   filter: hue-rotate(1080deg) saturate(25%); }
