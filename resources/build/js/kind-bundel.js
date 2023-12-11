@@ -50,15 +50,15 @@ hexagonsOuter.innerHTML = `<div class="hexagons-container">${singleHTML}</div>`;
   
   document.querySelector('.uitgelichte-afbeelding-buiten.hero').appendChild(hexagonsOuter);
 
-  const configToUse = bodyWidth > 1500 ? hideIndexAtWidth1500 : [];
   setTimeout(()=>{
+      const configToUse = bodyWidth > 1500 ? hideIndexAtWidth1500 : [];
+      console.log(configToUse);
     addClassesToHexagon(hexagonCount, configToUse);
   }, 10);
 
 }
 
 function addClassesToHexagon(hexagonCount, config){
-    
     
     if (!config.includes(hexagonCount)) {
         const thisEl = document.getElementById(`hexagons-single-${hexagonCount}`);
