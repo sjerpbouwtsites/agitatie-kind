@@ -667,6 +667,12 @@ main {
   font-size: .5em;
   display: block; }
 
+.agenda-lijst__taxonomieen {
+  display: flex; }
+
+.agenda-lijst__taxonomieen > * + * {
+  margin-left: 10px; }
+
 .archive.category .tax {
   display: none; }
 
