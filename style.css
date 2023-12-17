@@ -640,6 +640,14 @@ main {
   padding: 10px;
   margin-bottom: 10px; }
 
+.agenda-lijst__datum {
+  flex-grow: 1; }
+
+.agenda-lijst__rechts {
+  max-width: 66% p;
+    max-width-font-size: .75rem;
+    max-width-margin: 0; }
+
 .agenda-lijst__link {
   display: flex; }
 
