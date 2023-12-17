@@ -81,3 +81,10 @@
 .agenda-lijst__taxonomieen > * + * {
   //margin-left: 10px;
 }
+
+@media screen and (max-width: 800px){
+  #agenda-filter,.agenda-lijst {
+    margin-left: -2.33em;
+    margin-right: -2.33em;
+  }
+}
