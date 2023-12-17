@@ -105,7 +105,8 @@
     top: 0;
     left: 30px;
     font-size: 1.5em;
-    padding-top: calc(100% - 110px);
+    padding: 100%;
+    transform: translate(0, -100%);
 
   .tekst-zwart {
     color: white;
