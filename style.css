@@ -398,7 +398,8 @@ main {
   margin-bottom: .5em; }
 
 .geen-uitgelicht .sticky-sidebar {
-  top: 120px; }
+  top: 120px;
+  height: calc(100% - 100px); }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
