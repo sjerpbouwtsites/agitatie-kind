@@ -649,7 +649,8 @@ main {
 
 .agenda-lijst__rechts p {
   font-size: .75rem;
-  margin: 0; }
+  margin: 0;
+  margin-top: .25em; }
 
 .agenda-lijst__link {
   display: flex; }
@@ -659,12 +660,12 @@ main {
 
 .agenda-lijst__titel {
   margin: 0;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
   font-size: 1.5rem; }
 
 .agenda-lijst__tijd {
   font-size: .5em;
-  display: inline-block; }
+  display: block; }
 
 .archive.category .tax {
   display: none; }
