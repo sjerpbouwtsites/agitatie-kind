@@ -33,35 +33,33 @@ else :
 
 endif;
 
-// echo "<div class='Ag_knoppen-doos'>";
+echo "<div class='Ag_knoppen-doos'>";
 
-// 	$archief = array_key_exists('archief', $_GET);
-// 	$agenda_link = get_post_type_archive_link('agenda');
+$archief = array_key_exists('archief', $_GET);
+$agenda_link = get_post_type_archive_link('agenda');
 
-// 	//wat als er uberhaupt geen GET zijn => andere link
-// 	$archief_Ag_knop = new Ag_knop(array(
-// 		'ikoon'=> ($archief ? "arrow-right-thick"  : "step-backward-2"),
-// 		'class'=> 'in-kleur '.($archief ? ""  : "ikoon-links"),
-// 		'link' => $agenda_link . ($archief ? ""  : "?archief=ja"),
-// 		'tekst'=> $archief ? "normale agenda" : "agenda archief"
-// 	));
+//wat als er uberhaupt geen GET zijn => andere link
+$archief_Ag_knop = new Ag_knop(array(
+    'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
+    'class'=> 'in-kleur '.($archief ? "" : "ikoon-links"),
+    'link' => $agenda_link . ($archief ? "" : "?archief=ja"),
+    'tekst'=> $archief ? "normale agenda" : "agenda archief"
+));
 
-// 	$archief_Ag_knop->print();
+$archief_Ag_knop->print();
 
-// 	//als filters actief Ag_knop terug naar begin.
-// 	if ( $afm['filters_actief'] ) {
+//als filters actief Ag_knop terug naar begin.
+if ($afm['filters_actief']) {
+    $agenda_begin = new Ag_knop(array(
+        'ikoon' => 'replay',
+        'class'=> 'in-wit',
+        'link' => $agenda_link,
+        'tekst'=> "Verwijder filters",
+    ));
+    $agenda_begin->print();
+}
 
-// 		$agenda_begin = new Ag_knop(array(
-// 			'ikoon' => 'replay',
-// 			'class'=> 'in-wit',
-// 			'link' => $agenda_link,
-// 			'tekst'=> "Verwijder filters",
-// 		));
-// 		$agenda_begin->print();
-
-// 	}
-
-// echo "</div>";
+echo "</div>";
 
 ?>
 	</div>
