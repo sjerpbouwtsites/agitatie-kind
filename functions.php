@@ -438,21 +438,5 @@ function schakel_debug()
     endif;
 }
 
-function onderdruk_deprecated()
-{
-    if (is_user_logged_in() && !array_key_exists('deprecated', $_GET)) :
-
-        echo "HALLO";
-        die();
-
-        add_filter('deprecated_constructor_trigger_error', '__return_false');
-        add_filter('deprecated_function_trigger_error', '__return_false');
-        add_filter('deprecated_file_trigger_error', '__return_false');
-        add_filter('deprecated_argument_trigger_error', '__return_false');
-        add_filter('deprecated_hook_trigger_error', '__return_false');
-    endif;
-}
-
-onderdruk_deprecated();
 
 add_action('wp_footer', 'schakel_debug');
