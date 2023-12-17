@@ -126,6 +126,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 
     $m_art = new OyveyTeam($basis_array, $post);
 
+    echo $afb_formaat;
+
     if (isset($m_art)) {
         $m_art->afb_formaat	= $afb_formaat;
         $m_art->print();
