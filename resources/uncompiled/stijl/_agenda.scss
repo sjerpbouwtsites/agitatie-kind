@@ -1,12 +1,12 @@
 .agenda-address__regel {
- // color: #d0d0d0;
+  // color: #d0d0d0;
 }
 
 // overschrijving van klungelige css uit ouder
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
   margin-top: 0.5em;
   padding-top: 0.5em;
- // border-top: 1px solid rgba(33, 33, 33, 0.1);
+  // border-top: 1px solid rgba(33, 33, 33, 0.1);
 }
 #stek-voet .agenda-lijst__stuk.agenda-lijst__stuk--widget {
   margin-bottom: 0.5em;
@@ -24,37 +24,42 @@
 .agenda-lijst__stuk {
   border-bottom: 1px solid rgba(232, 222, 222, 0.1);
   padding: 10px;
-  
 }
 
 .agenda-lijst__datum {
   flex-grow: 1;
   max-width: 350px;
 }
-.agenda-lijst__rechts {
-  width: 66%
+@media screen and (max-width: 600px) {
+  .agenda-lijst__datum {
+    max-width: calc(100% - 170px);
+  }
 }
-@media screen and (max-width: 1000px){
+
+.agenda-lijst__rechts {
+  width: 66%;
+}
+@media screen and (max-width: 1000px) {
   .agenda-lijst__rechts {
     width: 50%;
   }
 }
 .agenda-lijst__rechts p {
-  font-size: .75rem;
+  font-size: 0.75rem;
   margin: 0;
-  margin-top:.25em;
+  margin-top: 0.25em;
 }
 
 .agenda-lijst__link {
   display: flex;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .agenda-lijst__link {
     flex-wrap: wrap;
-  } 
+  }
 }
 
-.agenda-lijst__links{
+.agenda-lijst__links {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,20 +72,20 @@
 }
 .agenda-lijst__titel {
   margin: 0;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
   font-size: 1.5rem;
 }
 .agenda-lijst__tijd {
-  font-size: .5em;
-  margin-top: .5em;
+  font-size: 0.5em;
+  margin-top: 0.5em;
   display: block;
 }
 .agenda-lijst__taxonomieen {
-//  display: flex;
-  font-size: .75em;
+  //  display: flex;
+  font-size: 0.75em;
 }
 .agenda-lijst__taxonomie-prefix {
-  opacity: .75;
+  opacity: 0.75;
   display: inline-block;
   min-width: 35px;
 }
@@ -88,16 +93,19 @@
   //margin-left: 10px;
 }
 
-@media screen and (max-width: 800px){
-  #agenda-filter,.agenda-lijst__wrapper {
+@media screen and (max-width: 800px) {
+  #agenda-filter,
+  .agenda-lijst__wrapper {
     margin-left: -2.33em;
     margin-right: -2.33em;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .agenda-lijst__rechts{
+  .agenda-lijst__rechts {
     width: 100% !important;
     display: block;
-}
+    margin-left: 0;
+    margin-bottom: 0;
   }
+}
