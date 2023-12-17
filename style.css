@@ -313,6 +313,9 @@ p {
   display: block;
   margin-bottom: .5em; }
 
+main {
+  overflow-x: hidden; }
+
 .zichtbaar-op-focus {
   position: absolute;
   left: -50vw;

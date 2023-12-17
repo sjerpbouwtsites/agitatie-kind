@@ -82,9 +82,8 @@ function ag_vp_print_joods_genoeg_afb_in_post_content()
         <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='1080' height='1080' alt='Je bent Joods genoeg grafiek'>
     </figure>
     <figure class='element-naast-tekst element-naast-tekst-rechts oy-vey-logo-in-tekst'>
-        <img src='".site_url('wp-content/uploads/2023/12/New-Oy-Vey-Logo1.svg')."' alt='Wapen van joodse culturele verenging Oy Vey' width='300' height='300' />
+        <img src='".site_url('wp-content/uploads/2023/12/New-Oy-Vey-Logo1.svg')."' alt='Wapen van joodse culturele verenging Oy Vey' width='500' height='500' />
     </figure>
-    
     ";
 }
 
@@ -166,3 +165,24 @@ add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
 // }
 
 // add_action('after_setup_theme', 'vervang_singular_na_artikel');
+
+
+function ag_logo_in_footer_hook()
+{
+    $blog_url = site_url();
+    $img = $blog_url."wp-content/uploads/2023/12/oy-vey-letters-white.svg";
+    echo "<a 
+        href='$blog_url' 
+        class='custom-logo-link' 
+        rel='home' 
+        aria-current='page'>
+            <img 
+                width='280' 
+                height='280' 
+                src='$img' 
+                class='custom-logo' 
+                alt='logo joodse culturele vereniging oy vey' 
+                decoding='async' 
+            />
+        </a>";
+}
