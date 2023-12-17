@@ -734,9 +734,13 @@ main {
     margin-left: 0;
     margin-bottom: 0; } }
 
+.agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail {
+  max-height: 150px; }
+
 @media (max-width: 380px) {
   .agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail {
-    width: 100px; }
+    width: 100px;
+    max-height: 100px; }
   .agenda-lijst__datum.agenda-lijst__datum--pagina {
     max-width: calc(100% - 120px); } }
 
