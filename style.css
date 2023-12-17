@@ -714,6 +714,12 @@ main {
     margin-left: 0;
     margin-bottom: 0; } }
 
+@media (max-width: 380px) {
+  .agenda-lijst__link .attachment-thumbnail {
+    width: 100px; }
+  .agenda-lijst__datum {
+    max-width: calc(100% - 120px); } }
+
 .archive.category .tax {
   display: none; }
 
