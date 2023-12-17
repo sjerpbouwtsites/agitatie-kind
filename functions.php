@@ -424,7 +424,7 @@ add_filter('upload_mimes', 'enable_svg_upload', 10, 1);
 
 function schakel_debug()
 {
-    if (is_admin()) :
+    if (is_user_admin()) :
 
         global $wp;
         $current_url = home_url(add_query_arg(array(), $wp->request));
