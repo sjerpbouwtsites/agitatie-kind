@@ -102,9 +102,11 @@
   }
   .art-rechts {
     position: absolute;
-  top: 2em;
-  left: 2em;
-  font-size: 1.25em;
+    top: 0;
+    left: 30px;
+    font-size: 1.5em;
+    padding-top: calc(100% - 110px);
+
   .tekst-zwart {
     color: white;
     
