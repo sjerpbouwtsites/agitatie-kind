@@ -80,8 +80,8 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
 
         $agenda->registreer();
 
-        $tax_meervoud = 'plekken';
-        $tax_enkelvoud = 'plek';
+        $tax_meervoud = 'locaties';
+        $tax_enkelvoud = 'locatie';
         $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
         register_taxonomy(
             $tax_enkelvoud,
@@ -98,8 +98,8 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
                 'show_in_nav_menus'=> true,
             )
         );
-        $tax_meervoud = 'types';
-        $tax_enkelvoud = 'type';
+        $tax_meervoud = 'soorten';
+        $tax_enkelvoud = 'soort';
         $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
         register_taxonomy(
             $tax_enkelvoud,
