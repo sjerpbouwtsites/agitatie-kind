@@ -23,72 +23,72 @@
   margin-left: 20px;
 }
 
-.agenda-lijst__stuk {
+.agenda-lijst__stuk.agenda-lijst__stuk--pagina {
   border-bottom: 1px solid rgba(232, 222, 222, 0.1);
   padding: 10px;
 }
 
-.agenda-lijst__datum {
+.agenda-lijst__datum.agenda-lijst__datum--pagina {
   flex-grow: 1;
   width: 350px;
 }
 @media screen and (max-width: 600px) {
-  .agenda-lijst__datum {
+  .agenda-lijst__datum.agenda-lijst__datum--pagina {
     width: calc(100% - 170px);
   }
 }
 
-.agenda-lijst__rechts {
+.agenda-lijst__rechts.agenda-lijst__rechts--pagina {
   width: 66%;
   align-self: flex-end;
 }
 @media screen and (max-width: 1000px) {
-  .agenda-lijst__rechts {
+  .agenda-lijst__rechts.agenda-lijst__rechts--pagina {
     width: 50%;
   }
 }
-.agenda-lijst__rechts p {
+.agenda-lijst__rechts.agenda-lijst__rechts--pagina p {
   font-size: 0.75rem;
   margin: 0;
   margin-top: 0.25em;
 }
 
-.agenda-lijst__link {
+.agenda-lijst__link.agenda-lijst__link--pagina {
   display: flex;
 }
 @media screen and (max-width: 600px) {
-  .agenda-lijst__link {
+  .agenda-lijst__link.agenda-lijst__link--pagina {
     flex-wrap: wrap;
   }
 }
 
-.agenda-lijst__links {
+.agenda-lijst__links.agenda-lijst__links--pagina {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.agenda-lijst__link > * + * {
+.agenda-lijst__link.agenda-lijst__link--pagina > * + * {
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.agenda-lijst__titel {
+.agenda-lijst__titel.agenda-lijst__titel--pagina {
   margin: 0;
   margin-bottom: 0.25em;
   font-size: 1.5rem;
 }
 
-.agenda-lijst__tijd {
+.agenda-lijst__tijd.agenda-lijst__tijd--pagina {
   font-size: 0.5em;
   margin-top: 0.5em;
   display: block;
 }
 @media (max-width: 380px){
-  .agenda-lijst__titel {
+  .agenda-lijst__titel.agenda-lijst__titel--pagina {
     font-size: 1.25rem;
   }  
-  .agenda-lijst__tijd {
+  .agenda-lijst__tijd.agenda-lijst__tijd--pagina {
     font-size: 0.66em;
   }
 }
@@ -114,7 +114,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .agenda-lijst__rechts {
+  .agenda-lijst__rechts.agenda-lijst__rechts--pagina {
     width: 100% !important;
     display: block;
     margin-left: 0;
@@ -123,10 +123,10 @@
 }
 
 @media (max-width: 380px){
-  .agenda-lijst__link .attachment-thumbnail {
+  .agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail {
     width: 100px;
   }
-  .agenda-lijst__datum {
+  .agenda-lijst__datum.agenda-lijst__datum--pagina {
     max-width: calc(100% - 120px);
   }  
 }
