@@ -48,6 +48,11 @@
 .agenda-lijst__link {
   display: flex;
 }
+@media screen and (max-width: 600px){
+  .agenda-lijst__link {
+    flex-wrap: wrap;
+  } 
+}
 
 .agenda-lijst__links{
   display: flex;
@@ -89,3 +94,10 @@
     margin-right: -2.33em;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .agenda-lijst__rechts{
+    width: 100% !important;
+    display: block;
+}
+  }
