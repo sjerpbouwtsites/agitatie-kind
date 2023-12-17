@@ -635,6 +635,11 @@ main {
 .agenda-filter-inner-flex > * {
   margin-left: 20px; }
 
+.agenda-lijst__stuk {
+  border-bottom: 1px solid rgba(232, 222, 222, 0.1);
+  padding: 10px;
+  margin-bottom: 10px; }
+
 .archive.category .tax {
   display: none; }
 
