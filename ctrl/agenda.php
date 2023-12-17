@@ -105,7 +105,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
         <p><?= $filter_text ?></p>
 
         <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>' method='POST'>
-            <div class=''>
+            <div class='agenda-filter-inner-flex'>
 
                 <?php
                 foreach ($filters_inst as $tax_naam => $opts) {

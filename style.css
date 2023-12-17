@@ -618,6 +618,12 @@ main {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em; }
 
+.agenda-filter-inner-flex {
+  display: flex; }
+
+.agenda-filter-inner-flex > * {
+  margin-left: 20px; }
+
 .archive.category .tax {
   display: none; }
 
