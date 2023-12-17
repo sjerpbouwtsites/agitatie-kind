@@ -45,7 +45,9 @@ a {
 
 .mc4wp-form-fields {
   label {
-    display: block;
+    display: flex;   
+    justify-content: space-between;
+    width: 260px;
     input {
       margin-left: 5px;
     }

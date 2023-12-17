@@ -285,7 +285,9 @@ a {
   color: #CAC8C8; }
 
 .mc4wp-form-fields label {
-  display: block; }
+  display: flex;
+  justify-content: space-between;
+  width: 260px; }
   .mc4wp-form-fields label input {
     margin-left: 5px; }
 
