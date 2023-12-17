@@ -675,11 +675,12 @@ main {
   display: block; }
 
 .agenda-lijst__taxonomieen {
-  display: flex;
-  font-size: .75m; }
+  font-size: .75em; }
 
-.agenda-lijst__taxonomieen > * + * {
-  margin-left: 10px; }
+.agenda-lijst__taxonomie-prefix {
+  opacity: .75;
+  display: inline-block;
+  min-width: 75px; }
 
 .archive.category .tax {
   display: none; }
