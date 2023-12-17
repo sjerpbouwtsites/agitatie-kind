@@ -13,11 +13,6 @@ a {
 // border-color: $donkergrijs
 }
 
-.radical-riders-title--footer {
-  font-size: 4rem;
-  line-height: 1;
-} 
-
 
 #stek-voet .verpakking.widgets section {
   align-self: flex-start;
@@ -46,4 +41,11 @@ a {
 #stek-voet .geen-logo:hover,
 #menu-footer-menu .menu-item a:hover {
   color: $lichtgrijs;
+}
+
+.mc4wp-form-fields {
+  label {
+    display: block;
+    margin-right: 5px;
+  }
 }
