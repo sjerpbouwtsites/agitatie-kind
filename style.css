@@ -644,9 +644,11 @@ main {
   flex-grow: 1; }
 
 .agenda-lijst__rechts {
-  max-width: 66% p;
-    max-width-font-size: .75rem;
-    max-width-margin: 0; }
+  max-width: 66%; }
+
+.agenda-lijst__rechts p {
+  font-size: .75rem;
+  margin: 0; }
 
 .agenda-lijst__link {
   display: flex; }
