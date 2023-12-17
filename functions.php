@@ -433,7 +433,7 @@ function schakel_debug()
     var_dump($_GET);
     $url = $current_url . $is_debug ? "" : "?debug=true";
 
-    echo "<a class='schakel-debug' href='$current_url.$url'>schakel debug</a>";
+    echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
 
     //endif;
 }
