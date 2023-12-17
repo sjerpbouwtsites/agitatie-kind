@@ -637,8 +637,7 @@ main {
 
 .agenda-lijst__stuk {
   border-bottom: 1px solid rgba(232, 222, 222, 0.1);
-  padding: 10px;
-  margin-bottom: 10px; }
+  padding: 10px; }
 
 .agenda-lijst__datum {
   flex-grow: 1;
@@ -655,8 +654,15 @@ main {
 .agenda-lijst__link {
   display: flex; }
 
+.agenda-lijst__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
 .agenda-lijst__link > * + * {
-  margin-left: 20px; }
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .agenda-lijst__titel {
   margin: 0;
@@ -669,7 +675,8 @@ main {
   display: block; }
 
 .agenda-lijst__taxonomieen {
-  display: flex; }
+  display: flex;
+  font-size: .75m; }
 
 .agenda-lijst__taxonomieen > * + * {
   margin-left: 10px; }
