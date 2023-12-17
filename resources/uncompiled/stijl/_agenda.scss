@@ -75,10 +75,19 @@
   margin-bottom: 0.25em;
   font-size: 1.5rem;
 }
+
 .agenda-lijst__tijd {
   font-size: 0.5em;
   margin-top: 0.5em;
   display: block;
+}
+@media (max-width: 380px){
+  .agenda-lijst__titel {
+    font-size: 1.25rem;
+  }  
+  .agenda-lijst__tijd {
+    font-size: 0.66em;
+  }
 }
 .agenda-lijst__taxonomieen {
   //  display: flex;
