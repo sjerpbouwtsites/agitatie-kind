@@ -106,10 +106,13 @@
     left: 30px;
     font-size: 1.5em;
     padding-top: calc(100% - 120px);
+    text-shadow: 1px 1px 1px #00000091;
 
   .tekst-zwart {
     color: white;
-    
+  }
+  p {
+    opacity: 1;
   }
   }
   .oyvey-team-volle-tekst {
