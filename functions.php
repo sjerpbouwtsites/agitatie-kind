@@ -15,6 +15,7 @@ add_action('after_setup_theme', 'kinder_klassen');
 
 include_once KIND_DIR . '/kind-gereedschap.php';
 include_once KIND_DIR . '/kind-hooks.php';
+include_once KIND_DIR . '/ctrl/agenda.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 
 function agitatie_stijl_en_script()
