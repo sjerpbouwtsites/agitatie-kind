@@ -646,6 +646,10 @@ main {
 .agenda-lijst__rechts {
   max-width: 66%; }
 
+@media screen and (max-width: 1000px) {
+  .agenda-lijst__rechts {
+    max-width: 50%; } }
+
 .agenda-lijst__rechts p {
   font-size: .75rem;
   margin: 0;
@@ -680,7 +684,7 @@ main {
 .agenda-lijst__taxonomie-prefix {
   opacity: .75;
   display: inline-block;
-  min-width: 75px; }
+  min-width: 35px; }
 
 .archive.category .tax {
   display: none; }
