@@ -5,6 +5,8 @@ global $wp_query;
 define('KIND_DIR', get_stylesheet_directory());
 define('KIND_URI', get_stylesheet_directory_uri());
 
+add_image_size("zeshonderd", 600, 600);
+
 //deze klassen extenden die van de parent theme. Moet dus later geladen worden. functions.php wordt geladen in 'setup theme' dus daar wachten we op.
 function kinder_klassen()
 {
