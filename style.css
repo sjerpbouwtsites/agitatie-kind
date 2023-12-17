@@ -720,6 +720,9 @@ main {
   .agenda-lijst__datum {
     max-width: calc(100% - 120px); } }
 
+.Ag_knoppen-doos--agenda {
+  margin-top: 50px; }
+
 .archive.category .tax {
   display: none; }
 
