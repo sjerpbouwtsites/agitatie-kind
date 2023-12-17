@@ -292,7 +292,7 @@ a {
     margin-left: 5px; }
 
 .mc4wp-form + p {
-  display: none; }
+  margin-bottom: -18px; }
 
 .schakel-debug {
   position: fixed;
@@ -393,6 +393,9 @@ main {
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
     justify-content: center;
     top: 60vh; } }
+
+.grunion-field-name-wrap {
+  margin-bottom: .5em; }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
