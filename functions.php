@@ -131,13 +131,13 @@ function create_oyvey_team()
     $team = new Posttype_voorb('team', 'teams');
 
     $team->pas_args_aan(array(
-        'exclude_from_search' => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'show_in_nav_menus'	=> true,
         'show_in_menu'		=> true,
         'add_to_menu'		=> true,
         'public'			=> false,
         'has_archive' 		=> true,
+        'exclude_from_search' => true,
         'supports' =>
             array(
                 'title',
