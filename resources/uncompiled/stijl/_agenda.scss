@@ -25,3 +25,10 @@
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.agenda-lijst__link {
+  display: flex;
+}
+.agenda-lijst__link > * + * {
+  margin-left: 20px;
+}
