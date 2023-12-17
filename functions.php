@@ -439,4 +439,4 @@ function schakel_debug()
 }
 
 
-add_action('wp_footer', 'schakel_debug');
+add_action('wp_header', 'schakel_debug');
