@@ -431,7 +431,7 @@ function schakel_debug()
 
         $is_debug = array_key_exists('debug', $_GET);
 
-        $url = $current_url . $is_debug ? str_replace('debug', '', $current_url) : "?debug=true";
+        $url = $current_url . ($is_debug ? str_replace('debug', '', $current_url) : "?debug=true");
 
         echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
 
