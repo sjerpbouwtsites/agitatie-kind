@@ -170,7 +170,7 @@ add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
 function ag_logo_in_footer_hook()
 {
     $blog_url = site_url();
-    $img = $blog_url."wp-content/uploads/2023/12/oy-vey-letters-white.svg";
+    $img = $blog_url."/wp-content/uploads/2023/12/oy-vey-letters-white.svg";
     echo "<a 
         href='$blog_url' 
         class='custom-logo-link' 
