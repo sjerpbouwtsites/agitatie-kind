@@ -291,6 +291,9 @@ a {
   .mc4wp-form-fields label input {
     margin-left: 5px; }
 
+.mc4wp-form + p {
+  display: none; }
+
 .schakel-debug {
   position: fixed;
   bottom: 50px;
