@@ -56,10 +56,13 @@ a {
 
 .schakel-debug {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 20px;
+  bottom: 30px;
+  left: 0;
+  padding: .3em .6em;
+  font-weight: bold;
   background-color: gold;
-  color: black;
-  font-size: 17px;
-}
+  color:black;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 20;
+  }
