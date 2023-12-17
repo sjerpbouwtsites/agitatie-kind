@@ -430,6 +430,7 @@ function schakel_debug()
     $current_url = home_url(add_query_arg(array(), $wp->request));
 
     $is_debug = array_key_exists('debug', $_GET);
+    var_dump($_GET);
     $url = $current_url . $is_debug ? "" : "?debug=true";
 
     echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
