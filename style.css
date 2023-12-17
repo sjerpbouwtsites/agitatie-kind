@@ -651,6 +651,10 @@ main {
   .agenda-lijst__datum.agenda-lijst__datum--pagina {
     width: calc(100% - 170px); } }
 
+.agenda-lijst__tijd-spacer.agenda-lijst__tijd-spacer--widget {
+  padding-left: 0;
+  padding-right: 0; }
+
 .agenda-lijst__rechts.agenda-lijst__rechts--pagina {
   width: 66%;
   align-self: flex-end; }
@@ -688,12 +692,20 @@ main {
 
 .agenda-lijst__titel.agenda-lijst__titel--widget {
   margin: 0;
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+  font-size: .9rem; }
 
 .agenda-lijst__tijd.agenda-lijst__tijd--pagina {
   font-size: 0.5em;
   margin-top: 0.5em;
   display: block; }
+
+.agenda-lijst__tijd.agenda-lijst__tijd--widget {
+  font-weight: 300;
+  font-size: .66em;
+  width: 100%;
+  max-width: initial;
+  margin-top: .5em; }
 
 @media (max-width: 380px) {
   .agenda-lijst__titel.agenda-lijst__titel--pagina {
