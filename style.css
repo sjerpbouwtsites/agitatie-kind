@@ -642,14 +642,15 @@ main {
 
 .agenda-lijst__datum {
   flex-grow: 1;
-  max-width: 350px; }
+  width: 350px; }
 
 @media screen and (max-width: 600px) {
   .agenda-lijst__datum {
-    max-width: calc(100% - 170px); } }
+    width: calc(100% - 170px); } }
 
 .agenda-lijst__rechts {
-  width: 66%; }
+  width: 66%;
+  align-self: flex-end; }
 
 @media screen and (max-width: 1000px) {
   .agenda-lijst__rechts {
