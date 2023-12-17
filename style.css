@@ -291,6 +291,15 @@ a {
   .mc4wp-form-fields label input {
     margin-left: 5px; }
 
+.schakel-debug {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  background-color: gold;
+  color: black;
+  font-size: 17px; }
+
 .art-c .art-rechts p {
   font-size: .75em;
   font-family: Merriweather Sans;
