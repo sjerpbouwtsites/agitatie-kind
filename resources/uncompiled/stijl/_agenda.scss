@@ -15,6 +15,7 @@
 
 .agenda-filter-inner-flex {
   display: flex;
+  flex-wrap: wrap;
 }
 .agenda-filter-inner-flex > * {
   margin-left: 20px;
