@@ -420,7 +420,11 @@ function enable_svg_upload($upload_mimes)
     return $upload_mimes;
 }
 
-
-
-
 add_filter('upload_mimes', 'enable_svg_upload', 10, 1);
+
+function schakel_debug()
+{
+    echo "jhallo";
+}
+
+add_action('wp_footer', 'schakel_debug');
