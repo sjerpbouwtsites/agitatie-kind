@@ -286,7 +286,8 @@ a {
 .mc4wp-form-fields label {
   display: flex;
   justify-content: space-between;
-  width: 260px; }
+  width: 260px;
+  margin-bottom: 5px; }
   .mc4wp-form-fields label input {
     margin-left: 5px; }
 
