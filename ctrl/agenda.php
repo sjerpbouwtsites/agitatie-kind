@@ -142,8 +142,10 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                     echo "</select>";
                     echo "</section>";
                 } ?>
-
-                <input type='submit' value='filter'>
+                <section>
+                    <h3>Zoek</h3>
+                    <input type='submit' value='ga!'>
+                </section>
             </div>
 
             <!--WEG IN PRODUCTIE -->
