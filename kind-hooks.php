@@ -103,7 +103,7 @@ function oyvey_vp_agenda()
     $type_counts = [];
 
     foreach ($agenda->agendastukken as $a) {
-        $types_hier = wp_get_post_terms($a->ID, 'type');
+        $types_hier = wp_get_post_terms($a->ID, 'soort');
         foreach($types_hier as $t) {
             $types_id_verz[] = $t->term_taxonomy_id;
             $cur_count = $type_counts[$t->term_taxonomy_id] || 0;
