@@ -285,8 +285,9 @@ a {
   color: #CAC8C8; }
 
 .mc4wp-form-fields label {
-  display: block;
-  margin-right: 5px; }
+  display: block; }
+  .mc4wp-form-fields label input {
+    margin-left: 5px; }
 
 .art-c .art-rechts p {
   font-size: .75em;
