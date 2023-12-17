@@ -442,6 +442,9 @@ function onderdruk_deprecated()
 {
     if (is_user_logged_in() && !array_key_exists('deprecated', $_GET)) :
 
+        echo "HALLO";
+        die();
+
         add_filter('deprecated_constructor_trigger_error', '__return_false');
         add_filter('deprecated_function_trigger_error', '__return_false');
         add_filter('deprecated_file_trigger_error', '__return_false');
