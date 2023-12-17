@@ -622,8 +622,7 @@ main {
     top: 0;
     left: 30px;
     font-size: 1.5em;
-    padding: 100%;
-    transform: translate(0, -100%); }
+    padding-top: calc(100% - 120px); }
     .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
       color: white; }
   .oyvey-team.art-c.in-lijst .oyvey-team-volle-tekst {
