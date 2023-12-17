@@ -424,17 +424,17 @@ add_filter('upload_mimes', 'enable_svg_upload', 10, 1);
 
 function schakel_debug()
 {
-    if (is_user_admin()) :
+    //if (is_user_admin()) :
 
-        global $wp;
-        $current_url = home_url(add_query_arg(array(), $wp->request));
+    global $wp;
+    $current_url = home_url(add_query_arg(array(), $wp->request));
 
-        $is_debug = array_key_exists($_GET, 'debug');
-        $url = $current_url . $is_debug ? "" : "?debug=true";
+    $is_debug = array_key_exists($_GET, 'debug');
+    $url = $current_url . $is_debug ? "" : "?debug=true";
 
-        echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
+    echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
 
-    endif;
+    //endif;
 }
 
 add_action('wp_footer', 'schakel_debug');
