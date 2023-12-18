@@ -429,7 +429,7 @@ main {
   margin: 0; }
 
 .in-card .datum-float-rechts {
-  float: rechts;
+  float: right;
   line-height: inherit; }
 
 .in-card .datum-float-rechts::after {
