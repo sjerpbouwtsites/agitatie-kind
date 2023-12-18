@@ -57,6 +57,7 @@ while (have_posts()) : the_post();
                     'geen_tekst'=> true,
                     'korte_titel'=> true
                 ), $soort);
+                $a->art->name = $a->art->name . " " . \agitatie\taal\streng('Events');
                 $a->print();
 
                 $agenda_model = new Ag_agenda(array(
