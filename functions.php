@@ -135,7 +135,7 @@ function create_oyvey_team()
         'show_in_nav_menus'	=> true,
         'show_in_menu'		=> true,
         'add_to_menu'		=> true,
-        'public'			=> false,
+        'public'			=> true,
         'has_archive' 		=> true,
         'exclude_from_search' => true,
         'supports' =>
