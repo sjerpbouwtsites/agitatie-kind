@@ -73,12 +73,11 @@ while (have_posts()) : the_post();
                     $a = new Ag_article_c(array(
                         'class' 		=> 'in-lijst',
                         'htype'			=> 3,
-                        // 'geen_afb'      => true,
-                        // 'geen_datum'    => true,
-                        // 'is_categorie'	=> true,
-                        // 'geen_meer_tekst'=> true,
-                        // 'geen_tekst'=> true,
-                        // 'korte_titel'=> true
+                         'geen_afb'      => true,
+                         'geen_datum'    => true,
+                         'geen_meer_tekst'=> true,
+                         'geen_tekst'=> true,
+                         'korte_titel'=> true
                     ), $as);
 
                     $a->print();
