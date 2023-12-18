@@ -28,6 +28,7 @@ while (have_posts()) : the_post();
             $tekst = get_sub_field('tekst');
             $afbeelding = get_sub_field('afbeelding');
             $slug = sanitize_title($titel);
+            $soort = get_sub_field('soort');
 
             echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum">';
 
@@ -43,6 +44,14 @@ while (have_posts()) : the_post();
                     $tekst
                 </p>
             </div>";
+            echo "<div class='art-card-tax-list'>";
+            $a = new Ag_article_c(array(
+                'class' 		=> 'in-lijst',
+                'htype'			=> 3,
+                'is_categorie'	=> true,
+            ), $type);
+            $a->print();
+            echo "</div>";
             echo "</article>";
         endwhile;
         echo "</div";
