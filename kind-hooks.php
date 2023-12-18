@@ -199,4 +199,4 @@ function print_tax_blok()
     ));
     $tax_blok->print();
 }
-add_action('ag_archief_na_content_action', 'ag_archief_na_content_hook', 15);
+add_action('ag_archief_na_content_action', 'print_tax_blok', 15);
