@@ -58,7 +58,7 @@ while (have_posts()) : the_post();
                     'korte_titel'=> true
                 ), $soort);
                 $a->art->name = $a->art->name . " " . \agitatie\taal\streng('Events');
-                $a->print();
+
 
                 $agenda_model = new Ag_agenda(array(
                     'aantal' => 10,
@@ -68,25 +68,29 @@ while (have_posts()) : the_post();
                     )
                 ));
 
-                if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
-
-                    $a = new Ag_article_c(array(
-                        'class' 		=> 'in-lijst in-card',
-                        'htype'			=> 5,
-                         'geen_afb'      => true,
-                         'geen_datum'    => true,
-                         'geen_meer_tekst'=> true,
-                         'geen_tekst'=> true,
-                    ), $as);
-
-                    $datum = "<span class='datum-float-rechts'>".explode(' ', get_field('datum', $as->ID))[0] . "</span>";
-                    $a->art->post_title = $a->art->post_title . " " . $datum;
+                if (count($agenda_model->agendastukken) > 0) :
 
                     $a->print();
 
+                    foreach ($agenda_model->agendastukken as $as) :
+
+                        $a = new Ag_article_c(array(
+                            'class' 		=> 'in-lijst in-card',
+                            'htype'			=> 5,
+                             'geen_afb'      => true,
+                             'geen_datum'    => true,
+                             'geen_meer_tekst'=> true,
+                             'geen_tekst'=> true,
+                        ), $as);
+
+                        $datum = "<span class='datum-float-rechts'>".explode(' ', get_field('datum', $as->ID))[0] . "</span>";
+                        $a->art->post_title = $a->art->post_title . " " . $datum;
+
+                        $a->print();
 
 
-                endforeach; endif;
+
+                    endforeach; endif;
 
 
 
