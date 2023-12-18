@@ -78,7 +78,7 @@ while (have_posts()) : the_post();
                          'geen_tekst'=> true,
                     ), $as);
 
-                    $datum = get_field('datum', $as->ID);
+                    $datum = explode(' ', get_field('datum', $as->ID))[0];
                     $a->art->post_title = $a->art->post_title . " " . $datum;
 
                     $a->print();
