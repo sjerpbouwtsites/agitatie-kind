@@ -70,7 +70,7 @@ while (have_posts()) : the_post();
                 if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
 
                     $a = new Ag_article_c(array(
-                        'class' 		=> 'in-lijst',
+                        'class' 		=> 'in-lijst in-card',
                         'htype'			=> 3,
                          'geen_afb'      => true,
                          'geen_datum'    => true,
