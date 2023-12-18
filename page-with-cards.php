@@ -81,9 +81,9 @@ while (have_posts()) : the_post();
                     $a->print();
                 endforeach; endif;
 
-                // echo "<pre>";
-                // var_dump($agenda);
-                // echo "</pre>";
+                echo "<pre>";
+                var_dump($agenda_model->agendastukken);
+                echo "</pre>";
 
 
 
