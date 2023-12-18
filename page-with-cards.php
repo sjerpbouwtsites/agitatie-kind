@@ -68,6 +68,11 @@ while (have_posts()) : the_post();
                 ));
 
                 if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
+
+                    echo "<pre>";
+                    var_dump($as);
+                    echo "</pre>";
+
                     $a = new Ag_article_c(array(
                         'class' 		=> 'in-lijst',
                         'htype'			=> 3,
@@ -81,9 +86,6 @@ while (have_posts()) : the_post();
                     $a->print();
                 endforeach; endif;
 
-                echo "<pre>";
-                var_dump($agenda_model->agendastukken);
-                echo "</pre>";
 
 
 
