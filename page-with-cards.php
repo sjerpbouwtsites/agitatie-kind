@@ -59,7 +59,7 @@ while (have_posts()) : the_post();
                 ), $soort);
                 $a->print();
 
-                $agenda = new Ag_agenda(array(
+                $agenda_model = new Ag_agenda(array(
                     'aantal' => 10,
                     'omgeving' => 'pagina',
                     'nep_post' => array(
@@ -67,9 +67,23 @@ while (have_posts()) : the_post();
                     )
                 ));
 
-                echo "<pre>";
-                var_dump($agenda);
-                echo "</pre>";
+                if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
+                    $a = new Ag_article_c(array(
+                        'class' 		=> 'in-lijst',
+                        'htype'			=> 3,
+                        'geen_afb'      => true,
+                        'geen_datum'    => true,
+                        'is_categorie'	=> true,
+                        'geen_meer_tekst'=> true,
+                        'geen_tekst'=> true,
+                        'korte_titel'=> true
+                    ), $as);
+                    $a->print();
+                endforeach; endif;
+
+                // echo "<pre>";
+                // var_dump($agenda);
+                // echo "</pre>";
 
 
 
