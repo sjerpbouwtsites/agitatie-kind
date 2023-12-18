@@ -46,7 +46,7 @@ while (have_posts()) : the_post();
             </div>";
             if ($soort):
 
-                echo "<div class='art-card-tax-list'>";
+                echo "<div class='art-card-tax-list art-lijst'>";
                 $a = new Ag_article_c(array(
                     'class' 		=> 'in-lijst',
                     'htype'			=> 3,
@@ -69,7 +69,6 @@ while (have_posts()) : the_post();
 
                 if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
 
-
                     $a = new Ag_article_c(array(
                         'class' 		=> 'in-lijst',
                         'htype'			=> 3,
@@ -79,6 +78,9 @@ while (have_posts()) : the_post();
                          'geen_tekst'=> true,
                          'korte_titel'=> true
                     ), $as);
+
+                    $datum = get_field('datum', $as->ID);
+                    $a->art->post_title = $a->art->post_title . " " . $datum;
 
                     $a->print();
 
