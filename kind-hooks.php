@@ -194,7 +194,7 @@ function print_tax_blok()
 
     $tax_blok = new Ag_tax_blok(array(
         'post'		=> $post,
-        'titel'		=> '',
+        'titel'		=> 'Zoek',
         'reset'		=> false
     ));
     $tax_blok->print();
