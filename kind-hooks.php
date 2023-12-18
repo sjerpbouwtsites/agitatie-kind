@@ -194,9 +194,9 @@ function print_tax_blok()
 
     $tax_blok = new Ag_tax_blok(array(
         'post'		=> $post,
-        'titel'		=> 'Zoek',
+        'titel'		=> \agitatie\taal\streng('Kijk verder bij:'),
         'reset'		=> false,
-        'uitgesloten'=> ['plek']
+        'uitgesloten'=> ['locatie']
     ));
     $tax_blok->print();
 }
