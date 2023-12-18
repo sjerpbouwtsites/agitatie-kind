@@ -69,20 +69,22 @@ while (have_posts()) : the_post();
 
                 if (count($agenda_model->agendastukken) > 0) : foreach ($agenda_model->agendastukken as $as) :
 
-                    echo "<pre>";
-                    var_dump($as);
-                    echo "</pre>";
 
                     $a = new Ag_article_c(array(
                         'class' 		=> 'in-lijst',
                         'htype'			=> 3,
-                        'geen_afb'      => true,
-                        'geen_datum'    => true,
-                        'is_categorie'	=> true,
-                        'geen_meer_tekst'=> true,
-                        'geen_tekst'=> true,
-                        'korte_titel'=> true
+                        // 'geen_afb'      => true,
+                        // 'geen_datum'    => true,
+                        // 'is_categorie'	=> true,
+                        // 'geen_meer_tekst'=> true,
+                        // 'geen_tekst'=> true,
+                        // 'korte_titel'=> true
                     ), $as);
+
+                    echo "<pre>";
+                    var_dump($a);
+                    echo "</pre>";
+
                     $a->print();
                 endforeach; endif;
 
