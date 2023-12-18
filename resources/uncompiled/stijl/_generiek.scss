@@ -94,8 +94,9 @@ main {
     height: calc(100% - 100px);
 }
 
-.art-card-tax-list {
-
+.art-lijst.art-card-tax-list {
+    margin: 0;
+    flex-direction: column;
 }
 .art-c.geen-afb.in-card {
     padding-left: 0;
@@ -106,4 +107,9 @@ main {
     margin-left: 0;
     align-self: initial;
     transition: initial;
-  }
+}
+.in-card {
+    h4, h5 {
+        margin: 0;
+    }
+}
