@@ -48,8 +48,8 @@ while (have_posts()) : the_post();
 
                 echo "<div class='art-card-tax-list art-lijst'>";
                 $a = new Ag_article_c(array(
-                    'class' 		=> 'in-lijst',
-                    'htype'			=> 3,
+                    'class' 		=> 'in-lijst in-card',
+                    'htype'			=> 4,
                     'geen_afb'      => true,
                     'geen_datum'    => true,
                     'is_categorie'	=> true,
@@ -71,7 +71,7 @@ while (have_posts()) : the_post();
 
                     $a = new Ag_article_c(array(
                         'class' 		=> 'in-lijst in-card',
-                        'htype'			=> 3,
+                        'htype'			=> 5,
                          'geen_afb'      => true,
                          'geen_datum'    => true,
                          'geen_meer_tekst'=> true,
