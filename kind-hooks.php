@@ -118,7 +118,8 @@ function oyvey_vp_agenda()
 
     echo "<div class='art-lijst'>";
 
-    $types_set = array_unique($types_id_verz);
+    $types_set = array_splice(array_unique($types_id_verz), 0, 6);
+
     foreach ($types_set as $type_id) {
         $type = $types[$type_id];
         $type->name = $type->name . "<br><small class='tekst-grijs'>" .$type_counts[$type_id]." ".\agitatie\taal\streng('gepland')."</small>";
