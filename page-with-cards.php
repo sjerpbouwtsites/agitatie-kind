@@ -76,7 +76,6 @@ while (have_posts()) : the_post();
                          'geen_datum'    => true,
                          'geen_meer_tekst'=> true,
                          'geen_tekst'=> true,
-                         'korte_titel'=> true
                     ), $as);
 
                     $datum = get_field('datum', $as->ID);
