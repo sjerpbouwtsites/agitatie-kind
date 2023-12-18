@@ -79,7 +79,7 @@ while (have_posts()) : the_post();
                          'geen_tekst'=> true,
                     ), $as);
 
-                    $datum = explode(' ', get_field('datum', $as->ID))[0];
+                    $datum = "<span class='datum-float-rechts'>".explode(' ', get_field('datum', $as->ID))[0] . "</span>";
                     $a->art->post_title = $a->art->post_title . " " . $datum;
 
                     $a->print();

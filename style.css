@@ -403,7 +403,9 @@ main {
 
 .art-lijst.art-card-tax-list {
   margin: 0;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 1rem; }
 
 .art-c.geen-afb.in-card {
   padding-left: 0;
@@ -414,9 +416,23 @@ main {
   margin-left: 0;
   align-self: initial;
   transition: initial; }
+  .art-c.geen-afb.in-card:hover {
+    border-left: none;
+    text-decoration: underline; }
+
+.art-c.geen-afb.in-card + .in-card {
+  margin-top: 10px; }
 
 .in-card h4, .in-card h5 {
   margin: 0; }
+
+.in-card .datum-float-rechts {
+  float: rechts; }
+
+.in-card .datum-float-rechts::after {
+  float: none;
+  content: '';
+  display: block; }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
