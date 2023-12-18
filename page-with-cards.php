@@ -81,11 +81,12 @@ while (have_posts()) : the_post();
                         // 'korte_titel'=> true
                     ), $as);
 
+                    $a->print();
+
                     echo "<pre>";
                     var_dump($a);
                     echo "</pre>";
 
-                    $a->print();
                 endforeach; endif;
 
 
