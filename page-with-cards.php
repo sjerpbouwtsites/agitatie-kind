@@ -44,6 +44,9 @@ while (have_posts()) : the_post();
                     $tekst
                 </p>
             </div>";
+            echo "<pre>";
+            var_dump($soort);
+            echo "</pre>";
             echo "<div class='art-card-tax-list'>";
             $a = new Ag_article_c(array(
                 'class' 		=> 'in-lijst',
