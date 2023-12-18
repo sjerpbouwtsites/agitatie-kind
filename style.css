@@ -415,7 +415,9 @@ main {
   margin-right: 0;
   margin-left: 0;
   align-self: initial;
-  transition: initial; }
+  transition: initial;
+  width: 100%;
+  max-width: initial; }
   .art-c.geen-afb.in-card:hover {
     border-left: none;
     text-decoration: underline; }
@@ -427,7 +429,8 @@ main {
   margin: 0; }
 
 .in-card .datum-float-rechts {
-  float: rechts; }
+  float: rechts;
+  line-height: inherit; }
 
 .in-card .datum-float-rechts::after {
   float: none;

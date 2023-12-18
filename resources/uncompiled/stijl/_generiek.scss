@@ -109,6 +109,8 @@ main {
     margin-left: 0;
     align-self: initial;
     transition: initial;
+    width: 100%;
+  max-width: initial;
     &:hover {
         border-left: none;
         text-decoration: underline;
@@ -125,6 +127,7 @@ main {
 
 .in-card .datum-float-rechts {
     float: rechts;
+    line-height: inherit;
 }
 .in-card .datum-float-rechts::after{
     float: none;
