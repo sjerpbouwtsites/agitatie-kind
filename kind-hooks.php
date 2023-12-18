@@ -186,3 +186,17 @@ function ag_logo_in_footer_hook()
             />
         </a>";
 }
+
+
+function print_tax_blok()
+{
+    global $post;
+
+    $tax_blok = new Ag_tax_blok(array(
+        'post'		=> $post,
+        'titel'		=> '',
+        'reset'		=> false
+    ));
+    $tax_blok->print();
+}
+add_action('ag_archief_na_content_action', 'ag_archief_na_content_hook', 15);
