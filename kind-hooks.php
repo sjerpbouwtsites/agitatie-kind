@@ -41,7 +41,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
         $footerknop = new Ag_knop(array(
             'link' 		=> get_post_type_archive_link('post'),
-            'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
+            'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('berichten'),
             'class'		=> 'in-wit'
         ));
 
@@ -114,7 +114,7 @@ function oyvey_vp_agenda()
 
     echo "<section class='verpakking marginveld oyvey-agenda-voorpagina'>";
 
-    echo "<h2>" . ucfirst(\agitatie\taal\streng('Onze events')) . "</h2>";
+    echo "<h2>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
 
     echo "<div class='art-lijst'>";
 
@@ -136,7 +136,7 @@ function oyvey_vp_agenda()
 
     $footerknop = new Ag_knop(array(
         'link' 		=> get_post_type_archive_link('agenda'),
-        'tekst' 	=> ucfirst(\agitatie\taal\streng('Bekijk de volledige agenda')),
+        'tekst' 	=> ucfirst(\agitatie\taal\streng('bekijk de volledige agenda')),
         'class'		=> 'in-wit'
     ));
     echo "<footer>";
@@ -195,7 +195,7 @@ function print_tax_blok()
 
     $tax_blok = new Ag_tax_blok(array(
         'post'		=> $post,
-        'titel'		=> \agitatie\taal\streng('Kijk verder bij:'),
+        'titel'		=> \agitatie\taal\streng('kijk verder bij').':',
         'reset'		=> false,
         'uitgesloten'=> ['locatie']
     ));
