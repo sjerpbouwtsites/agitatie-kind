@@ -83,9 +83,7 @@ while (have_posts()) : the_post();
 
                     $a->print();
 
-                    echo "<pre>";
-                    var_dump($a);
-                    echo "</pre>";
+
 
                 endforeach; endif;
 
