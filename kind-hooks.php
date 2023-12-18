@@ -196,7 +196,7 @@ function print_tax_blok()
         'post'		=> $post,
         'titel'		=> 'Zoek',
         'reset'		=> false,
-        'uitgesloten'=> 'plek'
+        'uitgesloten'=> ['plek']
     ));
     $tax_blok->print();
 }
