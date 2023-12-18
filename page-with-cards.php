@@ -58,6 +58,21 @@ while (have_posts()) : the_post();
                     'korte_titel'=> true
                 ), $soort);
                 $a->print();
+
+                $agenda = new Ag_agenda(array(
+                    'aantal' => 10,
+                    'omgeving' => 'pagina',
+                    'nep_post' => array(
+                        'soort' => $soort->slug
+                    )
+                ));
+
+                echo "<pre>";
+                var_dump($agenda);
+                echo "</pre>";
+
+
+
                 echo "</div>";
             endif;
             echo "</article>";
