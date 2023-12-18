@@ -49,7 +49,7 @@ while (have_posts()) : the_post();
                 'class' 		=> 'in-lijst',
                 'htype'			=> 3,
                 'is_categorie'	=> true,
-            ), $type);
+            ), $soort);
             $a->print();
             echo "</div>";
             echo "</article>";
