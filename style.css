@@ -465,6 +465,12 @@ main {
   .stek-kop-links .radical-riders-title {
     font-size: 1.5rem; } }
 
+.multi-lang-vlaggen .lang-item a {
+  background-color: transparent; }
+
+.multi-lang-vlaggen .lang-item a:hover {
+  background-color: transparent; }
+
 #stek-kop .custom-logo-link img {
   width: auto;
   height: 60px; }
