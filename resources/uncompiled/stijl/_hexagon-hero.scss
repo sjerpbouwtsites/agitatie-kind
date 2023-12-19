@@ -45,7 +45,7 @@
     font-size: initial;
     // clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     // background: rgb(168, 191, 191);
-    background-image: url('http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon-rood.png');
+    background-image: url('https://sjerpvanwouden.nl/oyvey/wp-content/themes/agitatie-kind/img/hexagon-rood.png');
     background-size: cover;
     background-position: center center;
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
@@ -56,7 +56,7 @@
     filter: hue-rotate(90deg) saturate(70%);
   }
   .hexagons-single.white-background {
-    background-image: url('http://localhost/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png');
+    background-image: url('https://sjerpvanwouden.nl/oyvey/wp-content/themes/agitatie-kind/img/hexagon.png');
   }
 
   .white-background .hexagons-inner {
