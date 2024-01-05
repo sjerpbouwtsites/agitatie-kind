@@ -568,7 +568,8 @@ main .sticky-sidebar {
 .voorpagina .site-main .tekstveld:first-child h1, .voorpagina .site-main .tekstveld:first-child .tekst, .voorpagina .site-main .tekstveld:first-child p {
   display: inline;
   color: #2E6160;
-  line-height: 1.15; }
+  line-height: 1.15;
+  letter-spacing: -.03em; }
 
 .voorpagina .site-main .tekstveld:first-child p:last-child {
   display: block;
