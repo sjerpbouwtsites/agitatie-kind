@@ -22,7 +22,7 @@ module.exports = {
       output: function (styles, styleNodes) {
         fs.writeFileSync("style.css", styles);
       },
-      sourceMaps: true,
+      sourceMap: true,
       outFile: "../style.css",
     }), // will output compiled styles to output.css
   ],

@@ -117,4 +117,4 @@ function addClassesToHexagon(hexagonCount, config){
 }
 
 
-window.addEventListener('load', setHexagonsOnHero)
+//window.addEventListener('load', setHexagonsOnHero)

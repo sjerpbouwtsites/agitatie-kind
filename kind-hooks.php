@@ -1,5 +1,6 @@
 <?php
 
+use agitatie\taal as taal;
 
 add_filter('the_content', 'voeg_auteur_toe_aan_content_op_single', 1);
 
@@ -26,139 +27,6 @@ if (!function_exists('ag_archief_content_hook')) : function ag_archief_content_h
     ag_archief_sub_tax_ctrl();
 }
 endif;
-
-if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
-{
-    $vp_posts = new WP_Query(array(
-        'posts_per_page' => 6
-    ));
-
-    if (count($vp_posts->posts)) :
-
-        echo "<section class='verpakking marginveld vp-nieuws'>";
-
-        echo "<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
-
-        $footerknop = new Ag_knop(array(
-            'link' 		=> get_post_type_archive_link('post'),
-            'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('berichten'),
-            'class'		=> 'in-wit'
-        ));
-
-        echo  "<div class='art-lijst'>";
-
-        foreach ($vp_posts->posts as $vp_post) :
-            if (!isset($a)) {
-                $a = new Ag_article_c(array(
-                    'class' 		=> 'in-lijst',
-                    'htype'			=> 3,
-                    'geen_afb'		=> false
-                ), $vp_post);
-            } else {
-                $a->art = $vp_post;
-            }
-            $a->gecontroleerd = false;
-
-            $a->print();
-        endforeach;
-
-    echo "</div>"; //art lijst
-    echo "<footer>";
-    $footerknop->print();
-    echo "</footer>";
-
-    echo "</section>";
-
-    endif;
-}
-endif;
-
-
-function ag_vp_print_joods_genoeg_afb_in_post_content()
-{
-    global $post;
-    $post->post_content .= "
-    <figure class='element-naast-tekst element-naast-tekst-links joods-genoeg-afbeelding-buiten'>
-        <img src='".site_url('wp-content/uploads/2023/08/Am-I-Jewish-Enough.png')."' width='1080' height='1080' alt='Je bent Joods genoeg grafiek'>
-    </figure>
-    <figure class='element-naast-tekst element-naast-tekst-rechts oy-vey-logo-in-tekst'>
-        <img src='".site_url('wp-content/uploads/2023/12/New-Oy-Vey-Logo1.svg')."' alt='Wapen van joodse culturele verenging Oy Vey' width='500' height='500' />
-    </figure>
-    ";
-}
-
-add_action('voorpagina_voor_tekst_action', 'ag_vp_print_joods_genoeg_afb_in_post_content', 01);
-
-function oyvey_vp_agenda()
-{
-    //$afm = ag_agenda_filter_ctrl();
-
-    $agenda = new Ag_agenda(array(
-        'aantal' => 100,
-        'omgeving' => 'pagina'
-    ));
-
-    $types_id_verz = [];
-    $types = [];
-    $type_counts = [];
-
-    foreach ($agenda->agendastukken as $a) {
-        $types_hier = wp_get_post_terms($a->ID, 'soort');
-        foreach($types_hier as $t) {
-            $types_id_verz[] = $t->term_taxonomy_id;
-            $cur_count = $type_counts[$t->term_taxonomy_id] || 0;
-            $type_counts[$t->term_taxonomy_id] = $cur_count + 1;
-            $types[$t->term_taxonomy_id] = $t;
-        }
-    }
-
-    echo "<section class='verpakking marginveld oyvey-agenda-voorpagina'>";
-
-    echo "<h2>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
-
-    echo "<div class='art-lijst'>";
-
-    $types_set = array_splice(array_unique($types_id_verz), 0, 6);
-
-    foreach ($types_set as $type_id) {
-        $type = $types[$type_id];
-        $type->name = $type->name . "<br><small class='tekst-grijs'>" .$type_counts[$type_id]." ".\agitatie\taal\streng('gepland')."</small>";
-        $a = new Ag_article_c(array(
-            'class' 		=> 'in-lijst',
-            'htype'			=> 3,
-            'is_categorie'	=> true,
-        ), $type);
-        $a->print();
-    }
-
-
-    echo "</div>";
-
-    $footerknop = new Ag_knop(array(
-        'link' 		=> get_post_type_archive_link('agenda'),
-        'tekst' 	=> ucfirst(\agitatie\taal\streng('bekijk de volledige agenda')),
-        'class'		=> 'in-wit'
-    ));
-    echo "<footer>";
-    $footerknop->print();
-    echo "</footer>";
-
-    echo "</section>";
-
-    // if (count($agenda->agendastukken) > 0) :
-
-    //     echo "<section class='verpakking verpakking-klein marginveld'>";
-    //     echo "<div class='agenda'>
-    // 		<h2>Agenda</h2>";
-
-    //     $agenda->print();
-    //     echo "</div>";
-    //     echo "</section>";
-
-    // endif; // als agendastukken
-}
-
-add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
 
 // function vervang_singular_na_artikel(){
 // 	remove_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 20);
@@ -191,6 +59,10 @@ function ag_logo_in_footer_hook()
 
 function print_tax_blok()
 {
+    if (!is_post_type_archive()) {
+        return;
+    }
+
     global $post;
 
     $tax_blok = new Ag_tax_blok(array(
@@ -202,3 +74,138 @@ function print_tax_blok()
     $tax_blok->print();
 }
 add_action('ag_archief_na_content_action', 'print_tax_blok', 15);
+
+if(!function_exists('ag_print_footer_widgets')) : function ag_print_footer_widgets()
+{
+    global $wp_registered_sidebars;
+
+    if (array_key_exists('footer-sidebar', $wp_registered_sidebars)) { ?>
+ 
+     <div class='verpakking verpakking-klein widgets'>
+         <div class='neg-marge'>
+             <?php dynamic_sidebar('footer'); ?>
+         </div>
+     </div>
+     <?php
+    }
+} endif;
+
+if (!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true)
+{
+    if (!has_custom_logo()) {
+        // if (is_user_logged_in()) {
+        // 	$logo_url = wp_customize_url();
+        // 	echo "<p class='foutmelding'><a href='$logo_url'>👉Todo: logo</a></p>";
+        // 	return;
+        // }
+
+        echo "<a href='" . taal\home_url() . "' class='custom-logo geen-logo' rel='home' itemprop='url'>";
+        echo get_bloginfo();
+        echo "</a>";
+        return;
+    }
+
+    $str = "<span class='serif-letter tekst-hoofdkleur'>".taal\streng("Radicaal inclusieve Joodse cultuur")."</span>";
+    if ($print) {
+        the_custom_logo();
+        echo $str;
+    } else {
+        ob_start();
+        the_custom_logo();
+        echo $str;
+        return  ob_get_clean();
+    }
+}
+endif;
+
+
+if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel()
+{
+    global $post;
+    global $wp_query;
+
+    //als hero, dan geen titel.
+    if (ag_hero_model()) {
+        return;
+    }
+
+    if ($wp_query->is_home) {
+        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
+    } elseif ($wp_query->is_search) {
+        $zocht = ucfirst(taal\streng('je zocht'));
+        $watzoekje = ucfirst(taal\streng('wat zoek je'));
+        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+    } else {
+        echo "<h1 class='serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
+    }
+}
+
+endif;
+
+if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl()
+{
+    if ($archief_titel = ag_archief_titel_model()) {
+        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . $archief_titel . "</h1>";
+    }
+}
+endif;
+
+
+if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_ctrl()
+{
+    global $post;
+    global $kind_config;
+
+    $extra_class = '';
+
+    if (
+        isset($kind_config) and
+        isset($post) &&
+        property_exists($post, 'post_type') &&
+        array_key_exists('archief', $kind_config) and
+        array_key_exists($post->post_type, $kind_config['archief'])
+    ) {
+        if (
+            array_key_exists('geen_afb', $kind_config['archief'][$post->post_type]) and
+            $kind_config['archief'][$post->post_type]['geen_afb']
+        ) {
+            $extra_class = 'geen-afb-buiten';
+        }
+    }
+
+    echo "<div id='archief-lijst' class='tekstveld marginveld art-lijst $extra_class'>";
+    if (have_posts()) : while (have_posts()) : the_post();
+
+        //maakt post type objs aan en print @ controllers
+        ag_archief_generiek_loop($post, 'portfolio');
+
+    endwhile;
+    else :
+
+        get_template_part('sja/niets-gevonden');
+
+    endif;
+    echo "</div>";
+}
+endif;
+
+function ag_generieke_titel()
+{
+    global $post;
+    global $wp_query;
+
+    //als hero, dan geen titel.
+    if (ag_hero_model()) {
+        return;
+    }
+
+    if ($wp_query->is_home) {
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
+    } elseif ($wp_query->is_search) {
+        $zocht = ucfirst(taal\streng('je zocht'));
+        $watzoekje = ucfirst(taal\streng('wat zoek je'));
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+    } else {
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
+    }
+}

@@ -5,6 +5,7 @@ global $wp_query;
 define('KIND_DIR', get_stylesheet_directory());
 define('KIND_URI', get_stylesheet_directory_uri());
 
+add_image_size('vierkant-480', 480, 480, true);
 
 //deze klassen extenden die van de parent theme. Moet dus later geladen worden. functions.php wordt geladen in 'setup theme' dus daar wachten we op.
 function kinder_klassen()
@@ -16,6 +17,7 @@ add_action('after_setup_theme', 'kinder_klassen');
 
 include_once KIND_DIR . '/kind-gereedschap.php';
 include_once KIND_DIR . '/kind-hooks.php';
+include_once KIND_DIR . '/kind-vp-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 
@@ -38,6 +40,9 @@ $kind_config = array(
     //     ),
     // ),
     'archief'                      => array(
+        'post' => array(
+          'afb_formaat'             => 'portfolio'
+        ),
         // 'story'                      => array(
         //     // 'geen_afb'             => true,
         //     'geen_datum'           => true,

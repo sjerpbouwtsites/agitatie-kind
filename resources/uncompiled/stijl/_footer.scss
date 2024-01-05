@@ -1,26 +1,68 @@
 //child
 
 #stek-voet {
-//  background-color: #121212;
-//margin-top: 0;
-color: #f5f5f5;
-a {
-  color: #f5f5f5;
+  //  background-color: #121212;
+  //margin-top: 0;
+  font-size: inherit;
+  background-color: white;
+  p,
+  span,
+  a,
+  .textwidget {
+    color: $hoofdkleur;
+  }
+  a:hover{
+    color: $zijkleur;
+  }
+  margin-top: 0;
 }
+
+#stek-voet .verpakking .neg-marge > * {
+  flex-basis: calc(50% - 25px);
+}
+
+#stek-voet .verpakking.logo-en-tekst .neg-marge > .footer-section {
+  flex-basis: 100%;
+  max-width: 420px;
+}
+
+#stek-voet .verpakking.widgets .neg-marge section:last-child {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  h3,
+  .textwidget {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p {
+    font-size: 0.75em;
+    display: inline-block;
+  }
 }
 
 #stek-voet section {
-// border-color: $donkergrijs
+  // border-color: $donkergrijs
 }
-
 
 #stek-voet .verpakking section {
   align-self: flex-start;
-}    
- 
+}
+
 #stek-voet .textwidget ol,
 #stek-voet .textwidget ul {
   padding-left: 1em;
+}
+
+#stek-voet section {
+  padding-left: 0;
+  border-left: none;
+}
+
+.widgettitle {
+  color: $zijkleur;
 }
 
 .footer-menu {
@@ -34,39 +76,70 @@ a {
 }
 
 .footer-section .search-form .search-submit {
-    margin-left: 10px;
-    padding-top: calc(.3em - 0px);
-    padding-bottom: calc(.3em - 0px);
-}
-#stek-voet .geen-logo:hover,
-#menu-footer-menu .menu-item a:hover {
-  color: $lichtgrijs;
+  margin-left: 10px;
+  padding-top: calc(0.3em - 0px);
+  padding-bottom: calc(0.3em - 0px);
 }
 
+#stek-voet .verpakking.logo-en-tekst .neg-marge {
+  justify-content: space-around;
+  p {
+    text-align: center;
+  }
+}
 .mc4wp-form-fields {
   label {
-    display: flex;   
-    justify-content: space-between;
-    width: 260px;
-    margin-bottom: 5px;
+    // display: flex;
+    // justify-content: space-between;
+    // width: 260px;
+    // margin-bottom: 5px;
     input {
-      margin-left: 5px;
+      // margin-left: 5px;
     }
   }
 }
 .mc4wp-form + p {
-  margin-bottom: -18px;
+  // margin-bottom: -18px;
+}
+#MC-EMAIL {
+  width: 360px;
+  background-color: $zijkleur_zeer_licht;
+  border: 0;
+  padding: 10px 5px;
+  max-width: calc(100vw - 120px);
+  color: $zijkleur;
+}
+
+#MC-EMAIL::placeholder {
+  color: $zijkleur;
+  opacity: 0.6;
+}
+#MC-EMAIL:hover::placeholder,
+#MC-EMAIL:focus::placeholder {
+  opacity: 1;
+}
+
+.mc4wp-form .knop-rond {
+  background: transparent;
+  border: 2px solid $zijkleur;
+  border-radius: 30px;
+  padding: 8px 21px;
+  margin-left: 50px;
+  color: $zijkleur;
+  &:hover {
+    background-color: $zijkleur_zeer_licht;
+  }
 }
 
 .schakel-debug {
   position: fixed;
   bottom: 50px;
   left: 0;
-  padding: .3em .6em;
+  padding: 0.3em 0.6em;
   font-weight: bold;
   background-color: gold;
-  color:black;
+  color: black;
   font-size: 20px;
   text-transform: uppercase;
   z-index: 20;
-  }
+}

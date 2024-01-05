@@ -159,3 +159,14 @@ max-height: 150px;
 .Ag_knoppen-doos--agenda {
   margin-top: 50px;
 }
+
+.agenda h1 {
+  @extend .gecentreerde-titel;
+  @extend .serif-letter;
+  @extend .tekst-zijkleur;
+  margin-top: 100px;
+}
+
+.agenda-lijst__rechts--pagina p {
+  color: white;
+}

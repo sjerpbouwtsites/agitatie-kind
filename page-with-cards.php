@@ -8,12 +8,12 @@ get_template_part('/sja/open-main');
 
 echo "<article class='bericht'>";
 
-ag_uitgelichte_afbeelding_ctrl();
 
 while (have_posts()) : the_post();
     echo "<div class='verpakking verpakking-klein marginveld titel-over-afbeelding-indien-aanwezig'>";
 
     do_action('ag_pagina_titel');
+    ag_uitgelichte_afbeelding_ctrl();
 
     do_action('ag_pagina_voor_tekst');
 
@@ -30,29 +30,30 @@ while (have_posts()) : the_post();
             $slug = sanitize_title($titel);
             $soort = get_sub_field('soort');
 
-            echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum">';
+            echo '<article id="'.$slug.'" class="flex art-c in-lijst geen-datum card-artikel">';
 
             echo "<div class='art-links'>
-        <img src='".$afbeelding['sizes']['medium']."' alt='".$afbeelding['alt']."' width='300' height='200' />
+        <img src='".$afbeelding['sizes']['portfolio']."' alt='".$afbeelding['alt']."' width='600' height='600' />
         </div>";
 
             echo "<div class='art-rechts'>
                 <header>
                     <h3 class='tekst-hoofdkleur'>$titel</h3>
                 </header>
-                <p class='tekst-zwart'>
+                <div class='tekst-hoofdkleur verklein'>
                     $tekst
-                </p>
+                </div>
             </div>";
             if ($soort):
 
-                echo "<div class='art-card-tax-list art-lijst'>";
+
                 $a = new Ag_article_c(array(
-                    'class' 		=> 'in-lijst in-card',
+                    'class' 		=> 'in-lijst in-card tekst-hoofdkleur-wit event-title-link',
                     'htype'			=> 4,
                     'geen_afb'      => true,
                     'geen_datum'    => true,
                     'is_categorie'	=> true,
+                    'afb_formaat'   => 'portfolio',
                     'geen_meer_tekst'=> true,
                     'geen_tekst'=> true,
                     'korte_titel'=> true
@@ -70,32 +71,38 @@ while (have_posts()) : the_post();
 
                 if (count($agenda_model->agendastukken) > 0) :
 
+                    echo "<div class='art-card-tax-list art-lijst'>";
+
                     $a->print();
 
                     foreach ($agenda_model->agendastukken as $as) :
 
                         $a = new Ag_article_c(array(
-                            'class' 		=> 'in-lijst in-card',
+                            'class' 		=> 'in-lijst in-card tekst-hoofdkleur-wit',
                             'htype'			=> 5,
+                            'afb_formaat'   => 'portfolio',
                              'geen_afb'      => true,
                              'geen_datum'    => true,
                              'geen_meer_tekst'=> true,
                              'geen_tekst'=> true,
                         ), $as);
 
-                        $datum = "<span class='datum-float-rechts tekst-grijs'>".explode(' ', get_field('datum', $as->ID))[0] . "</span>";
+                        $datum = "<span class='datum-float-rechts tekst-lichtgrijs'>".explode(' ', get_field('datum', $as->ID))[0] . "</span>";
                         $a->art->post_title = $a->art->post_title . " " . $datum;
 
                         $a->print();
 
 
 
-                    endforeach; endif;
+                    endforeach;
+
+                    echo "</div>";
+
+                endif;
 
 
 
 
-                echo "</div>";
             endif;
             echo "</article>";
         endwhile;

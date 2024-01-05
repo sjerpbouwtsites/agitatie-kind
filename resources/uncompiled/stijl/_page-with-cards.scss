@@ -1,0 +1,68 @@
+.art-card-tax-list.art-lijst .art-rechts {
+    margin-top: .25em;
+    font-size: 1em;
+    padding: 0px;
+  }
+  .art-card-tax-list.art-lijst article:first-child .art-rechts  {
+    margin-top: 0;
+    h4 {
+        display: inline;
+  border-bottom: 2px solid white;
+    }
+  }
+
+.card-artikel .verklein {
+    font-size: .8em;
+}
+
+.art-lijst.art-card-tax-list {
+    margin: 0;
+      margin-top: 0px;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: $hoofdkleur;
+    
+  }
+  .tekst-hoofdkleur-wit .tekst-hoofdkleur, 
+  .tekst-hoofdkleur-wit a.tekst-hoofdkleur {
+    color: white;
+    &:hover{
+        text-decoration: underline;;
+    }
+  }
+.art-c.geen-afb.in-card {
+    padding-left: 0;
+    border-left: 0;
+    flex-basis: 100%;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    align-self: initial;
+    transition: initial;
+    width: 100%;
+  max-width: initial;
+    &:hover {
+        border-left: none;
+        text-decoration: underline;
+    }
+}
+.art-c.geen-afb.in-card + .in-card {
+    margin-top: 10px;
+}
+.in-card {
+    h4, h5 {
+        margin: 0;
+    }
+}
+
+.in-card .datum-float-rechts {
+    float: right;
+    line-height: inherit;
+}
+.in-card .datum-float-rechts::after{
+    float: none;
+    content: '';
+    display: block;
+}

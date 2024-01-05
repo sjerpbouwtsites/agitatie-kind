@@ -3,24 +3,63 @@
   }
 .art-c .art-rechts p {
    font-size: .75em;
-   font-family: Merriweather Sans;
-   opacity: .75;
+   // font-family: Merriweather Sans;
+   opacity: 1;
+   line-height: 1.15;
+   color: $hoofdkleur_donker;
 }
+.art-c header {
+   margin-bottom: .5em;
+ }
+
+.art-lijst .art-rechts {
+   margin-top: 1em;
+   font-size: 1.5em;
+ }
 
 h1 {
-   line-height: 0.9
+   line-height: 0.9;
+   font-size: 1.5rem;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: Merriweather Sans, sans-serif;
+h2 {
+   font-size: 1.3rem;
+}
+h3 {
+   font-size: 1.2rem;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//    font-family: Merriweather Sans, sans-serif;
+// }
+
+h2, h3 {
+   letter-spacing: -.03em;
+}
+
+h2, h3, .bericht-tekst {
+   color: $hoofdkleur;
+}
+.bericht-tekst {
+   font-size: .9rem;
+ }
+.serif-letter {
+   font-family: "Courgette", serif
+}
+
+.gecentreerde-titel {
+   margin-bottom: 1.5em;
+   margin-top: 0;
+   text-align: center;
+   font-size: 3rem;
 }
 
 p {
    font-weight: 400;
+   color: $hoofdkleur;
 }
 
 .auteur {

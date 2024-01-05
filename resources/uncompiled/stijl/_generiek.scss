@@ -1,8 +1,8 @@
 
 
 body {
-    // background-color: darken($zwart, 5%);
-    // color: $wittig;
+    background-color: none; 
+    background: transparent;
 }
 
 pre {
@@ -94,43 +94,23 @@ main {
     height: calc(100% - 100px);
 }
 
-.art-lijst.art-card-tax-list {
-    margin: 0;
-    flex-direction: column;
-    margin-top: 20px;
-  font-size: 1rem;
-}
-.art-c.geen-afb.in-card {
-    padding-left: 0;
-    border-left: 0;
-    flex-basis: 100%;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    align-self: initial;
-    transition: initial;
-    width: 100%;
-  max-width: initial;
-    &:hover {
-        border-left: none;
-        text-decoration: underline;
-    }
-}
-.art-c.geen-afb.in-card + .in-card {
-    margin-top: 10px;
-}
-.in-card {
-    h4, h5 {
-        margin: 0;
-    }
+
+
+.voorpagina .art-lijst .art-c img{
+    height: auto; 
 }
 
-.in-card .datum-float-rechts {
-    float: right;
-    line-height: inherit;
-}
-.in-card .datum-float-rechts::after{
-    float: none;
-    content: '';
-    display: block;
+
+/* INDIEN à la OY VEY TITLE BOVEN AFB MOET STAAN */
+
+h1 + .uitgelichte-afbeelding-buiten {
+    margin: 2em 0;
+    height: initial;
+    width: 100%;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+        display: inline;
+    }
 }

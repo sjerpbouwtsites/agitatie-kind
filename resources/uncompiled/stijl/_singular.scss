@@ -3,3 +3,13 @@
 .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child{
  // background-color: #181818
 } 
+
+@media screen and (min-width: 1025px) {
+    .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
+      background-color: white;
+    }
+    .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
+      background-color: white;
+    }
+    
+  }
