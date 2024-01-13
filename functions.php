@@ -21,6 +21,13 @@ include_once KIND_DIR . '/kind-vp-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 
+function add_favicon_to_header()
+{
+    get_template_part('/sja/header/icons');
+}
+
+add_action('wp_head', 'add_favicon_to_header');
+
 function agitatie_stijl_en_script()
 {
     wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
