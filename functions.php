@@ -444,4 +444,4 @@ function schakel_debug()
 }
 
 
-add_action('get_header', 'schakel_debug');
+add_action('wp_footer', 'schakel_debug');
