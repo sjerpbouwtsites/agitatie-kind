@@ -28,6 +28,14 @@ function add_favicon_to_header()
 
 add_action('wp_head', 'add_favicon_to_header');
 
+function do_favicon_ag()
+{
+    wp_redirect(get_site_icon_url(32, KIND_URI."/icons/favicon-32x32.png"));
+    exit;
+}
+
+add_action('do_faviconico', 'do_favicon_ag');
+
 function agitatie_stijl_en_script()
 {
     wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
