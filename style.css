@@ -358,6 +358,9 @@ a {
   text-transform: uppercase;
   z-index: 20; }
 
+main blockquote {
+  font-size: .9em; }
+
 .art-c .art-rechts p {
   font-size: .75em;
   opacity: 1;
@@ -408,6 +411,25 @@ p {
   font-style: italic;
   display: block;
   margin-bottom: .5em; }
+
+.bericht-tekst a:not(.knop) {
+  position: relative;
+  color: #d53417; }
+  .bericht-tekst a:not(.knop)::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: #d53417; }
+  .bericht-tekst a:not(.knop):hover {
+    color: #e73d1e;
+    text-decoration: none; }
+    .bericht-tekst a:not(.knop):hover::after {
+      background-color: #e73d1e;
+      height: 3px; }
 
 body {
   background-color: none;

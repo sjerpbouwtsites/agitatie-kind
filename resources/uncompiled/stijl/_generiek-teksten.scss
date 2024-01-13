@@ -1,4 +1,8 @@
-  .tekst-zwart,a.tekst-zwart {
+main blockquote {
+   font-size: .9em;
+}
+
+.tekst-zwart,a.tekst-zwart {
      // color: $wittig;
   }
 .art-c .art-rechts p {
@@ -67,4 +71,27 @@ p {
    font-style: italic;
    display: block;
    margin-bottom: .5em;
+}
+
+.bericht-tekst a:not(.knop){
+   position: relative;
+   color: $zijkleur_donker;
+   &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      position:absolute;
+      bottom: -1px;
+      left: 0;
+      background-color: $zijkleur_donker;
+   }
+   &:hover {
+      color: $zijkleur;
+      text-decoration: none;
+      &::after {
+         background-color: $zijkleur;
+         height: 3px;
+      }
+   }
 }
