@@ -537,10 +537,10 @@ function schakel_debug()
         $url = $is_debug ? str_replace('debug', '', $current_url) : "$current_url?debug=true";
 
         echo "<a class='schakel-debug' href='$url'>schakel debug</a>";
-        $is_localhost = str_contains($url, 'localhost');
+        $is_localhost = str_contains($current_url, 'localhost');
         $schakel_naar = $is_localhost ? 'staging' : 'localhost';
-        $naar_url = $is_localhost ? str_replace('http://localhost/oyvey', 'https://sjerpvanwouden.nl/oyvey', $url) : str_replace('https://sjerpvanwouden.nl/oyvey', 'http://localhost/oyvey', $url);
-
+        $pad = str_replace('https://sjerpvanwouden.nl/oyvey', '', str_replace('http://localhost/oyvey', '', $current_url));
+        $naar_url = $is_localhost ? "https://sjerpvanwouden.nl/oyvey/$pad" : "http://localhost/oyvey/$pad";
         echo "<a class='schakel-localhost' href='$naar_url'>schakel naar $schakel_naar</a>";
 
     endif;
