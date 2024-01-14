@@ -127,9 +127,20 @@
 //       }
 // }
 
+#stek-kop .stek-kop-links .custom-logo-link {
+    overflow: initial;
+  }
+
 #stek-kop .custom-logo-link img {
-    width: 60px;
-    height: 58px;
+    width: 120px;
+    height: 120px;
+    margin: 5px 0;
+  }
+  @media (max-width: 600px){
+    #stek-kop .custom-logo-link img {
+        width: 90px;
+        height: 90px;
+      }    
   }
 
 #stek-kop .stek-kop-links {

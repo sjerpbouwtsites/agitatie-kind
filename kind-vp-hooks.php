@@ -143,3 +143,23 @@ function oyvey_vp_agenda()
 }
 
 add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
+
+function oyvey_vp_extra_tekst()
+{
+    global $post;
+
+
+    $content = apply_filters('the_content', get_field('voorpagina_onder_video', $post->ID));
+
+    $content = str_replace('<h2>', '<h2 class="gecentreerde-titel serif-letter tekst-zijkleur">', $content);
+
+    echo "<section class='verpakking verpakking-klein marginveld tekstveld oyvey-extra-tekst-voorpagina voorpagina-sectie'>";
+
+    //echo "<h2 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
+
+    echo $content;
+
+    echo "</section>";
+}
+
+add_action('voorpagina_na_tekst_action', 'oyvey_vp_extra_tekst', 1);

@@ -139,15 +139,29 @@ if (!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true)
         return;
     }
 
+    $logo = "<a 
+        href='".home_url()."' 
+        class='custom-logo-link' 
+        rel='home' 
+        aria-current='page'>
+            <img 
+            width='280' 
+            height='280' 
+            src='".KIND_URI."/img/oy-vey-logo-anim.gif' 
+            class='custom-logo' 
+            alt='Oy Vey radicaal inclusieve joodse cultuur' 
+            decoding='async' 
+            fetchpriority='high' />
+        </a>";
+
     $str = "<span class='serif-letter tekst-hoofdkleur'>".taal\streng("Radicaal inclusieve Joodse cultuur")."</span>";
     if ($print) {
-        the_custom_logo();
+        //the_custom_logo();
+        echo  $logo;
         echo $str;
     } else {
-        ob_start();
-        the_custom_logo();
-        echo $str;
-        return  ob_get_clean();
+        //the_custom_logo();
+        return $logo.$str;
     }
 }
 endif;
