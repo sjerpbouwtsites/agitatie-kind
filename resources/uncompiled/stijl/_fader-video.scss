@@ -7,6 +7,10 @@
     margin: 0;
     align-self: center;
     max-width: calc(84vh - 40px);
+    visibility: hidden;
+}
+.fader-video.initialized{
+    visibility: initial;
 }
 .fader-video-overlay {
     width: 100%;
@@ -24,7 +28,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
+    display: block; 
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.4s;

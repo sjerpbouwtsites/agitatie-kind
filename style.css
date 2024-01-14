@@ -1343,7 +1343,11 @@ main .sticky-sidebar {
   position: relative;
   margin: 0;
   align-self: center;
-  max-width: calc(84vh - 40px); }
+  max-width: calc(84vh - 40px);
+  visibility: hidden; }
+
+.fader-video.initialized {
+  visibility: initial; }
 
 .fader-video-overlay {
   width: 100%;

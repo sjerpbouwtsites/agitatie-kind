@@ -45,7 +45,7 @@ function getChildWatcherLog(lastWatcherLog = ''){
 } 
 
 function faderVideo(faderFigure, hasWentRound = false){
-    console.log(faderFigure);
+    
     const faderFigureIndex = Number(faderFigure.getAttribute('data-current-index'));
     const faderFigureCount = Number(faderFigure.getAttribute('data-count'));
     const faderIndex = Number(faderFigure.getAttribute('data-fader-index'));
@@ -66,7 +66,11 @@ function faderVideo(faderFigure, hasWentRound = false){
     if (!hasWentRoundN) {
         unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex);
     }
-        
+
+    if (!faderFigure.className.includes('initialized')){
+        faderFigure.classList.add('initialized');
+    }
+
     setTimeout(()=>{
         faderFigure.setAttribute('data-current-index', faderFigureNextIndex)
     }, 2400) 
