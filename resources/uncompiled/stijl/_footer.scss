@@ -105,13 +105,13 @@
   // margin-bottom: -18px;
 }
 #MC-EMAIL {
-  width: 360px;
-  background-color: #f7c0b629;
-  border: 0;
-  padding: 10px 5px;
+  width: 320px;
+  background-color: #f9f9f9;
+  border: 2px solid $zijkleur;
+  padding: 8px 21px;
   max-width: calc(100vw - 120px);
   color: $zijkleur;
-  border-radius: 3px;
+  border-radius: 50px;
 }
 
 #MC-EMAIL::placeholder {
@@ -131,7 +131,8 @@
   margin-left: 50px;
   color: $zijkleur;
   &:hover {
-    background-color: $zijkleur_zeer_licht;
+    background-color: $zijkleur;
+    color: white;
   }
 }
 

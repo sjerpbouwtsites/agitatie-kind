@@ -321,13 +321,13 @@ a {
     text-align: center; }
 
 #MC-EMAIL {
-  width: 360px;
-  background-color: #f7c0b629;
-  border: 0;
-  padding: 10px 5px;
+  width: 320px;
+  background-color: #f9f9f9;
+  border: 2px solid #e73d1e;
+  padding: 8px 21px;
   max-width: calc(100vw - 120px);
   color: #e73d1e;
-  border-radius: 3px; }
+  border-radius: 50px; }
 
 #MC-EMAIL::placeholder {
   color: #e73d1e;
@@ -345,7 +345,8 @@ a {
   margin-left: 50px;
   color: #e73d1e; }
   .mc4wp-form .knop-rond:hover {
-    background-color: #f7c0b6; }
+    background-color: #e73d1e;
+    color: white; }
 
 .schakel-debug {
   position: fixed;
