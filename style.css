@@ -1040,7 +1040,8 @@ main .sticky-sidebar {
     padding-top: calc(100% - 125px);
     text-shadow: 1px 1px 1px #00000091; }
     .oyvey-team.art-c.in-lijst .art-rechts h3 {
-      font-size: 1.75em; }
+      font-size: 1.75em;
+      min-height: initial; }
     .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
       color: white; }
     .oyvey-team.art-c.in-lijst .art-rechts p {
