@@ -540,7 +540,7 @@ function schakel_debug()
         $is_localhost = str_contains($current_url, 'localhost');
         $schakel_naar = $is_localhost ? 'staging' : 'localhost';
         $pad = str_replace('https://sjerpvanwouden.nl/oyvey', '', str_replace('http://localhost/oyvey', '', $current_url));
-        $naar_url = $is_localhost ? "https://sjerpvanwouden.nl/oyvey/$pad" : "http://localhost/oyvey/$pad";
+        $naar_url = $is_localhost ? "https://sjerpvanwouden.nl/oyvey$pad" : "http://localhost/oyvey$pad";
         echo "<a class='schakel-localhost' href='$naar_url'>schakel naar $schakel_naar</a>";
 
     endif;
