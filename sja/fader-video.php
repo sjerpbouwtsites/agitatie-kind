@@ -9,10 +9,6 @@ if (!isset($afbeeldingen)) {
 $fader_counter = (!isset($fader_counter)) ? '0' : $fader_counter;
 $count = count($afbeeldingen);
 
-echo "<pre>";
-var_dump($afbeeldingen);
-echo "</pre>";
-
 if ($count > 0) :
 
     $overlay_url = "background-image: url(".KIND_URI . '/img/hexagon-overlay.png'.")";
