@@ -113,13 +113,16 @@ p {
       left: unset;
       background-color: unset;      
    }
+   filter: brightness(100%);
+   transition-duration: 0.3s;
+   transition-property: filter;
    &:hover {
       color: unset;
+      filter: brightness(125%);
       &::after {
          background-color: unset;
          height: initial;
       }
-      filter: brightness(125%)
    }   
 }
 

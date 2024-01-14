@@ -436,7 +436,10 @@ p {
 
 .bericht-tekst .gallery a {
   position: unset;
-  color: inherit; }
+  color: inherit;
+  filter: brightness(100%);
+  transition-duration: 0.3s;
+  transition-property: filter; }
   .bericht-tekst .gallery a::after {
     content: unset;
     display: initial;
