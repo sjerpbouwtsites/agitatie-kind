@@ -31,6 +31,7 @@ $cta->maak();
 $knoppendoos = "<div class='knoppendoos groot'>$cta2->html $cta->html</div>";
 
 ob_start();
+set_query_var('afbeeldingen', get_field('afbeeldingen', $post->ID));
 get_template_part('sja/fader-video');
 $fader_html = ob_get_clean();
 

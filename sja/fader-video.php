@@ -1,18 +1,20 @@
 <?php
 
 global $post;
-$fader_afb = get_field('afbeeldingen', $post->ID);
-// echo "<pre>";
-// var_dump($fader_afb);
-// echo "</pre>";
-$count = count($fader_afb);
+
+if (!isset($afbeeldingen)) {
+    echo "<h1>geen afbeeldingen!</h1>";
+}
+
+$fader_counter = (!isset($fader_counter)) ? '0' : $fader_counter;
+$count = count($afbeeldingen);
 if ($count > 0) :
 
     $overlay_url = "background-image: url(".KIND_URI . '/img/hexagon-overlay.png'.")";
-    echo "<figure class='fader-video' data-current-index='0' data-count='$count'>";
+    echo "<figure class='fader-video' data-current-index='0' data-count='$count' data-fader-index='$fader_counter'>";
     echo "<div class='fader-video-overlay' style='$overlay_url'></div>";
     for ($i = 0; $i < $count; $i++) :
-        $fa = $fader_afb[$i];
+        $fa = $afbeeldingen[$i];
         $src_port_dbl = $i === 0 ? $fa['sizes']['fader-video'] : '';
         $data_src_port_dbl = $fa['sizes']['fader-video'];
         $w_port_dbl = $fa['sizes']['fader-video'];
@@ -20,9 +22,9 @@ if ($count > 0) :
         $alt = $fa['alt'];
         echo "<picture 
             class='fader-video-picture' 
-            id='fader-video-picture-$i'>";
+            id='fader-video-picture-$fader_counter-$i'>";
         echo "<img 
-            id='fader-video-image-$i'
+            id='fader-video-image-$fader_counter-$i'
             class='fader-video-image'
             src='$src_port_dbl' 
             data-src='$data_src_port_dbl'

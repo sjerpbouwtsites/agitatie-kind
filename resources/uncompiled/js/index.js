@@ -45,8 +45,10 @@ function getChildWatcherLog(lastWatcherLog = ''){
 } 
 
 function faderVideo(faderFigure, hasWentRound = false){
+    console.log(faderFigure);
     const faderFigureIndex = Number(faderFigure.getAttribute('data-current-index'));
     const faderFigureCount = Number(faderFigure.getAttribute('data-count'));
+    const faderIndex = Number(faderFigure.getAttribute('data-fader-index'));
     const heightSet = faderFigure.hasAttribute('data-height-set');
     if (!heightSet) {
         faderFigure.setAttribute('style', `height: ${faderFigure.scrollWidth * 10 / 12}px`);
@@ -60,29 +62,29 @@ function faderVideo(faderFigure, hasWentRound = false){
         faderFigureNextIndex = 0;
         hasWentRound = true;
     } 
-    setFaderImageActive(faderFigure, faderFigureIndex);
+    setFaderImageActive(faderFigure, faderIndex, faderFigureIndex);
     if (!hasWentRoundN) {
-        unLazyNextFaderImage(faderFigure, faderFigureNextIndex);
+        unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex);
     }
         
     setTimeout(()=>{
         faderFigure.setAttribute('data-current-index', faderFigureNextIndex)
-    }, 2900)
+    }, 5900)
     setTimeout(()=>{
         faderVideo(faderFigure, hasWentRoundN);
-    }, 3000)
+    }, 6000)
 }
 
-function setFaderImageActive(faderFigure, faderFigureIndex){
+function setFaderImageActive(faderFigure, faderIndex, faderFigureIndex){
     const activePicture = faderFigure.querySelector('picture.active');
     if (activePicture) {
         activePicture.classList.remove('active');
     }
-    document.getElementById(`fader-video-picture-${faderFigureIndex}`).classList.add('active')
+    document.getElementById(`fader-video-picture-${faderIndex}-${faderFigureIndex}`).classList.add('active')
 }
 
-function unLazyNextFaderImage(faderFigure, faderFigureNextIndex){
-    const image = document.getElementById(`fader-video-image-${faderFigureNextIndex}`);
+function unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex){
+    const image = document.getElementById(`fader-video-image-${faderIndex}-${faderFigureNextIndex}`);
     image.src = image.getAttribute('data-src');
 }
 

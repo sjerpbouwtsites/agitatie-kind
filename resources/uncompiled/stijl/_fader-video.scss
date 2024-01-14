@@ -1,7 +1,12 @@
+.gecentreerde-titel.heeft-fader {
+    margin-bottom: .5em;
+}
+
 .fader-video {
     position: relative;
     margin: 0;
     align-self: center;
+    max-width: calc(84vh - 40px);
 }
 .fader-video-overlay {
     width: 100%;

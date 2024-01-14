@@ -151,7 +151,16 @@ margin-top: 0;
 //   top: calc(100vh + 240px);
 // }
 
-@media (min-width: 1200px){
+.voorpagina-sectie .art-c p::after {
+  color: $zijkleur;
+  margin-left: 5px;
+  content: 'Meer';
+}
+.voorpagina-sectie .art-c:hover p::after{
+  text-decoration: underline;
+}
+
+@media (min-width: 1620px){
   .voorpagina-sectie {
     position: relative;
   }

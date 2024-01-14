@@ -264,7 +264,7 @@ a {
   #stek-voet a,
   #stek-voet .textwidget {
     color: #2E6160; }
-  #stek-voet a:hover {
+  #stek-voet .current_page_item a, #stek-voet a:hover {
     color: #e73d1e; }
 
 #stek-voet .verpakking .neg-marge > * {
@@ -322,11 +322,12 @@ a {
 
 #MC-EMAIL {
   width: 360px;
-  background-color: #f7c0b6;
+  background-color: #f7c0b629;
   border: 0;
   padding: 10px 5px;
   max-width: calc(100vw - 120px);
-  color: #e73d1e; }
+  color: #e73d1e;
+  border-radius: 3px; }
 
 #MC-EMAIL::placeholder {
   color: #e73d1e;
@@ -391,6 +392,10 @@ h2, h3, .bericht-tekst {
   margin-top: 0;
   text-align: center;
   font-size: 3rem; }
+
+@media (max-width: 800px) {
+  .gecentreerde-titel, .agenda h1 {
+    font-size: 2rem; } }
 
 p {
   font-weight: 400;
@@ -780,7 +785,15 @@ main .sticky-sidebar {
 .home #main .uitgelichte-afbeelding-buiten + div + .tekstveld {
   position: relative; }
 
-@media (min-width: 1200px) {
+.voorpagina-sectie .art-c p::after {
+  color: #e73d1e;
+  margin-left: 5px;
+  content: 'Meer'; }
+
+.voorpagina-sectie .art-c:hover p::after {
+  text-decoration: underline; }
+
+@media (min-width: 1620px) {
   .voorpagina-sectie {
     position: relative; }
   .voorpagina-sectie .voorpagina-sectie-footer {
@@ -852,6 +865,9 @@ main .sticky-sidebar {
   .is-voorpagina-titel-en-tekst .fader-video {
     max-width: 360px;
     margin: 40px auto 0; } }
+
+.bericht {
+  margin-top: 5em; }
 
 .auteur {
   color: #666;
@@ -1317,10 +1333,14 @@ main .sticky-sidebar {
   content: '';
   display: block; }
 
+.gecentreerde-titel.heeft-fader, .agenda h1.heeft-fader {
+  margin-bottom: .5em; }
+
 .fader-video {
   position: relative;
   margin: 0;
-  align-self: center; }
+  align-self: center;
+  max-width: calc(84vh - 40px); }
 
 .fader-video-overlay {
   width: 100%;

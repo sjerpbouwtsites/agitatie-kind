@@ -90,6 +90,40 @@ if(!function_exists('ag_print_footer_widgets')) : function ag_print_footer_widge
     }
 } endif;
 
+function zet_faders_in_post_content($content)
+{
+    global $post;
+    $pt = $post->post_type;
+    if ($pt !== 'post' && $pt !== 'page') {
+        return $content;
+    }
+
+    $heeft_fader = get_field('gebruikt_fader_videos_in_tekst', $post->ID);
+    if (!$heeft_fader) {
+        return $content;
+    }
+
+    $faders = get_field('faders', $post->id);
+
+    $faders_html = array();
+
+    for ($i = 0; $i < count($faders); $i++) {
+        $fa = $faders[$i];
+        ob_start();
+        set_query_var('afbeeldingen', $fa['afbeeldingen']);
+        set_query_var('fader_counter', $i);
+        get_template_part('sja/fader-video');
+        $html = ob_get_clean();
+        $j = $i +1;
+        $str_to_replace = "%%FADER-$j%%";
+        $content = str_replace($str_to_replace, $html, $content);
+    }
+
+    return $content;
+}
+
+add_filter('the_content', 'zet_faders_in_post_content');
+
 if (!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true)
 {
     if (!has_custom_logo()) {
@@ -129,13 +163,17 @@ function ag_generieke_titel()
     }
 
     if ($wp_query->is_home) {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-home-titel'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
     } elseif ($wp_query->is_search) {
         $zocht = ucfirst(taal\streng('je zocht'));
         $watzoekje = ucfirst(taal\streng('wat zoek je'));
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-search-titel'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+    } elseif ($post->post_type === 'post' || $post->post_type === 'page') {
+        $heeft_fader = get_field('gebruikt_fader_video_in_plaats_van_uitgelichte_afbeelding', $post->ID);
+        $heeft_fader_class = $heeft_fader ? 'heeft-fader' : '';
+        echo "<h1 class='$heeft_fader_class gecentreerde-titel serif-letter tekst-zijkleur is-page-of-post-titel'>" . ucfirst($post->post_title) . "</h1>";
     } else {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-overige-titel'>" . ucfirst($post->post_title) . "</h1>";
     }
 }
 

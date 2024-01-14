@@ -45,6 +45,11 @@ h2, h3, .bericht-tekst {
    text-align: center;
    font-size: 3rem;
 }
+@media (max-width: 800px){
+   .gecentreerde-titel {
+      font-size: 2rem;
+   }
+}
 
 p {
    font-weight: 400;

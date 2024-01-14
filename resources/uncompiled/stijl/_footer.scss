@@ -11,9 +11,12 @@
   .textwidget {     
     color: $hoofdkleur; 
   }
-  a:hover{ 
+  .current_page_item a, a:hover{ 
     color: $zijkleur;
   }
+   
+
+  
   margin-top: 0; 
 }
 
@@ -103,11 +106,12 @@
 }
 #MC-EMAIL {
   width: 360px;
-  background-color: $zijkleur_zeer_licht;
+  background-color: #f7c0b629;
   border: 0;
   padding: 10px 5px;
   max-width: calc(100vw - 120px);
   color: $zijkleur;
+  border-radius: 3px;
 }
 
 #MC-EMAIL::placeholder {
