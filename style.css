@@ -447,7 +447,8 @@ p {
     left: unset;
     background-color: unset; }
   .bericht-tekst .gallery a:hover {
-    color: unset; }
+    color: unset;
+    filter: brightness(125%); }
     .bericht-tekst .gallery a:hover::after {
       background-color: unset;
       height: initial; }
