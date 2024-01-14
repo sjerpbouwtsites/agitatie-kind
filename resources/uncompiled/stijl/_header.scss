@@ -19,7 +19,8 @@
 }
 #stek-kop .stek-kop-links {
     flex-basis: 300px;
-    max-width: calc(100% - 160px)
+    max-width: calc(100% - 160px);
+    justify-content: flex-start;
 }
 .stek-kop-links .radical-riders-title {
     font-size: 2.5rem; 
@@ -71,7 +72,7 @@
 
 .openklap-menu {
     left: calc(50% - 40px);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 25px));
     width: 1200px;
     max-width: calc(100% - 40px);
     align-items: end;
@@ -88,7 +89,7 @@
 @media (max-width: 460px){
     .openklap-menu  {
     left: calc(50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 25px));
     width: 1200px;
     max-width: calc(100% - 40px);
     align-items: center;    
@@ -145,6 +146,11 @@
       text-align: center;
       max-width: 170px;
       font-size: .9em
+  }
+  @media (max-width: 600px){
+    #stek-kop .stek-kop-links .custom-logo-link + span{
+        display: none;
+    }
   }
 
   main.heeft-uitgelicht .sticky-sidebar,

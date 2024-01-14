@@ -5,21 +5,8 @@ main blockquote {
 .tekst-zwart,a.tekst-zwart {
      // color: $wittig;
   }
-.art-c .art-rechts p {
-   font-size: .75em;
-   // font-family: Merriweather Sans;
-   opacity: 1;
-   line-height: 1.15;
-   color: $hoofdkleur_donker;
-}
-.art-c header {
-   margin-bottom: .5em;
- }
 
-.art-lijst .art-rechts {
-   margin-top: 1em;
-   font-size: 1.5em;
- }
+
 
 h1 {
    line-height: 0.9;
@@ -31,14 +18,7 @@ h2 {
 h3 {
    font-size: 1.2rem;
 }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//    font-family: Merriweather Sans, sans-serif;
-// }
+
 
 h2, h3 {
    letter-spacing: -.03em;
@@ -71,86 +51,3 @@ p {
    color: $hoofdkleur;
 }
 
-.auteur {
-   color: $grijs;
-   font-style: italic;
-   display: block;
-   margin-bottom: .5em;
-}
-
-.bericht-tekst a:not(.knop){
-   position: relative;
-   color: $zijkleur_donker;
-   &::after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 100%;
-      position:absolute; 
-      bottom: -1px;
-      left: 0;
-      background-color: $zijkleur_donker;
-   }
-   &:hover {
-      color: $zijkleur;
-      text-decoration: none;
-      &::after {
-         background-color: $zijkleur;
-         height: 3px;
-      }
-   }
-}
-.bericht-tekst .gallery a {
-   position: unset;
-   color: inherit;
-   &::after{
-      content: unset;
-      display: initial;
-      height: initial;
-      width: initial;
-      position:unset; 
-      bottom: unset;
-      left: unset;
-      background-color: unset;      
-   }
-   filter: brightness(100%);
-   transition-duration: 0.3s;
-   transition-property: filter;
-   &:hover {
-      color: unset;
-      filter: brightness(125%);
-      &::after {
-         background-color: unset;
-         height: initial;
-      }
-   }   
-}
-
-@media (max-width: 1350px){
-   img.alignleft, img.alignright, img.aligncenter {
-      margin-top: .5em;
-      margin-bottom: .5em;
-   }
-}
-@media (min-width: 1350px){
-   img.alignleft.absoluted {
-      position: absolute;
-      right: 100%;
-   }
-   img.alignright.absoluted {
-      position: absolute;
-      left: 100%;
-   }   
-}
-
-@media (min-width: 1100px){
-   .bericht-tekst .gallery {
-      margin: 0 -150px;
-   }
-
-}
-@media (min-width: 1300px){
-   .bericht-tekst .gallery {
-      margin: 0 200-px;
-   }
-}

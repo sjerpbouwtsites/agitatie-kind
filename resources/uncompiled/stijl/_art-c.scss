@@ -1,0 +1,30 @@
+
+.art-c .art-rechts p {
+    font-size: .75em;
+    // font-family: Merriweather Sans;
+    opacity: 1;
+    line-height: 1.15;
+    color: $hoofdkleur_donker;
+ }
+ .art-c header {
+    margin-bottom: .5em;
+  }
+ 
+  .art-c h3 {
+     font-size: 1.33em;
+  }
+ .art-lijst .art-rechts {
+    margin-top: 1em;
+    font-size: 1em;
+    p {
+        font-size: .9em;
+        opacity: 1;
+        line-height: 1.075;
+        color: #26504f;      
+    }
+    h3 {
+       font-size: 1.5em;
+       min-height: 2.125em;
+    }
+  }
+ 

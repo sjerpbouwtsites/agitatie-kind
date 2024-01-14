@@ -8,7 +8,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
     if (count($vp_posts->posts)) :
 
-        echo "<section class='verpakking marginveld vp-nieuws'>";
+        echo "<section class='verpakking marginveld vp-nieuws voorpagina-sectie'>";
 
         echo "<h2 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
 
@@ -37,7 +37,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
         endforeach;
 
     echo "</div>"; //art lijst
-    echo "<footer>";
+    echo "<footer class='voorpagina-sectie-footer'>";
     $footerknop->print();
     echo "</footer>";
 
@@ -86,7 +86,7 @@ function oyvey_vp_agenda()
     //     }
     // }
 
-    echo "<section class='verpakking marginveld oyvey-agenda-voorpagina'>";
+    echo "<section class='verpakking marginveld oyvey-agenda-voorpagina voorpagina-sectie'>";
 
     echo "<h2 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
 
@@ -123,7 +123,7 @@ function oyvey_vp_agenda()
         'tekst' 	=> ucfirst(\agitatie\taal\streng('bekijk de volledige agenda')),
         'class'		=> 'in-wit'
     ));
-    echo "<footer>";
+    echo "<footer class='voorpagina-sectie-footer'>";
     $footerknop->print();
     echo "</footer>";
 
