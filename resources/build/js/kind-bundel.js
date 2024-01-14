@@ -94,9 +94,12 @@ function imagesAlignedInTextsNextToText(){
     if (document.body.scrollWidth < 1350){
         return;
     }
-    document.querySelectorAll('.bericht .bericht-tekst img.alignleft').forEach(alignedLeft => {
-        alignedLeft.parentNode.style.position = "relative";
-        alignedLeft.classList.add('absoluted');
+    document.querySelectorAll('.bericht .bericht-tekst img.alignleft, .bericht .bericht-tekst img.alignright').forEach(alignedLeftRight => {
+        const ruimte = alignedLeftRight.parentNode.offsetLeft;
+        const maxWidth = `${ruimte - 40}px`;
+        alignedLeftRight.parentNode.style.position = "relative";
+        alignedLeftRight.classList.add('absoluted');
+        alignedLeftRight.style.maxWidth = maxWidth;
     });
 }
 
