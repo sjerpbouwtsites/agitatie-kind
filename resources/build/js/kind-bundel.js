@@ -88,6 +88,7 @@ function unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex){
 
 function setFaderVideos(){
     document.querySelectorAll('.fader-video').forEach(fig=>{
+        console.log(fig);
         faderVideo(fig, false);
     });
 }
