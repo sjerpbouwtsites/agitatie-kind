@@ -67,10 +67,10 @@ function faderVideo(faderFigure, hasWentRound = false){
         
     setTimeout(()=>{
         faderFigure.setAttribute('data-current-index', faderFigureNextIndex);
-    }, 5900);
+    }, 2400); 
     setTimeout(()=>{
         faderVideo(faderFigure, hasWentRoundN);
-    }, 6000);
+    }, 2500);
 }
 
 function setFaderImageActive(faderFigure, faderIndex, faderFigureIndex){
