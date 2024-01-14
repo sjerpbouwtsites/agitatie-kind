@@ -38,11 +38,11 @@ if ($count > 0) :
 
         echo "<source 
             srcset='$data_src_portfolio_dbl' 
-            media='(max-width: 1200px)' />";
+            media='(max-width: 1460px)' />";
 
         echo "<source 
             srcset='$data_src_fader_dbl' 
-            media='(min-width: 1201px)' />";
+            media='(min-width: 1461px)' />";
 
         echo "<img 
             loading='lazy'
