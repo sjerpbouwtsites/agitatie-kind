@@ -434,6 +434,24 @@ p {
       background-color: #e73d1e;
       height: 3px; }
 
+.bericht-tekst .gallery a {
+  position: unset;
+  color: inherit; }
+  .bericht-tekst .gallery a::after {
+    content: unset;
+    display: initial;
+    height: initial;
+    width: initial;
+    position: unset;
+    bottom: unset;
+    left: unset;
+    background-color: unset; }
+  .bericht-tekst .gallery a:hover {
+    color: unset; }
+    .bericht-tekst .gallery a:hover::after {
+      background-color: unset;
+      height: initial; }
+
 img.alignleft, img.alignright, img.aligncenter {
   margin-top: .5em;
   margin-bottom: .5em; }
