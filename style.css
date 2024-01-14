@@ -456,9 +456,15 @@ p {
       background-color: unset;
       height: initial; }
 
-img.alignleft, img.alignright, img.aligncenter {
-  margin-top: .5em;
-  margin-bottom: .5em; }
+@media (max-width: 1350px) {
+  img.alignleft, img.alignright, img.aligncenter {
+    margin-top: .5em;
+    margin-bottom: .5em; } }
+
+@media (min-width: 1350px) {
+  img.alignleft.absoluted {
+    position: absolute;
+    right: 100%; } }
 
 @media (min-width: 1100px) {
   .bericht-tekst .gallery {

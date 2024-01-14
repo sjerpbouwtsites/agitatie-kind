@@ -92,6 +92,16 @@ function setFaderVideos(){
     });
 }
 
+function imagesAlignedInTextsNextToText(){
+    if (document.body.scrollWidth < 1350){
+        return;
+    }
+    document.querySelectorAll('.bericht bericht-tekst img.alignleft').forEach(alignedLeft => {
+        alignedLeft.parentNode.style.position = "relative";
+        alignedLeft.classList.add('absoluted')
+    })
+}
+
 
 
 function setHexagonsOnHero(){
@@ -193,6 +203,7 @@ function initChild(){
     getChildWatcherLog()
     setFaderVideos()
     copyCloseMenuForAccessibility();
+    imagesAlignedInTextsNextToText();
     //setHexagonsOnHero()
 }
 
