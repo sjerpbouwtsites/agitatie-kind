@@ -1,6 +1,6 @@
 //child
 //parent
-.knop, .pushbutton-wide, .knop:visited{
+.knop, .pushbutton-wide, .knop:visited, .navigation a {
 	display: inline-block; // idem
 	padding: 0.3em 1em; // idem
 	font-weight: bold; // idem
@@ -15,10 +15,32 @@
 	border-radius: 39px; 
 	font-family: inherit; // idem
 	border: 3px solid $zijkleur; 
-  	&:hover, &:active {
+    &:hover, &:active, &.active {
+        color: $wittig; 
+        text-decoration: none;// idem
+        background-color: $zijkleur;
+    }
+}
+.navigation a {
+    font-size: 1.25em;
+
+}
+.navigation .active a {
+    color: $wittig; 
+    text-decoration: none;// idem
+    background-color: $zijkleur;
+    box-shadow: none;
+    &:hover{
+        box-shadow: none;
+    }
+}
+ 
+.knop, .pushbutton-wide, .knop:visited, .navigation a {
+&:hover, &:active, &.active {
 		color: $wittig; 
 		text-decoration: none;// idem
         background-color: $zijkleur;
+        box-shadow: none;
 	}
 	&:hover {
 		transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out 0.2s;

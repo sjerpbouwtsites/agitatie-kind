@@ -1,3 +1,4 @@
+.invoerveld,
 .invoerveld[type="email"],
 .invoerveld[type="text"],
 .invoerveld[type="textarea"]{
@@ -16,3 +17,23 @@
   .invoerveld:focus::placeholder {
     opacity: 1;
   }
+
+.contact-form .grunion-field {
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid #e73d1e;
+}
+.grunion-field-wrap {
+  margin-top: 10px;
+}
+.contact-form  .grunion-field-name-wrap, 
+.contact-form  .grunion-field-email-wrap {
+  display: inline-block;
+  width: calc(50% - 20px);
+  input {
+    width: 100%;
+  }
+}
+.grunion-field-name-wrap + .grunion-field-email-wrap {
+  margin-left: 20px;
+}

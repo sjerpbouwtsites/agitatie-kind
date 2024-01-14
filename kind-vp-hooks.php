@@ -120,7 +120,7 @@ function oyvey_vp_agenda()
 
     $footerknop = new Ag_knop(array(
         'link' 		=> get_post_type_archive_link('agenda'),
-        'tekst' 	=> ucfirst(\agitatie\taal\streng('bekijk de volledige agenda')),
+        'tekst' 	=> ucfirst(\agitatie\taal\streng('volledige agenda')),
         'class'		=> 'in-wit'
     ));
     echo "<footer class='voorpagina-sectie-footer'>";

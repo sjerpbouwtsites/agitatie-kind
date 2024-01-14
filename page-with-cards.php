@@ -40,7 +40,7 @@ while (have_posts()) : the_post();
                 <header>
                     <h3 class='tekst-hoofdkleur'>$titel</h3>
                 </header>
-                <div class='tekst-hoofdkleur verklein'>
+                <div class='tekst-hoofdkleur'>
                     $tekst
                 </div>
             </div>";

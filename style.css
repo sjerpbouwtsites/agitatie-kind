@@ -914,7 +914,7 @@ main .sticky-sidebar {
     max-width: 360px;
     margin: 40px auto 0; } }
 
-.knop, .pushbutton-wide, .knop:visited {
+.knop, .pushbutton-wide, .knop:visited, .navigation a {
   display: inline-block;
   padding: 0.3em 1em;
   font-weight: bold;
@@ -929,46 +929,69 @@ main .sticky-sidebar {
   border-radius: 39px;
   font-family: inherit;
   border: 3px solid #e73d1e; }
-  .knop:hover, .knop:active, .pushbutton-wide:hover, .pushbutton-wide:active, .knop:visited:hover, .knop:visited:active {
+  .knop:hover, .knop:active, .knop.active, .pushbutton-wide:hover, .pushbutton-wide:active, .pushbutton-wide.active, .knop:visited:hover, .knop:visited:active, .knop:visited.active, .navigation a:hover, .navigation a:active, .navigation a.active {
     color: #f5f5f5;
     text-decoration: none;
     background-color: #e73d1e; }
-  .knop:hover, .pushbutton-wide:hover, .knop:visited:hover {
-    transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out 0.2s;
+
+.navigation a {
+  font-size: 1.25em; }
+
+.navigation .active a {
+  color: #f5f5f5;
+  text-decoration: none;
+  background-color: #e73d1e;
+  box-shadow: none; }
+  .navigation .active a:hover {
+    box-shadow: none; }
+
+.knop:hover, .knop:active, .knop.active, .pushbutton-wide:hover, .pushbutton-wide:active, .pushbutton-wide.active, .knop:visited:hover, .knop:visited:active, .knop:visited.active, .navigation a:hover, .navigation a:active, .navigation a.active {
+  color: #f5f5f5;
+  text-decoration: none;
+  background-color: #e73d1e;
+  box-shadow: none; }
+
+.knop:hover, .pushbutton-wide:hover, .knop:visited:hover, .navigation a:hover {
+  transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out 0.2s;
+  box-shadow: none;
+  transform: initial;
+  filter: brightness(110%); }
+
+.knop span, .pushbutton-wide span, .knop:visited span, .navigation a span {
+  margin-right: 8px;
+  color: inherit !important;
+  line-height: inherit  !important;
+  position: relative;
+  top: -1px;
+  font-weight: inherit; }
+
+.knop.geen-ikoon span, .pushbutton-wide.geen-ikoon span, .knop:visited.geen-ikoon span, .navigation a.geen-ikoon span {
+  margin-right: 0 !important; }
+
+.knop i, .pushbutton-wide i, .knop:visited i, .navigation a i {
+  color: inherit !important; }
+
+.knop.in-wit, .pushbutton-wide.in-wit, .knop:visited.in-wit, .navigation a.in-wit {
+  background-color: #e73d1e;
+  box-shadow: none;
+  color: #f5f5f5 !important; }
+  .knop.in-wit:hover, .pushbutton-wide.in-wit:hover, .knop:visited.in-wit:hover, .navigation a.in-wit:hover {
     box-shadow: none;
-    transform: initial;
-    filter: brightness(110%); }
-  .knop span, .pushbutton-wide span, .knop:visited span {
-    margin-right: 8px;
-    color: inherit !important;
-    line-height: inherit  !important;
-    position: relative;
-    top: -1px;
-    font-weight: inherit; }
-  .knop.geen-ikoon span, .pushbutton-wide.geen-ikoon span, .knop:visited.geen-ikoon span {
-    margin-right: 0 !important; }
-  .knop i, .pushbutton-wide i, .knop:visited i {
+    color: #e73d1e !important;
+    background-color: #f5f5f5; }
+  .knop.in-wit span, .knop.in-wit i, .pushbutton-wide.in-wit span, .pushbutton-wide.in-wit i, .knop:visited.in-wit span, .knop:visited.in-wit i, .navigation a.in-wit span, .navigation a.in-wit i {
     color: inherit !important; }
-  .knop.in-wit, .pushbutton-wide.in-wit, .knop:visited.in-wit {
-    background-color: #e73d1e;
-    box-shadow: none;
-    color: #f5f5f5 !important; }
-    .knop.in-wit:hover, .pushbutton-wide.in-wit:hover, .knop:visited.in-wit:hover {
-      box-shadow: none;
-      color: #e73d1e !important;
-      background-color: #f5f5f5; }
-    .knop.in-wit span, .knop.in-wit i, .pushbutton-wide.in-wit span, .pushbutton-wide.in-wit i, .knop:visited.in-wit span, .knop:visited.in-wit i {
-      color: inherit !important; }
-  .knop.ikoon-links, .pushbutton-wide.ikoon-links, .knop:visited.ikoon-links {
-    display: inline-flex;
-    flex-direction: row;
-    margin-right: 10px; }
-    .knop.ikoon-links span, .pushbutton-wide.ikoon-links span, .knop:visited.ikoon-links span {
-      order: 2;
-      margin-right: 0;
-      margin-left: 10px; }
-    .knop.ikoon-links i, .pushbutton-wide.ikoon-links i, .knop:visited.ikoon-links i {
-      margin-left: -2px; }
+
+.knop.ikoon-links, .pushbutton-wide.ikoon-links, .knop:visited.ikoon-links, .navigation a.ikoon-links {
+  display: inline-flex;
+  flex-direction: row;
+  margin-right: 10px; }
+  .knop.ikoon-links span, .pushbutton-wide.ikoon-links span, .knop:visited.ikoon-links span, .navigation a.ikoon-links span {
+    order: 2;
+    margin-right: 0;
+    margin-left: 10px; }
+  .knop.ikoon-links i, .pushbutton-wide.ikoon-links i, .knop:visited.ikoon-links i, .navigation a.ikoon-links i {
+    margin-left: -2px; }
 
 .knoppendoos {
   margin-bottom: -10px; }
@@ -1246,7 +1269,7 @@ main .sticky-sidebar {
 
 .agenda-lijst__tijd.agenda-lijst__tijd--widget {
   font-weight: 300;
-  font-size: .66em;
+  font-size: .9em;
   width: 100%;
   max-width: initial;
   margin-top: .5em; }
@@ -1296,6 +1319,13 @@ main .sticky-sidebar {
 
 .agenda-lijst__rechts--pagina p {
   color: white; }
+
+.agenda-lijst__buiten.agenda-lijst__buiten--widget .knop.in-kleur {
+  color: #2E6160;
+  border-color: #f5f5f5; }
+  .agenda-lijst__buiten.agenda-lijst__buiten--widget .knop.in-kleur:hover {
+    border-color: #78bfbe;
+    background-color: #78bfbe; }
 
 .archive.category .tax {
   display: none; }
@@ -1450,6 +1480,7 @@ main .sticky-sidebar {
   content: '';
   display: block; }
 
+.invoerveld,
 .invoerveld[type="email"],
 .invoerveld[type="text"],
 .invoerveld[type="textarea"] {
@@ -1466,6 +1497,25 @@ main .sticky-sidebar {
 .invoerveld:hover::placeholder,
 .invoerveld:focus::placeholder {
   opacity: 1; }
+
+.contact-form .grunion-field {
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid #e73d1e; }
+
+.grunion-field-wrap {
+  margin-top: 10px; }
+
+.contact-form .grunion-field-name-wrap,
+.contact-form .grunion-field-email-wrap {
+  display: inline-block;
+  width: calc(50% - 20px); }
+  .contact-form .grunion-field-name-wrap input,
+  .contact-form .grunion-field-email-wrap input {
+    width: 100%; }
+
+.grunion-field-name-wrap + .grunion-field-email-wrap {
+  margin-left: 20px; }
 
 .gecentreerde-titel.heeft-fader, .agenda h1.heeft-fader {
   margin-bottom: .5em; }

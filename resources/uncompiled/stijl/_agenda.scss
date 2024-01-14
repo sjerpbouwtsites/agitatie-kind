@@ -97,7 +97,7 @@
 
 .agenda-lijst__tijd.agenda-lijst__tijd--widget {
   font-weight: 300;
-  font-size: .66em;
+  font-size: .9em;
   width: 100%;
   max-width: initial;
   margin-top: .5em;
@@ -169,4 +169,13 @@ max-height: 150px;
 
 .agenda-lijst__rechts--pagina p {
   color: white;
+}
+
+.agenda-lijst__buiten.agenda-lijst__buiten--widget .knop.in-kleur {
+  color: $hoofdkleur;
+  border-color: $wittig;
+  &:hover {
+    border-color: $hoofdkleur_zeer_licht;
+    background-color: $hoofdkleur_zeer_licht;
+  }
 }
