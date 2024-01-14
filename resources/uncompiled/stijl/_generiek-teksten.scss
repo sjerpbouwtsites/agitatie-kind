@@ -50,8 +50,10 @@ h2, h3, .bericht-tekst {
 .bericht-tekst {
    font-size: 1rem;
  }
- .bericht-tekst p {
-   max-width: 55ch;
+ .bericht-tekst {
+   p, ol, ul {
+      max-width: 55ch;
+   }
  }
 .serif-letter {
    font-family: "Courgette", serif

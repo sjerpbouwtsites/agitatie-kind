@@ -393,7 +393,7 @@ h2, h3, .bericht-tekst {
 .bericht-tekst {
   font-size: 1rem; }
 
-.bericht-tekst p {
+.bericht-tekst p, .bericht-tekst ol, .bericht-tekst ul {
   max-width: 55ch; }
 
 .serif-letter, .agenda h1 {
