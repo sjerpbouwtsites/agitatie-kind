@@ -460,6 +460,14 @@ img.alignleft, img.alignright, img.aligncenter {
   margin-top: .5em;
   margin-bottom: .5em; }
 
+@media (min-width: 1100px) {
+  .bericht-tekst .gallery {
+    margin: 0 -150px; } }
+
+@media (min-width: 1300px) {
+  .bericht-tekst .gallery {
+    margin: 0 200-px; } }
+
 body.has-animation {
   transition-property: opacity;
   transition-duration: 0.1s ease-in-out; }
