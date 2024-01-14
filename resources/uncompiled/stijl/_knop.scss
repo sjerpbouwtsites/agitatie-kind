@@ -1,1 +1,111 @@
 //child
+//parent
+.knop, .pushbutton-wide, .knop:visited{
+	display: inline-block; // idem
+	padding: 0.3em 1em; // idem
+	font-weight: bold; // idem
+	background-color: $wittig; // idem
+	box-shadow: none; 
+	transition: background-color 0.4s ease-in-out, filter 0.35s ease-in-out;
+    filter: brightness(100%);
+	transform: initial ;
+	color: $zijkleur; 
+	font-size: 1em; // idem
+	text-transform: lowercase; // idem
+	border-radius: 39px; 
+	font-family: inherit; // idem
+	border: 3px solid $zijkleur; 
+  	&:hover, &:active {
+		color: $wittig; 
+		text-decoration: none;// idem
+        background-color: $zijkleur;
+	}
+	&:hover {
+		transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out 0.2s;
+		box-shadow: none;
+		transform: initial;		
+        filter: brightness(110%);
+	}
+	span {
+		margin-right: 8px;//idem
+		color: inherit !important;//idem
+		line-height: inherit  !important;//idem
+		position: relative;//idem
+		top: -1px;//idem
+		font-weight: inherit;//idem
+  	}
+	&.geen-ikoon {
+		span {
+			margin-right: 0 !important;//idem
+		}
+	}
+	i {
+		color: inherit !important; //idem
+	}
+	&.in-wit {
+		background-color: $zijkleur;
+		box-shadow: none;
+		color: $wittig !important;
+			&:hover {
+			box-shadow: none;
+            color: $zijkleur !important;
+            background-color: $wittig;
+		}
+		span, i {
+			color: inherit !important; //idem
+		}
+	}
+	&.ikoon-links {
+		display: inline-flex;//idem
+		flex-direction: row;//idem
+		margin-right: 10px;//idem
+		span {
+			order: 2;//idem
+			margin-right: 0;//idem
+			margin-left: 10px;//idem
+		}
+		i {
+			margin-left: -2px;//idem
+		}
+	}
+}
+
+
+.knoppendoos {
+	margin-bottom: -10px; //idem
+	.knop {
+		margin-bottom: 10px; //idem
+		margin-right: 10px; //idem
+	}
+}
+.knoppendoos.groot {
+	font-size: 1.5em; //idem
+	@media (max-width: 600px) {
+		font-size: 1em; //idem
+	}
+}
+// .knop.ghost {
+//   background-color: #ffffff1f;
+//   border: 3px solid $wit;
+//   color: $wit;
+//   &:hover {
+// 	background-color: #ffffffcc;
+// 	color: $hoofdkleur;
+//   }  
+//   line-height: calc(1.5em - 6px);
+//   &.in-wit {
+// 	background-color: transparent;
+// 	border: 3px solid $hoofdkleur;
+// 	color: $hoofdkleur !important;
+// 	&:hover {
+// 		background-color: $hoofdkleur_zeer_licht;
+// 		color: $zwart !important;
+// 		span, i {
+// 			color: $zwart !important;
+// 		}
+// 	  }  
+// 	span, i {
+// 		color: inherit !important;
+// 	}
+// }  
+// }

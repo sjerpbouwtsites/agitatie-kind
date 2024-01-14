@@ -258,7 +258,31 @@ a {
 #stek-voet {
   font-size: inherit;
   background-color: white;
-  margin-top: 0; }
+  position: relative;
+  margin-top: 30px;
+  padding-top: 30px; }
+  #stek-voet::before {
+    content: '';
+    height: 2px;
+    width: calc(100% - 400px);
+    min-width: 200px;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    display: block;
+    background-color: #e73d1e; }
+  @media (min-width: 1600px) {
+    #stek-voet::before {
+      width: 1400px;
+      left: calc(50vw - 700px); } }
+  @media (max-width: 800px) {
+    #stek-voet::before {
+      width: calc(100% - 200px);
+      left: 100px; } }
+  @media (max-width: 500px) {
+    #stek-voet::before {
+      width: calc(100% - 100px);
+      left: 50px; } }
   #stek-voet p,
   #stek-voet span,
   #stek-voet a,
@@ -310,10 +334,21 @@ a {
   background-color: transparent;
   margin-bottom: 0; }
 
-.footer-section .search-form .search-submit {
-  margin-left: 10px;
-  padding-top: calc(0.3em - 0px);
-  padding-bottom: calc(0.3em - 0px); }
+#zoekveld-footer .search-form .invoerveld {
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 2px solid #e73d1e; }
+
+#zoekveld-footer .search-form .mdi {
+  color: #e73d1e;
+  font-size: 1.5em;
+  vertical-align: middle; }
+
+#zoekveld-footer label + label {
+  padding: 5px 10px; }
+  #zoekveld-footer label + label:hover {
+    filter: brightness(110%);
+    cursor: pointer; }
 
 #stek-voet .verpakking.logo-en-tekst .neg-marge {
   justify-content: space-around; }
@@ -322,20 +357,7 @@ a {
 
 #MC-EMAIL {
   width: 320px;
-  background-color: #f9f9f9;
-  border: 2px solid #e73d1e;
-  padding: 8px 21px;
-  max-width: calc(100vw - 120px);
-  color: #e73d1e;
-  border-radius: 50px; }
-
-#MC-EMAIL::placeholder {
-  color: #e73d1e;
-  opacity: 0.6; }
-
-#MC-EMAIL:hover::placeholder,
-#MC-EMAIL:focus::placeholder {
-  opacity: 1; }
+  max-width: calc(100vw - 120px); }
 
 .mc4wp-form .knop-rond {
   background: transparent;
@@ -520,8 +542,7 @@ h1 + .uitgelichte-afbeelding-buiten {
   background: transparent; }
   .search-form .search-field {
     padding: 2px;
-    border-radius: 3px;
-    border: 1px solid #f2f2f2; }
+    border-radius: 3px; }
   .search-form input {
     background-color: #f7f7f7; }
   .search-form .mdi {
@@ -892,6 +913,74 @@ main .sticky-sidebar {
   .is-voorpagina-titel-en-tekst .fader-video {
     max-width: 360px;
     margin: 40px auto 0; } }
+
+.knop, .pushbutton-wide, .knop:visited {
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  box-shadow: none;
+  transition: background-color 0.4s ease-in-out, filter 0.35s ease-in-out;
+  filter: brightness(100%);
+  transform: initial;
+  color: #e73d1e;
+  font-size: 1em;
+  text-transform: lowercase;
+  border-radius: 39px;
+  font-family: inherit;
+  border: 3px solid #e73d1e; }
+  .knop:hover, .knop:active, .pushbutton-wide:hover, .pushbutton-wide:active, .knop:visited:hover, .knop:visited:active {
+    color: #f5f5f5;
+    text-decoration: none;
+    background-color: #e73d1e; }
+  .knop:hover, .pushbutton-wide:hover, .knop:visited:hover {
+    transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out 0.2s;
+    box-shadow: none;
+    transform: initial;
+    filter: brightness(110%); }
+  .knop span, .pushbutton-wide span, .knop:visited span {
+    margin-right: 8px;
+    color: inherit !important;
+    line-height: inherit  !important;
+    position: relative;
+    top: -1px;
+    font-weight: inherit; }
+  .knop.geen-ikoon span, .pushbutton-wide.geen-ikoon span, .knop:visited.geen-ikoon span {
+    margin-right: 0 !important; }
+  .knop i, .pushbutton-wide i, .knop:visited i {
+    color: inherit !important; }
+  .knop.in-wit, .pushbutton-wide.in-wit, .knop:visited.in-wit {
+    background-color: #e73d1e;
+    box-shadow: none;
+    color: #f5f5f5 !important; }
+    .knop.in-wit:hover, .pushbutton-wide.in-wit:hover, .knop:visited.in-wit:hover {
+      box-shadow: none;
+      color: #e73d1e !important;
+      background-color: #f5f5f5; }
+    .knop.in-wit span, .knop.in-wit i, .pushbutton-wide.in-wit span, .pushbutton-wide.in-wit i, .knop:visited.in-wit span, .knop:visited.in-wit i {
+      color: inherit !important; }
+  .knop.ikoon-links, .pushbutton-wide.ikoon-links, .knop:visited.ikoon-links {
+    display: inline-flex;
+    flex-direction: row;
+    margin-right: 10px; }
+    .knop.ikoon-links span, .pushbutton-wide.ikoon-links span, .knop:visited.ikoon-links span {
+      order: 2;
+      margin-right: 0;
+      margin-left: 10px; }
+    .knop.ikoon-links i, .pushbutton-wide.ikoon-links i, .knop:visited.ikoon-links i {
+      margin-left: -2px; }
+
+.knoppendoos {
+  margin-bottom: -10px; }
+  .knoppendoos .knop {
+    margin-bottom: 10px;
+    margin-right: 10px; }
+
+.knoppendoos.groot {
+  font-size: 1.5em; }
+  @media (max-width: 600px) {
+    .knoppendoos.groot {
+      font-size: 1em; } }
 
 .bericht {
   margin-top: 5em; }
@@ -1360,6 +1449,23 @@ main .sticky-sidebar {
   float: none;
   content: '';
   display: block; }
+
+.invoerveld[type="email"],
+.invoerveld[type="text"],
+.invoerveld[type="textarea"] {
+  background-color: #f9f9f9;
+  border: 2px solid #e73d1e;
+  padding: 8px 21px;
+  color: #e73d1e;
+  border-radius: 50px; }
+
+.invoerveld::placeholder {
+  color: #e73d1e;
+  opacity: 0.6; }
+
+.invoerveld:hover::placeholder,
+.invoerveld:focus::placeholder {
+  opacity: 1; }
 
 .gecentreerde-titel.heeft-fader, .agenda h1.heeft-fader {
   margin-bottom: .5em; }

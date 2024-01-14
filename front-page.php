@@ -16,14 +16,14 @@ do_action('voorpagina_voor_tekst_action');
 
 $cta2 = new Ag_knop(array(
     'tekst'		=> ucfirst(taal\streng('pak nieuwsbrief')),
-    'class'		=> 'in-wit scroll nieuwsbrief-knop',
+    'class'		=> 'scroll nieuwsbrief-knop',
     'link'		=> '#mc4wp-form-1'
 ));
 $cta2->maak();
 
 $cta = new Ag_knop(array(
     'tekst'		=> ucfirst(taal\streng('events')),
-    'class'		=> 'in-wit evenementen-knop',
+    'class'		=> 'evenementen-knop',
     'link'		=> get_post_type_archive_link('agenda')
 ));
 $cta->maak();

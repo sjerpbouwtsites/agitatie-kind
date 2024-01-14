@@ -2,9 +2,41 @@
 
 #stek-voet {
   //  background-color: #121212;
-  //margin-top: 0; 
+  
   font-size: inherit; 
   background-color: white;  
+  position: relative;
+  margin-top: 30px;
+  padding-top: 30px;
+  &::before {
+    content: '';
+    height: 2px;
+    width: calc(100% - 400px);
+    min-width: 200px;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    display: block; 
+    background-color: $zijkleur;
+  }
+  @media (min-width: 1600px){
+    &::before {
+      width: 1400px;
+      left: calc(50vw - 700px);
+    }
+  }  
+  @media (max-width: 800px){
+    &::before {
+      width: calc(100% - 200px);
+      left: 100px;
+    }
+  }
+  @media (max-width: 500px){
+    &::before {
+      width: calc(100% - 100px);
+      left: 50px;
+    }
+  }
   p,  
   span,
   a,    
@@ -15,9 +47,6 @@
     color: $zijkleur;
   }
    
-
-  
-  margin-top: 0; 
 }
 
 #stek-voet .verpakking .neg-marge > * {  
@@ -76,12 +105,25 @@
   padding: 0;
   background-color: transparent;
   margin-bottom: 0;
+  
+}
+#zoekveld-footer .search-form .invoerveld {
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 2px solid $zijkleur;
 }
 
-.footer-section .search-form .search-submit {
-  margin-left: 10px;
-  padding-top: calc(0.3em - 0px);
-  padding-bottom: calc(0.3em - 0px);
+#zoekveld-footer .search-form .mdi {
+  color: #e73d1e;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+#zoekveld-footer label + label {
+  padding: 5px 10px;
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+  }
 }
 
 #stek-voet .verpakking.logo-en-tekst .neg-marge {
@@ -106,22 +148,9 @@
 }
 #MC-EMAIL {
   width: 320px;
-  background-color: #f9f9f9;
-  border: 2px solid $zijkleur;
-  padding: 8px 21px;
   max-width: calc(100vw - 120px);
-  color: $zijkleur;
-  border-radius: 50px;
 }
 
-#MC-EMAIL::placeholder {
-  color: $zijkleur;
-  opacity: 0.6;
-}
-#MC-EMAIL:hover::placeholder,
-#MC-EMAIL:focus::placeholder {
-  opacity: 1;
-}
 
 .mc4wp-form .knop-rond {
   background: transparent;

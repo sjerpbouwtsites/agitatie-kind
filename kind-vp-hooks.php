@@ -153,7 +153,7 @@ function oyvey_vp_extra_tekst()
 
     $content = str_replace('<h2>', '<h2 class="gecentreerde-titel serif-letter tekst-zijkleur">', $content);
 
-    echo "<section class='verpakking verpakking-klein marginveld tekstveld oyvey-extra-tekst-voorpagina voorpagina-sectie'>";
+    echo "<section class='verpakking verpakking marginveld tekstveld oyvey-extra-tekst-voorpagina voorpagina-sectie'>";
 
     //echo "<h2 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
 
