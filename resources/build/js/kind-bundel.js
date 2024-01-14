@@ -24,12 +24,11 @@ function getChildWatcherLog(lastWatcherLog = ''){
     fetch("http://localhost/oyvey/wp-content/themes/agitatie-kind/watcher.log").then(a => {
         return a.text()
     }).then(t => {
-        console.log(lastWatcherLog, t);
         if (lastWatcherLog && lastWatcherLog.length){
             if (t === lastWatcherLog) {
                 setTimeout(()=>{
                     getChildWatcherLog(t);
-                },250);
+                },150);
             } else {
                 location.reload();
                 return;
@@ -37,7 +36,7 @@ function getChildWatcherLog(lastWatcherLog = ''){
         } else {
             setTimeout(()=>{
                 getChildWatcherLog(t);
-            },500);
+            },200);
         }
         
     });
