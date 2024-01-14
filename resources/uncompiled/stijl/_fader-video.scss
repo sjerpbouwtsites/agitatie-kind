@@ -7,10 +7,7 @@
     margin: 0;
     align-self: center;
     max-width: calc(84vh - 40px);
-    visibility: hidden;
-}
-.fader-video.initialized{
-    visibility: initial;
+    color: white;
 }
 .fader-video-overlay {
     width: 100%;

@@ -67,10 +67,6 @@ function faderVideo(faderFigure, hasWentRound = false){
         unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex);
     }
 
-    if (!faderFigure.className.includes('initialized')){
-        faderFigure.classList.add('initialized');
-    }
-
     setTimeout(()=>{
         faderFigure.setAttribute('data-current-index', faderFigureNextIndex)
     }, 2400) 
