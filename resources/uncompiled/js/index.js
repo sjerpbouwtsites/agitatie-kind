@@ -85,7 +85,7 @@ function setFaderImageActive(faderFigure, faderIndex, faderFigureIndex){
 
 function unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex){
     const image = document.getElementById(`fader-video-image-${faderIndex}-${faderFigureNextIndex}`);
-    image.src = image.getAttribute('data-src');
+    image.srcset = image.getAttribute('data-srcset');
 }
 
 function setFaderVideos(){
