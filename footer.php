@@ -47,6 +47,7 @@
 		TEMPLATE_URL = "<?= THEME_URI ?>",
 		IMG_URL = "<?= IMG_URI ?>",
 		AJAX_URL = BASE_URL + "/wp-admin/admin-ajax.php";
+		KIND_URL = "<?=KIND_URI?>";
 </script>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
