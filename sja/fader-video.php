@@ -15,6 +15,7 @@ if ($count > 0) :
     echo "<div class='fader-video-overlay' style='$overlay_url'></div>";
     for ($i = 0; $i < $count; $i++) :
         $fa = $afbeeldingen[$i];
+        var_dump($fa);
         $src_port_dbl = $i === 0 ? $fa['sizes']['fader-video'] : '';
         $data_src_port_dbl = $fa['sizes']['fader-video'];
         $w_port_dbl = $fa['sizes']['fader-video'];
