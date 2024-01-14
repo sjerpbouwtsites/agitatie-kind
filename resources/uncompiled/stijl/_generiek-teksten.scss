@@ -135,6 +135,10 @@ img.alignleft, img.alignright, img.aligncenter {
    .bericht-tekst .gallery {
       margin: 0 -150px;
    }
+   .bericht-tekst iframe {
+      margin: 0 -150px;
+      width: calc(100% + 300px);      
+   }
 }
 @media (min-width: 1300px){
    .bericht-tekst .gallery {
