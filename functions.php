@@ -69,7 +69,7 @@ function ag_kop_menu_ctrl()
         class='schakel kopmenu-mobiel'
         data-toon='#zoekveld'
         data-toon-soort='flex'
-        data-anti='.openklap-menu-container'
+        data-anti='#menuschakel'
         aria-label='Zoeken'
         aria-haspopup='true'
         aria-expanded='false'
