@@ -118,8 +118,7 @@ if (!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true)
 }
 endif;
 
-
-if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel()
+function ag_generieke_titel()
 {
     global $post;
     global $wp_query;
@@ -130,22 +129,20 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel()
     }
 
     if ($wp_query->is_home) {
-        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
     } elseif ($wp_query->is_search) {
         $zocht = ucfirst(taal\streng('je zocht'));
         $watzoekje = ucfirst(taal\streng('wat zoek je'));
-        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
     } else {
-        echo "<h1 class='serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
+        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
     }
 }
-
-endif;
 
 if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl()
 {
     if ($archief_titel = ag_archief_titel_model()) {
-        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . $archief_titel . "</h1>";
+        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel is-archief-titel'>" . $archief_titel . "</h1>";
     }
 }
 endif;
@@ -188,24 +185,3 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
     echo "</div>";
 }
 endif;
-
-function ag_generieke_titel()
-{
-    global $post;
-    global $wp_query;
-
-    //als hero, dan geen titel.
-    if (ag_hero_model()) {
-        return;
-    }
-
-    if ($wp_query->is_home) {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
-    } elseif ($wp_query->is_search) {
-        $zocht = ucfirst(taal\streng('je zocht'));
-        $watzoekje = ucfirst(taal\streng('wat zoek je'));
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
-    } else {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst($post->post_title) . "</h1>";
-    }
-}

@@ -48,7 +48,10 @@ h2, h3, .bericht-tekst {
    color: $hoofdkleur;
 }
 .bericht-tekst {
-   font-size: .9rem;
+   font-size: 1rem;
+ }
+ .bericht-tekst p {
+   max-width: 55ch;
  }
 .serif-letter {
    font-family: "Courgette", serif

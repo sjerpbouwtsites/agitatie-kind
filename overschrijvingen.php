@@ -21,6 +21,15 @@ function ag_uitgelichte_afbeelding_ctrl()
         return false;
     }
 
+    $gebruikt_fader_video = get_field('gebruikt_fader_video_in_plaats_van_uitgelichte_afbeelding', $post->ID);
+
+    if ($gebruikt_fader_video) {
+        get_template_part('sja/fader-video');
+        return;
+    }
+
+
+
     set_query_var('overschrijf_thumb_grootte', 'volle_breedte');
 
     if (!$hero_ar = ag_hero_model()) {

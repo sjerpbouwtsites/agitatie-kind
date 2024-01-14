@@ -391,7 +391,10 @@ h2, h3, .bericht-tekst {
   color: #2E6160; }
 
 .bericht-tekst {
-  font-size: .9rem; }
+  font-size: 1rem; }
+
+.bericht-tekst p {
+  max-width: 55ch; }
 
 .serif-letter, .agenda h1 {
   font-family: "Courgette", serif; }
@@ -430,6 +433,13 @@ p {
     .bericht-tekst a:not(.knop):hover::after {
       background-color: #e73d1e;
       height: 3px; }
+
+body.has-animation {
+  transition-property: opacity;
+  transition-duration: 0.1s ease-in-out; }
+
+body.hidden-body.animate-into-view {
+  opacity: 1; }
 
 body {
   background-color: none;
@@ -533,6 +543,11 @@ h1 + .uitgelichte-afbeelding-buiten {
     color: #2E6160; }
     .search-form .mdi:hover {
       color: #26504f; }
+
+.search-form.search-form--footer {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
@@ -788,6 +803,22 @@ main .sticky-sidebar {
       font-size: 1.75em;
       background-color: rgba(46, 97, 96, 0.7);
       padding: 1.33em 1em; } }
+
+.is-voorpagina-titel-en-tekst {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: calc(100vh - 200px); }
+  .is-voorpagina-titel-en-tekst.verpakking {
+    width: 1550px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+  .is-voorpagina-titel-en-tekst > * {
+    flex-basis: calc(50% - 40px); }
+  .is-voorpagina-titel-en-tekst .tekstveld-links {
+    align-self: center;
+    max-width: 600px; }
 
 @media screen and (min-width: 1025px) {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
@@ -1184,5 +1215,40 @@ main .sticky-sidebar {
   float: none;
   content: '';
   display: block; }
+
+.fader-video {
+  position: relative;
+  margin: 0; }
+
+.fader-video-overlay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+
+.fader-video-picture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in; }
+
+.fader-video-picture.active {
+  opacity: 1;
+  transition-duration: 0.3s; }
+
+.fader-video-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

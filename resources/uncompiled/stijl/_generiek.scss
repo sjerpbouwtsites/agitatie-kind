@@ -1,6 +1,15 @@
 
 
-body {
+body.has-animation {
+    transition-property: opacity;
+    transition-duration: 0.1s ease-in-out;    
+}
+
+body.hidden-body.animate-into-view {
+    opacity: 1;
+}
+
+body { 
     background-color: none; 
     background: transparent;
 }
@@ -121,7 +130,7 @@ h1 + .uitgelichte-afbeelding-buiten {
     margin-bottom: initial;
     background:transparent;
     .search-field {
-        padding: 2px;
+        padding: 2px; 
         border-radius: 3px;
         border: 1px solid #f2f2f2;
     }
@@ -134,4 +143,9 @@ h1 + .uitgelichte-afbeelding-buiten {
             color: $hoofdkleur_donker;
         }
     }
+}
+.search-form.search-form--footer {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }

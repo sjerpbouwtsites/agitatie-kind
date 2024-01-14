@@ -25,6 +25,24 @@
 
 			endif;
 
+			?>
+			
+			<div id='zoekveld-footer'>
+
+<form role="search" method="get" class="search-form search-form--footer" action="<?=SITE_URI?>">
+    <label>
+        <span class="screen-reader-text">Zoeken naar:</span>
+        <input class="search-field" placeholder="Zoeken …" value="" name="s" type="search">
+    </label>
+    <label for='footer-zoekveld' aria-label='Doe zoekopdracht'>
+        <input id='footer-zoekveld' class="search-submit" style='display:none' value="Zoeken" type="submit">
+        <i class='mdi mdi-arrow-right-thick'></i>
+    </label>
+</form>
+
+</div>
+			<?php
+
 			//do_action('ag_footer_na_velden_action');
 
 			?>

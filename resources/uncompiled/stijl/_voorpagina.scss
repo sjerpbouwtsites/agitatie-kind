@@ -218,3 +218,24 @@ margin-top: 0;
     }
   }
 }
+
+.is-voorpagina-titel-en-tekst {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: calc(100vh - 200px);
+  &.verpakking{
+    width: 1550px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto    ;    
+
+  }
+  > * {
+    flex-basis: calc(50% - 40px);
+  }
+  .tekstveld-links{
+    align-self: center;
+    max-width: 600px;
+  }
+}
