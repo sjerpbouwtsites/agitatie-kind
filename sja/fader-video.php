@@ -8,6 +8,11 @@ if (!isset($afbeeldingen)) {
 
 $fader_counter = (!isset($fader_counter)) ? '0' : $fader_counter;
 $count = count($afbeeldingen);
+
+echo "<pre>";
+var_dump($fa);
+echo "</pre>";
+
 if ($count > 0) :
 
     $overlay_url = "background-image: url(".KIND_URI . '/img/hexagon-overlay.png'.")";
@@ -15,7 +20,6 @@ if ($count > 0) :
     echo "<div class='fader-video-overlay' style='$overlay_url'></div>";
     for ($i = 0; $i < $count; $i++) :
         $fa = $afbeeldingen[$i];
-        var_dump($fa);
         $src_port_dbl = $i === 0 ? $fa['sizes']['fader-video'] : '';
         $data_src_port_dbl = $fa['sizes']['fader-video'];
         $w_port_dbl = $fa['sizes']['fader-video'];
