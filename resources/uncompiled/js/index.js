@@ -96,13 +96,20 @@ function imagesAlignedInTextsNextToText(){
     if (document.body.scrollWidth < 1350){
         return;
     }
-    document.querySelectorAll('.bericht .bericht-tekst img.alignleft, .bericht .bericht-tekst img.alignright').forEach(alignedLeftRight => {
-        const ruimte = alignedLeftRight.parentNode.offsetLeft;
+    document.querySelectorAll('.bericht .bericht-tekst img.alignleft').forEach(alignedLeft => {
+        const ruimte = alignedLeft.parentNode.offsetLeft;
         const maxWidth = `${ruimte - 40}px`;
-        alignedLeftRight.parentNode.style.position = "relative";
-        alignedLeftRight.classList.add('absoluted');
-        alignedLeftRight.style.maxWidth = maxWidth;
+        alignedLeft.parentNode.style.position = "relative";
+        alignedLeft.classList.add('absoluted');
+        alignedLeft.style.maxWidth = maxWidth;
     })
+    document.querySelectorAll('.bericht .bericht-tekst img.alignright').forEach(alignedRight => {
+        const ruimte = alignedRight.parentNode.offsetLeft;
+        const maxWidth = `${ruimte - 240}px`;
+        alignedRight.parentNode.style.position = "relative";
+        alignedRight.classList.add('absoluted');
+        alignedRight.style.maxWidth = maxWidth;
+    })    
 }
 
 
