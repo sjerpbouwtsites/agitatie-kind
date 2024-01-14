@@ -10,7 +10,7 @@ $fader_counter = (!isset($fader_counter)) ? '0' : $fader_counter;
 $count = count($afbeeldingen);
 
 echo "<pre>";
-var_dump($fa);
+var_dump($afbeeldingen);
 echo "</pre>";
 
 if ($count > 0) :
