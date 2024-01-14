@@ -104,7 +104,7 @@ main {
 /* INDIEN à la OY VEY TITLE BOVEN AFB MOET STAAN */
 
 h1 + .uitgelichte-afbeelding-buiten {
-    margin: 2em 0;
+    margin: 2em 0; 
     height: initial;
     width: 100%;
     img {
@@ -112,5 +112,26 @@ h1 + .uitgelichte-afbeelding-buiten {
         height: auto;
         object-fit: unset;
         display: inline;
+    }
+}
+
+
+.search-form {
+    padding: 0;
+    margin-bottom: initial;
+    background:transparent;
+    .search-field {
+        padding: 2px;
+        border-radius: 3px;
+        border: 1px solid #f2f2f2;
+    }
+    input {
+        background-color: #f7f7f7;
+    }
+    .mdi {
+        color: $hoofdkleur;
+        &:hover {
+            color: $hoofdkleur_donker;
+        }
     }
 }

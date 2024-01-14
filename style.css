@@ -519,12 +519,29 @@ h1 + .uitgelichte-afbeelding-buiten {
     object-fit: unset;
     display: inline; }
 
+.search-form {
+  padding: 0;
+  margin-bottom: initial;
+  background: transparent; }
+  .search-form .search-field {
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid #f2f2f2; }
+  .search-form input {
+    background-color: #f7f7f7; }
+  .search-form .mdi {
+    color: #2E6160; }
+    .search-form .mdi:hover {
+      color: #26504f; }
+
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   z-index: 1002; }
 
 #stek-kop {
   background-color: #fff;
   box-shadow: 0.5px 0.5px 1px #367271; }
+  #stek-kop .stek-kop-rechts {
+    justify-content: flex-end; }
 
 #stek-kop .stek-kop-links {
   flex-basis: 300px;
@@ -532,6 +549,10 @@ h1 + .uitgelichte-afbeelding-buiten {
 
 .stek-kop-links .radical-riders-title {
   font-size: 2.5rem; }
+
+.menuschakel-open #stek-kop {
+  position: sticky;
+  top: 0; }
 
 @media screen and (max-width: 600px) {
   #mobiele-menu-schakel {
@@ -543,6 +564,45 @@ h1 + .uitgelichte-afbeelding-buiten {
 @media screen and (max-width: 600px) {
   .stek-kop-links .radical-riders-title {
     font-size: 1.5rem; } }
+
+.stek-kop-knoppen {
+  display: flex; }
+  .stek-kop-knoppen button {
+    border: 0;
+    background: transparent;
+    padding: 0 .9em;
+    font-size: 1.25rem;
+    margin-right: 0; }
+    .stek-kop-knoppen button.open {
+      background-color: #2E6160;
+      color: white; }
+  .stek-kop-knoppen button:last-child {
+    margin-right: -20px; }
+
+.openklap-menu-container {
+  top: 70px;
+  height: calc(100vh - 70px); }
+
+.openklap-menu {
+  left: calc(50% - 40px);
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  max-width: calc(100% - 40px);
+  align-items: end;
+  max-height: calc(100vh - 130px);
+  flex-wrap: wrap; }
+
+@media (min-width: 420px) {
+  .openklap-menu .menu-item {
+    min-width: 260px; } }
+
+@media (max-width: 460px) {
+  .openklap-menu {
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    align-items: center; } }
 
 .multi-lang-vlaggen select {
   height: 40px;
@@ -572,6 +632,101 @@ main.heeft-uitgelicht .sticky-sidebar,
 main .sticky-sidebar {
   top: 100px;
   height: calc(100% + 500px); }
+
+#sluit-openklap-li {
+  border-top: 3px solid white;
+  padding-top: 10px;
+  margin-top: 10px; }
+  #sluit-openklap-li button {
+    background: transparent;
+    color: white;
+    border: 0;
+    padding: 0;
+    font-size: 1em; }
+    #sluit-openklap-li button:hover {
+      text-decoration: underline; }
+
+#zoekveld {
+  display: none;
+  margin-right: 20px; }
+
+@media (max-width: 460px) {
+  .zoekveldschakel-open #toegankelijkheidsschakel, .zoekveldschakel-open #menuschakel {
+    display: none; }
+  .zoekveldschakel-open #zoekveldschakel {
+    margin-right: 0; }
+  .zoekveldschakel-open #zoekveld {
+    margin-right: 10px; } }
+
+@media (max-width: 360px) {
+  .zoekveldschakel-open {
+    /*zoek tekst veld*/ }
+    .zoekveldschakel-open #zoekveld form > input:first-child {
+      max-width: calc(100% - 50px); } }
+
+@media (max-width: 900px) {
+  .zoekveldschakel-open .stek-kop-links {
+    display: none; }
+  .zoekveldschakel-open .stek-kop-rechts {
+    width: 100%; } }
+
+#zoekveld {
+  /* 					left: 115px;
+					top: 0; */
+  align-items: center; }
+
+#zoekveld input,
+#zoekveld label {
+  vertical-align: middle;
+  display: inline-block; }
+
+@media (max-width: 570px) {
+  .screen-reader-text {
+    display: none; } }
+
+@media (max-width: 360px) {
+  #zoekveld input {
+    width: 120px; } }
+
+[for='kop-zoekveld']:hover,
+#zoekveld input:focus + label .mdi {
+  cursor: pointer;
+  color: #e73d1e;
+  transition: 0.2s ease-out; }
+
+#zoekveld #kop-zoekveld {
+  display: none; }
+
+#zoekveld .mdi {
+  font-size: 1.5em; }
+
+.zoekveldschakel-open #zoekveldschakel .kop-in-button-text {
+  display: none; }
+
+.kop-in-button-text {
+  margin-right: 10px; }
+
+.kopmenu-mobiel i {
+  margin-left: 0; }
+
+@media (max-width: 1200px) {
+  .kop-in-button-text {
+    display: none; } }
+
+@media (max-width: 1200px) {
+  #zoekveld {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    background-color: #2E6160;
+    z-index: 100000000;
+    justify-content: space-around;
+    font-size: 1.5rem; }
+  #zoekveld .mdi {
+    color: white; } }
 
 .uitgelichte-afbeelding-buiten.hero {
   height: calc(100vh - 70px);

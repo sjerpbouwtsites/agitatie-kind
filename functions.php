@@ -28,6 +28,89 @@ function add_favicon_to_header()
 
 add_action('wp_head', 'add_favicon_to_header');
 
+function add_search_to_header()
+{
+    get_template_part('/sja/header/search');
+}
+
+add_action('ag_kop_rechts_action', 'add_search_to_header');
+
+function ag_kop_menu_ctrl()
+{
+    // 		global $wpdb;
+    // 		$results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}options WHERE option_id = 1", OBJECT );
+
+    // 		SELECT *
+    //   FROM wp_posts
+    //  WHERE post_type = 'nav_menu_item';
+
+    $menu_locations = get_nav_menu_locations();
+
+    if (!array_key_exists('openklap-menu', $menu_locations)) {
+        $adm_url = get_admin_url('nav-menus.php');
+        echo "<p class='foutmelding'><a href='$adm_url'>👉 Todo: menu maken & aan kop toekennen.</a></p>";
+        return;
+    }
+
+    if (array_key_exists('prio-menu', $menu_locations)) {
+        $a = array(
+            'theme_location' 			=> 'prio-menu',
+            'menu_class'					=> 'prio-menu menu',
+            'container_class'			=> 'prio-menu-container',
+        );
+        wp_nav_menu($a);
+    }
+
+    echo "
+    <div class='stek-kop-knoppen'>
+    <button
+        id='zoekveldschakel'
+        href='#'
+        class='schakel kopmenu-mobiel'
+        data-toon='#zoekveld'
+        data-toon-soort='flex'
+        data-anti='.openklap-menu-container'
+        aria-label='Zoeken'
+        aria-haspopup='true'
+        aria-expanded='false'
+        data-f='focusZoekveld'>
+        <span class='kop-in-button-text'>Zoeken</span>
+        <i class='mdi mdi-magnify'></i>
+        <i class='mdi mdi-window-close'></i>
+    </button>
+    <button
+        id='menuschakel'
+        href='#'
+        aria-label='open menu'
+        class='schakel kopmenu-mobiel'
+        aria-haspopup='true'
+        data-toon='.openklap-menu-container'
+        aria-label='Open navigatie'
+        aria-expanded='false'
+        data-anti='#zoekveldschakel'>
+        <span class='kop-in-button-text'>Menu</span>
+        <i class='mdi mdi-menu'></i>
+        <i class='mdi mdi-window-close'></i>
+        
+    </button>
+    </div>
+    ";
+    // echo "<a id='mobiele-menu-schakel' href='#' class='schakel kopmenu-mobiel' data-toon='.stek-kop-rechts .openklap-menu-container'>
+    // 			<span class='menu-menu-tekst'>Menu</span>";
+    // ag_mdi('menu', true);
+    // ag_mdi('close', true);
+    // echo "</a>";
+
+    $a = array(
+        'theme_location' 			=> 'openklap-menu',
+        'menu_class'					=> 'openklap-menu menu',
+        'container_class'			=> 'openklap-menu-container',
+    );
+    wp_nav_menu($a);
+}
+
+
+
 function do_favicon_ag()
 {
     wp_redirect(get_site_icon_url(32, KIND_URI."/icons/favicon-32x32.png"));
