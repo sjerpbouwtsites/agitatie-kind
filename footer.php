@@ -74,6 +74,15 @@
 
 <?php wp_footer(); ?>
 
+<?php $extra_css = get_field('extra_css', 'option');
+
+			if ($extra_css) {
+			    echo "<style>$extra_css</style>";
+			}
+
+
+			?>
+
 </body>
 
 </html>
