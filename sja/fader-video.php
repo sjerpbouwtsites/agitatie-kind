@@ -45,8 +45,8 @@ if ($count > 0) :
             media='(min-width: 1461px)' />";
 
         echo "<img 
-            loading='lazy'
-            decoding='async'
+            loading='eager'
+            decoding='sync'
             id='fader-video-image-$fader_counter-$i'
             class='fader-video-image'
             srcset='$src_portfolio_dbl' 
