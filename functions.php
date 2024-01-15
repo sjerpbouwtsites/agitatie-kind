@@ -227,6 +227,14 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
 }
 endif;
 
+function preload_logo()
+{
+    $src = KIND_URI."/img/oy-vey-logo-anim.gif";
+    echo "<link rel='preload' href='$src' as='image' type='image/gif' />";
+}
+
+add_action('wp_head', 'preload_logo');
+
 add_action('after_setup_theme', 'ag_config_agenda');
 
 function create_oyvey_team()

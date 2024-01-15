@@ -1,5 +1,21 @@
 <?php
 
+function vp_preload_video_images()
+{
+    global $post;
+    if (is_front_page()) {
+        $preload = get_field('preload', $post->ID);
+        if (!$preload) {
+            return;
+        }
+        echo "<link rel='preload' href='".$preload['sizes']['portfolio']."' as='image' type='image/webp' />";
+    }
+}
+
+add_action('wp_head', 'vp_preload_video_images', 50);
+
+
+
 if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
 {
     $vp_posts = new WP_Query(array(
