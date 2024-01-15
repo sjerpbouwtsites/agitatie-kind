@@ -139,7 +139,7 @@ $kind_config = array(
     // ),
     'archief'                      => array(
         'post' => array(
-          'afb_formaat'             => 'portfolio'
+          'afb_formaat'             => 'vierkant-480'
         ),
         // 'story'                      => array(
         //     // 'geen_afb'             => true,

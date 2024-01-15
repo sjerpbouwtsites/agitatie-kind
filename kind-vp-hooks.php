@@ -26,7 +26,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
                     'class' 		=> 'in-lijst',
                     'htype'			=> 3,
                     'geen_afb'		=> false,
-                    'afb_formaat'   => 'portfolio'
+                    'afb_formaat'   => 'vierkant-480'
                 ), $vp_post);
             } else {
                 $a->art = $vp_post;
@@ -96,7 +96,7 @@ function oyvey_vp_agenda()
         $a = new Ag_article_c(array(
             'class' 		=> 'in-lijst',
             'htype'			=> 3,
-            'afb_formaat'   => 'portfolio'
+            'afb_formaat'   => 'vierkant-480'
         ), $as);
         $a->print();
     }
