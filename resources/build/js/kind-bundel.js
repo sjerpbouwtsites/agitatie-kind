@@ -18,7 +18,7 @@ function copyCloseMenuForAccessibility(){
 
 function getChildWatcherLog(lastWatcherLog = ''){
     if (!location.href.includes('localhost')) {
-        console.log('niet op localhost');
+        //console.log('niet op localhost')
         return;
     }
     fetch("http://localhost/oyvey/wp-content/themes/agitatie-kind/watcher.log").then(a => {
@@ -88,7 +88,7 @@ function unLazyNextFaderImage(faderFigure, faderIndex, faderFigureNextIndex){
 
 function setFaderVideos(){
     document.querySelectorAll('.fader-video').forEach(fig=>{
-        console.log(fig);
+        
         faderVideo(fig, false);
     });
 }
