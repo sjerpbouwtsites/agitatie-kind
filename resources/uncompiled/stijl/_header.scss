@@ -4,7 +4,12 @@
     z-index: 1002;
 }
 
-
+@media (max-width: 600px) {
+    #stek-kop .stek-kop-rechts
+  {
+      padding-left: 0;
+    }
+  }
 
 #stek-kop {
     background-color: $wit;
@@ -58,9 +63,21 @@
             background-color: $hoofdkleur;
             color: white;
         }
+        @media (max-width: 380px){
+            padding-left: 0.4em;
+            padding-right: 0.4em;
+            
+        }
     }
     button:last-child {
         margin-right: -20px;
+    }
+    
+}
+
+.multi-lang-vlaggen__buiten {
+    @media (max-width: 380px){
+        margin-left: 20px;
     }
 }
 
