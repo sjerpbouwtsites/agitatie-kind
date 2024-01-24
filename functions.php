@@ -599,5 +599,6 @@ function smartwp_remove_wp_block_library_css()
     wp_deregister_style('wp-mediaelement');
     wp_dequeue_style('classic-themes');
     wp_dequeue_style('wc-blocks-style');
+    wp_dequeue_style('classic-theme-styles');
 }
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100);
