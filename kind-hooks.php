@@ -195,7 +195,7 @@ if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl(
 {
     if ($archief_titel = ag_archief_titel_model()) {
         if ($archief_titel === 'Teams') {
-            $archief_titel = "Team Oy Vey";
+            $archief_titel = ucfirst(taal\streng('Oy Vey, wie zijn we?'));
         }
         echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel is-archief-titel'>" . $archief_titel . "</h1>";
     }
