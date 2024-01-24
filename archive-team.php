@@ -61,14 +61,13 @@ class OyveyTeam extends Ag_article_c
 							<?= $this->art->post_title ?>
 						</h<?= $this->htype ?>>
 						<?php
-                            //$this->datum();
-                            // $this->taxonomieen();
-        ?>
+                            $this->datum();
+        $this->taxonomieen(); ?>
 					</header>
 					<?php
 
                     if (!$this->geen_tekst) :
-                        echo $this->maak_tekst();
+                        //echo $this->maak_tekst();
                     endif;  ?>
 				
 			</div>
