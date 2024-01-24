@@ -152,3 +152,18 @@ h1 + .uitgelichte-afbeelding-buiten {
     margin: 0 auto;
     text-align: center;
 }
+
+.art-links-binnen {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: calc(100% - 60px);
+  color: white;
+  h3 {
+    color: 0;
+  }
+  P {
+    color: white;
+    margin: 0
+  }
+}
