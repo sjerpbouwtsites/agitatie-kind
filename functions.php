@@ -600,3 +600,10 @@ function smartwp_remove_wp_block_library_css()
     wp_dequeue_style('classic-theme-styles');
 }
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100);
+
+// Remove tags support from posts
+function myprefix_unregister_tags()
+{
+    unregister_taxonomy_for_object_type('post_tag', 'post');
+}
+add_action('init', 'myprefix_unregister_tags');
