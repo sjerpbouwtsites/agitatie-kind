@@ -57,7 +57,7 @@ class OyveyTeam extends Ag_article_c
 			<div class='art-rechts'>
 				
 					<header>
-						<h<?= $this->htype ?> class='tekst-hoofdkleur'>
+						<h<?= $this->htype ?> class='tekst-wit'>
 							<?= $this->art->post_title ?>
 						</h<?= $this->htype ?>>
 						<?php $this->datum();

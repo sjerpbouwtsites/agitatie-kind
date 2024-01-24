@@ -396,6 +396,10 @@ a {
   .schakel-localhost:hover {
     color: white; }
 
+html {
+  font-size: 19.2px;
+  line-height: 1.4; }
+
 main blockquote {
   font-size: .9em; }
 
@@ -416,7 +420,7 @@ h2, h3, .bericht-tekst {
   color: #2E6160; }
 
 .bericht-tekst {
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 .bericht-tekst p, .bericht-tekst ol, .bericht-tekst ul {
   max-width: 55ch; }
@@ -765,7 +769,7 @@ main .sticky-sidebar {
     color: white; } }
 
 .art-c .art-rechts p {
-  font-size: .75em;
+  font-size: 1.1em;
   opacity: 1;
   line-height: 1.15;
   color: #26504f; }
@@ -1012,7 +1016,8 @@ main .sticky-sidebar {
   color: #666;
   font-style: italic;
   display: block;
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+  margin-top: 1em; }
 
 @media screen and (min-width: 1025px) {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
@@ -1166,7 +1171,7 @@ main .sticky-sidebar {
     padding-top: calc(100% - 125px);
     text-shadow: 1px 1px 1px #00000091; }
     .oyvey-team.art-c.in-lijst .art-rechts h3 {
-      font-size: 1.75em;
+      font-size: 1.4em;
       min-height: initial; }
     .oyvey-team.art-c.in-lijst .art-rechts .tekst-zwart {
       color: white; }

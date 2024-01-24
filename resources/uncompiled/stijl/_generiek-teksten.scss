@@ -1,3 +1,8 @@
+html {
+   font-size: 19.2px;
+   line-height: 1.4;
+}
+
 main blockquote {
    font-size: .9em;
 }
@@ -6,8 +11,7 @@ main blockquote {
      // color: $wittig;
   }
 
-
-
+  
 h1 {
    line-height: 0.9;
    font-size: 1.5rem;
@@ -28,8 +32,8 @@ h2, h3, .bericht-tekst {
    color: $hoofdkleur;
 }
 .bericht-tekst {
-   font-size: 1rem;
- }
+   font-size: 1.2rem;
+ } 
  .bericht-tekst {
    p, ol, ul {
       max-width: 55ch;
