@@ -60,8 +60,9 @@ class OyveyTeam extends Ag_article_c
 						<h<?= $this->htype ?> class='tekst-wit'>
 							<?= $this->art->post_title ?>
 						</h<?= $this->htype ?>>
-						<?php $this->datum();
-        $this->taxonomieen(); ?>
+						<?php
+                            //$this->datum();
+                            $this->taxonomieen(); ?>
 					</header>
 					<?php
 
