@@ -24,6 +24,7 @@ module.exports = {
       },
       sourceMap: true,
       outFile: "../style.css",
+      outputStyle: "compressed",
     }), // will output compiled styles to output.css
   ],
 };
