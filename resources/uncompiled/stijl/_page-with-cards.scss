@@ -1,3 +1,16 @@
+.art-lijst.art-lijst__cards {
+  @media(min-width: 1200px){
+    margin-left: -150px;
+    margin-right: -150px;
+  }
+}
+
+.art-lijst .art-c.card-artikel
+{
+  flex-grow: 1;
+  min-width: 200px;
+}
+
 .art-card-tax-list.art-lijst .art-rechts {
     margin-top: .25em;
     font-size: 1em;
@@ -7,7 +20,7 @@
     margin-top: 0;
     h4 {
         display: inline;
-  border-bottom: 2px solid white;
+        border-bottom: 2px solid white;
     }
   }
 
@@ -65,4 +78,11 @@
     float: none;
     content: '';
     display: block;
+}
+
+@media (min-width: 600px) {
+  .art-lijst.art-lijst__cards .art-rechts h3
+{
+    min-height: initial;
+  }
 }

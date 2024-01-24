@@ -24,7 +24,18 @@
     }
     h3 {
        font-size: 1.5em;
-       min-height: 2.125em;
+       @media (min-width: 600px){
+          min-height: 2.125em;
+       }
     }
   }
  
+  @media (max-width: 800px){
+   .art-lijst {
+      justify-content: center;
+   }
+   .art-lijst .art-c {
+      flex-grow: 1;
+      min-width: 240px;
+   }
+  }

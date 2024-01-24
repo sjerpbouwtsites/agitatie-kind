@@ -308,6 +308,13 @@ a {
     max-width: 600px;
     margin: 0 auto;
     text-align: center; }
+    @media (max-width: 640px) {
+      #stek-voet .verpakking.widgets .neg-marge section:last-child h3,
+      #stek-voet .verpakking.widgets .neg-marge section:last-child .textwidget {
+        max-width: 100%;
+        max-width: 100%;
+        margin: 0;
+        text-align: left; } }
   #stek-voet .verpakking.widgets .neg-marge section:last-child p {
     font-size: 0.75em;
     display: inline-block; }
@@ -338,6 +345,9 @@ a {
   padding: 4px 8px;
   border-radius: 3px;
   border: 2px solid #e73d1e; }
+  @media (max-width: 440px) {
+    #zoekveld-footer .search-form .invoerveld {
+      max-width: 200px; } }
 
 #zoekveld-footer .search-form .mdi {
   color: #e73d1e;
@@ -349,6 +359,10 @@ a {
   #zoekveld-footer label + label:hover {
     filter: brightness(110%);
     cursor: pointer; }
+
+@media (max-width: 500px) {
+  #zoekveld-footer .search-form label {
+    display: inline-block; } }
 
 #stek-voet .verpakking.logo-en-tekst .neg-marge {
   justify-content: space-around; }
@@ -369,6 +383,12 @@ a {
   .mc4wp-form .knop-rond:hover {
     background-color: #e73d1e;
     color: white; }
+  @media (max-width: 600px) {
+    .mc4wp-form .knop-rond {
+      margin-top: 10px;
+      margin-left: 0;
+      width: 320px;
+      max-width: calc(100% - 70px); } }
 
 .schakel-localhost, .schakel-debug {
   position: fixed;
@@ -789,8 +809,17 @@ main .sticky-sidebar {
     line-height: 1.075;
     color: #26504f; }
   .art-lijst .art-rechts h3 {
-    font-size: 1.5em;
-    min-height: 2.125em; }
+    font-size: 1.5em; }
+    @media (min-width: 600px) {
+      .art-lijst .art-rechts h3 {
+        min-height: 2.125em; } }
+
+@media (max-width: 800px) {
+  .art-lijst {
+    justify-content: center; }
+  .art-lijst .art-c {
+    flex-grow: 1;
+    min-width: 240px; } }
 
 .uitgelichte-afbeelding-buiten.hero {
   height: calc(100vh - 70px);
@@ -917,6 +946,11 @@ main .sticky-sidebar {
   .is-voorpagina-titel-en-tekst .fader-video {
     max-width: 360px;
     margin: 40px auto 0; } }
+
+@media (max-width: 800px) {
+  .voorpagina .art-lijst .art-c {
+    flex-grow: 1;
+    min-width: 240px; } }
 
 .knop, .pushbutton-wide, .knop:visited, .navigation a {
   display: inline-block;
@@ -1425,6 +1459,15 @@ main .sticky-sidebar {
   height: 120%;
   shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f)); }
 
+@media (min-width: 1200px) {
+  .art-lijst.art-lijst__cards {
+    margin-left: -150px;
+    margin-right: -150px; } }
+
+.art-lijst .art-c.card-artikel {
+  flex-grow: 1;
+  min-width: 200px; }
+
 .art-card-tax-list.art-lijst .art-rechts {
   margin-top: .25em;
   font-size: 1em;
@@ -1484,6 +1527,10 @@ main .sticky-sidebar {
   float: none;
   content: '';
   display: block; }
+
+@media (min-width: 600px) {
+  .art-lijst.art-lijst__cards .art-rechts h3 {
+    min-height: initial; } }
 
 .invoerveld,
 .invoerveld[type="email"],

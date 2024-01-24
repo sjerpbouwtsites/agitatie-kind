@@ -298,3 +298,12 @@ margin-top: 0;
     margin: 40px auto 0; 
   }
 }
+
+
+@media (max-width: 800px){
+  
+  .voorpagina .art-lijst .art-c  {
+     flex-grow: 1;
+     min-width: 240px;
+  }
+ }

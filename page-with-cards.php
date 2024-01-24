@@ -21,7 +21,7 @@ while (have_posts()) : the_post();
     the_content();
 
     if(have_rows('kaart')):
-        echo '<div class="art-lijst">';
+        echo '<div class="art-lijst art-lijst__cards">';
         while(have_rows('kaart')) : the_row();
 
             $titel = get_sub_field('titel');
