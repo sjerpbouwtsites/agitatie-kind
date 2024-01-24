@@ -24,7 +24,7 @@ $cta2->maak();
 $cta = new Ag_knop(array(
     'tekst'		=> ucfirst(taal\streng('events')),
     'class'		=> 'evenementen-knop',
-    'link'		=> get_post_type_archive_link('agenda')
+    'link'		=> get_post_type_archive_link('event')
 ));
 $cta->maak();
 

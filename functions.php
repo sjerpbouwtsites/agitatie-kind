@@ -173,7 +173,7 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
         // echo "a";
         // die();
 
-        $agenda = new Posttype_voorb('agenda', 'agenda');
+        $agenda = new Posttype_voorb('event', 'events');
         $agenda->pas_args_aan(array(
             'has_archive' => true,
             'public' => true,
@@ -189,7 +189,7 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
         $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
         register_taxonomy(
             $tax_enkelvoud,
-            'agenda',
+            'event',
             array(
                 'labels' => array(
                     'name' => _x($tax_meervoud, 'taxonomy general name'),
@@ -207,7 +207,7 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
         $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
         register_taxonomy(
             $tax_enkelvoud,
-            'agenda',
+            'event',
             array(
                 'labels' => array(
                     'name' => _x($tax_meervoud, 'taxonomy general name'),
