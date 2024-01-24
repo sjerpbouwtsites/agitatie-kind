@@ -584,10 +584,8 @@ add_filter(
 // Then, remove each CSS file, one at a time
 function jeherve_remove_all_jp_css()
 {
-    global $wp_styles;
     wp_dequeue_style('social-logos');
     wp_dequeue_style('jetpack_css');
-    echo "<script>console.log(".json_encode($wp_styles).");</script>";
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css', 99);
 
