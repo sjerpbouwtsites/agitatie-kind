@@ -159,6 +159,12 @@ h1 + .uitgelichte-afbeelding-buiten {
   left: 30px;
   width: calc(100% - 60px);
   color: white;
+  @media (max-width: 600px){
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);    
+  }
+
   h3 {
     color: 0;
   }
