@@ -62,7 +62,8 @@ class OyveyTeam extends Ag_article_c
 						</h<?= $this->htype ?>>
 						<?php
                             //$this->datum();
-                            $this->taxonomieen(); ?>
+                            // $this->taxonomieen();
+        ?>
 					</header>
 					<?php
 
