@@ -252,6 +252,9 @@
 					//width: 260px;
                     align-items: center;
 				}
+                .search-form{
+                    max-width: 100%;
+                }
 					#zoekveld input,
 					#zoekveld label {
 						vertical-align: middle;
@@ -262,12 +265,16 @@
 								display: none;
 							}
 						}
-						@media (max-width: 360px) {
-							#zoekveld input {
-								width: 120px;
+						@media (max-width: 480px) {
+							input {
+								max-width: 100%;
 							}
+                            label:first-child {
+                                max-width: calc(100% - 60px)
+                            }
 						}
 					[for='kop-zoekveld']:hover,
+
 					#zoekveld input:focus + label .mdi {
 						cursor: pointer;
 						color: $zijkleur;
