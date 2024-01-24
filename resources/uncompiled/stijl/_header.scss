@@ -68,6 +68,10 @@
     top: 70px;
     height: calc(100vh - 70px);
     z-index: 100;
+    @media (min-width: 1200px){
+        width: 50%;
+        left: 50%;
+    }
   }
 
 .openklap-menu {
