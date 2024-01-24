@@ -50,25 +50,28 @@ class OyveyTeam extends Ag_article_c
 				<div class='art-links'>
 					
 						<?php $this->print_afb(); ?>
-					
-				</div>
-			<?php endif; ?>
-
-			<div class='art-rechts'>
-				
-					<header>
+                        <div class='art-links-binnen'>
+                        <header>
 						<h<?= $this->htype ?> class='tekst-wit'>
 							<?= $this->art->post_title ?>
 						</h<?= $this->htype ?>>
 						<?php
                             $this->datum();
-        $this->taxonomieen(); ?>
+			    $this->taxonomieen(); ?>
 					</header>
 					<?php
 
                     if (!$this->geen_tekst) :
-                        //echo $this->maak_tekst();
-                    endif;  ?>
+                        echo $this->maak_tekst();
+                    endif;
+			    ?>
+                      </div>
+				</div>
+			<?php endif; ?>
+
+			<div class='art-rechts'>
+				
+					
 				
 			</div>
             <div class='oyvey-team-volle-tekst'>
