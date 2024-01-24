@@ -589,4 +589,4 @@ function jeherve_remove_all_jp_css()
     wp_dequeue_style('jetpack');
     //echo "<script>console.log(".json_encode($wp_styles).");</script>";
 }
-add_action('wp_print_styles', 'jeherve_remove_all_jp_css');
+add_action('wp_print_styles', 'jeherve_remove_all_jp_css', 99);
