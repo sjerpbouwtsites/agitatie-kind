@@ -173,3 +173,30 @@ h1 + .uitgelichte-afbeelding-buiten {
     margin: 0
   }
 }
+
+.error404, .search {
+    main {
+        overflow: initial;
+    }
+    .knop-rond
+{
+  background: transparent;
+  border: 2px solid $zijkleur;
+  border-radius: 30px;
+  padding: 8px 21px;
+  margin-left: 50px;
+  color:$zijkleur;
+  box-shadow: none;
+  &:hover {
+    color: $zijkleur;
+
+  }
+}
+}
+#zoekveld2 .search-field{
+    background-color: white;
+  border: 2px solid $zijkleur;
+  padding: 8px 21px;
+  color: $zijkleur;
+  border-radius: 50px;
+}
