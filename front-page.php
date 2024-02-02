@@ -35,8 +35,6 @@ set_query_var('afbeeldingen', get_field('afbeeldingen', $post->ID));
 get_template_part('sja/fader-video');
 $fader_html = ob_get_clean();
 
-ag_pre_dump(ag_hero_model());
-
 ag_tekstveld_ctrl(array(
     'formaat'		=> 'groot',
     'titel' 		=> ag_hero_model() === false ? $post->post_title : false,
