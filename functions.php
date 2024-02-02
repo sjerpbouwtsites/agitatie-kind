@@ -349,3 +349,41 @@ function myprefix_unregister_tags()
     unregister_taxonomy_for_object_type('post_tag', 'post');
 }
 add_action('init', 'myprefix_unregister_tags');
+
+// function register_media_tax()
+// {
+//     register_taxonomy(
+//         'media-category',
+//         'attachment',
+//         array(
+//             'labels' => array(
+//                 'name' => _x('media categories', 'taxonomy general name'),
+//                 'singular_name' 	=> _x('media category', 'taxonomy singular name'),
+//             ),
+//             'public' 	=> true,
+//             // 'rewrite'	=> array('slug'=>'agenda-plek'),
+//             'show_ui'   => true,
+//             'show_in_menu'=> true,
+//             'show_in_nav_menus'=> true,
+//         )
+//     );
+// }
+
+// add_action('after_setup_theme', 'register_media_tax');
+
+// function column_id($columns)
+// {
+//     $terms = wp_get_post_terms(__('ID'), 'media-category');
+//     ag_pre_dump($terms);
+//     $columns['media-category'] = 'harry';
+//     return $columns;
+// }
+// add_filter('manage_media_columns', 'column_id');
+
+// function column_id_row($columnName, $columnID)
+// {
+//     if($columnName == 'media-category') {
+//         echo $columnID;
+//     }
+// }
+// add_filter('manage_media_custom_column', 'column_id_row', 10, 2);
