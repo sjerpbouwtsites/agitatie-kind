@@ -200,3 +200,35 @@ max-height: 150px;
   margin-top: 0;
   margin-bottom: 0;
 }
+
+// HEAVY YASHIFICATION
+
+.agenda-lijst__wrapper
+{
+  background-color: #fff;
+  padding: 20px;
+}
+
+#agenda-filter{
+  display: none;
+}
+.agenda-lijst__stuk.agenda-lijst__stuk--pagina article {
+  border: 1px solid $grijs;
+}
+.agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wittig, 
+.agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wit {
+  color: inherit;
+}
+.agenda-lijst__titel.agenda-lijst__titel--pagina {
+  @extend .serif-letter;
+}
+.agenda-lijst__rechts--pagina p
+{
+  color: inherit;
+}
+.agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail
+{
+  max-height: 152px;
+  margin-top: -1px;
+  margin-left: -1px;
+}
