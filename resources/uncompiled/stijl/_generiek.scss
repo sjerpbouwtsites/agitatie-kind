@@ -200,3 +200,8 @@ h1 + .uitgelichte-afbeelding-buiten {
   color: $zijkleur;
   border-radius: 50px;
 }
+
+.widget_text.widget.sticky-widget.widget_custom_html .textwidget.custom-html-widget {
+    font-size: .75rem;
+    line-height: .75rem;
+}
