@@ -179,3 +179,24 @@ max-height: 150px;
     background-color: $hoofdkleur_zeer_licht;
   }
 }
+ 
+// in bericht via shortcode
+ 
+.agenda-via-shortcode .agenda-lijst__link.agenda-lijst__link--pagina::after {
+  display: none;
+}
+.agenda-via-shortcode .agenda-lijst__stuk.agenda-lijst__stuk--pagina {
+  border-bottom: none;
+}
+
+.agenda-via-shortcode .agenda-lijst__cel--pagina
+{
+  padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  flex-grow: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
