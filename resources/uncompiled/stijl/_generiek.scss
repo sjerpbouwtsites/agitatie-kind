@@ -192,6 +192,14 @@ h1 + .uitgelichte-afbeelding-buiten {
 
   }
 }
+@media (max-width: 570px) {
+    .screen-reader-text {
+      display: none;
+    }
+  }
+.search-form {
+    max-width: 100%;
+  }
 }
 #zoekveld2 .search-field{
     background-color: white;
@@ -204,4 +212,9 @@ h1 + .uitgelichte-afbeelding-buiten {
 .widget_text.widget.sticky-widget.widget_custom_html .textwidget.custom-html-widget {
     font-size: .75rem;
     line-height: .75rem;
+}
+main.heeft-uitgelicht .sticky-sidebar,
+main .sticky-sidebar {
+  top: 100px;
+  height: calc(100% + 500px);
 }
