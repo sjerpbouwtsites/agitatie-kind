@@ -203,11 +203,14 @@ max-height: 150px;
 
 // HEAVY YASHIFICATION
 
-.agenda-lijst__wrapper
-{
+.agenda-lijst__wrapper:not(.agenda-lijst__wrapper--widget) 
+
+{ 
   background-color: #fff;
   padding: 20px;
 }
+
+
 
 #agenda-filter{
   display: none;
