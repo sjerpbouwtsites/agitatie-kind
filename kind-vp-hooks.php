@@ -158,7 +158,7 @@ function oyvey_vp_agenda()
     // endif; // als agendastukken
 }
 
-add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 25);
+add_action('voorpagina_na_tekst_action', 'oyvey_vp_agenda', 15);
 
 function oyvey_vp_extra_tekst()
 {
