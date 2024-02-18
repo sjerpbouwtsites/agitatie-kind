@@ -21,6 +21,7 @@ add_action('after_setup_theme', 'kinder_klassen');
 include_once KIND_DIR . '/kind-gereedschap.php';
 include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/kind-vp-hooks.php';
+include_once KIND_DIR . '/kind-agenda-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
 include_once KIND_DIR . '/ctrl/delen.php';
 include_once KIND_DIR . '/overschrijvingen.php';
@@ -75,11 +76,11 @@ function ag_kop_menu_ctrl()
         data-toon='#zoekveld'
         data-toon-soort='flex'
         data-anti='#menuschakel'
-        aria-label='Zoeken'
+        aria-label='".\agitatie\taal\streng('Zoeken')."'
         aria-haspopup='true'
         aria-expanded='false'
         data-f='focusZoekveld'>
-        <span class='kop-in-button-text'>Zoeken</span>
+        <span class='kop-in-button-text'>".\agitatie\taal\streng('Zoeken')."</span>
         <i class='mdi mdi-magnify'></i>
         <i class='mdi mdi-window-close'></i>
     </button>
