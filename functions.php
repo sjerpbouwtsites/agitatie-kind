@@ -20,6 +20,7 @@ add_action('after_setup_theme', 'kinder_klassen');
 include_once KIND_DIR . '/kind-gereedschap.php';
 include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/kind-vp-hooks.php';
+include_once KIND_DIR . '/kind-agenda-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 include_once KIND_DIR . '/event-shortcode.php';
