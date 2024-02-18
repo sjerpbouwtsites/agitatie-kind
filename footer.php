@@ -29,13 +29,13 @@
 			
 			<div id='zoekveld-footer'>
 
-<form role="search" method="get" class="search-form search-form--footer" action="<?=SITE_URI?>">
+<form role="search" method="get" class="search-form search-form--footer" action="<?php echo esc_url(home_url('/')); ?>">
     <label>
-        <span class="screen-reader-text">Zoeken naar:</span>
-        <input class="search-field invoerveld" placeholder="Zoeken …" value="" name="s" type="search">
+        <span class="screen-reader-text"><?=\agitatie\taal\streng('Zoeken naar')?>:</span>
+        <input class="search-field invoerveld" placeholder="<?=\agitatie\taal\streng('Zoeken')?> …" value="" name="s" type="search">
     </label>
     <label for='footer-zoekveld' aria-label='Doe zoekopdracht'>
-        <input id='footer-zoekveld' class="search-submit" style='display:none' value="Zoeken" type="submit">
+        <input id='footer-zoekveld' class="search-submit" style='display:none' value="<?=\agitatie\taal\streng('Zoeken')?>" type="submit">
         <i class='mdi mdi-arrow-right-thick'></i>
     </label>
 </form>
