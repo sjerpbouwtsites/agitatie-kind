@@ -1,6 +1,6 @@
 <div id='zoekveld'>
-
-<form role="search" method="get" class="search-form" action="<?=SITE_URI?>">
+<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+    
     <label>
         <span class="screen-reader-text"><?=\agitatie\taal\streng('Zoeken naar')?>:</span>
         <input class="search-field" placeholder="<?=\agitatie\taal\streng('Zoeken')?> …" value="" name="s" type="search">
