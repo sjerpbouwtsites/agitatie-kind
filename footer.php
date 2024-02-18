@@ -3,9 +3,11 @@
 		<div class='neg-marge'>
 			<?php
 
-            //do_action('ag_footer_voor_velden_action');
+            do_action('oyvey_footer_socials');
 
-            $voet_velden = get_field('footervelden', 'option');
+			//do_action('ag_footer_voor_velden_action');
+
+			$voet_velden = get_field('footervelden', 'option');
 			if ($voet_velden and count($voet_velden)) :
 
 			    foreach ($voet_velden as $v) :

@@ -21,6 +21,7 @@ include_once KIND_DIR . '/kind-gereedschap.php';
 include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/kind-vp-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
+include_once KIND_DIR . '/ctrl/delen.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 include_once KIND_DIR . '/event-shortcode.php';
 
