@@ -6,6 +6,7 @@ use agitatie\taal as taal;
 
 define('KIND_DIR', get_stylesheet_directory());
 define('KIND_URI', get_stylesheet_directory_uri());
+define('IS_DEVELOPMENT', str_contains($_SERVER['HTTP_HOST']), 'sjerpbouwtsites.nl');
 
 add_image_size('vierkant-480', 480, 480, true);
 

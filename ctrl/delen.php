@@ -98,4 +98,6 @@ function ag_print_socials()
 
 <?php }
 
-add_action('ag_singular_na_artikel', 'ag_print_socials', 5);
+if (!IS_DEVELOPMENT) {
+    add_action('ag_singular_na_artikel', 'ag_print_socials', 5);
+}
