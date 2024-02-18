@@ -5,7 +5,7 @@
     class='schakel'
     data-toon='#zoekveld'
     data-anti='#toegankelijkheidsschakel, #menuschakel'
-    aria-label='Zoeken'
+    aria-label='<?=\agitatie\taal\streng('Zoeken')?>'
     aria-haspopup="true"
     aria-expanded='false'
     data-f='focusZoekveld'>
