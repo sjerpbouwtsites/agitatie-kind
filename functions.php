@@ -6,6 +6,7 @@ use agitatie\taal as taal;
 
 define('KIND_DIR', get_stylesheet_directory());
 define('KIND_URI', get_stylesheet_directory_uri());
+define('IS_DEVELOPMENT', str_contains($_SERVER['HTTP_HOST'], 'sjerpbouwtsites.nl'));
 
 add_image_size('vierkant-480', 480, 480, true);
 
@@ -22,6 +23,7 @@ include_once KIND_DIR . '/kind-hooks.php';
 include_once KIND_DIR . '/kind-vp-hooks.php';
 include_once KIND_DIR . '/kind-agenda-hooks.php';
 include_once KIND_DIR . '/ctrl/agenda.php';
+include_once KIND_DIR . '/ctrl/delen.php';
 include_once KIND_DIR . '/overschrijvingen.php';
 include_once KIND_DIR . '/event-shortcode.php';
 
@@ -350,41 +352,3 @@ function myprefix_unregister_tags()
     unregister_taxonomy_for_object_type('post_tag', 'post');
 }
 add_action('init', 'myprefix_unregister_tags');
-
-// function register_media_tax()
-// {
-//     register_taxonomy(
-//         'media-category',
-//         'attachment',
-//         array(
-//             'labels' => array(
-//                 'name' => _x('media categories', 'taxonomy general name'),
-//                 'singular_name' 	=> _x('media category', 'taxonomy singular name'),
-//             ),
-//             'public' 	=> true,
-//             // 'rewrite'	=> array('slug'=>'agenda-plek'),
-//             'show_ui'   => true,
-//             'show_in_menu'=> true,
-//             'show_in_nav_menus'=> true,
-//         )
-//     );
-// }
-
-// add_action('after_setup_theme', 'register_media_tax');
-
-// function column_id($columns)
-// {
-//     $terms = wp_get_post_terms(__('ID'), 'media-category');
-//     ag_pre_dump($terms);
-//     $columns['media-category'] = 'harry';
-//     return $columns;
-// }
-// add_filter('manage_media_columns', 'column_id');
-
-// function column_id_row($columnName, $columnID)
-// {
-//     if($columnName == 'media-category') {
-//         echo $columnID;
-//     }
-// }
-// add_filter('manage_media_custom_column', 'column_id_row', 10, 2);

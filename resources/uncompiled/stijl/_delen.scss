@@ -1,0 +1,21 @@
+.agitatie-socials__buiten {
+    font-size: 1rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.agitatie-socials__titel {
+    margin: 0;
+    margin-bottom: .5em;
+}
+.agitatie-socials__lijst {
+    padding: 0;
+    margin: 0;
+    margin-left: -0.1em;
+    margin-right: -0.1em;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.agitatie-socials__lijst-item {
+    margin: 0 0.1em;
+}
