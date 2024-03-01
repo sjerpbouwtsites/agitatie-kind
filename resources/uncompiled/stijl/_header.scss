@@ -142,14 +142,19 @@
 //       }
 // }
 
+
 #stek-kop .stek-kop-links .custom-logo-link {
   overflow: initial;
 }
+
 
 #stek-kop .custom-logo-link img {
   width: 120px;
   height: 120px;
   margin: 5px 0;
+}
+.menuschakel-open #stek-kop .custom-logo-link img {
+  border-bottom: 5px solid white;
 }
 @media (max-width: 600px){
   #stek-kop .custom-logo-link img {
