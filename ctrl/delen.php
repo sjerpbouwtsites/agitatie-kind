@@ -69,8 +69,10 @@ function ag_print_socials()
 
     $url_whatsapp = "https://api.whatsapp.com/send?text=$whatsapp_title $current_url";
 
+    $classes_voor_op_page = is_page() ? "verpakking verpakking-klein" : 'niet-op-page'
+
     ?>
-    <aside class='agitatie-socials__buiten verpakking verpakking-klein'>
+    <aside class='agitatie-socials__buiten <?=$classes_voor_op_page?>'>
         <h3 class='agitatie-socials__titel serif-letter tekst-zijkleur'><?=$is_engels ? "Share this" : "Deel dit"?></h3>
         <ul class='agitatie-socials__lijst'>
             <li class='agitatie-socials__lijst-item'>
