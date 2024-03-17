@@ -45,7 +45,7 @@ if (!function_exists('ag_agenda_plek_adres')) :
 
         if ($locatie_optie === 'prive') {
             echo "<address class='agenda-address'>";
-            echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>".\agitatie\taal\streng('Privé event')." in  $stad</h3>";
+            echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>".\agitatie\taal\streng('Privé locatie')." in  $stad</h3>";
             echo "<span class='agenda-address__regel'>".\agitatie\taal\streng('Locatie wordt gemaild')."</span>";
             echo "</address>";
             return;
