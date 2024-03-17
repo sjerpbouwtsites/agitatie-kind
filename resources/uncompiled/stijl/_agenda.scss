@@ -255,3 +255,9 @@ max-height: 150px;
 .agenda-lijst__taxonomie.agenda-lijst__taxonomie--pagina + .agenda-lijst__taxonomie--pagina::before {
   content: ', '
 }
+.agenda-lijst__tijd-tussen-spacer--pagina:nth-child(4) {
+  padding: 0 5px;
+}
+.agenda-lijst__tijd-tussen-spacer--widget:nth-child(4) {
+  padding: 0 3px;
+}
