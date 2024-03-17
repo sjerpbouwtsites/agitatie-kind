@@ -189,6 +189,7 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
                 'editor',
                 'excerpt',
                 'thumbnail',
+                'author',
             ),
         ));
 
