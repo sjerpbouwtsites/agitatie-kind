@@ -61,18 +61,19 @@
 .agenda-lijst__link.agenda-lijst__link--pagina {
   display: flex;
 }
-@media screen and (max-width: 600px) {
-  .agenda-lijst__link.agenda-lijst__link--pagina {
-    flex-wrap: wrap;
-  }
-}
 
 .agenda-lijst__links.agenda-lijst__links--pagina {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
+ 
+@media screen and (max-width: 600px) {
+  .agenda-lijst__link.agenda-lijst__link--pagina {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
 .agenda-lijst__link.agenda-lijst__link--pagina > * + * {
   margin-left: 20px;
   margin-top: 10px;
