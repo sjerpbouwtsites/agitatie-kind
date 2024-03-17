@@ -5,8 +5,7 @@
 }
 
 @media (max-width: 600px) {
-  #stek-kop .stek-kop-rechts
-{
+  #stek-kop .stek-kop-rechts {
     padding-left: 0;
   }
 }
@@ -14,70 +13,69 @@
 #stek-kop {
   background-color: $wit;
   a {
-      //color: #C82449;
+    //color: #C82449;
   }
   .stek-kop-rechts {
-      //display: none !important;
-      justify-content: flex-end;
+    //display: none !important;
+    justify-content: flex-end;
   }
   box-shadow: 0.5px 0.5px 1px $hoofdkleur_licht;
 }
+
 #stek-kop .stek-kop-links {
   flex-basis: 300px;
   max-width: calc(100% - 160px);
   justify-content: flex-start;
 }
 .stek-kop-links .radical-riders-title {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 
-.menuschakel-open #stek-kop{
+.menuschakel-open #stek-kop {
   position: sticky;
-    top: 0;
+  top: 0;
 }
 
 @media screen and (max-width: 600px) {
   #mobiele-menu-schakel {
-      font-size: 0.01px;
-      padding-right:15px;
+    font-size: 0.01px;
+    padding-right: 15px;
   }
   #mobiele-menu-schakel i {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .stek-kop-links .radical-riders-title  {
-      font-size: 1.5rem;
+  .stek-kop-links .radical-riders-title {
+    font-size: 1.5rem;
   }
 }
 
 .stek-kop-knoppen {
   display: flex;
   button {
-      border: 0;
-      background: transparent;
-      padding: 0 .9em;
-      font-size: 1.25rem;
-      margin-right: 0;
-      &.open {
-          background-color: $hoofdkleur;
-          color: white;
-      }
-      @media (max-width: 380px){
-          padding-left: 0.4em;
-          padding-right: 0.4em;
-          
-      }
+    border: 0;
+    background: transparent;
+    padding: 0 0.9em;
+    font-size: 1.25rem;
+    margin-right: 0;
+    &.open {
+      background-color: $hoofdkleur;
+      color: white;
+    }
+    @media (max-width: 380px) {
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+    }
   }
   button:last-child {
-      margin-right: -20px;
+    margin-right: -20px;
   }
-  
 }
 
 .multi-lang-vlaggen__buiten {
-  @media (max-width: 380px){
-      margin-left: 20px;
+  @media (max-width: 380px) {
+    margin-left: 20px;
   }
 }
 
@@ -85,9 +83,9 @@
   top: 70px;
   height: calc(100vh - 70px);
   z-index: 100;
-  @media (min-width: 1200px){
-      width: 50%;
-      left: 50%;
+  @media (min-width: 1200px) {
+    width: 50%;
+    left: 50%;
   }
 }
 
@@ -102,22 +100,23 @@
   flex-wrap: wrap;
 }
 
-@media (min-width: 420px){
+@media (min-width: 420px) {
   .openklap-menu .menu-item {
-      min-width: 260px;
-    }
+    min-width: 260px;
+  }
 }
-@media (max-width: 460px){
-  .openklap-menu  {
-  left: calc(50%);
-  transform: translate(-50%, calc(-50% + 25px));
-  width: 1200px;
-  max-width: calc(100% - 40px);
-  align-items: center;    
-}}
+@media (max-width: 460px) {
+  .openklap-menu {
+    left: calc(50%);
+    transform: translate(-50%, calc(-50% + 25px));
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    align-items: center;
+  }
+}
 //   .openklap-menu .sub-menu .menu-item a {
 //     padding-left: 1.5em;
-//   }  
+//   }
 
 // .multi-lang-vlaggen .lang-item a {
 //     background-color: transparent;
@@ -125,9 +124,6 @@
 // .multi-lang-vlaggen .lang-item a:hover {
 //     background-color: transparent;
 //   }
-
-
-
 
 // @media screen and (max-width: 600px){
 //     .kopmenu-mobiel {
@@ -142,11 +138,9 @@
 //       }
 // }
 
-
 #stek-kop .stek-kop-links .custom-logo-link {
   overflow: initial;
 }
-
 
 #stek-kop .custom-logo-link img {
   width: 120px;
@@ -156,11 +150,11 @@
 .menuschakel-open #stek-kop .custom-logo-link img {
   border-bottom: 5px solid white;
 }
-@media (max-width: 600px){
+@media (max-width: 600px) {
   #stek-kop .custom-logo-link img {
-      width: 90px;
-      height: 90px;
-    }    
+    width: 90px;
+    height: 90px;
+  }
 }
 
 #stek-kop .stek-kop-links {
@@ -170,48 +164,41 @@
 #stek-kop .stek-kop-links .custom-logo-link {
   align-self: center;
 }
-#stek-kop .stek-kop-links .custom-logo-link + span{
-    line-height: 1.2;
-    align-self: center;
-    margin-left: 10px;
-    text-align: center;
-    max-width: 170px;
-    font-size: .85em
+#stek-kop .stek-kop-links .custom-logo-link + span {
+  line-height: 1.2;
+  align-self: center;
+  margin-left: 10px;
+  text-align: center;
+  max-width: 170px;
+  font-size: 0.85em;
 }
-@media (max-width: 600px){
-  #stek-kop .stek-kop-links .custom-logo-link + span{
-      display: none;
+@media (max-width: 600px) {
+  #stek-kop .stek-kop-links .custom-logo-link + span {
+    display: none;
   }
 }
 
 main.heeft-uitgelicht .sticky-sidebar,
-main .sticky-sidebar  {
+main .sticky-sidebar {
   top: 100px;
   height: calc(100% + 500px);
 }
-
 
 #sluit-openklap-li {
   border-top: 3px solid white;
   padding-top: 10px;
   margin-top: 10px;
   button {
-      background: transparent;
-      color: white;
-      border: 0;
-      padding: 0;
-      font-size: 1em;    
-      &:hover {
-          text-decoration: underline;
-      }
+    background: transparent;
+    color: white;
+    border: 0;
+    padding: 0;
+    font-size: 1em;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
-
-
-
-
-
-
 
 // .stek-kop-rechts {
 
@@ -222,150 +209,171 @@ main .sticky-sidebar  {
 // 	}
 // }
 
+#zoekveld {
+  display: none;
+  margin-right: 20px;
+}
 
-
-    #zoekveld {
+.zoekveldschakel-open {
+  @media (max-width: 460px) {
+    #toegankelijkheidsschakel,
+    #menuschakel {
       display: none;
-      margin-right: 20px;
     }
-
-    .zoekveldschakel-open {
-      @media (max-width: 460px) {
-        #toegankelijkheidsschakel, #menuschakel {
-          display: none;
-        }
-        #zoekveldschakel {
-          margin-right: 0;
-        }
-        #zoekveld {
-          margin-right: 10px;
-        }
-      }
-      @media (max-width: 360px) {
-        /*zoek tekst veld*/
-        #zoekveld form > input:first-child {
-          max-width: calc(100% - 50px);
-        }
-      }
+    #zoekveldschakel {
+      margin-right: 0;
     }
+    #zoekveld {
+      margin-right: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    /*zoek tekst veld*/
+    #zoekveld form > input:first-child {
+      max-width: calc(100% - 50px);
+    }
+  }
+}
 
-      @media (max-width: 900px) {
-        .zoekveldschakel-open {
-          .stek-kop-links{
-            display: none;
-          }
-          .stek-kop-rechts {
-            width: 100%;
-          }
-        }
-      }
-  
+@media (max-width: 900px) {
+  .zoekveldschakel-open {
+    .stek-kop-links {
+      display: none;
+    }
+    .stek-kop-rechts {
+      width: 100%;
+    }
+  }
+}
 
-
-      #zoekveld {
-/* 					left: 115px;
+#zoekveld {
+  /* 					left: 115px;
         top: 0; */
-        //width: 260px;
-                  align-items: center;
-      }
-              .search-form{
-                  max-width: 100%;
-              }
-        #zoekveld input,
-        #zoekveld label {
-          vertical-align: middle;
-          display: inline-block;
-        }
-          @media (max-width: 570px) {
-            .screen-reader-text {
-              display: none;
-            }
-          }
-          @media (max-width: 480px) {
-            input {
-              max-width: 100%;
-            }
-                          label:first-child {
-                              max-width: calc(100% - 60px)
-                          }
-          }
-        [for='kop-zoekveld']:hover,
+  //width: 260px;
+  align-items: center;
+}
+.search-form {
+  max-width: 100%;
+}
+#zoekveld input,
+#zoekveld label {
+  vertical-align: middle;
+  display: inline-block;
+}
+@media (max-width: 570px) {
+  .screen-reader-text {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  input {
+    max-width: 100%;
+  }
+  label:first-child {
+    max-width: calc(100% - 60px);
+  }
+}
+[for="kop-zoekveld"]:hover,
+#zoekveld input:focus + label .mdi {
+  cursor: pointer;
+  color: $zijkleur;
+  transition: 0.2s ease-out;
+}
+#zoekveld #kop-zoekveld {
+  display: none;
+}
+#zoekveld .mdi {
+  font-size: 1.5em;
+}
+.zoekveldschakel-open #zoekveldschakel .kop-in-button-text {
+  display: none;
+}
+.kop-in-button-text {
+  margin-right: 10px;
+}
+.kopmenu-mobiel i {
+  margin-left: 0;
+}
 
-        #zoekveld input:focus + label .mdi {
-          cursor: pointer;
-          color: $zijkleur;
-          transition: 0.2s ease-out;
-        }
-          #zoekveld #kop-zoekveld {
-            display: none;
-          }
-          #zoekveld .mdi {
-            font-size: 1.5em;
-          }
-              .zoekveldschakel-open #zoekveldschakel .kop-in-button-text {
-                  display: none;
-              }
-              .kop-in-button-text {
-                  margin-right: 10px;
-              }
-              .kopmenu-mobiel i {
-                  margin-left: 0;
-              }
+@media (max-width: 1200px) {
+  .kop-in-button-text {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  #zoekveld {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    background-color: $hoofdkleur;
+    z-index: 100000000;
+    justify-content: space-around;
+    font-size: 1.5rem;
+  }
+  #zoekveld .mdi {
+    color: white;
+  }
+}
 
-              @media (max-width: 1200px){
-                  .kop-in-button-text{
-                      display: none;
-                  }
-              }
-              @media (max-width: 1200px){
-                  #zoekveld {
-                      position: fixed;
-                      top: 70px;
-                      left: 0;
-                      padding: 20px;
-                      width: 100vw;
-                      height: calc(100vh - 70px);
-                      background-color: $hoofdkleur;
-                      z-index: 100000000;
-                      justify-content: space-around;
-                      font-size: 1.5rem;
-                  }
-                  #zoekveld .mdi {
-                      color: white;
-                  }
-              }
+.openklap-menu .menu-item.current_page_item,
+.openklap-menu .menu-item.current-menu-item {
+  padding-left: 0;
+  border-left: none;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: -62px;
+    top: 2px;
+    width: 39px;
+    height: 46px;
+    background-image: url("https://oyvey.nl/wp-content/themes/agitatie-kind/img/hexagon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+  }
+  // a {
+  //   text-decoration: none;
+  // }
+}
+// .openklap-menu:hover .menu-item.current_page_item,
+// .openklap-menu:hover .menu-item.current-menu-item {
+//   &::before {
+//     display: none;
+//   }
+// }
+// .openklap-menu li.menu-item.current_page_item:hover,
+// .openklap-menu li.menu-item.current-menu-item:hover {
+//   &::before {
+//     display: block;
+//   }
+// }
 
+.menuschakel-open {
+  #stek-kop .stek-kop-links .custom-logo-link {
+    clip-path: polygon(116px 26.51%, 51.67% 3.57%, 3.89% 28.57%, 3.84% 104.44%, 49.99% 140.00%, 96.67% 105.33%);
+    max-height: 90px;
+    background-color: white;
+    z-index: 4324234;
+    margin-bottom: -20px;
+  }
+}
 
-              .openklap-menu .menu-item.current_page_item,
-              .openklap-menu .menu-item.current-menu-item {
-                padding-left: 0;
-                border-left: none;
-                position: relative; 
-                &::before { 
-                  position: absolute;
-                  left: -62px;
-                  top: 2px;
-                  width: 39px;
-                  height: 46px;
-                  background-image: url("https://oyvey.nl/wp-content/themes/agitatie-kind/img/hexagon.png");
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  content: '';
-                  display: block;
-                }
-                // a {
-                //   text-decoration: none;
-                // }
-              }
-              // .openklap-menu:hover .menu-item.current_page_item,
-              // .openklap-menu:hover .menu-item.current-menu-item {
-              //   &::before {
-              //     display: none;
-              //   }
-              // }           
-              // .openklap-menu li.menu-item.current_page_item:hover,
-              // .openklap-menu li.menu-item.current-menu-item:hover {
-              //   &::before {
-              //     display: block;
-              //   }
-              // }                 
+@media (max-width: 600px) {
+  .menuschakel-open #stek-kop .custom-logo-link img {
+    height: 95px;
+    border-bottom: 5px solid white;
+  }
+  .menuschakel-open {
+    #stek-kop .stek-kop-links .custom-logo-link {
+      clip-path: polygon(86px 20.95%, 51.67% 3.57%, 3.89% 28.57%, -16.16% 71.10%, 49.99% 110%, 124.45% 67.55%);
+  max-height: 90px;
+  background-color: white;
+  z-index: 4324234;
+  
+    }
+  }
+}
