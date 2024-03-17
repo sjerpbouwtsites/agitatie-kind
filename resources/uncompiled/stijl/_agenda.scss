@@ -247,3 +247,11 @@ max-height: 150px;
   margin-top: -1px;
   margin-left: -1px;
 }
+
+.agenda-lijst__taxonomie.agenda-lijst__taxonomie--pagina {
+  display: inline;
+  font-style: italic;
+} 
+.agenda-lijst__taxonomie.agenda-lijst__taxonomie--pagina + .agenda-lijst__taxonomie--pagina::before {
+  content: ', '
+}
