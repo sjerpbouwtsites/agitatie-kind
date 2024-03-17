@@ -1,5 +1,16 @@
+.agenda-address {
+  min-height: 80px;
+}
+.agenda-address__titel {
+  font-style: normal;
+  margin-top: 0;
+}
 .agenda-address__regel {
-  // color: #d0d0d0;
+  color: #666;
+  font-style: italic;
+  display: block;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 // overschrijving van klungelige css uit ouder
@@ -61,18 +72,19 @@
 .agenda-lijst__link.agenda-lijst__link--pagina {
   display: flex;
 }
-@media screen and (max-width: 600px) {
-  .agenda-lijst__link.agenda-lijst__link--pagina {
-    flex-wrap: wrap;
-  }
-}
 
 .agenda-lijst__links.agenda-lijst__links--pagina {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
+ 
+@media screen and (max-width: 600px) {
+  .agenda-lijst__link.agenda-lijst__link--pagina {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
 .agenda-lijst__link.agenda-lijst__link--pagina > * + * {
   margin-left: 20px;
   margin-top: 10px;

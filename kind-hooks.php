@@ -2,18 +2,16 @@
 
 use agitatie\taal as taal;
 
-add_filter('the_content', 'voeg_auteur_toe_aan_content_op_single', 1);
+add_action('ag_pagina_voor_tekst', 'voeg_auteur_toe_aan_content_op_single', 11);
 
-function voeg_auteur_toe_aan_content_op_single($content)
+function voeg_auteur_toe_aan_content_op_single()
 {
     global $post;
 
-    if (is_singular() && in_the_loop() && !is_front_page() && $post->post_type === 'post') {
+    if (is_singular() && $post->post_type === 'post') {
         $a = get_the_author();
-        return "<span class='auteur'>Door $a</span>" . $content;
+        echo "<span class='auteur'>Door $a</span>";
     }
-
-    return $content;
 }
 
 if (!function_exists('ag_archief_content_hook')) : function ag_archief_content_hook()
@@ -240,3 +238,16 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
     echo "</div>";
 }
 endif;
+
+function ag_delen_hook()
+{
+    if (is_page()) {
+        if (!is_front_page() && !is_home()) {
+            add_action('ag_singular_na_artikel', 'ag_print_socials', 15);
+        }
+    } elseif (is_singular()) {
+        add_action('ag_pagina_voor_tekst', 'ag_print_socials', 1);
+    }
+}
+
+add_action('template_redirect', 'ag_delen_hook');

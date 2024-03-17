@@ -183,8 +183,14 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
             'has_archive' => true,
             'public' => true,
             'show_in_nav_menus' => true,
-
             'menu_icon' => 'dashicons-calendar-alt',
+            'supports' => 		array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail',
+                'author',
+            ),
         ));
 
         $agenda->registreer();
@@ -352,3 +358,20 @@ function myprefix_unregister_tags()
     unregister_taxonomy_for_object_type('post_tag', 'post');
 }
 add_action('init', 'myprefix_unregister_tags');
+
+
+add_filter('mce_buttons_2', 'jivedig_remove_tiny_mce_buttons_from_kitchen_sink');
+function jivedig_remove_tiny_mce_buttons_from_kitchen_sink($buttons)
+{
+    $remove_buttons = array(
+        'forecolor', // text color
+        'outdent',
+        'indent',
+    );
+    foreach ($buttons as $button_key => $button_value) {
+        if (in_array($button_value, $remove_buttons)) {
+            unset($buttons[ $button_key ]);
+        }
+    }
+    return $buttons;
+}
