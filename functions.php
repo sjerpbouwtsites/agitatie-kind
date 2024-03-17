@@ -183,8 +183,13 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
             'has_archive' => true,
             'public' => true,
             'show_in_nav_menus' => true,
-
             'menu_icon' => 'dashicons-calendar-alt',
+            'supports' => 		array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail',
+            ),
         ));
 
         $agenda->registreer();
