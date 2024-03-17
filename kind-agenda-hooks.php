@@ -26,10 +26,12 @@ if (!function_exists('ag_agenda_plek_adres')) :
         global $post;
 
         $locatie_optie = get_field('locatie_optie', $post->ID);
+        $tijd = get_field('datum');
 
         if ($locatie_optie === 'online') {
             echo "<address class='agenda-address'>";
             echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>Online event</h3>";
+            echo "<span class='agenda-address__regel'>$tijd</span>";
             echo "<span class='agenda-address__regel'>".\agitatie\taal\streng('Locatie wordt gemaild')."</span>";
             echo "</address>";
             return;
@@ -46,6 +48,7 @@ if (!function_exists('ag_agenda_plek_adres')) :
         if ($locatie_optie === 'prive') {
             echo "<address class='agenda-address'>";
             echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>".\agitatie\taal\streng('Privé locatie')." in  $stad</h3>";
+            echo "<span class='agenda-address__regel'>$tijd</span>";
             echo "<span class='agenda-address__regel'>".\agitatie\taal\streng('Locatie wordt gemaild')."</span>";
             echo "</address>";
             return;
@@ -53,10 +56,9 @@ if (!function_exists('ag_agenda_plek_adres')) :
 
         $straat = get_field('straat', 'locatie_' . $p->term_id);
         $huisnummer = get_field('huisnummer', 'locatie_' . $p->term_id);
-        $tijd = get_field('datum');
 
         echo "<address class='agenda-address'>";
-        echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>$p->name in $stad</h3>";
+        echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>$p->name, $stad</h3>";
         echo "<span class='agenda-address__regel'>$straat $huisnummer</span>";
         echo "<span class='agenda-address__regel'>$tijd</span>";
         echo "</address>";
