@@ -27,6 +27,10 @@ if (!function_exists('ag_agenda_plek_adres')) :
 
         $locatie_optie = get_field('locatie_optie', $post->ID);
         $tijd = get_field('datum');
+        $dit_jaar = date("Y");
+        if (str_contains($tijd, $dit_jaar)) {
+            $tijd = str_replace("/$dit_jaar", '', $tijd);
+        }
 
         if ($locatie_optie === 'online') {
             echo "<address class='agenda-address'>";
