@@ -30,7 +30,7 @@ if (!function_exists('ag_agenda_plek_adres')) :
         if ($locatie_optie === 'online') {
             echo "<address class='agenda-address'>";
             echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>Online event</h3>";
-            echo "<span class='agenda-address__regel'".\agitatie\taal\streng('Locatie wordt gemaild')."</span>";
+            echo "<span class='agenda-address__regel'>".\agitatie\taal\streng('Locatie wordt gemaild')."</span>";
             echo "</address>";
             return;
         }
