@@ -33,14 +33,12 @@ if (!function_exists('ag_agenda_plek_adres')) :
         $p = $plekken[0];
         $straat = get_field('straat', 'locatie_' . $p->term_id);
         $huisnummer = get_field('huisnummer', 'locatie_' . $p->term_id);
-        $postcode = get_field('postcode', 'locatie_' . $p->term_id);
         $stad = get_field('stad', 'locatie_' . $p->term_id);
         $tijd = get_field('datum');
 
         echo "<address class='agenda-address'>";
         echo "<h3 class='agenda-address__titel tekst-zijkleur serif-letter'>$p->name $stad</h3>";
         echo "<span class='agenda-address__regel'>$straat $huisnummer</span>";
-        echo "<span class='agenda-address__regel'>$postcode $stad</span>";
         echo "<span class='agenda-address__regel'>$tijd</span>";
         echo "</address>";
     }
