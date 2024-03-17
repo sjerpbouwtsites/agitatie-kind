@@ -240,3 +240,16 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
     echo "</div>";
 }
 endif;
+
+function ag_delen_hook()
+{
+    if (is_page()) {
+        if (!is_front_page() && !is_home()) {
+            add_action('ag_singular_na_artikel', 'ag_print_socials', 15);
+        }
+    } elseif (is_singular()) {
+        add_action('ag_pagina_voor_tekst', 'ag_print_socials', 1);
+    }
+}
+
+add_action('template_redirect', 'ag_delen_hook');

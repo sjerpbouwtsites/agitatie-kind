@@ -97,7 +97,3 @@ function ag_print_socials()
     </aside>
 
 <?php }
-
-if (IS_DEVELOPMENT) {
-    add_action('ag_singular_na_artikel', 'ag_print_socials', 5);
-}
