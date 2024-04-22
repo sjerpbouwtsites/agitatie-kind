@@ -251,3 +251,70 @@ function ag_delen_hook()
 }
 
 add_action('template_redirect', 'ag_delen_hook');
+
+function ag_event_upsell()
+{
+    global $post;
+
+    if (!is_singular() || $post->post_type !== 'event') {
+        return ;
+    }
+    $soorten = get_the_terms($post, 'soort');
+    if (count($soorten) < 1) {
+        return;
+    }
+    $soort_naam = $soorten[0]->name;
+    $soort_slug = $soorten[0]->slug;
+    $agenda = new Ag_agenda(array(
+        'aantal' => 150,
+        'omgeving' => 'pagina'
+    ));
+    $nieuwe_agenda_stukken = [];
+    foreach ($agenda->agendastukken as $as) {
+        if ($as->ID === $post->ID) {
+            continue;
+        }
+
+        $deze_soorten = get_the_terms($as, 'soort');
+        if (count($deze_soorten) < 1) {
+            continue;
+        }
+        $correcte_slug = false;
+        foreach($deze_soorten as $ds) {
+            if($ds->slug === $soort_slug) {
+                $correcte_slug = true;
+            }
+        }
+        if (!$correcte_slug) {
+            continue;
+        }
+
+        $nieuwe_agenda_stukken[] = $as;
+    }
+
+    if (count($nieuwe_agenda_stukken) === 0) {
+        return;
+    }
+
+    $agenda->agendastukken = $nieuwe_agenda_stukken;
+
+
+    ?>
+            <aside class='verpakking verpakking-klein marginveld agenda-upsell'>
+                <h2 class='gecentreerde-titel gecentreerde-titel-klein serif-letter tekst-zijkleur'>
+                    <?php echo ucfirst(taal\streng("andere"));
+    echo " ";
+    echo $soort_naam;
+    echo " ";
+    echo taal\streng("events");
+    ?>
+                </h2>
+            
+            <?php $agenda->print();?>
+    
+            </aside>
+        <?php
+
+}
+
+add_action('ag_singular_na_artikel', 'ag_event_upsell', 20);
