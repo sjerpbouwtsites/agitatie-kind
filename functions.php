@@ -144,7 +144,10 @@ $kind_config = array(
     // ),
     'archief'                      => array(
         'post' => array(
-          'afb_formaat'             => 'vierkant-480'
+            'afb_formaat'             => 'vierkant-480',
+        ),
+        'event' => array(
+            'taxonomieen'              => false
         ),
         // 'story'                      => array(
         //     // 'geen_afb'             => true,
@@ -158,10 +161,13 @@ $kind_config = array(
     ),
     'agenda' => true,
     'downloads' => true,
-    'post'                     => array(
-        'taxonomieen'          => false
-    )
     // 'content_width'                => 760
+
+    // $basis_array = array(
+    //     'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
+    //     'class'			=> 'in-lijst',
+    //     'taxonomieen' 	=> true
+    // );
 
 );
 $kind_menus = array(
@@ -231,6 +237,25 @@ if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
                 'show_in_nav_menus'=> true,
             )
         );
+
+        $tax_meervoud = 'festivals';
+        $tax_enkelvoud = 'festival';
+        $agenda->maak_taxonomie($tax_enkelvoud, $tax_meervoud);
+        register_taxonomy(
+            $tax_enkelvoud,
+            'event',
+            array(
+                'labels' => array(
+                    'name' => _x($tax_meervoud, 'taxonomy general name'),
+                    'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
+                ),
+                'public' 	=> true,
+                'rewrite'	=> array('slug'=>'festival'),
+                'show_ui'   => true,
+                'show_in_menu'=> true,
+                'show_in_nav_menus'=> true,
+            )
+        ); // reg tax
 
 
 

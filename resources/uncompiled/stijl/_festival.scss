@@ -1,0 +1,96 @@
+.tax-festival .art-c .art-links img { // fix terug wat elders vierkant moest 🤮
+    height: 201.2px;
+  }
+
+  .tax-festival .uitgelichte-afbeelding-buiten.hero {
+    @media (max-width: 800px){
+        height: calc(60vh - 70px);
+    }
+    
+  }
+
+  .tax-festival #stek-kop .custom-logo-link img {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 40px;
+    z-index:20;
+    left: 40px;
+    mix-blend-mode: multiply;
+    @media (max-width: 1420px){
+        top: 140px;
+    }
+    @media (max-width: 800px){
+        top: 130px;
+        left: 20px;
+        height: 110px;
+        width: 110px;
+    }
+  }
+
+  .tax-festival #stek-kop .stek-kop-links .custom-logo-link + span {
+    margin-left: 40px;
+      }
+
+      .tax-festival .post-datum.filmmaker{
+        font-variant: small-caps;
+        font-size: .75em;
+        line-height: 1;
+        display: block;
+        margin-top: 1.25em;
+  margin-bottom: -.25em;
+      }
+
+.quasi-marquee {
+    position: absolute;
+    right: 20vw;
+    color: #2E6160;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(33, 33, 33, 0.2);
+    transition: all 0.2s ease-in-out;
+    width: 550px;
+    line-height: 1;
+    text-align: center;
+    mix-blend-mode: multiply;
+    filter: hue-rotate(0deg);
+    @media (max-width: 1240px){
+        font-size: 2.5em;
+        width: 350px;
+    }
+    @media (max-width: 800px){
+        font-size: 2rem;
+        max-width: 80%;
+    }
+}
+
+
+.quasi-marquee--ongeladen {
+    opacity: 0;
+}
+.quasi-marquee--geladen {
+    opacity: 1;
+}
+.quasi-marquee--verdwijnt {
+    opacity: 0;
+}
+
+
+.quasi-marquee--niet-geanimeerd {
+    transform: translate(100%,-25%)
+}
+
+.quasi-marquee--halverwege-geanimeerd {
+    transform: translate(calc(-50vw + 100%), -25%);
+    transition: all 0.4s ease-in-out;
+    @media (max-width: 800px){
+        transform: translate(calc(-75vw + 100%), -25%);
+    }
+}
+
+.quasi-marquee--weg-geanimeerd {
+    transform: translate(calc(150vw - 100%), 25vh);
+    transition: all 0.5s ease-in-out;
+    filter: hue-rotate(0deg)
+}
+
