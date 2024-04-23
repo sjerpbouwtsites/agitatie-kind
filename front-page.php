@@ -22,9 +22,11 @@ $cta2 = new Ag_knop(array(
 $cta2->maak();
 
 $cta = new Ag_knop(array(
-    'tekst'		=> ucfirst(taal\streng('events')),
+    // 'tekst'		=> ucfirst(taal\streng('events')),
+    'tekst'     => "Oy Vey Filmfestival 2024",
     'class'		=> 'evenementen-knop',
-    'link'		=> get_post_type_archive_link('event')
+    'link'      => 'https://oyvey.nl/festival/film-festival-nl/'
+    // 'link'		=> get_post_type_archive_link('event')
 ));
 $cta->maak();
 
