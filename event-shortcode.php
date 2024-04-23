@@ -72,9 +72,9 @@ function ag_event_shortcode($atts)
 
     //$datum = preg_replace("/\s/i", "<br>", $datum);
 
-    $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--pagina'>/</span>", $datum);
+    // $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--pagina'>/</span>", $datum);
 
-    $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--pagina'>:</span>", $datum);
+    // $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--pagina'>:</span>", $datum);
 
     $afb = get_the_post_thumbnail($agenda_post->ID, 'thumbnail');
 

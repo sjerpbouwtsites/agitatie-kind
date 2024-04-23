@@ -205,6 +205,7 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
 {
     global $post;
     global $kind_config;
+    global $wp_query;
 
     $extra_class = '';
 
@@ -223,6 +224,10 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
         }
     }
 
+    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+        echo "<div class='verpakking'>";
+    }
+
     echo "<div id='archief-lijst' class='tekstveld marginveld art-lijst $extra_class'>";
     if (have_posts()) : while (have_posts()) : the_post();
 
@@ -235,6 +240,9 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
         get_template_part('sja/niets-gevonden');
 
     endif;
+    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+        echo "</div>";
+    }
     echo "</div>";
 }
 endif;
@@ -251,3 +259,39 @@ function ag_delen_hook()
 }
 
 add_action('template_redirect', 'ag_delen_hook');
+
+function ag_festival_eigen_js()
+{
+    global $wp_query;
+    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+        echo "
+        <script src='".KIND_URI."/resources/losse-js-festival.js'></script>";
+    }
+}
+
+add_action('wp_footer', 'ag_festival_eigen_js', 15);
+
+
+function doneer_festival()
+{
+    echo '
+
+    <div class="marginveld">
+    <div class="verpakking klein verpakking-klein">
+    <div class="tekstveld">
+    <span style="font-weight: 400;">Een onafhankelijk, eigenzinnig en uitgesproken Joods filmfestival organiseren is niet eenvoudig. Daarom zijn wij begonnen met een crowdfundingcampagne. Jouw donatie helpt ons om van Oy Vey Film een glansrijk (en terugkerend) succes te maken. Alle beetjes helpen! </span>
+    <br><br><br><div class="gfm-embed" data-url="https://www.gofundme.com/f/oy-vey-film-eigentijds-joods-filmfestival-in-amsterdam/widget/large?sharesheet=CAMPAIGN_PAGE"></div>
+    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div></div></div>
+    ';
+}
+add_action('ag_archief_na_content_action', 'doneer_festival', 99);
+
+add_action('ag_singular_na_artikel', 'doneer_festival', 99);
+
+function verwijder_single_knop_terug()
+{
+    remove_action('ag_singular_na_artikel', 'ag_event_single_knop_terug', 80);
+}
+
+add_action('after_setup_theme', 'verwijder_single_knop_terug');
