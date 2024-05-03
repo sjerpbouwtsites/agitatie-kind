@@ -59,7 +59,7 @@ function ag_uitgelichte_afbeelding_ctrl()
 
             set_query_var('expliciete_img', $img);
             echo "<div class='uitgelichte-afbeelding-buiten hero'>";
-            get_template_part('sja/afb/post-afb-met-desc');
+
             echo "</div>";
             return;
         }

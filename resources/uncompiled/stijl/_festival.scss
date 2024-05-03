@@ -94,3 +94,77 @@
     filter: hue-rotate(0deg)
 }
 
+
+.youtube-buiten {
+    position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  z-index:9;
+}
+
+ 
+.youtube-midden {
+    width: 1200px;
+    position: relative;
+    max-width: calc(100% - 40px);
+}
+
+
+.youtube-binnen {
+  width: 100%;
+  position: absolute;  
+  top: calc(50vh - 22.37vw);
+  left: 0;
+  padding-bottom: 56.25%;
+}
+
+
+.youtube-binnen iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.sluit-youtube {
+    background-color: black;
+    border: 0;
+    font-size: 3rem;
+    position: fixed;
+    top: -10px;
+    right: -40px;
+    @media (max-width: 800px){
+      font-size: 2rem;
+    top: -10px;
+    right: -33px;
+    }
+}
+
+.open-festival-trailer {
+    border: 0;
+    background: transparent;
+    font-size: unset;
+    padding: unset;
+    line-height: unset;
+    border-radius: unset;
+    color: unset;
+    font-family: unset;
+    text-align: left;    
+    width: 100%;
+    .camera-span {
+        margin-left: .5em;
+        font-size: .5em;
+        float: right;
+        font-variant: small-caps;
+        padding: 10px;
+        background-color: #f2f2f2;
+        line-height: 1;
+        color: #151313;     
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+}
