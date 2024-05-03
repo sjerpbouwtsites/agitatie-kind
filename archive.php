@@ -7,7 +7,6 @@ define('POST_TYPE_NAAM', ag_post_naam_model());
 set_query_var('klassen_bij_primary', "archief archief-" . POST_TYPE_NAAM);
 get_template_part('/sja/open-main');
 
-global $wp_query;
 if (ag_is_festival()) {
     echo "<div class=''>";
 } else {

@@ -40,7 +40,7 @@ function ag_uitgelichte_afbeelding_ctrl()
     }
 
     //op post met afbeelding
-    if (!($wp_query->is_category || $wp_query->is_tax) and has_post_thumbnail($post)) {
+    if (!ag_is_festival()) {
         get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
     } else {
         //op cat of op post zonder afbeelding
