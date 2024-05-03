@@ -118,9 +118,10 @@
 .youtube-binnen {
   width: 100%;
   position: absolute;  
-  top: calc(50vh - 22.37vw);
+  top: 50vh;
   left: 0;
   padding-bottom: 56.25%;
+  transform: translate(0, -50%);
 }
 
 
