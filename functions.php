@@ -400,3 +400,9 @@ function jivedig_remove_tiny_mce_buttons_from_kitchen_sink($buttons)
     }
     return $buttons;
 }
+
+function ag_is_festival()
+{
+    global $wp_query;
+    return $wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival');
+}
