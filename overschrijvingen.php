@@ -40,7 +40,7 @@ function ag_uitgelichte_afbeelding_ctrl()
     }
 
     //op post met afbeelding
-    if (!($wp_query->is_category || $wp_query->is_tax) and has_post_thumbnail($post)) {
+    if (!ag_is_festival()) {
         get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
     } else {
         //op cat of op post zonder afbeelding
@@ -48,7 +48,7 @@ function ag_uitgelichte_afbeelding_ctrl()
 
         $afb_verz = get_field('cat_afb', 'category_'.$wp_query->queried_object_id);
 
-        if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+        if (ag_is_festival()) {
             set_query_var('heeft_hero', true);
             $img = "<img
 				src='{$afb_verz['sizes']['bovenaan_art']}'
@@ -59,7 +59,7 @@ function ag_uitgelichte_afbeelding_ctrl()
 
             set_query_var('expliciete_img', $img);
             echo "<div class='uitgelichte-afbeelding-buiten hero'>";
-            get_template_part('sja/afb/post-afb-met-desc');
+
             echo "</div>";
             return;
         }
@@ -145,7 +145,7 @@ if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek
         }
     }
 
-    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+    if (ag_is_festival()) {
         $m_art = new Ag_article_festival_c($basis_array, $post);
 
         if (isset($m_art)) {

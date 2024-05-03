@@ -224,7 +224,7 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
         }
     }
 
-    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+    if (ag_is_festival()) {
         echo "<div class='verpakking'>";
     }
 
@@ -240,7 +240,7 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
         get_template_part('sja/niets-gevonden');
 
     endif;
-    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+    if (ag_is_festival()) {
         echo "</div>";
     }
     echo "</div>";
@@ -263,7 +263,7 @@ add_action('template_redirect', 'ag_delen_hook');
 function ag_festival_eigen_js()
 {
     global $wp_query;
-    if ($wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival')) {
+    if (ag_is_festival()) {
         echo "
         <script src='".KIND_URI."/resources/losse-js-festival.js'></script>";
     }
@@ -274,7 +274,8 @@ add_action('wp_footer', 'ag_festival_eigen_js', 15);
 
 function doneer_festival()
 {
-    echo '
+    if (ag_is_festival()) :
+        echo '
 
     <div class="marginveld">
     <div class="verpakking klein verpakking-klein">
@@ -284,6 +285,7 @@ function doneer_festival()
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div></div></div>
     ';
+    endif; //ag is festival
 }
 add_action('ag_archief_na_content_action', 'doneer_festival', 99);
 
