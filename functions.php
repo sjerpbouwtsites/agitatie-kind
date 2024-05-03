@@ -406,3 +406,23 @@ function ag_is_festival()
     global $wp_query;
     return $wp_query->is_tax && str_contains($_SERVER['REQUEST_URI'], 'film-festival');
 }
+
+// function my_mce_before_init_insert_formats2($init_array)
+// {
+//     $style_formats = array(
+//         // Each array child is a format with it's own settings
+//         array(
+//             'title' => 'klein',
+//             'inline' => 'small',
+//             'classes' => 'verkleinde-tekst uit-mce',
+//             'wrapper' => true,
+//         ),
+
+//    );
+//     // Insert the array, JSON ENCODED, into 'style_formats'
+//     $init_array['style_formats'] = json_encode($style_formats);
+
+//     return $init_array;
+// }
+
+// add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats2');
