@@ -49,15 +49,24 @@ function ag_uitgelichte_afbeelding_ctrl()
         //heeft cat afb?
 
         $afb_verz = get_field('cat_afb', 'category_'.$wp_query->queried_object_id);
+        $video = get_field('video', 'category_'.$wp_query->queried_object_id);
+
 
         if (ag_is_festival()) {
             set_query_var('heeft_hero', true);
-            $img = "<img
-				src='{$afb_verz['sizes']['bovenaan_art']}'
-				alt='{$afb_verz['alt']}'
-				height='{$afb_verz['sizes']['bovenaan_art-width']}'
-				width='{$afb_verz['sizes']['bovenaan_art-height']}'
-			/>";
+
+            if ($video && $video !== '') {
+                $img = "<video autoplay preload poster='{$afb_verz['sizes']['bovenaan_art']}'>
+                    <source src='{$video['url']}' type='video/webm'></source>
+                </video><button class='kijk-festival-trailer' id='kijk-festival-trailer'><i class='mdi mdi-play-circle'></i></button>";
+            } else {
+                $img = "<img
+                    src='{$afb_verz['sizes']['bovenaan_art']}'
+                    alt='{$afb_verz['alt']}'
+                    height='{$afb_verz['sizes']['bovenaan_art-width']}'
+                    width='{$afb_verz['sizes']['bovenaan_art-height']}'
+                />";
+            }
 
             set_query_var('expliciete_img', $img);
             echo "<div class='uitgelichte-afbeelding-buiten hero'>";
@@ -65,7 +74,6 @@ function ag_uitgelichte_afbeelding_ctrl()
             echo "</div>";
             return;
         }
-        echo "HALLO5<br>";
 
         if ($afb_verz and $afb_verz !== '') {
             $img = "<img
