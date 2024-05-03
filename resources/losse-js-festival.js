@@ -1,24 +1,55 @@
+function speelFestivalVideoEventListener(){
+  const bbbtn = document.getElementById('kijk-festival-trailer');
+  bbbtn.addEventListener('click', e =>{
+    e.preventDefault();
+    document.body.classList.add('festival-video-speelt');
+    document.querySelector('.uitgelichte-afbeelding-buiten.hero video').play();
+    bbbtn.parentNode.removeChild(bbbtn)
+  })
+}
+
 function printTitelsFestivalOpHero() {
   let titels = Array.from(document.querySelectorAll(".art-c.in-lijst h3")).map(
     (titel) => titel.textContent.trim().replace("trailer", "")
   );
-
+  const heeftVideo = !!document.querySelector('.uitgelichte-afbeelding-buiten.hero video');
   titels = shuffle(titels);
 
-  printTitelsRecursief(titels);
+  if (heeftVideo){
+    setTimeout(()=>{
+      printTitelsRecursief(titels);
+    }, 1200)
+  } else {
+    printTitelsRecursief(titels);
+  }
+
+}
+
+function alsVideoKlaar(){
+  const heeftVideo = !!document.querySelector('.uitgelichte-afbeelding-buiten.hero video');
+  if (!heeftVideo) return;
+  document.querySelector('.uitgelichte-afbeelding-buiten.hero video').addEventListener('ended',festivalScrollNaarInhoud,false);
+  
+}
+
+function festivalScrollNaarInhoud(){
+  if (window.scrollY < 300) {
+    setTimeout(() => {
+      window.scrollTo({
+        top:
+          document.querySelector(".uitgelichte-afbeelding-buiten + div")
+            .offsetTop - 50,
+        behavior: "smooth",
+      });
+    }, 50);
+  }
 }
 
 function printTitelsRecursief(lijst, index = 0) {
   if (!lijst.length) {
-    if (window.scrollY < 300) {
-      setTimeout(() => {
-        window.scrollTo({
-          top:
-            document.querySelector(".uitgelichte-afbeelding-buiten + div")
-              .offsetTop - 50,
-          behavior: "smooth",
-        });
-      }, 50);
+    const heeftVideo = !!document.querySelector('.uitgelichte-afbeelding-buiten.hero video');
+    if (!heeftVideo){
+      festivalScrollNaarInhoud();
     }
     return;
   }
@@ -138,10 +169,11 @@ function verwijderYoutubeEscape() {
 }
 // A $( document ).ready() block.
 $(document).ready(function () {
-  console.log("ready!");
+  alsVideoKlaar()  
   printTitelsFestivalOpHero();
   navNaarPaginaTitel();
   openFestivalTrailerEventListeners();
   sluitYoutubeButtonEventListener();
   verwijderYoutubeEscape();
+  speelFestivalVideoEventListener()
 });
