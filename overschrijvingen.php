@@ -39,6 +39,8 @@ function ag_uitgelichte_afbeelding_ctrl()
         ag_array_naar_queryvars($hero_ar);
     }
 
+
+
     //op post met afbeelding
     if (!ag_is_festival()) {
         get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
@@ -59,11 +61,11 @@ function ag_uitgelichte_afbeelding_ctrl()
 
             set_query_var('expliciete_img', $img);
             echo "<div class='uitgelichte-afbeelding-buiten hero'>";
-
+            get_template_part('sja/afb/post-afb-met-desc');
             echo "</div>";
             return;
         }
-
+        echo "HALLO5<br>";
 
         if ($afb_verz and $afb_verz !== '') {
             $img = "<img
