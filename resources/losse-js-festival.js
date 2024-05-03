@@ -1,6 +1,6 @@
 function printTitelsFestivalOpHero() {
   let titels = Array.from(document.querySelectorAll(".art-c.in-lijst h3")).map(
-    (titel) => titel.textContent.trim().replace("📽️", "")
+    (titel) => titel.textContent.trim().replace("trailer", "")
   );
 
   titels = shuffle(titels);
