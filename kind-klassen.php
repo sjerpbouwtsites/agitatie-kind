@@ -5,6 +5,7 @@ class Ag_article_festival_c extends Ag_article_c
     public function __construct($config, $post)
     {
         parent::__construct($config, $post);
+        $this->exc_lim = 450;
         $this->art = $post;
     }
 
