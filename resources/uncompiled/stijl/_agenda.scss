@@ -174,7 +174,6 @@ max-height: 150px;
 
 .agenda h1 {
   @extend .gecentreerde-titel;
-  @extend .serif-letter;
   @extend .tekst-zijkleur;
   margin-top: 100px;
 }
@@ -232,10 +231,10 @@ max-height: 150px;
 }
 .agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wittig, 
 .agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wit {
-  color: inherit;
+  color: inherit; 
 }
 .agenda-lijst__titel.agenda-lijst__titel--pagina {
-  @extend .serif-letter;
+  
 }
 .agenda-lijst__rechts--pagina p
 {

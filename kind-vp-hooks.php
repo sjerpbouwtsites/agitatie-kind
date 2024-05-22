@@ -26,7 +26,7 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 
         echo "<section class='verpakking marginveld vp-nieuws voorpagina-sectie'>";
 
-        echo "<h2 class='gecentreerde-titel serif-letter tekst-zijkleur'>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+        echo "<h2 class='gecentreerde-titel tekst-zijkleur'>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
 
         $footerknop = new Ag_knop(array(
             'link' 		=> get_post_type_archive_link('post'),
@@ -104,7 +104,7 @@ function oyvey_vp_agenda()
 
     echo "<section class='verpakking marginveld oyvey-agenda-voorpagina voorpagina-sectie'>";
 
-    echo "<h2 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
+    echo "<h2 class='tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
 
     echo "<div class='art-lijst'>";
 
@@ -167,11 +167,11 @@ function oyvey_vp_extra_tekst()
 
     $content = apply_filters('the_content', get_field('voorpagina_onder_video', $post->ID));
 
-    $content = str_replace('<h2>', '<h2 class="gecentreerde-titel serif-letter tekst-zijkleur">', $content);
+    $content = str_replace('<h2>', '<h2 class="gecentreerde-titel tekst-zijkleur">', $content);
 
     echo "<section class='verpakking verpakking marginveld tekstveld oyvey-extra-tekst-voorpagina voorpagina-sectie'>";
 
-    //echo "<h2 class='serif-letter tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
+    //echo "<h2 class='tekst-zijkleur gecentreerde-titel'>" . ucfirst(\agitatie\taal\streng('onze events')) . "</h2>";
 
     echo $content;
 

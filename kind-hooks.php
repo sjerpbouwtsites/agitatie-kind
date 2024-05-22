@@ -175,17 +175,17 @@ function ag_generieke_titel()
     }
 
     if ($wp_query->is_home) {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-home-titel'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
+        echo "<h1 class='gecentreerde-titel tekst-zijkleur is-home-titel'>" . get_the_title(get_option('page_for_posts', true)) . "</h1>";
     } elseif ($wp_query->is_search) {
         $zocht = ucfirst(taal\streng('je zocht'));
         $watzoekje = ucfirst(taal\streng('wat zoek je'));
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-search-titel'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
+        echo "<h1 class='gecentreerde-titel tekst-zijkleur is-search-titel'>" . ($_GET['s'] !== '' ? ucfirst($zocht) . ": " . $_GET['s'] : ucfirst($watzoekje) . "?") . "</h1>";
     } elseif ($post->post_type === 'post' || $post->post_type === 'page') {
         $heeft_fader = get_field('gebruikt_fader_video_in_plaats_van_uitgelichte_afbeelding', $post->ID);
         $heeft_fader_class = $heeft_fader ? 'heeft-fader' : '';
-        echo "<h1 class='$heeft_fader_class gecentreerde-titel serif-letter tekst-zijkleur is-page-of-post-titel'>" . ucfirst($post->post_title) . "</h1>";
+        echo "<h1 class='$heeft_fader_class gecentreerde-titel tekst-zijkleur is-page-of-post-titel'>" . ucfirst($post->post_title) . "</h1>";
     } else {
-        echo "<h1 class='gecentreerde-titel serif-letter tekst-zijkleur is-overige-titel'>" . ucfirst($post->post_title) . "</h1>";
+        echo "<h1 class='gecentreerde-titel tekst-zijkleur is-overige-titel'>" . ucfirst($post->post_title) . "</h1>";
     }
 }
 
@@ -195,7 +195,7 @@ if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl(
         if ($archief_titel === 'Teams') {
             $archief_titel = ucfirst(taal\streng('Oy Vey, wie zijn we?'));
         }
-        echo "<h1 class='serif-letter tekst-zijkleur gecentreerde-titel is-archief-titel'>" . $archief_titel . "</h1>";
+        echo "<h1 class='tekst-zijkleur gecentreerde-titel is-archief-titel'>" . $archief_titel . "</h1>";
     }
 }
 endif;

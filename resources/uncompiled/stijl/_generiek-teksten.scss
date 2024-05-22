@@ -1,6 +1,7 @@
 html {
-   font-size: 19.2px;
+   font-size: 13px;
    line-height: 1.4;
+   font-family: "Fira Sans", 'sans-serif';
 }
 
 main blockquote {
@@ -14,13 +15,16 @@ main blockquote {
   
 h1 {
    line-height: 0.9;
-   font-size: 1.5rem;
+   font-size: 2.75rem;
+   font-family: "Alef", sans-serif;
 }
 h2 {
    font-size: 1.3rem;
+   font-family: "Alef", sans-serif;
 }
 h3 {
    font-size: 1.2rem;
+   font-family: "Alef", sans-serif;
 }
 
 
@@ -32,7 +36,7 @@ h2, h3, .bericht-tekst {
    color: $hoofdkleur;
 }
 .bericht-tekst {
-   font-size: 1.2rem;
+   //font-size: 1.2rem;
  } 
  .bericht-tekst {
    p, ol, ul {
@@ -40,18 +44,20 @@ h2, h3, .bericht-tekst {
    }
  }
 .serif-letter {
-   font-family: "Courgette", serif
+   font-family: "Courgette", serif 
 }
 
 .gecentreerde-titel {
-   margin-bottom: 1.5em;
+   margin-bottom: 1.55em;
    margin-top: 0;
    text-align: center;
-   font-size: 3rem;
+   font-size: 2.75rem;
+   font-family: "Alef", sans-serif;
 }
-@media (max-width: 800px){
+@media (max-width: 414px){
    .gecentreerde-titel {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: .84em;
    }
 }
 
