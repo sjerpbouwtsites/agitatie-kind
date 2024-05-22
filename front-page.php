@@ -21,25 +21,13 @@ $cta2 = new Ag_knop(array(
 ));
 $cta2->maak();
 
-if (pll_current_language() === 'nl') {
-    $cta = new Ag_knop(array(
-        // 'tekst'		=> ucfirst(taal\streng('events')),
-        'tekst'     => "Oy Vey Filmfestival 2024",
-        'class'		=> 'evenementen-knop',
-        'link'      => 'https://oyvey.nl/festival/film-festival-nl/'
-        // 'link'		=> get_post_type_archive_link('event')
-    ));
-    $cta->maak();
-} else {
-    $cta = new Ag_knop(array(
-        // 'tekst'		=> ucfirst(taal\streng('events')),
-        'tekst'     => "Oy Vey Filmfestival 2024",
-        'class'		=> 'evenementen-knop',
-        'link'      => 'https://oyvey.nl/festival/film-festival-en/'
-        // 'link'		=> get_post_type_archive_link('event')
-    ));
-    $cta->maak();
-}
+$cta = new Ag_knop(array(
+    'tekst'		=> ucfirst(taal\streng('events')),
+    'class'		=> 'evenementen-knop',
+     'link'		=> get_post_type_archive_link('event')
+));
+$cta->maak();
+
 
 
 $knoppendoos = "<div class='knoppendoos groot'>$cta2->html $cta->html</div>";
