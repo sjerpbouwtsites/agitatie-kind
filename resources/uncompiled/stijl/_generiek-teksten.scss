@@ -109,7 +109,8 @@ h1, h2, h3, .gecentreerde-titel {
    text-align: center;
    font-size: 2.75rem;
    font-family: "Alef", sans-serif;
-   line-height: 1.15;
+   font-weight: bold;
+   line-height: calc(1em + 15px);
 }
 @media (max-width: 414px){
    .gecentreerde-titel {

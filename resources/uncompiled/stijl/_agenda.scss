@@ -191,11 +191,20 @@ max-height: 150px;
 }
 
 .agenda-lijst__buiten.agenda-lijst__buiten--widget .knop.in-kleur {
-  color: $hoofdkleur;
-  border-color: $wittig;
+  // color: $hoofdkleur;
+  // border-color: $wittig;
+  // &:hover {
+  //   border-color: $hoofdkleur_zeer_licht;
+  //   background-color: $hoofdkleur_zeer_licht;
+  // }
+  // TODO NOODGREEP
+  color: #2e6160;
+  border-color: #E73D1E;
+  background-color: #f5f5f5;
   &:hover {
-    border-color: $hoofdkleur_zeer_licht;
-    background-color: $hoofdkleur_zeer_licht;
+    border-color: #E73D1E;
+    background-color: #E73D1E;
+    color: white;
   }
 }
  

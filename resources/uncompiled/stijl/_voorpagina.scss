@@ -14,16 +14,28 @@
 }
 
 .voorpagina .site-main .tekstveld:first-child {
+
+
+
   h1, p {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 800;
   }
   h1, .tekst, p {
     display: inline;
+    text-align: left;
     color: $hoofdkleur;
-    line-height: 1.15;
-    letter-spacing: -.03em;
-    font-family: "Alef", sans-serif;
+    font-size: 2.75rem;
+    line-height: 1.15em;
+    line-height: auto;
+    letter-spacing: 0.05em;
+    @extend .secundaire-font;
+  }
+  h1{
+    padding-top: 15px;
+  }
+  .tekst {
+    padding-bottom: 15px;
   }
   p:last-child {
     display: block;
@@ -33,6 +45,9 @@
   .knop {
     margin-top: 1em;
   }
+  .knoppendoos.groot {
+    font-size: 1.5rem;
+}
 }
 @media screen and (max-width: 1024px) {
   .voorpagina .site-main .tekstveld {
