@@ -59,6 +59,9 @@
     padding: 0 0.9em;
     font-size: 1.25rem;
     margin-right: 0;
+    /* TODO NOODVERBAND*/
+    @extend .secundaire-font;
+    
     &.open {
       background-color: $hoofdkleur;
       color: white;
@@ -71,6 +74,14 @@
   button:last-child {
     margin-right: -20px;
   }
+}
+
+.prio-menu .menu-item a {
+  font-size: 1.25rem;
+  /*TODO NOODVERBAND*/
+  @extend .secundaire-font;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .multi-lang-vlaggen__buiten {
@@ -171,6 +182,10 @@
   text-align: center;
   max-width: 170px;
   font-size: 0.85em;
+  /* TODO NOODVERBAND */
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1em;
 }
 @media (max-width: 600px) {
   #stek-kop .stek-kop-links .custom-logo-link + span {

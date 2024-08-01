@@ -1,6 +1,8 @@
-html {
+html, body {
    font-size: 13px;
    line-height: 1.4;
+}
+html, body, button, input, select, textarea {
    font-family: "Fira Sans", 'sans-serif';
 }
 
@@ -12,9 +14,11 @@ main blockquote {
      // color: $wittig;
   }
 
+p {
+   margin-bottom: 0.75em;
+ }
   
 h1 {
-   line-height: 0.9;
    font-size: 2.75rem;
    font-family: "Alef", sans-serif;
 }
@@ -27,25 +31,63 @@ h3 {
    font-family: "Alef", sans-serif;
 }
 
+h1, h2, h3 {
+   line-height: 1.15;
+}
+
 
 h2, h3 {
-   letter-spacing: -.03em;
+   //letter-spacing: -.03em;
+}
+h1, h2, h3, .gecentreerde-titel {
+   color: $zijkleur;
 }
 
-h2, h3, .bericht-tekst {
-   color: $hoofdkleur;
+.bericht-tekst {
+   //color: $hoofdkleur;
+   //color: hsl(178.82, 35.66%, 13.04%);
+   color: black;
 }
 .bericht-tekst {
-   //font-size: 1.2rem;
+   // parent: 1.33; hier origineel 1.2
+   font-size: 1em;
  } 
+ 
  .bericht-tekst {
-   p, ol, ul {
-      max-width: 55ch;
+   p, ol, ul, h1, h2, h3, hr{
+      max-width: 37rem;
    }
  }
-.serif-letter {
-   font-family: "Courgette", serif 
+ 
+ hr {
+   margin-left: 0;
+ }
+ p, ol, ul, blockquote {
+   letter-spacing: 0.02em;
+   font-weight: 300;
+ }
+ .bericht-tekst > * {
+   line-height: 1.4;
+ }
+
+ ul, ol {
+   margin-left: 0;
+ }
+
+//  .bericht-tekst > h2,
+//  .bericht-tekst > h3  {
+//    line-height: 1.15;
+//  }
+
+
+.secundaire-font {
+   font-family: "Fira Sans", 'sans-serif';
 }
+
+.serif-letter {
+//   font-family: "Courgette", serif;
+   @extend .secundaire-font;
+} 
 
 .gecentreerde-titel {
    margin-bottom: 1.55em;
@@ -53,6 +95,7 @@ h2, h3, .bericht-tekst {
    text-align: center;
    font-size: 2.75rem;
    font-family: "Alef", sans-serif;
+   line-height: 1.15;
 }
 @media (max-width: 414px){
    .gecentreerde-titel {
@@ -61,8 +104,5 @@ h2, h3, .bericht-tekst {
    }
 }
 
-p {
-   font-weight: 400;
-   color: $hoofdkleur;
-}
+
 
