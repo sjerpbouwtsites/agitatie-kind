@@ -31,19 +31,22 @@
     &::after {
        content: '';
        display: block;
-       height: 2px;
+       height: 3px;
        width: 100%;
        position:absolute; 
        bottom: -1px;
        left: 0;
        background-color: $zijkleur_donker;
+       transition: 0.18s;
+       transform:scaleY(0%);
     }
     &:hover {
        color: $zijkleur;
        text-decoration: none;
        &::after {
+         transition: 0.12s;
           background-color: $zijkleur;
-          height: 3px;
+          transform:scaleY(100%);
        }
     }
  }

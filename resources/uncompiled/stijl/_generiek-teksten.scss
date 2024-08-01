@@ -51,6 +51,20 @@ h1, h2, h3, .gecentreerde-titel {
 .bericht-tekst {
    // parent: 1.33; hier origineel 1.2
    font-size: 1em;
+   @media (max-width: 600px){
+      // TODO NOODVERBAND
+      font-size: 1.4em;
+      h1 {
+         font-size: 2.75em;
+      }
+      h2 {
+         font-size: 1.3em;
+         line-height: 1.2;
+      }
+      h3 {
+         font-size: 1.2em;
+      }
+   }
  } 
  
  .bericht-tekst {
