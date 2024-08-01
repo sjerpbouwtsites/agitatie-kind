@@ -51,7 +51,7 @@ function faderVideo(faderFigure, hasWentRound = false){
     const faderIndex = Number(faderFigure.getAttribute('data-fader-index'));
     const heightSet = faderFigure.hasAttribute('data-height-set');
     if (!heightSet) {
-        faderFigure.setAttribute('style', `height: ${faderFigure.scrollWidth * 10 / 12}px`);
+        faderFigure.setAttribute('style', `height: ${faderFigure.scrollWidth * 940 / 1200}px`);
         faderFigure.setAttribute('data-height-set', true);
     }
     let faderFigureNextIndex;

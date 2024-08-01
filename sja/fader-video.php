@@ -11,7 +11,7 @@ $count = count($afbeeldingen);
 
 if ($count > 0) :
 
-    $overlay_url = "background-image: url(".KIND_URI . '/img/hexagon-overlay.png'.")";
+    $overlay_url = "background-image: url(".KIND_URI . '/img/hexagon-overlay-940.png'.")";
     echo "<figure class='fader-video' data-current-index='0' data-count='$count' data-fader-index='$fader_counter'>";
     echo "<div class='fader-video-overlay' style='$overlay_url'></div>";
     for ($i = 0; $i < $count; $i++) :
