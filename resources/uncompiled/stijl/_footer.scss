@@ -43,8 +43,12 @@
   .textwidget {     
     // color: $hoofdkleur; 
     // TODO NOODVERBAND
-    color: black;
-
+    @extend .secundaire-font;
+    font-size: 1.08rem;
+    text-align: left;
+    letter-spacing: 0.02em;
+    color: $hoofdkleur;
+    line-height: calc(1em + 15px);
   }
   .current-menu-item a, .current_page_item a, a:hover{ 
     color: $zijkleur;
@@ -221,4 +225,8 @@
 
 .colofon p {
   font-size: .75rem;
+}
+
+.footer-section>h3:first-child, .footer-section>h2:first-child, .footer-section h2.widgettitle, .footer-section .wp-block-search__label {
+@extend .header-footer-labels
 }

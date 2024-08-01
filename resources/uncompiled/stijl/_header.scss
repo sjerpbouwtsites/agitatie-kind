@@ -77,17 +77,18 @@
 }
 
 .prio-menu .menu-item a {
-  font-size: 1.25rem;
-  /*TODO NOODVERBAND*/
-  @extend .secundaire-font;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.8);
+  
+  @extend .header-footer-labels;
+
 }
 
 .multi-lang-vlaggen__buiten {
   @media (max-width: 380px) {
     margin-left: 20px;
   }
+}
+.multi-lang-vlaggen:hover {
+  cursor: pointer;
 }
 
 .openklap-menu-container {
@@ -320,7 +321,14 @@ main .sticky-sidebar {
 }
 .kop-in-button-text {
   margin-right: 10px;
+  @extend .header-footer-labels;
+  
 }
+.kopmenu-mobiel:hover .kop-in-button-text {
+  color: white;
+
+}
+
 .kopmenu-mobiel i {
   margin-left: 0;
 }
