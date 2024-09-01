@@ -43,7 +43,9 @@ function ag_uitgelichte_afbeelding_ctrl()
 
     //op post met afbeelding
     if (!ag_is_festival()) {
-        get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
+        if (has_post_thumbnail() || is_tax()) {
+            get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
+        }
     } else {
         //op cat of op post zonder afbeelding
         //heeft cat afb?
