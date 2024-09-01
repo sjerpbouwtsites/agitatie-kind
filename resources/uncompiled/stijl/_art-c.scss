@@ -15,15 +15,19 @@
   }
  .art-lijst .art-rechts {
     margin-top: 1em;
-    font-size: 1em;
+    font-size: 1.25em;
     p {
         font-size: .9em;
         opacity: 1;
         line-height: 1.075;
-        color: #26504f;      
+        color:black;      
     }
     h3 {
-       font-size: 1.5em;
+      font-size: 1.55rem;
+      font-family: "Alef", sans-serif;
+      margin-bottom: calc(5px - 0.075em);
+      line-height: 1.15em;   
+      margin-top: calc(20px - 0.075em);
        @media (min-width: 600px){
           min-height: 2.125em;
        }
