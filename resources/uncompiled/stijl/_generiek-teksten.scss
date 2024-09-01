@@ -21,18 +21,24 @@ p {
 h1 {
    font-size: 2.75rem;
    font-family: "Alef", sans-serif;
+ 
 }
 h2 {
-   font-size: 1.3rem;
+   font-size: 1.55rem;
    font-family: "Alef", sans-serif;
-}
+   margin-bottom: calc(5px - 0.075em);
+   line-height: 1.15em;   
+   margin-top: calc(20px - 0.075em);
+} 
 h3 {
    font-size: 1.2rem;
    font-family: "Alef", sans-serif;
+   margin-bottom: calc(4px - 0.075em);
+   margin-top: calc(20px - 0.075em);
 }
 
 h1, h2, h3 {
-   line-height: 1.15;
+   line-height: 1.15em;
 }
 
 
@@ -51,37 +57,46 @@ h1, h2, h3, .gecentreerde-titel {
 .bericht-tekst {
    // parent: 1.33; hier origineel 1.2
    font-size: 1em;
+   & > h2 {
+      line-height: 1.15em;
+   }
+   & > h3 {
+      line-height: 1.15em;
+      letter-spacing: 0.02em;
+   }
    @media (max-width: 600px){
       // TODO NOODVERBAND
-      font-size: 1.4em;
+      font-size: 1.4rem;
       h1 {
-         font-size: 2.75em;
+         font-size: 2.75rem;
       }
       h2 {
-         font-size: 1.3em;
-         line-height: 1.2;
+         font-size: 1.55rem;
       }
       h3 {
-         font-size: 1.2em;
+         font-size: 1.2rem;
       }
    }
  } 
  
  .bericht-tekst {
-   p, ol, ul, h1, h2, h3, hr{
-      max-width: 37rem;
+   p, ol, ul, h1, blockquote, h2, h3, hr, span {
+      //max-width: 37rem;
+      max-width: initial;
+   }
+   p, ol, ul, hr, blockquote, span {
+      letter-spacing: 0.02em;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-top: 0;
+      margin-bottom: calc(10px - 0.2em);
    }
  }
  
+
+
  hr {
    margin-left: 0;
- }
- p, ol, ul, blockquote {
-   letter-spacing: 0.02em;
-   font-weight: 300;
- }
- .bericht-tekst > * {
-   line-height: 1.4;
  }
 
  ul, ol {
@@ -90,7 +105,7 @@ h1, h2, h3, .gecentreerde-titel {
 
 //  .bericht-tekst > h2,
 //  .bericht-tekst > h3  {
-//    line-height: 1.15;
+//    line-height: 1.15em;
 //  }
 
 
@@ -104,13 +119,13 @@ h1, h2, h3, .gecentreerde-titel {
 } 
 
 .gecentreerde-titel {
-   margin-bottom: 1.55em;
-   margin-top: 0;
+   margin-top: calc(20px - 0.075em);
+   margin-bottom: calc(6px - 0.075em);
+   line-height: 1.15em;
    text-align: center;
    font-size: 2.75rem;
    font-family: "Alef", sans-serif;
    font-weight: bold;
-   line-height: calc(1em + 15px);
 }
 @media (max-width: 414px){
    .gecentreerde-titel {
