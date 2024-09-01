@@ -48,6 +48,12 @@ main {
 } 
 
 
+@media screen and (max-width: 768px) {
+    .verpakking {
+      padding: 0 1.5rem; // was 1.25
+    }
+  }
+
 @media screen and (max-width: 600px) {
     .uitgelichte-afbeelding-buiten.hero {
         padding-top: 0;
