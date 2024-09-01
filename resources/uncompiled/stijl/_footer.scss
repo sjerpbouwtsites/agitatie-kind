@@ -122,7 +122,8 @@
 }
 #zoekveld-footer .search-form .invoerveld {
   padding: 4px 8px;
-  border-radius: 30px;
+  border-radius: 8px;
+  font-size: 16px;
   border: 4px solid $zijkleur;
   @media (max-width: 440px){
     max-width: 200px;
@@ -177,8 +178,8 @@
 .mc4wp-form .knop-rond {
   background: transparent;
   border: 4px solid $zijkleur;
-  border-radius: 30px;
-  padding: 8px 21px;
+  border-radius: 8px;
+  padding: 5.9px 13px;
   margin-left: 50px;
   color: $zijkleur;
   &:hover {
@@ -225,7 +226,7 @@
 
 .colofon p {
   font-size: .75rem;
-}
+} 
 
 .footer-section>h3:first-child, .footer-section>h2:first-child, .footer-section h2.widgettitle, .footer-section .wp-block-search__label {
 @extend .header-footer-labels

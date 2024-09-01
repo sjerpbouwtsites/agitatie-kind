@@ -4,7 +4,7 @@
 	display: inline-block; // idem
 	padding: 0.3em 1em; // idem
 	font-weight: 500; // idem
-	background-color: white; // idem
+	background-color: #f5f5f5; // idem
 	box-shadow: none; 
 	transition: background-color 0.4s ease-in-out, filter 0.35s ease-in-out;
     filter: brightness(100%);
@@ -66,13 +66,13 @@
 		color: inherit !important; //idem
 	}
 	&.in-wit {
-		background-color: $zijkleur;
+		background-color: #f5f5f5;
 		box-shadow: none;
-		color: white !important;
+		color: $zijkleur !important;
 			&:hover {
 			box-shadow: none;
-            color: $zijkleur !important;
-            background-color: white;
+            color: white !important;
+            background-color: $zijkleur;
 		}
 		span, i {
 			color: inherit !important; //idem

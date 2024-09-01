@@ -27,12 +27,19 @@
     color: $hoofdkleur;
     font-size: 2.75rem;
     line-height: 1.15em;
-    line-height: auto;
+    line-height: inherit;
     letter-spacing: 0.05em;
     @extend .secundaire-font;
+    margin-bottom: 7.5px;
   }
   h1{
     padding-top: 15px;
+  }
+  p::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 0;
   }
   .tekst {
     padding-bottom: 15px;

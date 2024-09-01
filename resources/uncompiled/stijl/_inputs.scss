@@ -4,9 +4,10 @@
 .invoerveld[type="textarea"]{
     background-color: #f9f9f9;
     border: 4px solid $zijkleur;
-    padding: 8px 21px;
+    padding: 4.2px 13px;
     color: $zijkleur;
-    border-radius: 50px;
+    border-radius: 8px;
+    font-size: 16px;
   }
   
   .invoerveld::placeholder {
