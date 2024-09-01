@@ -6,10 +6,12 @@
     position: relative;
     margin: 0;
     align-self: center;
-    max-width: calc(84vh - 40px);
+//    max-width: calc(84vh - 40px);
     color: white;
     // TODO NOODVERBAND
-    width: 600px;
+  //  max-width: 600px;
+  flex-basis: 600px;
+  max-width: calc(84vw - 40px);
 }
 .fader-video-overlay {
     width: 100%;
