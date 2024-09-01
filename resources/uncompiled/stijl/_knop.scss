@@ -3,20 +3,21 @@
 .knop, .pushbutton-wide, .knop:visited, .navigation a {
 	display: inline-block; // idem
 	padding: 0.3em 1em; // idem
-	font-weight: bold; // idem
-	background-color: $wittig; // idem
+	font-weight: 500; // idem
+	background-color: white; // idem
 	box-shadow: none; 
 	transition: background-color 0.4s ease-in-out, filter 0.35s ease-in-out;
     filter: brightness(100%);
 	transform: initial ;
-	color: $zijkleur; 
-	font-size: 1em; // idem
+	color: $hoofdkleur; 
+	font-size: 16px; // idem
 	text-transform: lowercase; // idem
-	border-radius: 39px; 
-	font-family: inherit; // idem
+	border-radius: 8px; 
+	font-family: "Fira Sans", 'sans-serif';
 	border: 4px solid $zijkleur; 
+	letter-spacing: 0.02em;
     &:hover, &:active, &.active {
-        color: $wittig; 
+        color: white; 
         text-decoration: none;// idem
         background-color: $zijkleur;
     }
@@ -26,7 +27,7 @@
 
 }
 .navigation .active a {
-    color: $wittig; 
+    color: white; 
     text-decoration: none;// idem
     background-color: $zijkleur;
     box-shadow: none;
@@ -37,7 +38,7 @@
  
 .knop, .pushbutton-wide, .knop:visited, .navigation a {
 &:hover, &:active, &.active {
-		color: $wittig; 
+		color: white; 
 		text-decoration: none;// idem
         background-color: $zijkleur;
         box-shadow: none;
@@ -67,11 +68,11 @@
 	&.in-wit {
 		background-color: $zijkleur;
 		box-shadow: none;
-		color: $wittig !important;
+		color: white !important;
 			&:hover {
 			box-shadow: none;
             color: $zijkleur !important;
-            background-color: $wittig;
+            background-color: white;
 		}
 		span, i {
 			color: inherit !important; //idem
