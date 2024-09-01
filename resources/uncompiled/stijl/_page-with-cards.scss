@@ -5,6 +5,13 @@
   }
 }
 
+@media (max-width: 1440px){
+  .page-template-page-with-cards .sticky-sidebar {
+    display: none;
+  }
+}
+
+
 .art-lijst .art-c.card-artikel
 {
   flex-grow: 1;
