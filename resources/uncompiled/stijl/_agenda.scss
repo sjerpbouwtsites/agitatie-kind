@@ -64,9 +64,8 @@
   }
 }
 .agenda-lijst__rechts.agenda-lijst__rechts--pagina p {
-  font-size: 0.75rem;
+  font-size: 1.3rem;
   margin: 0;
-  margin-top: 0.25em;
 }
 
 .agenda-lijst__link.agenda-lijst__link--pagina {
@@ -113,7 +112,7 @@
 }
 
 .agenda-lijst__tijd.agenda-lijst__tijd--pagina {
-  font-size: 0.5em;
+  font-size: .75em;
   margin-top: 0.5em;
   display: block;
 }
@@ -137,7 +136,7 @@
 }
 .agenda-lijst__taxonomieen {
   //  display: flex;
-  font-size: 0.75em;
+  font-size: 1em;
 }
 .agenda-lijst__taxonomie-prefix {
   opacity: 0.75;
@@ -165,12 +164,19 @@
   }
 }
 
-.agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail {
-max-height: 150px;
+.agenda-lijst__link.agenda-lijst__link--pagina .attachment-lijst {
+  margin-top: -1px;
+  margin-left: -1px;
+  object-fit: cover;
+  flex-grow: 1;
+  display: block;
+  max-height: unset;
+  width: 270px;
+  height: auto;
 }
 
 @media (max-width: 380px){
-  .agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail {
+  .agenda-lijst__link.agenda-lijst__link--pagina .attachment-lijst {
     width: 100px;
     max-height: 100px;
   }
@@ -252,20 +258,15 @@ max-height: 150px;
 .agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wittig, 
 .agenda-lijst__stuk.agenda-lijst__stuk--pagina .tekst-wit {
   color: inherit; 
+p, &.agenda-lijst__taxonomie {
+    color: black;
+  }
 }
 .agenda-lijst__titel.agenda-lijst__titel--pagina {
   
 }
-.agenda-lijst__rechts--pagina p
-{
-  color: inherit;
-}
-.agenda-lijst__link.agenda-lijst__link--pagina .attachment-thumbnail
-{
-  max-height: 152px;
-  margin-top: -1px;
-  margin-left: -1px;
-}
+
+
 
 .agenda-lijst__taxonomie.agenda-lijst__taxonomie--pagina {
   display: inline;
